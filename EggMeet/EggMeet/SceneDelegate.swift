@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  EggMeet
 //
-//  Created by 이윤성 on 2021/12/23.
+//  Created by 이윤성 on 2021/12/26.
 //
 
 import UIKit

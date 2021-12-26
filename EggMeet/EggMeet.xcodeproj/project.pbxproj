@@ -7,29 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		19AA09D727746639003CE13B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA09D627746639003CE13B /* AppDelegate.swift */; };
-		19AA09D927746639003CE13B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA09D827746639003CE13B /* SceneDelegate.swift */; };
-		19AA09DB27746639003CE13B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19AA09DA27746639003CE13B /* ViewController.swift */; };
-		19AA09DE27746639003CE13B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AA09DC27746639003CE13B /* Main.storyboard */; };
-		19AA09E127746639003CE13B /* EggMeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19AA09DF27746639003CE13B /* EggMeet.xcdatamodeld */; };
-		19AA09E32774663B003CE13B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AA09E22774663B003CE13B /* Assets.xcassets */; };
-		19AA09E62774663B003CE13B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AA09E42774663B003CE13B /* LaunchScreen.storyboard */; };
+		192C407327785BF4003055DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C407227785BF4003055DD /* AppDelegate.swift */; };
+		192C407527785BF4003055DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C407427785BF4003055DD /* SceneDelegate.swift */; };
+		192C407727785BF4003055DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C407627785BF4003055DD /* ViewController.swift */; };
+		192C407A27785BF4003055DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192C407827785BF4003055DD /* Main.storyboard */; };
+		192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */; };
+		192C407F27785BF5003055DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192C407E27785BF5003055DD /* Assets.xcassets */; };
+		192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192C408027785BF5003055DD /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		19AA09D327746639003CE13B /* EggMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		19AA09D627746639003CE13B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		19AA09D827746639003CE13B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		19AA09DA27746639003CE13B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		19AA09DD27746639003CE13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		19AA09E027746639003CE13B /* EggMeet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EggMeet.xcdatamodel; sourceTree = "<group>"; };
-		19AA09E22774663B003CE13B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		19AA09E52774663B003CE13B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		19AA09E72774663B003CE13B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192C406F27785BF4003055DD /* EggMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		192C407227785BF4003055DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		192C407427785BF4003055DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		192C407627785BF4003055DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		192C407927785BF4003055DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		192C407C27785BF4003055DD /* EggMeet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EggMeet.xcdatamodel; sourceTree = "<group>"; };
+		192C407E27785BF5003055DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		192C408127785BF5003055DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		192C408327785BF5003055DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		192C408927785C0C003055DD /* EggMeet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeet.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		19AA09D027746639003CE13B /* Frameworks */ = {
+		192C406C27785BF4003055DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,33 +40,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19AA09CA27746639003CE13B = {
+		192C406627785BF4003055DD = {
 			isa = PBXGroup;
 			children = (
-				19AA09D527746639003CE13B /* EggMeet */,
-				19AA09D427746639003CE13B /* Products */,
+				192C407127785BF4003055DD /* EggMeet */,
+				192C407027785BF4003055DD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		19AA09D427746639003CE13B /* Products */ = {
+		192C407027785BF4003055DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				19AA09D327746639003CE13B /* EggMeet.app */,
+				192C406F27785BF4003055DD /* EggMeet.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		19AA09D527746639003CE13B /* EggMeet */ = {
+		192C407127785BF4003055DD /* EggMeet */ = {
 			isa = PBXGroup;
 			children = (
-				19AA09D627746639003CE13B /* AppDelegate.swift */,
-				19AA09D827746639003CE13B /* SceneDelegate.swift */,
-				19AA09DA27746639003CE13B /* ViewController.swift */,
-				19AA09DC27746639003CE13B /* Main.storyboard */,
-				19AA09E22774663B003CE13B /* Assets.xcassets */,
-				19AA09E42774663B003CE13B /* LaunchScreen.storyboard */,
-				19AA09E72774663B003CE13B /* Info.plist */,
-				19AA09DF27746639003CE13B /* EggMeet.xcdatamodeld */,
+				192C408927785C0C003055DD /* EggMeet.entitlements */,
+				192C407227785BF4003055DD /* AppDelegate.swift */,
+				192C407427785BF4003055DD /* SceneDelegate.swift */,
+				192C407627785BF4003055DD /* ViewController.swift */,
+				192C407827785BF4003055DD /* Main.storyboard */,
+				192C407E27785BF5003055DD /* Assets.xcassets */,
+				192C408027785BF5003055DD /* LaunchScreen.storyboard */,
+				192C408327785BF5003055DD /* Info.plist */,
+				192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */,
 			);
 			path = EggMeet;
 			sourceTree = "<group>";
@@ -73,13 +75,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		19AA09D227746639003CE13B /* EggMeet */ = {
+		192C406E27785BF4003055DD /* EggMeet */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 19AA09EA2774663B003CE13B /* Build configuration list for PBXNativeTarget "EggMeet" */;
+			buildConfigurationList = 192C408627785BF5003055DD /* Build configuration list for PBXNativeTarget "EggMeet" */;
 			buildPhases = (
-				19AA09CF27746639003CE13B /* Sources */,
-				19AA09D027746639003CE13B /* Frameworks */,
-				19AA09D127746639003CE13B /* Resources */,
+				192C406B27785BF4003055DD /* Sources */,
+				192C406C27785BF4003055DD /* Frameworks */,
+				192C406D27785BF4003055DD /* Resources */,
 			);
 			buildRules = (
 			);
@@ -87,25 +89,25 @@
 			);
 			name = EggMeet;
 			productName = EggMeet;
-			productReference = 19AA09D327746639003CE13B /* EggMeet.app */;
+			productReference = 192C406F27785BF4003055DD /* EggMeet.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		19AA09CB27746639003CE13B /* Project object */ = {
+		192C406727785BF4003055DD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					19AA09D227746639003CE13B = {
+					192C406E27785BF4003055DD = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = 19AA09CE27746639003CE13B /* Build configuration list for PBXProject "EggMeet" */;
+			buildConfigurationList = 192C406A27785BF4003055DD /* Build configuration list for PBXProject "EggMeet" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -113,56 +115,56 @@
 				en,
 				Base,
 			);
-			mainGroup = 19AA09CA27746639003CE13B;
-			productRefGroup = 19AA09D427746639003CE13B /* Products */;
+			mainGroup = 192C406627785BF4003055DD;
+			productRefGroup = 192C407027785BF4003055DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				19AA09D227746639003CE13B /* EggMeet */,
+				192C406E27785BF4003055DD /* EggMeet */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		19AA09D127746639003CE13B /* Resources */ = {
+		192C406D27785BF4003055DD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19AA09E62774663B003CE13B /* LaunchScreen.storyboard in Resources */,
-				19AA09E32774663B003CE13B /* Assets.xcassets in Resources */,
-				19AA09DE27746639003CE13B /* Main.storyboard in Resources */,
+				192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */,
+				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
+				192C407A27785BF4003055DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		19AA09CF27746639003CE13B /* Sources */ = {
+		192C406B27785BF4003055DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19AA09DB27746639003CE13B /* ViewController.swift in Sources */,
-				19AA09D727746639003CE13B /* AppDelegate.swift in Sources */,
-				19AA09E127746639003CE13B /* EggMeet.xcdatamodeld in Sources */,
-				19AA09D927746639003CE13B /* SceneDelegate.swift in Sources */,
+				192C407727785BF4003055DD /* ViewController.swift in Sources */,
+				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
+				192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */,
+				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		19AA09DC27746639003CE13B /* Main.storyboard */ = {
+		192C407827785BF4003055DD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				19AA09DD27746639003CE13B /* Base */,
+				192C407927785BF4003055DD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		19AA09E42774663B003CE13B /* LaunchScreen.storyboard */ = {
+		192C408027785BF5003055DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				19AA09E52774663B003CE13B /* Base */,
+				192C408127785BF5003055DD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -170,7 +172,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		19AA09E82774663B003CE13B /* Debug */ = {
+		192C408427785BF5003055DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -231,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		19AA09E92774663B003CE13B /* Release */ = {
+		192C408527785BF5003055DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -286,13 +288,15 @@
 			};
 			name = Release;
 		};
-		19AA09EB2774663B003CE13B /* Debug */ = {
+		192C408727785BF5003055DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EggMeet/EggMeet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHQLLQPH65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EggMeet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -305,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = FivePotato.EggMeet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FivePotato.EggMeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -313,13 +317,15 @@
 			};
 			name = Debug;
 		};
-		19AA09EC2774663B003CE13B /* Release */ = {
+		192C408827785BF5003055DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EggMeet/EggMeet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CHQLLQPH65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EggMeet/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -332,7 +338,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = FivePotato.EggMeet;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FivePotato.EggMeet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -343,20 +349,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		19AA09CE27746639003CE13B /* Build configuration list for PBXProject "EggMeet" */ = {
+		192C406A27785BF4003055DD /* Build configuration list for PBXProject "EggMeet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19AA09E82774663B003CE13B /* Debug */,
-				19AA09E92774663B003CE13B /* Release */,
+				192C408427785BF5003055DD /* Debug */,
+				192C408527785BF5003055DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		19AA09EA2774663B003CE13B /* Build configuration list for PBXNativeTarget "EggMeet" */ = {
+		192C408627785BF5003055DD /* Build configuration list for PBXNativeTarget "EggMeet" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19AA09EB2774663B003CE13B /* Debug */,
-				19AA09EC2774663B003CE13B /* Release */,
+				192C408727785BF5003055DD /* Debug */,
+				192C408827785BF5003055DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -364,17 +370,17 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		19AA09DF27746639003CE13B /* EggMeet.xcdatamodeld */ = {
+		192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				19AA09E027746639003CE13B /* EggMeet.xcdatamodel */,
+				192C407C27785BF4003055DD /* EggMeet.xcdatamodel */,
 			);
-			currentVersion = 19AA09E027746639003CE13B /* EggMeet.xcdatamodel */;
+			currentVersion = 192C407C27785BF4003055DD /* EggMeet.xcdatamodel */;
 			path = EggMeet.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
 /* End XCVersionGroup section */
 	};
-	rootObject = 19AA09CB27746639003CE13B /* Project object */;
+	rootObject = 192C406727785BF4003055DD /* Project object */;
 }
