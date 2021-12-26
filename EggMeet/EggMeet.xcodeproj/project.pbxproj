@@ -14,6 +14,8 @@
 		192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */; };
 		192C407F27785BF5003055DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192C407E27785BF5003055DD /* Assets.xcassets */; };
 		192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192C408027785BF5003055DD /* LaunchScreen.storyboard */; };
+		192C408B277869AD003055DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408A277869AD003055DD /* User.swift */; };
+		192C408D27786A32003055DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408C27786A32003055DD /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		192C408127785BF5003055DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		192C408327785BF5003055DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		192C408927785C0C003055DD /* EggMeet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeet.entitlements; sourceTree = "<group>"; };
+		192C408A277869AD003055DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		192C408C27786A32003055DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +72,8 @@
 				192C408027785BF5003055DD /* LaunchScreen.storyboard */,
 				192C408327785BF5003055DD /* Info.plist */,
 				192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */,
+				192C408A277869AD003055DD /* User.swift */,
+				192C408C27786A32003055DD /* MainViewController.swift */,
 			);
 			path = EggMeet;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
 				192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */,
+				192C408D27786A32003055DD /* MainViewController.swift in Sources */,
+				192C408B277869AD003055DD /* User.swift in Sources */,
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
