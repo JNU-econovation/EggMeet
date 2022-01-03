@@ -6,3 +6,14 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpCheckTermsOfServiceVC: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    @IBAction func windSignUpCheckTermsOfMaliciousContentView (_ sender: Any){
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCheckTermsOfMaliciousContentVC") as? SignUpCheckTermsOfMaliciousContentVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+}

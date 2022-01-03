@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpEndVC: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}

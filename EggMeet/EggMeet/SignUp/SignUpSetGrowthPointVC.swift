@@ -6,3 +6,21 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpSetGrowthPointVC : UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func windSignUpSetMenteeAreaCategoryView (_ sender: Any){
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetMenteeAreaCategoryVC") as? SignUpSetMenteeAreaCategoryVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func skipAndWindSignUpSetMenteeAreaCategoryView (_ sender: Any){
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetMenteeAreaCategoryVC") as? SignUpSetMenteeAreaCategoryVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+}

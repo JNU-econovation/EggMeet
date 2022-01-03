@@ -6,3 +6,20 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpSetMenteeAreaDescriptionVC : UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    @IBAction func windSignUpSetChannelView (_ sender: Any){
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetChannelVC") as? SignUpSetChannelVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func skipAndWindSignUpSetChannelView (_ sender: Any){
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetChannelVC") as? SignUpSetChannelVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+}

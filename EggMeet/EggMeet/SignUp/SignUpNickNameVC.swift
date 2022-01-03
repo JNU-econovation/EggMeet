@@ -17,7 +17,9 @@ class SignUpNickNameVC: UIViewController {
     
     @IBAction func windSignUpLocationView(_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpLocationVC") as? SignUpLocationVC else {return}
+        print("실행")
         self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
     
 }

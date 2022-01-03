@@ -16,6 +16,14 @@
 		192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192C408027785BF5003055DD /* LaunchScreen.storyboard */; };
 		192C408B277869AD003055DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408A277869AD003055DD /* User.swift */; };
 		192C408D27786A32003055DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408C27786A32003055DD /* MainViewController.swift */; };
+		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
+		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
+		19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */; };
+		19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */; };
+		19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC49A2782E28100F18D8F /* SignUpSetChannelVC.swift */; };
+		19FEC49D2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC49C2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift */; };
+		19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC49E2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift */; };
+		19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */; };
 		1FDF114D24F96E2867CD8DE8 /* Pods_EggMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213EDAFC3CEFDC860F9CF9BD /* Pods_EggMeet.framework */; };
 		9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */; };
 		9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */; };
@@ -38,6 +46,14 @@
 		192C408927785C0C003055DD /* EggMeet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeet.entitlements; sourceTree = "<group>"; };
 		192C408A277869AD003055DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		192C408C27786A32003055DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
+		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
+		19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaCategoryVC.swift; sourceTree = "<group>"; };
+		19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaDescriptionVC.swift; sourceTree = "<group>"; };
+		19FEC49A2782E28100F18D8F /* SignUpSetChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetChannelVC.swift; sourceTree = "<group>"; };
+		19FEC49C2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCheckTermsOfServiceVC.swift; sourceTree = "<group>"; };
+		19FEC49E2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCheckTermsOfMaliciousContentVC.swift; sourceTree = "<group>"; };
+		19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEndVC.swift; sourceTree = "<group>"; };
 		213EDAFC3CEFDC860F9CF9BD /* Pods_EggMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EggMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45457B4AF0FF7C34AEC5106F /* Pods-EggMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.release.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.release.xcconfig"; sourceTree = "<group>"; };
 		9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameVC.swift; sourceTree = "<group>"; };
@@ -124,6 +140,14 @@
 				9CE4B6822780842E003AEB90 /* SignUpMentoAreaSelectionVC.swift */,
 				9CE4B68427808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift */,
 				9CE4B6862781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift */,
+				196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */,
+				19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */,
+				19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */,
+				19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */,
+				19FEC49A2782E28100F18D8F /* SignUpSetChannelVC.swift */,
+				19FEC49C2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift */,
+				19FEC49E2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift */,
+				19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -245,15 +269,23 @@
 			files = (
 				9CE4B6832780842E003AEB90 /* SignUpMentoAreaSelectionVC.swift in Sources */,
 				9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */,
+				19FEC49D2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift in Sources */,
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
 				192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */,
 				192C408D27786A32003055DD /* MainViewController.swift in Sources */,
+				19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */,
+				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
+				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
+				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
+				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
+				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
+				19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */,
 				9CE4B6872781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
