@@ -1,0 +1,6 @@
+framework module Pods_EggMeet {
+  umbrella header "Pods-EggMeet-umbrella.h"
+
+  export *
+  module * { export * }
+}
