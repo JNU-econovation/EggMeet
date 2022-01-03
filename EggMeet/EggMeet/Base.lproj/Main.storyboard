@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ib6-SA-B1Z">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -15,23 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-yq-CWo">
+                                <rect key="frame" x="78" y="388" width="164" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입테스트"/>
+                                <connections>
+                                    <segue destination="VFS-lx-X5e" kind="show" id="g3V-bF-VrW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-3S-Gya">
+                                <rect key="frame" x="102" y="216" width="171" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카카오톡 로그인"/>
+                                <connections>
+                                    <action selector="onKakaoLoginByAppTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jnr-Ih-1dS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="hcF-Hb-mWB"/>
                     <connections>
                         <segue destination="35j-nH-0BS" kind="show" identifier="segue" id="e7h-H2-rZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="84"/>
+            <point key="canvasLocation" x="1021.6" y="83.208395802098963"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="xih-sL-OU4">
             <objects>
                 <viewController id="35j-nH-0BS" customClass="MainViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RZ7-sT-Cxj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xr9-WY-dvH">
@@ -60,27 +81,21 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cSS-mQ-0J0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799.20000000000005" y="83.208395802098963"/>
+            <point key="canvasLocation" x="1738.4000000000001" y="83.208395802098963"/>
         </scene>
-        <!--Sign Up Mento Detail Introduce View Controller-->
+        <!--Sign Up Mento Detail IntroduceVC-->
         <scene sceneID="OKj-ai-wWZ">
             <objects>
-                <viewController storyboardIdentifier="SignUpMentoDetailIntroduceVC" id="nFd-fJ-OoC" customClass="SignUpMentoDetailIntroduceViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpMentoDetailIntroduceVC" id="nFd-fJ-OoC" customClass="SignUpMentoDetailIntroduceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lBL-Fy-ClE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aF6-xQ-Ocp">
-                                <rect key="frame" x="151" y="529" width="73" height="31"/>
+                                <rect key="frame" x="106" y="529" width="118" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="건너뛰기"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crb-wl-suN">
-                                <rect key="frame" x="151" y="585" width="73" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="멘토링에 대해 자세히 소개해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZkJ-Df-khv">
                                 <rect key="frame" x="68" y="89" width="239" height="21"/>
@@ -96,28 +111,34 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akA-F3-CCT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="멘토링 소개글..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akA-F3-CCT">
                                 <rect key="frame" x="16" y="198" width="317" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="crb-wl-suN">
+                                <rect key="frame" x="111" y="576" width="109" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ok-AC-kva"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7Bf-SE-pTd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N57-Gr-wuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="742.5787106446777"/>
+            <point key="canvasLocation" x="2893.5999999999999" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Nick Name View Controller-->
+        <!--Sign Up Nick NameVC-->
         <scene sceneID="hGw-RC-yf3">
             <objects>
-                <viewController storyboardIdentifier="SignUpNickNameVC" id="VFS-lx-X5e" customClass="SignUpNickNameViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpNickNameVC" id="VFS-lx-X5e" customClass="SignUpNickNameVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQl-7C-bWT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,24 +164,28 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-ue-0oW">
-                                <rect key="frame" x="151" y="527" width="73" height="31"/>
+                                <rect key="frame" x="122" y="527" width="102" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                                <connections>
+                                    <action selector="windSignUpLocationView:" destination="VFS-lx-X5e" eventType="touchUpInside" id="tBf-Qz-wpe"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WnD-5O-LaG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fMd-2Z-vFW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jI0-es-b8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="101.59999999999999" y="742.5787106446777"/>
+            <point key="canvasLocation" x="80.799999999999997" y="978.26086956521749"/>
         </scene>
-        <!--Sign Up Location View Controller-->
+        <!--Sign Up LocationVC-->
         <scene sceneID="OvO-89-15R">
             <objects>
-                <viewController storyboardIdentifier="SignUpLocationVC" id="QiW-3M-FxQ" customClass="SignUpLocationViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpLocationVC" id="QiW-3M-FxQ" customClass="SignUpLocationVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eb7-RF-gte">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -180,30 +205,37 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esc-gZ-CTx">
-                                <rect key="frame" x="129" y="538" width="73" height="31"/>
+                                <rect key="frame" x="97" y="538" width="105" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                                <connections>
+                                    <action selector="windSignUpSelfIntroduceView:" destination="QiW-3M-FxQ" eventType="touchUpInside" id="vcO-93-7v0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="boQ-u2-I8s">
-                                <rect key="frame" x="132" y="480" width="73" height="31"/>
+                                <rect key="frame" x="97" y="480" width="108" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="건너뛰기"/>
+                                <connections>
+                                    <action selector="skipAndWindSignUpSelfIntroduceView:" destination="QiW-3M-FxQ" eventType="touchUpInside" id="Kdf-8e-9ul"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGo-Fg-LEk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Fpa-jt-dmb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ir0-nw-VFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="799" y="743"/>
+            <point key="canvasLocation" x="781.60000000000002" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Self Introduce View Controller-->
+        <!--Sign Up Self IntroduceVC-->
         <scene sceneID="u1E-0q-5be">
             <objects>
-                <viewController storyboardIdentifier="SignUpSelfIntroduceVC" id="T4m-hU-3mg" customClass="SignUpSelfIntroduceViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSelfIntroduceVC" id="T4m-hU-3mg" customClass="SignUpSelfIntroduceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5u-yO-cFj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,47 +254,55 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="어떻게 적어야 할지 모르겠다면 이런 내용은 어때요?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h27-x6-6NO">
-                                <rect key="frame" x="21" y="230" width="344" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="onb-ow-i1F">
-                                <rect key="frame" x="58" y="285" width="240" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="dfsdf" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="onb-ow-i1F">
+                                <rect key="frame" x="58" y="285" width="249" height="195"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut al</string>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chs-mG-WO8">
-                                <rect key="frame" x="156" y="508" width="73" height="31"/>
+                                <rect key="frame" x="122" y="508" width="107" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="건너뛰기"/>
+                                <connections>
+                                    <action selector="skipAndWindSignUpMentoAreaSelectionView:" destination="T4m-hU-3mg" eventType="touchUpInside" id="DBK-XZ-Y2K"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ra-Tw-nei">
-                                <rect key="frame" x="156" y="577" width="73" height="31"/>
+                                <rect key="frame" x="130" y="577" width="99" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                                <connections>
+                                    <action selector="windSignUpMentoAreaSelectionView:" destination="T4m-hU-3mg" eventType="touchUpInside" id="CZE-k2-sAk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk0-BU-9JI">
+                                <rect key="frame" x="0.0" y="216" width="375" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="어떻게 적어야 할지 모르겠다면 이런 내용은 어때요?"/>
+                                <connections>
+                                    <segue destination="em6-zt-suY" kind="presentation" id="MQ2-JW-PB3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MCR-fO-u3Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dkm-uB-6rz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcO-Tl-eqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480.8" y="742.5787106446777"/>
+            <point key="canvasLocation" x="1472.8" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Mento Area Selection View Controller-->
+        <!--Sign Up Mento Area SelectionVC-->
         <scene sceneID="Hwy-CG-rXn">
             <objects>
-                <viewController storyboardIdentifier="SignUpMentoAreaSelectionVC" id="ces-hf-4fh" customClass="SignUpMentoAreaSelectionViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpMentoAreaSelectionVC" id="ces-hf-4fh" customClass="SignUpMentoAreaSelectionVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsF-UL-OlQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -282,25 +322,93 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8H-ZQ-UBB">
-                                <rect key="frame" x="152" y="511" width="73" height="31"/>
+                                <rect key="frame" x="114" y="511" width="111" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="건너뛰기"/>
+                                <connections>
+                                    <action selector="skipAndWindSignUpMentoDetailIntroduceView:" destination="ces-hf-4fh" eventType="touchUpInside" id="yRM-vS-2mg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O3D-2s-adn">
-                                <rect key="frame" x="152" y="576" width="73" height="31"/>
+                                <rect key="frame" x="114" y="576" width="111" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                                <connections>
+                                    <action selector="windSignUpMentoDetailIntroduceView:" destination="ces-hf-4fh" eventType="touchUpInside" id="EmC-FA-FeO"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1Y-YB-jdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8K-7f-yJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2144.8000000000002" y="742.5787106446777"/>
+            <point key="canvasLocation" x="2188" y="977.36131934032994"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aUq-WQ-1Go">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ib6-SA-B1Z" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fVG-kg-5f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iI3-Gq-Ryg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a7F-Es-h3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.400000000000006" y="83.208395802098963"/>
+        </scene>
+        <!--Sign Up Introduce Pop Up View-->
+        <scene sceneID="p4H-pX-NiJ">
+            <objects>
+                <viewController id="em6-zt-suY" customClass="SignUpIntroducePopUpView" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uoj-AK-uL8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bhy-uz-zgM">
+                                <rect key="frame" x="31" y="103" width="313" height="398"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w9h-P7-3eH">
+                                        <rect key="frame" x="7" y="8" width="298" height="343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <string key="text">1. 당신이 어떤 성향의 사람인지 해시태그로 알려주세요.  ex) #발랄한 #호기심강한 #세심한 #수다스러운 #ENFP  2. 당신이 어떤 성향의 성장파트너를 원하는지 알려주세요!  3. 성장 파트너와의 시간을 어떻게 보내고 싶은지 알려주세요!  4. 당신만의 강점 혹은 약점은 무엇인가요?  5. 에그밋을 통해 미래에 어떤 사람으로 거듭나고 싶은가요?</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ShS-iy-d3h">
+                                        <rect key="frame" x="230" y="359" width="75" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="닫기"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="99k-cq-8n1"/>
+                        <color key="backgroundColor" red="0.1059108153" green="0.1097981557" blue="0.1098041758" alpha="0.70656175678279121" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7rU-Y9-YJ1"/>
+                    <connections>
+                        <outlet property="closeButton" destination="ShS-iy-d3h" id="VBP-C9-FfN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nPh-7E-hgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.8" y="1664.617691154423"/>
         </scene>
     </scenes>
     <resources>
