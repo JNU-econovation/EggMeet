@@ -15,7 +15,10 @@ struct User {
     let lastName : String
     let email: String
     let accessTokenString: String
+<<<<<<< HEAD
     
+=======
+>>>>>>> main
     
     init(credentials: ASAuthorizationAppleIDCredential){
         self.id = credentials.user
@@ -33,7 +36,11 @@ extension User: CustomDebugStringConvertible{
         First Name: \(firstName)
         Last Name: \(lastName)
         Email: \(email)
+<<<<<<< HEAD
         accessToken: \(accessTokenString)
+=======
+        accessTokenString: \(accessTokenString)
+>>>>>>> main
         """
     }
 }

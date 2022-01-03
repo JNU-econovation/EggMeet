@@ -7,6 +7,8 @@
 
 import UIKit
 import AuthenticationServices
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class ViewController: UIViewController {
     
@@ -46,6 +48,59 @@ class ViewController: UIViewController {
             mainVC.user = user
         }
     }
+    
+    // 카카오톡으로 로그인
+    @IBAction func onKakaoLoginByAppTouched(_ sender: Any) {
+        //카카오 계정으로 로그인
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoAccount() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
+            }
+        
+        //토큰 존재 여부 확인
+        if (AuthApi.hasToken()) {
+            UserApi.shared.accessTokenInfo { (_, error) in
+                if let error = error {
+                    /*
+                    if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true  {
+                        //로그인 필요
+                    }
+                    else {
+                        //기타 에러
+                    }*/
+                }
+                else {
+                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
+                }
+            }
+        }
+        else {
+            //로그인 필요
+        }
+        
+        
+        // 사용자 액세스 토큰 정보 조회
+        UserApi.shared.accessTokenInfo {(accessTokenInfo, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("accessTokenInfo() success.")
+
+                //do something
+                _ = accessTokenInfo
+                print(accessTokenInfo)
+            }
+        }
+    }
+
 }
 
 extension ViewController: ASAuthorizationControllerDelegate {
@@ -56,6 +111,7 @@ extension ViewController: ASAuthorizationControllerDelegate {
             let user = User(credentials: credentials)
             
             performSegue(withIdentifier: "segue", sender: user)
+            
             
         default: break
         }
