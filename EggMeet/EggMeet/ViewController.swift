@@ -52,7 +52,9 @@ extension ViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let credentials as ASAuthorizationAppleIDCredential:
+            
             let user = User(credentials: credentials)
+            
             performSegue(withIdentifier: "segue", sender: user)
             
         default: break
