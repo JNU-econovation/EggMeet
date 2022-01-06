@@ -107,8 +107,11 @@ extension ViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let credentials as ASAuthorizationAppleIDCredential:
+            
             let user = User(credentials: credentials)
-            performSegue(withIdentifier: "segue", sender: user)
+            
+            print(user.debugDescription)
+            // segue 가 들어갈 공간. Navigation 으로 segue 한다.
             
             
         default: break

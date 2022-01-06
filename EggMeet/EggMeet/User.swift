@@ -7,6 +7,7 @@
 
 import Foundation
 import AuthenticationServices
+import UIKit
 
 struct User {
     let id: String
@@ -14,7 +15,7 @@ struct User {
     let lastName : String
     let email: String
     let accessTokenString: String
-    
+
     init(credentials: ASAuthorizationAppleIDCredential){
         self.id = credentials.user
         self.firstName = credentials.fullName?.givenName ?? ""
@@ -31,7 +32,7 @@ extension User: CustomDebugStringConvertible{
         First Name: \(firstName)
         Last Name: \(lastName)
         Email: \(email)
-        accessTokenString: \(accessTokenString)
+        accessToken: \(accessTokenString)
         """
     }
 }
