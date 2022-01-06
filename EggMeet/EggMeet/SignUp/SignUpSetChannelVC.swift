@@ -15,8 +15,15 @@ class SignUpSetChannelVC : UIViewController{
     
     var isOnlineChecked : Bool = false
     var isOfflineChecked : Bool = false
+    
+    let isOnlineAvailableKey = "isOnlineAvailable"
+    let isOfflineAvailableKey = "isOfflineAvailable"
+    
+    let ud = UserDefaults.standard
         
     override func viewDidLoad() {
+        ud.set(isOnlineChecked, forKey: isOnlineAvailableKey)
+        ud.set(isOfflineChecked, forKey: isOfflineAvailableKey)
         super.viewDidLoad()
     }
     
@@ -32,6 +39,7 @@ class SignUpSetChannelVC : UIViewController{
     
     @IBAction func touchUpOnlineButton(_ sender: UIButton){
         isOnlineChecked = !isOnlineChecked
+        ud.set(isOnlineChecked, forKey: isOnlineAvailableKey)
         if isOnlineChecked {
             sender.setTitle("온라인 체크", for:.normal)
         } else {
@@ -41,6 +49,7 @@ class SignUpSetChannelVC : UIViewController{
     
     @IBAction func touchUpOfflineButton(_ sender: UIButton){
         isOfflineChecked = !isOfflineChecked
+        ud.set(isOfflineChecked, forKey: isOfflineAvailableKey)
         if isOfflineChecked {
             sender.setTitle("직접 대면 체크", for: .normal)
         } else {
