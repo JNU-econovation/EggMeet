@@ -18,6 +18,11 @@ class SignUpSetGrowthPointVC : UIViewController{
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    @IBAction func windExplainGrowthPointView(_ sender: Any){
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ExplainGrowthPointVC") as? ExplainGrowthPointVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
     @IBAction func skipAndWindSignUpSetMenteeAreaCategoryView (_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetMenteeAreaCategoryVC") as? SignUpSetMenteeAreaCategoryVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
