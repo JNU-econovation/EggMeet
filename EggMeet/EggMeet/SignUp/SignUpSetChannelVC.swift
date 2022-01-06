@@ -34,7 +34,10 @@ class SignUpSetChannelVC : UIViewController{
     
     @IBAction func skipAndWindSignUpCheckTermsOfServiceView (_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCheckTermsOfServiceVC") as? SignUpCheckTermsOfServiceVC else {return}
+        ud.set(false, forKey: isOnlineAvailableKey)
+        ud.set(false, forKey: isOfflineAvailableKey)
         self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
     
     @IBAction func touchUpOnlineButton(_ sender: UIButton){

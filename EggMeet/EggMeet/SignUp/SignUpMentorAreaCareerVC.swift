@@ -35,6 +35,7 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
     
     @IBAction func skipAndWindSignUpSetGrowthPointView(_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetGrowthPointVC") as? SignUpSetGrowthPointVC else {return}
+        self.mentorAreaCareerTextField.text = ""
         ud.set("", forKey: mentorAreaCareerKey)
         print(ud.value(forKey: mentorAreaCareerKey))
         self.navigationController?.pushViewController(nextVC, animated: true)
