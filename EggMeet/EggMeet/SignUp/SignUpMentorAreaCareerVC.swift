@@ -12,10 +12,12 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var mentorAreaCareerTextField: UITextView!
+    
     let ud = UserDefaults.standard
     let mentorAreaCareerKey: String = "mentorAreaCareer"
     
     override func viewDidLoad() {
+        buildTextViewStyle()
         super.viewDidLoad()
     }
     
@@ -36,5 +38,10 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
         ud.set("", forKey: mentorAreaCareerKey)
         print(ud.value(forKey: mentorAreaCareerKey))
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func buildTextViewStyle(){
+        self.mentorAreaCareerTextField.layer.borderWidth = 1.0
+        self.mentorAreaCareerTextField.layer.borderColor = UIColor.black.cgColor
     }
 }

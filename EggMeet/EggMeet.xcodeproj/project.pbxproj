@@ -77,9 +77,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191773D627830374005B588A /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		192C406627785BF4003055DD = {
 			isa = PBXGroup;
 			children = (
+				191773D627830374005B588A /* Configs */,
 				192C407127785BF4003055DD /* EggMeet */,
 				192C407027785BF4003055DD /* Products */,
 				1AC344D49AB1ACB3D139411E /* Pods */,

@@ -542,7 +542,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xby-Ti-bvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4404" y="978"/>
+            <point key="canvasLocation" x="4404" y="977.36131934032994"/>
         </scene>
         <!--Sign Up Set Mentee Area CategoryVC-->
         <scene sceneID="kbf-05-fXJ">
@@ -682,14 +682,36 @@
                                     <action selector="windSignUpCheckTermsOfServiceView:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="Jv9-Ic-2Zv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKX-gm-Khg">
+                                <rect key="frame" x="92" y="272" width="61" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="온라인"/>
+                                <connections>
+                                    <action selector="touchUpOnlineButton:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="zpd-je-8mY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9WX-Vs-uCX">
+                                <rect key="frame" x="195" y="272" width="88" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="직접 대면"/>
+                                <connections>
+                                    <action selector="touchUpOfflineButton:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="ht3-Md-M2h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PI7-rj-vZp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="offlineSelectButton" destination="9WX-Vs-uCX" id="9bi-3b-fAh"/>
+                        <outlet property="onlineSelectButton" destination="pKX-gm-Khg" id="tOs-kY-PlO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4r-tA-zuf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6538" y="976"/>
+            <point key="canvasLocation" x="6536.8000000000002" y="975.56221889055485"/>
         </scene>
         <!--Sign Up Check Terms Of ServiceVC-->
         <scene sceneID="g3E-kl-4hx">
