@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="2893.5999999999999" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Mentor Area CareerVC-->
+        <!--멘토 경력-->
         <scene sceneID="VOI-9a-acA">
             <objects>
-                <viewController storyboardIdentifier="SignUpMentorAreaCareerVC" id="L2b-gd-SbA" customClass="SignUpMentorAreaCareerVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpMentorAreaCareerVC" title="멘토 경력" id="L2b-gd-SbA" customClass="SignUpMentorAreaCareerVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0lb-nc-nQc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -181,13 +181,6 @@
                                     <action selector="skipAndWindSignUpSetGrowthPointView:" destination="L2b-gd-SbA" eventType="touchUpInside" id="S7F-MH-jtF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="멘토 경력" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dE9-qQ-KA3">
-                                <rect key="frame" x="151" y="134" width="64" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-YY-P0U">
                                 <rect key="frame" x="63" y="269" width="240" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -482,10 +475,10 @@
             </objects>
             <point key="canvasLocation" x="1472.8" y="1664.617691154423"/>
         </scene>
-        <!--Sign Up Set Growth PointVC-->
+        <!--성장 비용 정하기-->
         <scene sceneID="IQK-0s-k63">
             <objects>
-                <viewController storyboardIdentifier="SignUpSetGrowthPointVC" id="Oqz-Yd-4be" customClass="SignUpSetGrowthPointVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSetGrowthPointVC" title="성장 비용 정하기" id="Oqz-Yd-4be" customClass="SignUpSetGrowthPointVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wvi-Ym-UPz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -522,13 +515,6 @@
                                     <action selector="windSignUpSetMenteeAreaCategoryView:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="Nnv-xz-1HW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성장 비용 정하기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Laj-pz-AMB">
-                                <rect key="frame" x="131" y="87" width="112" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-fe-h3e">
                                 <rect key="frame" x="103" y="301" width="169" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -562,10 +548,10 @@
             </objects>
             <point key="canvasLocation" x="4404" y="1675"/>
         </scene>
-        <!--Sign Up Set Mentee Area CategoryVC-->
+        <!--멘티 분야 선택-->
         <scene sceneID="kbf-05-fXJ">
             <objects>
-                <viewController storyboardIdentifier="SignUpSetMenteeAreaCategoryVC" id="BkO-TB-3sr" customClass="SignUpSetMenteeAreaCategoryVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSetMenteeAreaCategoryVC" title="멘티 분야 선택" id="BkO-TB-3sr" customClass="SignUpSetMenteeAreaCategoryVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AfD-TL-Q8n">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -609,13 +595,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="멘티 분야 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i10-m7-qog">
-                                <rect key="frame" x="125" y="94" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SMm-g7-6OP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -625,21 +604,14 @@
             </objects>
             <point key="canvasLocation" x="5104.8000000000002" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Set Mentee Area DescriptionVC-->
+        <!--멘티 상세 소개-->
         <scene sceneID="EtW-Do-A8O">
             <objects>
-                <viewController storyboardIdentifier="SignUpSetMenteeAreaDescriptionVC" id="Mm3-Qw-Tx7" customClass="SignUpSetMenteeAreaDescriptionVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSetMenteeAreaDescriptionVC" title="멘티 상세 소개" id="Mm3-Qw-Tx7" customClass="SignUpSetMenteeAreaDescriptionVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZgA-hh-tzO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="멘티 상세 소개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wcq-eu-2kG">
-                                <rect key="frame" x="139" y="95" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCD-I3-RbY">
                                 <rect key="frame" x="151" y="465" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -685,21 +657,14 @@
             </objects>
             <point key="canvasLocation" x="5840.8000000000002" y="975.56221889055485"/>
         </scene>
-        <!--Sign Up Set ChannelVC-->
+        <!--만남 채널 선택-->
         <scene sceneID="eEl-6N-7zw">
             <objects>
-                <viewController storyboardIdentifier="SignUpSetChannelVC" id="5aJ-Ak-S8n" customClass="SignUpSetChannelVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSetChannelVC" title="만남 채널 선택" id="5aJ-Ak-S8n" customClass="SignUpSetChannelVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UJY-gO-unm">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만남 채널 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xai-mm-ZWS">
-                                <rect key="frame" x="139" y="94" width="97" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UnY-vN-wjL">
                                 <rect key="frame" x="151" y="479" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -748,6 +713,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4r-tA-zuf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6536.8000000000002" y="975.56221889055485"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gdq-xa-qLO">
+            <objects>
+                <viewController id="N2a-8Y-LCE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RF1-lR-x6h">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AcE-e9-RhR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBf-mf-Cf3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7273" y="302"/>
         </scene>
         <!--Sign Up Check Terms Of ServiceVC-->
         <scene sceneID="g3E-kl-4hx">
@@ -805,6 +785,18 @@
                                     <action selector="touchUpAgreePersonalInfoButton:" destination="yRc-DP-q50" eventType="touchUpInside" id="VTp-KY-Rwu"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTv-a0-RkI">
+                                <rect key="frame" x="286" y="284" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="전문보기"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-z8-bAD">
+                                <rect key="frame" x="286" y="366" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="전문보기"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dzv-bD-bvb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -817,6 +809,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LSD-UO-jsh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7274" y="976"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Ii-oX-ANw">
+            <objects>
+                <viewController id="x8c-fK-dSz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Xx-s6-IPi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="9ZA-Lc-AnS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="asm-ch-7K7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7273" y="1675"/>
         </scene>
         <!--Sign Up Check Terms Of Malicious ContentVC-->
         <scene sceneID="oBB-MP-jYI">
