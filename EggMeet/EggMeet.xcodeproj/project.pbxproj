@@ -16,6 +16,7 @@
 		192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192C408027785BF5003055DD /* LaunchScreen.storyboard */; };
 		192C408B277869AD003055DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408A277869AD003055DD /* User.swift */; };
 		192C408D27786A32003055DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408C27786A32003055DD /* MainViewController.swift */; };
+		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
 		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
 		19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */; };
@@ -46,6 +47,7 @@
 		192C408927785C0C003055DD /* EggMeet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeet.entitlements; sourceTree = "<group>"; };
 		192C408A277869AD003055DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		192C408C27786A32003055DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
 		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
 		19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaCategoryVC.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				9CE4B6862781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift */,
 				196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */,
 				19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */,
+				196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */,
 				19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */,
 				19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */,
 				19FEC49A2782E28100F18D8F /* SignUpSetChannelVC.swift */,
@@ -281,6 +284,7 @@
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
+				196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */,
 				192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */,
 				192C408D27786A32003055DD /* MainViewController.swift in Sources */,
 				19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */,

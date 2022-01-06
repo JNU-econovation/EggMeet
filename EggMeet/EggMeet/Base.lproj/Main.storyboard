@@ -534,6 +534,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="성장포인트가 무엇인가요?"/>
+                                <connections>
+                                    <action selector="windExplainGrowthPointView:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="Psz-ca-1B5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="24v-jM-7yA"/>
@@ -543,6 +546,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xby-Ti-bvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4404" y="977.36131934032994"/>
+        </scene>
+        <!--Explain Growth PointVC-->
+        <scene sceneID="qT6-eJ-eeg">
+            <objects>
+                <viewController storyboardIdentifier="ExplainGrowthPointVC" id="fmj-Q1-9ot" customClass="ExplainGrowthPointVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fk2-0X-oJc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="HoQ-bi-VvO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ngf-bL-X4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4404" y="1675"/>
         </scene>
         <!--Sign Up Set Mentee Area CategoryVC-->
         <scene sceneID="kbf-05-fXJ">
@@ -824,6 +842,13 @@
                                     <action selector="windSignUpEndView:" destination="BZ8-PW-JpO" eventType="touchUpInside" id="Vgb-KU-xGa"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="악의적인 내용에 대한 설명" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qK-x6-93V">
+                                <rect key="frame" x="100" y="296" width="175" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cn8-dY-Tff"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -833,10 +858,10 @@
             </objects>
             <point key="canvasLocation" x="8022" y="978"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up EndVC-->
         <scene sceneID="jeM-cd-5vC">
             <objects>
-                <viewController id="xJ3-Vi-ymK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpEndVC" id="xJ3-Vi-ymK" customClass="SignUpEndVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6vX-IZ-K7V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
