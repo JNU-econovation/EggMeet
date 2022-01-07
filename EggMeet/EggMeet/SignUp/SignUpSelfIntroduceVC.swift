@@ -32,4 +32,8 @@ class SignUpSelfIntroduceVC: UIViewController {
         self.selfIntroduceTextView.layer.borderWidth = 1.0
         self.selfIntroduceTextView.layer.borderColor = UIColor.black.cgColor
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.selfIntroduceTextView.endEditing(true)
+        }
 }

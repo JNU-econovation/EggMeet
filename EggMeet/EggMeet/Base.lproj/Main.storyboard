@@ -290,11 +290,29 @@
                                     <action selector="skipAndWindSignUpSelfIntroduceView:" destination="QiW-3M-FxQ" eventType="touchUpInside" id="Kdf-8e-9ul"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-Wn-GAH">
+                                <rect key="frame" x="64" y="293" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="지역"/>
+                                <connections>
+                                    <action selector="touchLocationAreaButton" destination="QiW-3M-FxQ" eventType="touchUpInside" id="kHx-hZ-faC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-hT-hJD">
+                                <rect key="frame" x="224" y="293" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="전체"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGo-Fg-LEk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="Fpa-jt-dmb"/>
+                    <connections>
+                        <outlet property="locationAreaButton" destination="IvO-Wn-GAH" id="Run-fJ-8im"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ir0-nw-VFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -410,11 +428,29 @@
                                     <action selector="windSignUpMentoDetailIntroduceView:" destination="ces-hf-4fh" eventType="touchUpInside" id="EmC-FA-FeO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG6-2o-o3M">
+                                <rect key="frame" x="114" y="307" width="138" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="세부항목 선택"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC6-FQ-wSP">
+                                <rect key="frame" x="110" y="228" width="142" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="카테고리 선택"/>
+                                <connections>
+                                    <action selector="touchMentorAreaButton" destination="ces-hf-4fh" eventType="touchUpInside" id="DHE-Dd-WeE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1Y-YB-jdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
+                    <connections>
+                        <outlet property="mentorAreaButton" destination="eC6-FQ-wSP" id="TbF-aw-uht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8K-7f-yJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
