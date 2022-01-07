@@ -32,4 +32,8 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
         self.mentorIntroduceTextView.layer.borderWidth = 1.0
         self.mentorIntroduceTextView.layer.borderColor = UIColor.black.cgColor
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.mentorIntroduceTextView.endEditing(true)
+        }
 }
