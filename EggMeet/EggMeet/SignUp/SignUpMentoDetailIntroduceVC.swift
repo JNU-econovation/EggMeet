@@ -9,8 +9,11 @@ import Foundation
 import UIKit
 
 class SignUpMentoDetailIntroduceVC: UIViewController{
+    @IBOutlet weak var mentorIntroduceTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTextViewStyle()
         self.navigationItem.title = "멘토 상세 소개";
         self.navigationController?.navigationBar.tintColor = .black
     }
@@ -25,4 +28,8 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    func setTextViewStyle(){
+        self.mentorIntroduceTextView.layer.borderWidth = 1.0
+        self.mentorIntroduceTextView.layer.borderColor = UIColor.black.cgColor
+    }
 }
