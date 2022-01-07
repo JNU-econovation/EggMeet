@@ -9,6 +9,8 @@ import UIKit
 import AuthenticationServices
 import KakaoSDKAuth
 import KakaoSDKUser
+import Alamofire
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -108,9 +110,25 @@ extension ViewController: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let credentials as ASAuthorizationAppleIDCredential:
             
+            // token과 user 정보가 담겨있는 User 객체
             let user = User(credentials: credentials)
-            
             print(user.debugDescription)
+            // api 주소
+            if var apiURL = Bundle.main.infoDictionary?["API_URL"] as? String{
+                print(apiURL)
+            }
+        
+            
+            // 전송할 정보
+            let PARAM: Parameters = [
+                "loginType": "APPLE",
+                "socialToken": user.accessTokenString
+            ]
+            
+            
+            
+            
+            
             // segue 가 들어갈 공간. Navigation 으로 segue 한다.
             
             
@@ -118,6 +136,7 @@ extension ViewController: ASAuthorizationControllerDelegate {
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        
         print("something bad happened", error)
     }
 }
