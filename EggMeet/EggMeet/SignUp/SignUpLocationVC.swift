@@ -7,20 +7,39 @@
 
 import Foundation
 import UIKit
+import DropDown
 
 class SignUpLocationVC: UIViewController {
+    @IBOutlet weak var locationAreaButton: UIButton!
+    let locationAreaDD: DropDown = DropDown()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "활동 지역";
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
+        
         print("다음으로")
     }
     @IBAction func skipAndWindSignUpSelfIntroduceView(_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
         print("건너뛰기")
+    }
+    
+    @IBAction func touchLocationAreaButton(){
+        locationAreaDD.dataSource = [ "전체", "서울", "경기", "인천", "강원", "충남", "대전", "충북", "세종", "부산", "울산", "대구", "경북", "경남", "전남", "광주", "전북", "제주", "전국"]
+        locationAreaDD.textColor = UIColor.black
+        locationAreaDD.selectedTextColor = UIColor.blue
+        locationAreaDD.backgroundColor = UIColor.white
+        locationAreaDD.show()
+        locationAreaDD.selectionAction = { [unowned self] (index: Int, item: String) in
+            print("선택한 아이템 : \(item)")
+            print("인덱스 : \(index)")
+        }
     }
 }

@@ -12,12 +12,15 @@ class SignUpNickNameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "닉네임";
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpLocationVC") as? SignUpLocationVC else {return}
+        print("실행")
         self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
     
 }
