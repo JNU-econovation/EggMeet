@@ -41,4 +41,6 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
         self.menteeAreaDescriptionTextView.layer.borderWidth = 1.0
         self.menteeAreaDescriptionTextView.layer.borderColor = UIColor.black.cgColor
     }
+    
+    
 }
