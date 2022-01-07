@@ -8,7 +8,7 @@ target 'EggMeet' do
 pod 'KakaoSDKAuth'
 pod 'KakaoSDKUser'
 pod 'KakaoSDKCommon'
-pod 'DropDown', '2.3.2'
+pod 'DropDown', '2.3.13'
 
   # Pods for EggMeet
 
