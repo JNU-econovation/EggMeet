@@ -12,7 +12,8 @@ class SignUpNickNameVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "닉네임";
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){

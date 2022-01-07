@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="1738.4000000000001" y="83.208395802098963"/>
         </scene>
-        <!--Sign Up Mento Detail IntroduceVC-->
+        <!--멘토 상세 소개-->
         <scene sceneID="OKj-ai-wWZ">
             <objects>
-                <viewController storyboardIdentifier="SignUpMentoDetailIntroduceVC" id="nFd-fJ-OoC" customClass="SignUpMentoDetailIntroduceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpMentoDetailIntroduceVC" title="멘토 상세 소개" id="nFd-fJ-OoC" customClass="SignUpMentoDetailIntroduceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lBL-Fy-ClE">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -136,6 +136,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="7Bf-SE-pTd"/>
+                    <connections>
+                        <outlet property="mentorIntroduceTextView" destination="akA-F3-CCT" id="Dnv-4J-OKF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N57-Gr-wuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,10 +203,10 @@
             </objects>
             <point key="canvasLocation" x="3629.5999999999999" y="976.46176911544239"/>
         </scene>
-        <!--Sign Up Nick NameVC-->
+        <!--닉네임-->
         <scene sceneID="hGw-RC-yf3">
             <objects>
-                <viewController storyboardIdentifier="SignUpNickNameVC" id="VFS-lx-X5e" customClass="SignUpNickNameVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpNickNameVC" title="닉네임" id="VFS-lx-X5e" customClass="SignUpNickNameVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yQl-7C-bWT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,10 +250,10 @@
             </objects>
             <point key="canvasLocation" x="80.799999999999997" y="978.26086956521749"/>
         </scene>
-        <!--Sign Up LocationVC-->
+        <!--활동지역-->
         <scene sceneID="OvO-89-15R">
             <objects>
-                <viewController storyboardIdentifier="SignUpLocationVC" id="QiW-3M-FxQ" customClass="SignUpLocationVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpLocationVC" title="활동지역" id="QiW-3M-FxQ" customClass="SignUpLocationVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eb7-RF-gte">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -297,10 +300,10 @@
             </objects>
             <point key="canvasLocation" x="781.60000000000002" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Self IntroduceVC-->
+        <!--자기 소개-->
         <scene sceneID="u1E-0q-5be">
             <objects>
-                <viewController storyboardIdentifier="SignUpSelfIntroduceVC" id="T4m-hU-3mg" customClass="SignUpSelfIntroduceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpSelfIntroduceVC" title="자기 소개" id="T4m-hU-3mg" customClass="SignUpSelfIntroduceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p5u-yO-cFj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -359,15 +362,18 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="dkm-uB-6rz"/>
+                    <connections>
+                        <outlet property="selfIntroduceTextView" destination="onb-ow-i1F" id="MdB-k8-vb9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcO-Tl-eqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1472.8" y="977.36131934032994"/>
         </scene>
-        <!--Sign Up Mento Area SelectionVC-->
+        <!--멘토 분야 선택-->
         <scene sceneID="Hwy-CG-rXn">
             <objects>
-                <viewController storyboardIdentifier="SignUpMentoAreaSelectionVC" id="ces-hf-4fh" customClass="SignUpMentoAreaSelectionVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpMentoAreaSelectionVC" title="멘토 분야 선택" id="ces-hf-4fh" customClass="SignUpMentoAreaSelectionVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QsF-UL-OlQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
