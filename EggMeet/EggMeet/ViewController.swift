@@ -119,15 +119,33 @@ extension ViewController: ASAuthorizationControllerDelegate {
             var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
             let apiURL: String = "http://" + mainAddress + "/auth/login"
             
-            // 전송할 정보
-            let paramTestToken = Bundle.main.infoDictionary!["TEST_APPLE_SOCIAL_TOKEN"] as? String ?? ""
  
-            let loginParam: Parameters = [
+            let loginParam = [
                 "loginType": "APPLE",
-                "socialToken" : paramTestToken
-                ]
-            AF.request(apiURL, method: .get, parameters: loginParam, encoding: URLEncoding.default, headers: ["Content-Type" : "application/json"]).validate(statusCode: 200..<500).responseJSON{
-                (json) in print(json)
+                "socialToken" : user.accessTokenString
+                ] as Dictionary
+            
+            var request = URLRequest(url: URL(string: apiURL)!)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.timeoutInterval = 10
+            
+            do {
+                try request.httpBody = JSONSerialization.data(withJSONObject: loginParam, options: [])
+            } catch {
+                print("http Body Error")
+            }
+            
+            AF.request(request).responseString{ (responce) in
+                switch responce.result {
+                case .success:
+                    print("Post 성공")
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                case .failure(let error):
+                    print("error")
+                }
+                
             }
             
 
