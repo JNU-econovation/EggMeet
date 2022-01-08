@@ -245,6 +245,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fMd-2Z-vFW"/>
+                    <connections>
+                        <outlet property="nicknameTextField" destination="f4K-Ah-7lE" id="bv5-sJ-4Y8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jI0-es-b8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -783,10 +786,10 @@
             </objects>
             <point key="canvasLocation" x="6536.8000000000002" y="975.56221889055485"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Show Terms Of ServiceVC-->
         <scene sceneID="gdq-xa-qLO">
             <objects>
-                <viewController id="N2a-8Y-LCE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpShowTermsOfServiceVC" id="N2a-8Y-LCE" customClass="SignUpShowTermsOfServiceVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RF1-lR-x6h">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -852,12 +855,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="전문보기"/>
+                                <connections>
+                                    <action selector="windSignUpShowTermsOfServiceVC:" destination="yRc-DP-q50" eventType="touchUpInside" id="y6a-8i-ff3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-z8-bAD">
                                 <rect key="frame" x="286" y="366" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="전문보기"/>
+                                <connections>
+                                    <action selector="windSignUpShowPersonalInfoView:" destination="yRc-DP-q50" eventType="touchUpInside" id="qQo-rS-8bO"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="서비스 이용약관 및 개인정보 처리방침 동의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jci-hm-2hj">
                                 <rect key="frame" x="69" y="178" width="237" height="23"/>
@@ -879,10 +888,10 @@
             </objects>
             <point key="canvasLocation" x="7272.8000000000002" y="975.56221889055485"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Show Personal InfoVC-->
         <scene sceneID="9Ii-oX-ANw">
             <objects>
-                <viewController id="x8c-fK-dSz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpShowPersonalInfoVC" id="x8c-fK-dSz" customClass="SignUpShowPersonalInfoVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Xx-s6-IPi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

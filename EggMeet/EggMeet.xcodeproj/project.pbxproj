@@ -19,6 +19,8 @@
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
+		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
+		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
 		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
 		19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */; };
 		19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */; };
@@ -53,6 +55,8 @@
 		193DAC0327887423009F71AA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
+		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
+		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
 		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
 		19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaCategoryVC.swift; sourceTree = "<group>"; };
 		19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaDescriptionVC.swift; sourceTree = "<group>"; };
@@ -164,6 +168,8 @@
 				19FEC49A2782E28100F18D8F /* SignUpSetChannelVC.swift */,
 				19FEC49C2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift */,
 				19FEC49E2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift */,
+				19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */,
+				19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */,
 				19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */,
 				193DABFC278856FE009F71AA /* RegisterUser.swift */,
 			);
@@ -302,8 +308,10 @@
 				192C408B277869AD003055DD /* User.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
 				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
+				19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */,
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
+				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
 				19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */,
 				9CE4B6872781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift in Sources */,

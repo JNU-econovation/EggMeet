@@ -44,8 +44,27 @@ class SignUpCheckTermsOfServiceVC: UIViewController {
             self.navigationController?.pushViewController(nextVC, animated: true)
 
         } else {
+            checkAlert()
             print("둘 다 동의해주세요!")
             return
         }
      }
+    
+    @IBAction func windSignUpShowPersonalInfoView(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpShowPersonalInfoVC") as? SignUpShowPersonalInfoVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func windSignUpShowTermsOfServiceVC(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpShowTermsOfServiceVC") as? SignUpShowTermsOfServiceVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func checkAlert(){
+        let alert = UIAlertController(title: "약관 동의", message: "모두 동의해주세요.", preferredStyle: UIAlertController.Style.alert)
+        let cancelButton = UIAlertAction(title: "확인", style: .default , handler: nil)
+        alert.addAction(cancelButton)
+        present(alert, animated: true, completion: nil)
+    }
+    
 }
