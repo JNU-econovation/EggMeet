@@ -119,20 +119,39 @@ extension ViewController: ASAuthorizationControllerDelegate {
             var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
             let apiURL: String = "http://" + mainAddress + "/auth/login"
             
-            // 전송할 정보
-            let paramTestToken = Bundle.main.infoDictionary!["TEST_APPLE_SOCIAL_TOKEN"] as? String ?? ""
-            let PARAM: Parameters = [
+ 
+            let loginParam = [
                 "loginType": "APPLE",
-                // user.accessTokenString을 전송해주어야함.
-                "socialToken": paramTestToken
-            ] as Dictionary
-            NSLog("paramTestToken : \(paramTestToken)")
+                "socialToken" : user.accessTokenString
+                ] as Dictionary
             
+            var request = URLRequest(url: URL(string: apiURL)!)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.timeoutInterval = 10
             
-            AF.request(apiURL, method: .get, parameters: PARAM, encoding: URLEncoding.default, headers: ["Content-Type":"application/json", "Accept":"application/json"]).validate(statusCode: 200..<300).responseJSON{ (json) in
-                print(json)
+            do {
+                try request.httpBody = JSONSerialization.data(withJSONObject: loginParam, options: [])
+            } catch {
+                print("http Body Error")
             }
             
+            AF.request(request).responseString{ (responce) in
+                switch responce.result {
+                case .success:
+                    print("Post 성공")
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                case .failure(let error):
+                    print("error")
+                }
+                
+            }
+            
+
+            
+            
+                
         
             // segue 가 들어갈 공간. Navigation 으로 segue 한다.
             
@@ -151,4 +170,6 @@ extension ViewController: ASAuthorizationControllerPresentationContextProviding 
         return view.window!
     }
 }
+
+
 
