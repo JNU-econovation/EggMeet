@@ -10,6 +10,8 @@ import UIKit
 
 class SignUpMentoDetailIntroduceVC: UIViewController{
     @IBOutlet weak var mentorIntroduceTextView: UITextView!
+    let mentorIntroduceKey = "mentorIntroduce"
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,8 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
     }
     
     @IBAction func windSignUpMentorAreaCareerView(_ sender: Any){
+        ud.set(mentorIntroduceTextView.text, forKey: mentorIntroduceKey)
+        
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentorAreaCareerVC") as? SignUpMentorAreaCareerVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
     }

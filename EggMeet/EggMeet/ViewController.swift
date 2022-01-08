@@ -9,6 +9,8 @@ import UIKit
 import AuthenticationServices
 import KakaoSDKAuth
 import KakaoSDKUser
+import Alamofire
+import Foundation
 
 class ViewController: UIViewController {
     
@@ -108,9 +110,49 @@ extension ViewController: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let credentials as ASAuthorizationAppleIDCredential:
             
+            // token과 user 정보가 담겨있는 User 객체
             let user = User(credentials: credentials)
+            // 받아온 user 정보 debug 결과 로그로 출력
+            NSLog(user.debugDescription)
             
-            print(user.debugDescription)
+            // api 주소
+            var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+            let apiURL: String = "http://" + mainAddress + "/auth/login"
+            
+ 
+            let loginParam = [
+                "loginType": "APPLE",
+                "socialToken" : user.accessTokenString
+                ] as Dictionary
+            
+            var request = URLRequest(url: URL(string: apiURL)!)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.timeoutInterval = 10
+            
+            do {
+                try request.httpBody = JSONSerialization.data(withJSONObject: loginParam, options: [])
+            } catch {
+                print("http Body Error")
+            }
+            
+            AF.request(request).responseString{ (responce) in
+                switch responce.result {
+                case .success:
+                    print("Post 성공")
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                case .failure(let error):
+                    print("error")
+                }
+                
+            }
+            
+
+            
+            
+                
+        
             // segue 가 들어갈 공간. Navigation 으로 segue 한다.
             
             
@@ -118,6 +160,7 @@ extension ViewController: ASAuthorizationControllerDelegate {
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        
         print("something bad happened", error)
     }
 }
@@ -127,4 +170,6 @@ extension ViewController: ASAuthorizationControllerPresentationContextProviding 
         return view.window!
     }
 }
+
+
 
