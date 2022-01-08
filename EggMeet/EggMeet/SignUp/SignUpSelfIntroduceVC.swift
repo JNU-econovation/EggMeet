@@ -10,6 +10,8 @@ import UIKit
 
 class SignUpSelfIntroduceVC: UIViewController {
     @IBOutlet weak var selfIntroduceTextView: UITextView!
+    let selfIntroduceKey = "selfIntroduce"
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,8 @@ class SignUpSelfIntroduceVC: UIViewController {
     }
     
     @IBAction func windSignUpMentoAreaSelectionView(_ sender: Any){
+        ud.set(self.selfIntroduceTextView.text, forKey: selfIntroduceKey)
+        
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentoAreaSelectionVC") as? SignUpMentoAreaSelectionVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
     }

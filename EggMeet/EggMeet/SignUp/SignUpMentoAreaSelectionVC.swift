@@ -12,6 +12,8 @@ import DropDown
 class SignUpMentoAreaSelectionVC: UIViewController{
     @IBOutlet weak var mentorAreaButton: UIButton!
     let mentorAreaDD: DropDown = DropDown()
+    let mentoAreaKey = "mentoArea"
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
         mentorAreaDD.selectionAction = { [unowned self] (index: Int, item: String) in
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
+            ud.set(item, forKey: mentoAreaKey)
         }
     }
     

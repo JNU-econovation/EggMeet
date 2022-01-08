@@ -12,6 +12,8 @@ import DropDown
 class SignUpLocationVC: UIViewController {
     @IBOutlet weak var locationAreaButton: UIButton!
     let locationAreaDD: DropDown = DropDown()
+    let locationKey = "location"
+    let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,7 @@ class SignUpLocationVC: UIViewController {
         locationAreaDD.selectionAction = { [unowned self] (index: Int, item: String) in
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
+            ud.set(item, forKey: locationKey)
         }
     }
 }
