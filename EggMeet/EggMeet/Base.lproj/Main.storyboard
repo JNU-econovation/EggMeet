@@ -245,6 +245,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="fMd-2Z-vFW"/>
+                    <connections>
+                        <outlet property="nicknameTextField" destination="f4K-Ah-7lE" id="bv5-sJ-4Y8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jI0-es-b8n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
