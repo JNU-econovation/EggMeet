@@ -121,18 +121,19 @@ extension ViewController: ASAuthorizationControllerDelegate {
             
             // 전송할 정보
             let paramTestToken = Bundle.main.infoDictionary!["TEST_APPLE_SOCIAL_TOKEN"] as? String ?? ""
-            let PARAM: Parameters = [
+ 
+            let loginParam: Parameters = [
                 "loginType": "APPLE",
-                // user.accessTokenString을 전송해주어야함.
-                "socialToken": paramTestToken
-            ] as Dictionary
-            NSLog("paramTestToken : \(paramTestToken)")
-            
-            
-            AF.request(apiURL, method: .get, parameters: PARAM, encoding: URLEncoding.default, headers: ["Content-Type":"application/json", "Accept":"application/json"]).validate(statusCode: 200..<300).responseJSON{ (json) in
-                print(json)
+                "socialToken" : paramTestToken
+                ]
+            AF.request(apiURL, method: .get, parameters: loginParam, encoding: URLEncoding.default, headers: ["Content-Type" : "application/json"]).validate(statusCode: 200..<500).responseJSON{
+                (json) in print(json)
             }
             
+
+            
+            
+                
         
             // segue 가 들어갈 공간. Navigation 으로 segue 한다.
             
@@ -151,4 +152,6 @@ extension ViewController: ASAuthorizationControllerPresentationContextProviding 
         return view.window!
     }
 }
+
+
 
