@@ -112,23 +112,28 @@ extension ViewController: ASAuthorizationControllerDelegate {
             
             // token과 user 정보가 담겨있는 User 객체
             let user = User(credentials: credentials)
-            print(user.debugDescription)
+            // 받아온 user 정보 debug 결과 로그로 출력
+            NSLog(user.debugDescription)
+            
             // api 주소
-            if var apiURL = Bundle.main.infoDictionary?["API_URL"] as? String{
-                print(apiURL)
-            }
-        
+            var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+            let apiURL: String = "http://" + mainAddress + "/auth/login"
             
             // 전송할 정보
+            let paramTestToken = Bundle.main.infoDictionary!["TEST_APPLE_SOCIAL_TOKEN"] as? String ?? ""
             let PARAM: Parameters = [
                 "loginType": "APPLE",
-                "socialToken": user.accessTokenString
-            ]
+                // user.accessTokenString을 전송해주어야함.
+                "socialToken": paramTestToken
+            ] as Dictionary
+            NSLog("paramTestToken : \(paramTestToken)")
             
             
+            AF.request(apiURL, method: .get, parameters: PARAM, encoding: URLEncoding.default, headers: ["Content-Type":"application/json", "Accept":"application/json"]).validate(statusCode: 200..<300).responseJSON{ (json) in
+                print(json)
+            }
             
-            
-            
+        
             // segue 가 들어갈 공간. Navigation 으로 segue 한다.
             
             
