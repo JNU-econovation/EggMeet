@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpShowTermsOfServiceVC: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+}

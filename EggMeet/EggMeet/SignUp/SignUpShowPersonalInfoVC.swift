@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import UIKit
+
+class SignUpShowPersonalInfoVC: UIViewController{
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+
+    
+}
