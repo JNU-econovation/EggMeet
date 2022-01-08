@@ -28,5 +28,10 @@ struct RegisterUser {
     let role: String?
     let sex: String
     let socialToken: String
+    var getDictionary :[String : Any]
     
+    func makeRegisterParameters(){
+
+    }
 }
+
