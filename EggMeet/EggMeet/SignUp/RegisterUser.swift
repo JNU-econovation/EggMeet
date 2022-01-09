@@ -84,26 +84,25 @@ struct RegisterUser {
     
     func setDummyDataRegisterParameters() -> [String: Any]{
         let JSONDictionary: [String: Any] = [
-            "age": "24",
-            "description": "",
-            "email": "dbsdltjd3701@naver.com",
-            "location": "GWANGJU_BUKGU",
-            "loginType": "APPLE",
-            "menteeCategory": "",
-            "menteeDescription": "i m noob",
-            "mentorCareer": "undergraduate student",
-            "mentorCategory": "",
-            "mentorDescription": "write mentor description",
-            "mentorGrowthPoint": "5",
-            "mentorLink": "www.naver.com",
-            "name": "yunseong",
-            "offlineAvailable": true,
-            "onlineAvailable": true,
-            "pictureIndex": "",
-            "role": "",
+            "name": "test",
+            "age": 10,
             "sex": "MALE",
-            "socialToken": self.socialToken ?? ""
+            "description": "test",
+            "pictureIndex": 0,
+            "isOnlineAvailable": true,
+            "isOfflineAvailable": true,
+            "mentorCategory": "PROGRAMMING_C",
+            "mentorDescription": "test",
+            "mentorCareer": "test",
+            "mentorLink": "test",
+            "mentorGrowthPoint": 5,
+            "menteeCategory": "PROGRAMMING_CPP",
+            "menteeDescription": "test",
+            "loginType": "APPLE",
+            "socialToken": ud.string(forKey: "socialToken") ?? "",
+            "role": "ROLE_USER"
         ]
+        NSLog("dummyData : \(JSONDictionary)")
         return JSONDictionary
     }
     
