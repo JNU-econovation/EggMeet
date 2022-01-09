@@ -120,11 +120,15 @@ extension ViewController: ASAuthorizationControllerDelegate {
             var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
             let apiURL: String = "http://" + mainAddress + "/auth/login"
             
+            let ud = UserDefaults.standard
+            
+            ud.set(user.accessTokenString, forKey: "socialToken")
  
             let loginParam = [
                 "loginType": "APPLE",
                 "socialToken" : user.accessTokenString
                 ] as Dictionary
+            
             
             var request = URLRequest(url: URL(string: apiURL)!)
             request.httpMethod = "POST"
