@@ -11,6 +11,10 @@ import UIKit
 class SignUpEndVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
+        let registerUser = RegisterUser();
+        registerUser.requestRegisterInformation()
     }
+    
+    
     
 }
