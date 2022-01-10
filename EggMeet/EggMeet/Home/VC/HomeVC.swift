@@ -10,12 +10,62 @@ import UIKit
 
 class HomeVC: UIViewController {
     
+    private let tableView = UITableView()
+    private let headerView = HomeHeaderView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "";
+        setUp()
     }
     
-    @IBAction func moveToGrowthPoint(_ sender: UIButton){
-        tabBarController?.selectedIndex = 1
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+
+    private func setUp() {
+        attribute()
+        layout()
+    }
+
+    private func attribute() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.tableHeaderView = headerView.tableHeaderView
+        headerView.setUp()
+        updateHederViewLayout()
+    }
+
+    private func layout() {
+        view.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+          tableView.topAnchor.constraint(equalTo: view.topAnchor),
+          tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+          tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+          tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+      ])
+    }
+    
+    private func updateHederViewLayout() {
+        headerView.tableHeaderView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 100)
+        tableView.tableHeaderView = headerView.tableHeaderView
+        tableView.layoutIfNeeded()
+    }
+}
+
+extension HomeVC: UITableViewDelegate {
+
+}
+
+extension HomeVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+      return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+      let cell = UITableViewCell()
+      cell.textLabel?.text = "\(indexPath.row)"
+      return cell
     }
 }

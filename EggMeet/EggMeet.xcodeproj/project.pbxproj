@@ -38,6 +38,7 @@
 		9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4B695278BFB1A003AEB90 /* HomeStoryboard.storyboard */; };
 		9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B697278BFFAE003AEB90 /* HomeVC.swift */; };
 		9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B69C278C07A5003AEB90 /* GrowthPointVC.swift */; };
+		9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +79,7 @@
 		9CE4B695278BFB1A003AEB90 /* HomeStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeStoryboard.storyboard; sourceTree = "<group>"; };
 		9CE4B697278BFFAE003AEB90 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9CE4B69C278C07A5003AEB90 /* GrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthPointVC.swift; sourceTree = "<group>"; };
+		9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		B54572B4BFE2D6FE223E9867 /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.debug.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -204,6 +206,7 @@
 		9CE4B69A278C0095003AEB90 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CE4B69E278C13B3003AEB90 /* HeaderView */,
 				9CE4B69B278C00AD003AEB90 /* StoryBoard */,
 			);
 			path = View;
@@ -215,6 +218,14 @@
 				9CE4B695278BFB1A003AEB90 /* HomeStoryboard.storyboard */,
 			);
 			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		9CE4B69E278C13B3003AEB90 /* HeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */,
+			);
+			path = HeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -345,6 +356,7 @@
 				192C408D27786A32003055DD /* MainViewController.swift in Sources */,
 				19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */,
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
+				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
