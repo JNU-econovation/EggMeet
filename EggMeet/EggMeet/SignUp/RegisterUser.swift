@@ -10,6 +10,7 @@ import UIKit
 import Alamofire
 
 // JSON으로 보낼 구조체
+// isOnlineAvailable 로 변수명 변경 (offline도)
 struct RegisterUser {
     let age: String?
     let description: String?
@@ -87,10 +88,12 @@ struct RegisterUser {
             "name": "test",
             "age": 10,
             "sex": "MALE",
+            "email": "dbsdltjd123@naver.com",
+            "location": "ALL",
             "description": "test",
             "pictureIndex": 0,
-            "isOnlineAvailable": true,
-            "isOfflineAvailable": true,
+            "onlineAvailable": true,
+            "offlineAvailable": true,
             "mentorCategory": "PROGRAMMING_C",
             "mentorDescription": "test",
             "mentorCareer": "test",
@@ -109,7 +112,7 @@ struct RegisterUser {
     func requestRegisterInformation(){
         var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
         let apiURL: String = "http://" + mainAddress + "/auth/register"
-        let loginParam = setDummyDataRegisterParameters()
+        let loginParam = setDummyDataRegisterParameters() as Dictionary
         
         var request = URLRequest(url: URL(string: apiURL)!)
         request.httpMethod = "POST"
@@ -127,7 +130,7 @@ struct RegisterUser {
             case .success:
                 print("Post 성공")
             case .failure(let error):
-                print("error")
+                print("error \(error)")
             }
         }
     }
