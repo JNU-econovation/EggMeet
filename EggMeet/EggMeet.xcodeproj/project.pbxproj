@@ -39,6 +39,8 @@
 		9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B697278BFFAE003AEB90 /* HomeVC.swift */; };
 		9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B69C278C07A5003AEB90 /* GrowthPointVC.swift */; };
 		9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */; };
+		9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A1278C231F003AEB90 /* HomeUpperHeaderView.swift */; };
+		9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +82,8 @@
 		9CE4B697278BFFAE003AEB90 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9CE4B69C278C07A5003AEB90 /* GrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GrowthPointVC.swift; sourceTree = "<group>"; };
 		9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		9CE4B6A1278C231F003AEB90 /* HomeUpperHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUpperHeaderView.swift; sourceTree = "<group>"; };
+		9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLowerHeaderView.swift; sourceTree = "<group>"; };
 		B54572B4BFE2D6FE223E9867 /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.debug.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */,
+				9CE4B6A1278C231F003AEB90 /* HomeUpperHeaderView.swift */,
+				9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */,
 			);
 			path = HeaderView;
 			sourceTree = "<group>";
@@ -357,6 +363,7 @@
 				19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */,
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
+				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
@@ -366,6 +373,7 @@
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
 				9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */,
+				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,

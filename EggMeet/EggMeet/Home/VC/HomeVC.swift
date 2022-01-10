@@ -51,6 +51,12 @@ class HomeVC: UIViewController {
         headerView.tableHeaderView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 100)
         tableView.tableHeaderView = headerView.tableHeaderView
         tableView.layoutIfNeeded()
+        
+        self.view.addSubview(headerView.stackView)
+        headerView.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 30).isActive = true
+        headerView.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        self.view.bottomAnchor.constraint(equalTo: headerView.stackView.bottomAnchor).isActive = true
+        self.view.trailingAnchor.constraint(equalTo: headerView.stackView.trailingAnchor).isActive = true
     }
 }
 
