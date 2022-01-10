@@ -40,7 +40,6 @@ class ViewController: UIViewController {
         
         controller.delegate = self
         controller.presentationContextProvider = self
-        
         controller.performRequests()
     }
     
@@ -110,6 +109,8 @@ extension ViewController: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let credentials as ASAuthorizationAppleIDCredential:
             
+            let userIdentifer = credentials.user
+            NSLog("userID : \(credentials.user)")
             // token과 user 정보가 담겨있는 User 객체
             let user = User(credentials: credentials)
             // 받아온 user 정보 debug 결과 로그로 출력
@@ -119,11 +120,15 @@ extension ViewController: ASAuthorizationControllerDelegate {
             var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
             let apiURL: String = "http://" + mainAddress + "/auth/login"
             
+            let ud = UserDefaults.standard
+            
+            ud.set(user.accessTokenString, forKey: "socialToken")
  
             let loginParam = [
                 "loginType": "APPLE",
                 "socialToken" : user.accessTokenString
                 ] as Dictionary
+            
             
             var request = URLRequest(url: URL(string: apiURL)!)
             request.httpMethod = "POST"
