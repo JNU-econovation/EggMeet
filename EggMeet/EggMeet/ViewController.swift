@@ -131,20 +131,31 @@ extension ViewController: ASAuthorizationControllerDelegate {
             
             
             var request = URLRequest(url: URL(string: apiURL)!)
+            
             request.httpMethod = "POST"
             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
             request.timeoutInterval = 10
             
             do {
                 try request.httpBody = JSONSerialization.data(withJSONObject: loginParam, options: [])
+                NSLog("httpBody: \(String(data:request.httpBody!, encoding: .utf8))")
             } catch {
                 print("http Body Error")
             }
             
-            AF.request(request).responseString{ (responce) in
-                switch responce.result {
+            
+            AF.request(request).responseString{ (response) in
+                switch response.result {
                 case .success:
+                    // statusCode 에 따라서 구현
+                    // ban 유저 인지 확인
+                    // ban 유저 이면 -> 경고창
+                    // ban 유저 아니면 기존 유저인지 확인
+                    // 기존 유저 이면 ->
+                    // 기존 유저 아니면 -> 회원가입
                     print("Post 성공")
+                    print("StatusCode:\(response.response?.statusCode)")
+                    print("response: \(response.debugDescription)")
                     guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
                     self.navigationController?.pushViewController(nextVC, animated: true)
                 case .failure(let error):

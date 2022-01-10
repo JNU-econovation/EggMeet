@@ -92,8 +92,8 @@ struct RegisterUser {
             "location": "ALL",
             "description": "test",
             "pictureIndex": 0,
-            "onlineAvailable": true,
-            "offlineAvailable": true,
+            "isOnlineAvailable": true,
+            "isOfflineAvailable": true,
             "mentorCategory": "PROGRAMMING_C",
             "mentorDescription": "test",
             "mentorCareer": "test",
@@ -125,12 +125,14 @@ struct RegisterUser {
             print("http Body Error")
         }
         
-        AF.request(request).responseString{ (responce) in
-            switch responce.result {
+        AF.request(request).responseString{ (response) in
+            switch response.result {
             case .success:
                 print("Post 성공")
+                print("debugDescription:\(response.debugDescription)")
             case .failure(let error):
                 print("error \(error)")
+                print("debugDescription:\(response.debugDescription)")
             }
         }
     }
