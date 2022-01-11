@@ -24,7 +24,7 @@ struct RegisterUser {
     let mentorDescription: String?
     let mentorGrowthPoint: Int?
     let mentorLink: String?
-    let name: String?
+    let nickname: String?
     let isOfflineAvailable: Bool
     let isOnlineAvailable: Bool
     let phoneNumber: String?
@@ -41,14 +41,14 @@ struct RegisterUser {
         self.email = ud.string(forKey: "email")
         self.location = ud.string(forKey: "location")
         self.loginType = ud.string(forKey: "loginType")
-        self.menteeCategory = ud.string(forKey: "menteeAreaCategory")
-        self.menteeDescription = ud.string(forKey: "menteeAreaDescription")
-        self.mentorCareer = ud.string(forKey: "mentorAreaCareer")
-        self.mentorCategory = ud.string(forKey: "mentorAreaCategory")
-        self.mentorDescription = ud.string(forKey: "mentorAreaDescription")
+        self.menteeCategory = ud.string(forKey: "menteeCategory")
+        self.menteeDescription = ud.string(forKey: "menteeDescription")
+        self.mentorCareer = ud.string(forKey: "mentorCareer")
+        self.mentorCategory = ud.string(forKey: "mentorCategory")
+        self.mentorDescription = ud.string(forKey: "mentorDescription")
         self.mentorGrowthPoint = ud.integer(forKey: "growthPoint")
-        self.mentorLink = ud.string(forKey: "mentorAreaLink")
-        self.name = ud.string(forKey: "name")
+        self.mentorLink = ud.string(forKey: "mentorLink")
+        self.nickname = ud.string(forKey: "nickname")
         self.isOfflineAvailable = ud.bool(forKey:"isOfflineAvailable")
         self.isOnlineAvailable = ud.bool(forKey: "isOnlineAvailable")
         self.phoneNumber = ud.string(forKey: "phoneNumber")
@@ -60,7 +60,7 @@ struct RegisterUser {
     
     func setRegisterParameters() -> [String: Any]{
         let JSONDictionary: [String: Any] = [
-            "name": self.name ?? "",
+            "nickname": self.nickname ?? "",
             "age": self.age ?? 20,
             "sex": self.sex ?? "MALE",
             "email": self.email ?? "",
@@ -86,7 +86,7 @@ struct RegisterUser {
     
     func setDummyDataRegisterParameters() -> [String: Any]{
         let JSONDictionary: [String: Any] = [
-            "name": "test",
+            "nickname": "test",
             "age": 10,
             "sex": "MALE",
             "email": "dbsdltjd123@naver.com",
