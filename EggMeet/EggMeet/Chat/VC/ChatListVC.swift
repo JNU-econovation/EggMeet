@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ChatListViewController: UITableViewController {
+class ChatListVC: UITableViewController {
     
     var testDataset = [
             ("이윤성", "11:10", "test description 1"),
@@ -58,8 +58,18 @@ class ChatListViewController: UITableViewController {
     
     // 사용자가 행을 선택했을 때
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = self.testList[indexPath.row]
         NSLog("select Row : \(indexPath.row)")
-        
+        performSegue(withIdentifier: "ChatroomSegue", sender: row.nickname)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ChatroomSegue" {
+            let vc = segue.destination as? ChatroomVC
+            if let nickname = sender as? String {
+                vc?.nickname = nickname
+            }
+        }
     }
     
 }
