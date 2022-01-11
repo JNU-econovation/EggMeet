@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         sleep(2)
-        KakaoSDK.initSDK(appKey: "07aa7b932d00980f490b01177a1f3cf6")
+        KakaoSDK.initSDK(appKey: Bundle.main.infoDictionary!["KAKAO_SECRET_KEY"] as? String ?? "")
 
         return true
     }

@@ -496,10 +496,10 @@
             </objects>
             <point key="canvasLocation" x="82.400000000000006" y="83.208395802098963"/>
         </scene>
-        <!--Sign Up Introduce Pop Up View-->
+        <!--Sign Up Introduce Pop UpVC-->
         <scene sceneID="p4H-pX-NiJ">
             <objects>
-                <viewController id="em6-zt-suY" customClass="SignUpIntroducePopUpView" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="em6-zt-suY" customClass="SignUpIntroducePopUpVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uoj-AK-uL8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPh-7E-hgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="1664.617691154423"/>
+            <point key="canvasLocation" x="1473" y="1817"/>
         </scene>
         <!--성장 비용 정하기-->
         <scene sceneID="IQK-0s-k63">
