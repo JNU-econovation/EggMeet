@@ -10,7 +10,7 @@ import UIKit
 
 class HomeVC: UIViewController {
     
-    private let tableView = UITableView()
+    @IBOutlet weak var tableView: UITableView!
     private let headerView = HomeHeaderView()
     
     override func viewDidLoad() {
@@ -22,12 +22,12 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
     }
-
+    
     private func setUp() {
         attribute()
         layout()
     }
-
+    
     private func attribute() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -48,22 +48,9 @@ class HomeVC: UIViewController {
     }
     
     private func updateHederViewLayout() {
-        headerView.stackView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)
+        headerView.stackView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 130)
         tableView.tableHeaderView = headerView.stackView
         tableView.layoutIfNeeded()
-        print("headerview update")
-        
-        
-        //headerView.addSubview(headerView.stackView)
-        //self.view.insertSubview(headerView.stackView, at: 0)
-        
-        /*
-        headerView.stackView.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 30).isActive = true
-        headerView.stackView.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor).isActive = true
-        self.view.bottomAnchor.constraint(equalTo: headerView.stackView.bottomAnchor).isActive = true
-        self.view.trailingAnchor.constraint(equalTo: headerView.stackView.trailingAnchor).isActive = true*/
-        
-        
     }
 }
 
