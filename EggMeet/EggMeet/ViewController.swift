@@ -108,76 +108,62 @@ extension ViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let credentials as ASAuthorizationAppleIDCredential:
-            
-            let userIdentifer = credentials.user
-            NSLog("userID : \(credentials.user)")
-            // token과 user 정보가 담겨있는 User 객체
-            let user = User(credentials: credentials)
-            // 받아온 user 정보 debug 결과 로그로 출력
-            NSLog(user.debugDescription)
-            
-            // api 주소
-            var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
-            let apiURL: String = "http://" + mainAddress + "/auth/login"
-            
             let ud = UserDefaults.standard
-            
+            let user = User(credentials: credentials) // token과 user 정보가 담겨있는 User 객체
             ud.set(user.accessTokenString, forKey: "socialToken")
- 
-            let loginParam = [
-                "loginType": "APPLE",
-                "socialToken" : user.accessTokenString
-                ] as Dictionary
+            NSLog(user.debugDescription)
+            // 초기 로그인 시에, email ud에 추가. 이후 email에 접근할 때는 ud를 통해 접근한다.
+            if(user.email != "") { user.setEmailLocalDB() }
+            authLoginProcess(user: user)
             
-            
-            var request = URLRequest(url: URL(string: apiURL)!)
-            
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.timeoutInterval = 10
-            
-            do {
-                try request.httpBody = JSONSerialization.data(withJSONObject: loginParam, options: [])
-                NSLog("httpBody: \(String(data:request.httpBody!, encoding: .utf8))")
-            } catch {
-                print("http Body Error")
-            }
-            
-            
-            AF.request(request).responseString{ (response) in
-                switch response.result {
-                case .success:
-                    // statusCode 에 따라서 구현
-                    // ban 유저 인지 확인
-                    // ban 유저 이면 -> 경고창
-                    // ban 유저 아니면 기존 유저인지 확인
-                    // 기존 유저 이면 ->
-                    // 기존 유저 아니면 -> 회원가입
-                    print("Post 성공")
-                    print("StatusCode:\(response.response?.statusCode)")
-                    print("response: \(response.debugDescription)")
-                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
-                    self.navigationController?.pushViewController(nextVC, animated: true)
-                case .failure(let error):
-                    print("error")
-                }
-                
-            }
-            
-
-            
-            
-                
         
             // segue 가 들어갈 공간. Navigation 으로 segue 한다.
-            
-            
         default: break
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        
         print("something bad happened", error)
+    }
+
+    func authLoginProcess(user: User){
+        var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+        let apiURL: String = "http://" + mainAddress + "/auth/login"
+        let loginParam = [
+            "loginType": "APPLE",
+            "socialToken" : user.accessTokenString
+            ] as Dictionary
+        var request = URLRequest(url: URL(string: apiURL)!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 10
+        do {
+            try request.httpBody = JSONSerialization.data(withJSONObject: loginParam, options: [])
+            NSLog("httpBody: \(String(data:request.httpBody!, encoding: .utf8))")       // Log 출력
+        } catch {
+            print("http Body Error")    // 에러 출력
+        }
+        AF.request(request).responseString{ (response) in
+            switch response.result {
+            case .success:
+                // statusCode 에 따라서 구현
+                // ban 유저 인지 확인
+                // ban 유저 이면 -> 경고창
+                // ban 유저 아니면 기존 유저인지 확인
+                // 기존 유저 이면 ->
+                // 기존 유저 아니면 -> 회원가입
+                print("Post 성공")
+                print("StatusCode:\(response.response?.statusCode)")
+                print("response: \(response.debugDescription)")
+                guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
+                self.navigationController?.pushViewController(nextVC, animated: true)
+            case .failure(let error):
+                print("error")
+            }
+        }
+    }
+    
+    func checkBanUser(){
+        
     }
 }
 

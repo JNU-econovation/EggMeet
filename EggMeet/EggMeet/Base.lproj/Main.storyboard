@@ -537,7 +537,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nPh-7E-hgr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1472.8" y="1664.617691154423"/>
+            <point key="canvasLocation" x="1473" y="1817"/>
         </scene>
         <!--성장 비용 정하기-->
         <scene sceneID="IQK-0s-k63">
