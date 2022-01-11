@@ -59,6 +59,7 @@ class ChatListViewController: UITableViewController {
     // 사용자가 행을 선택했을 때
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         NSLog("select Row : \(indexPath.row)")
+        
     }
     
 }
