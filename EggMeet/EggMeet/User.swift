@@ -23,6 +23,13 @@ struct User {
         self.email = credentials.email ?? ""
         self.accessTokenString = String(data: credentials.identityToken!, encoding: .utf8)!
     }
+    
+    func setEmailLocalDB(){
+        let ud = UserDefaults.standard
+            ud.set(self.email, forKey: "email")
+        NSLog("이메일 UD에 추가. \(ud.string(forKey: "email"))")
+    }
+    
 }
 
 extension User: CustomDebugStringConvertible{
