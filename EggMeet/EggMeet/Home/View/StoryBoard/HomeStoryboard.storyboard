@@ -16,19 +16,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="홈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x06-Uw-dt6">
-                                <rect key="frame" x="169" y="203" width="15" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="E5e-OJ-BZ3">
+                                <rect key="frame" x="68" y="173" width="308" height="581"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" selectedImage="homekit" id="2g7-gh-dyI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="E5e-OJ-BZ3" id="Xnl-Ok-DSI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -66,35 +67,20 @@
                 <tabBarController storyboardIdentifier="HomeTabBar" automaticallyAdjustsScrollViewInsets="NO" id="Qat-BD-NR5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4y2-7K-xLw">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="OhK-jt-Zjo"/>
-                        <segue destination="Wr0-Pc-3Ts" kind="relationship" relationship="viewControllers" id="3YV-pE-jZs"/>
                         <segue destination="OXB-SO-XUY" kind="relationship" relationship="viewControllers" id="dBi-ok-SdM"/>
                         <segue destination="z6w-rC-VXR" kind="relationship" relationship="viewControllers" id="dmB-Wv-KbO"/>
+                        <segue destination="ZbK-r9-xYz" kind="relationship" relationship="viewControllers" id="USf-9K-JJU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw9-Ro-0sY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="63.768115942028992" y="89.732142857142847"/>
-        </scene>
-        <!--채팅-->
-        <scene sceneID="iMe-zR-anO">
-            <objects>
-                <viewController id="Wr0-Pc-3Ts" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="c04-eG-0rZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="c4X-C3-vMt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="채팅" image="message" catalog="system" selectedImage="message" id="QCL-uy-hPh"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="D9l-ol-XoD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="16" y="927"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="ceq-Mm-2NT">
@@ -112,10 +98,19 @@
             </objects>
             <point key="canvasLocation" x="-901" y="927"/>
         </scene>
+        <!--ChatVC-->
+        <scene sceneID="pxx-of-OW1">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" referencedIdentifier="ChatVC" id="ZbK-r9-xYz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fOV-3T-vs7"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VHa-C7-D8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="563"/>
+        </scene>
     </scenes>
     <resources>
         <image name="homekit" catalog="system" width="128" height="106"/>
-        <image name="message" catalog="system" width="128" height="113"/>
         <image name="moon" catalog="system" width="128" height="121"/>
         <image name="moon.stars" catalog="system" width="124" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>

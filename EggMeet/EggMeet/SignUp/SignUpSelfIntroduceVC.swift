@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpSelfIntroduceVC: UIViewController {
     @IBOutlet weak var selfIntroduceTextView: UITextView!
-    let selfIntroduceKey = "selfIntroduce"
+    let selfIntroduceKey = "description"
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {

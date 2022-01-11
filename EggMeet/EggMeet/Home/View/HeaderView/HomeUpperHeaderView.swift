@@ -17,14 +17,14 @@ class HomeUpperHeaderView: UIView {
     }
     
     func attribute() {
-        upperHeaderView.backgroundColor = .red
+        upperHeaderView.backgroundColor = .yellow
     }
     
     func upperHeaderViewLayout(){
         upperHeaderView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-               upperHeaderView.heightAnchor.constraint(equalToConstant: 40) ,
-               upperHeaderView.widthAnchor.constraint(equalToConstant: 200)
-           ])
+            upperHeaderView.heightAnchor.constraint(equalToConstant: 80),
+            upperHeaderView.widthAnchor.constraint(equalToConstant: 400)
+        ])
     }
 }

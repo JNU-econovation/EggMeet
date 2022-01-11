@@ -17,13 +17,14 @@ class HomeLowerHeaderView: UIView {
     }
     
     func attribute() {
-        lowerHeaderView.backgroundColor = .green
+        lowerHeaderView.backgroundColor = .gray
     }
     
     func lowerHeaderViewLayout(){
         lowerHeaderView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-             lowerHeaderView.heightAnchor.constraint(equalToConstant: 40)
-           ])
+            lowerHeaderView.heightAnchor.constraint(equalToConstant: 50),
+            lowerHeaderView.widthAnchor.constraint(equalToConstant: 400)
+        ])
     }
 }
