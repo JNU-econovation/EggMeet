@@ -12,7 +12,7 @@ import Alamofire
 // JSON으로 보낼 구조체
 // isOnlineAvailable 로 변수명 변경 (offline도)
 struct RegisterUser {
-    let age: String?
+    let age: Int?
     let description: String?
     let email: String?
     let location: String?
@@ -22,20 +22,21 @@ struct RegisterUser {
     let mentorCareer: String?
     let mentorCategory: String?
     let mentorDescription: String?
-    let mentorGrowthPoint: String?
+    let mentorGrowthPoint: Int?
     let mentorLink: String?
     let name: String?
-    let offlineAvailable: Bool
-    let onlineAvailable: Bool
+    let isOfflineAvailable: Bool
+    let isOnlineAvailable: Bool
     let phoneNumber: String?
-    let pictureIndex: String?
+    let pictureIndex: Int?
     let role: String?
     let sex: String?
     let socialToken: String?
     let ud = UserDefaults.standard
     
     init(){
-        self.age = ud.string(forKey: "age")
+        
+        self.age = ud.integer(forKey: "age")
         self.description = ud.string(forKey: "description")
         self.email = ud.string(forKey: "email")
         self.location = ud.string(forKey: "location")
@@ -45,13 +46,13 @@ struct RegisterUser {
         self.mentorCareer = ud.string(forKey: "mentorAreaCareer")
         self.mentorCategory = ud.string(forKey: "mentorAreaCategory")
         self.mentorDescription = ud.string(forKey: "mentorAreaDescription")
-        self.mentorGrowthPoint = ud.string(forKey: "growthPoint")
+        self.mentorGrowthPoint = ud.integer(forKey: "growthPoint")
         self.mentorLink = ud.string(forKey: "mentorAreaLink")
         self.name = ud.string(forKey: "name")
-        self.offlineAvailable = ud.bool(forKey:"offlineAvailable")
-        self.onlineAvailable = ud.bool(forKey: "onlineAvailable")
+        self.isOfflineAvailable = ud.bool(forKey:"isOfflineAvailable")
+        self.isOnlineAvailable = ud.bool(forKey: "isOnlineAvailable")
         self.phoneNumber = ud.string(forKey: "phoneNumber")
-        self.pictureIndex = ud.string(forKey: "pictureIndex")
+        self.pictureIndex = ud.integer(forKey: "pictureIndex")
         self.role = ud.string(forKey: "role")
         self.sex = ud.string(forKey: "sex")
         self.socialToken = ud.string(forKey: "socialToken")
@@ -59,25 +60,25 @@ struct RegisterUser {
     
     func setRegisterParameters() -> [String: Any]{
         let JSONDictionary: [String: Any] = [
-            "age": self.age ?? "",
-            "description": self.description ?? "",
-            "email": self.email ?? "",
-            "location": self.location ?? "",
-            "loginType": self.loginType ?? "",
-            "menteeCategory": self.menteeCategory ?? "",
-            "menteeDescription": self.menteeDescription ?? "",
-            "mentorCareer": self.mentorCareer ?? "",
-            "mentorCategory": self.mentorCategory ?? "",
-            "mentorDescription": self.mentorDescription ?? "",
-            "mentorGrowthPoint": self.mentorGrowthPoint ?? "",
-            "mentorLink": self.mentorLink ?? "",
             "name": self.name ?? "",
-            "offlineAvailable": self.offlineAvailable,
-            "onlineAvailable": self.onlineAvailable,
-            "pictureIndex": self.pictureIndex ?? "",
-            "role": self.role ?? "",
-            "sex": self.sex ?? "",
-            "socialToken": self.socialToken ?? ""
+            "age": self.age ?? 20,
+            "sex": self.sex ?? "MALE",
+            "email": self.email ?? "",
+            "location": self.location ?? "ALL",
+            "description": self.description ?? "",
+            "pictureIndex": self.pictureIndex ?? 1,
+            "isOnlineAvailable": self.isOnlineAvailable,
+            "isOfflineAvailable": self.isOfflineAvailable,
+            "mentorCategory": self.mentorCategory ?? "PROGRAMMING_C",
+            "mentorDescription": self.mentorDescription ?? "test",
+            "mentorCareer": self.mentorCareer ?? "test",
+            "mentorLink": self.mentorLink ?? "test",
+            "mentorGrowthPoint": self.mentorGrowthPoint ?? 1,
+            "menteeCategory": self.menteeCategory ?? "PROGRAMMING_CPP",
+            "menteeDescription": self.menteeDescription ?? "test",
+            "loginType": self.loginType ?? "NONE_TYPE",
+            "socialToken": self.socialToken ?? "",
+            "role": self.role ?? "ROLE_USER"
         ]
         
         return JSONDictionary
