@@ -80,6 +80,39 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X9r-sR-qQe">
+                                <rect key="frame" x="87" y="447" width="218" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="epC-nF-vxe">
+                                <rect key="frame" x="313" y="447" width="46" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="paperplane" catalog="system"/>
+                                <connections>
+                                    <action selector="sendData:" destination="MoS-1D-CbN" eventType="touchUpInside" id="fh8-IV-ff2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n8u-0e-qel">
+                                <rect key="frame" x="91" y="520" width="73" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="소켓연결"/>
+                                <connections>
+                                    <action selector="connectSocket:" destination="MoS-1D-CbN" eventType="touchUpInside" id="XGn-6c-PWw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ho-xD-gdx">
+                                <rect key="frame" x="233" y="520" width="77" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="소켓종료 "/>
+                                <connections>
+                                    <action selector="disconnectSocket:" destination="MoS-1D-CbN" eventType="touchUpInside" id="WAa-4c-gmM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WXn-2Y-2GD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -87,11 +120,12 @@
                     <navigationItem key="navigationItem" id="yFq-MK-gE5"/>
                     <connections>
                         <outlet property="chatOpponentNameLabel" destination="yWC-ly-HZP" id="DD6-el-K52"/>
+                        <outlet property="textField" destination="X9r-sR-qQe" id="sAP-ez-4ye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmP-wh-yWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2254" y="11"/>
+            <point key="canvasLocation" x="2253.6231884057975" y="10.714285714285714"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="3dD-P3-JCm">
@@ -114,6 +148,7 @@
     </scenes>
     <resources>
         <image name="message" catalog="system" width="128" height="113"/>
+        <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
