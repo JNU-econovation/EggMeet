@@ -496,10 +496,10 @@
             </objects>
             <point key="canvasLocation" x="82.400000000000006" y="83.208395802098963"/>
         </scene>
-        <!--Sign Up Introduce Pop Up View-->
+        <!--Sign Up Introduce Pop UpVC-->
         <scene sceneID="p4H-pX-NiJ">
             <objects>
-                <viewController id="em6-zt-suY" customClass="SignUpIntroducePopUpView" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="em6-zt-suY" customClass="SignUpIntroducePopUpVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uoj-AK-uL8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
