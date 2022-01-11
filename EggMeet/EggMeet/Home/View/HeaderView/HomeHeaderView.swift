@@ -20,7 +20,7 @@ class HomeHeaderView: UIView {
     }
     
     func attribute() {
-        //tableHeaderView.backgroundColor = .brown
+        tableHeaderView.backgroundColor = .brown
     }
     
     func headerViewLayout(){
@@ -28,16 +28,23 @@ class HomeHeaderView: UIView {
         upperHeaderView.setUp()
         lowerHeaderView.setUp()
         setStackView()
+        //tableHeaderView.addSubview(stackView)
     }
     
     func setStackView() {
         self.stackView = UIStackView()
         self.stackView.axis = .vertical
         self.stackView.alignment = .fill
-        self.stackView.distribution = .fill
-        self.stackView.spacing = 4
+        self.stackView.distribution = .fillEqually
+        self.stackView.spacing = 0
         self.stackView.translatesAutoresizingMaskIntoConstraints = false
-        self.stackView.addArrangedSubview(upperHeaderView)
-        self.stackView.addArrangedSubview(lowerHeaderView)
+        self.stackView.addArrangedSubview(upperHeaderView.upperHeaderView)
+        self.stackView.addArrangedSubview(lowerHeaderView.lowerHeaderView)
+        
+        print("stackview 추가")
+        NSLayoutConstraint.activate([
+            self.stackView.heightAnchor.constraint(equalToConstant: 200) ,
+            self.stackView.widthAnchor.constraint(equalToConstant: 300)
+           ])
     }
 }

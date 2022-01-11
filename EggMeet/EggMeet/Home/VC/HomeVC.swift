@@ -35,28 +35,35 @@ class HomeVC: UIViewController {
         headerView.setUp()
         updateHederViewLayout()
     }
-
+    
     private func layout() {
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-          tableView.topAnchor.constraint(equalTo: view.topAnchor),
-          tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-          tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-          tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-      ])
+            tableView.topAnchor.constraint(equalTo: view.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+        ])
     }
     
     private func updateHederViewLayout() {
-        headerView.tableHeaderView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 100)
-        tableView.tableHeaderView = headerView.tableHeaderView
+        headerView.stackView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 200)
+        tableView.tableHeaderView = headerView.stackView
         tableView.layoutIfNeeded()
+        print("headerview update")
         
-        self.view.addSubview(headerView.stackView)
-        headerView.stackView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 30).isActive = true
-        headerView.stackView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        
+        //headerView.addSubview(headerView.stackView)
+        //self.view.insertSubview(headerView.stackView, at: 0)
+        
+        /*
+        headerView.stackView.topAnchor.constraint(equalTo: self.headerView.topAnchor, constant: 30).isActive = true
+        headerView.stackView.leadingAnchor.constraint(equalTo: self.headerView.leadingAnchor).isActive = true
         self.view.bottomAnchor.constraint(equalTo: headerView.stackView.bottomAnchor).isActive = true
-        self.view.trailingAnchor.constraint(equalTo: headerView.stackView.trailingAnchor).isActive = true
+        self.view.trailingAnchor.constraint(equalTo: headerView.stackView.trailingAnchor).isActive = true*/
+        
+        
     }
 }
 
