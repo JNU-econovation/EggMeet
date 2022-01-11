@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpMentoDetailIntroduceVC: UIViewController{
     @IBOutlet weak var mentorIntroduceTextView: UITextView!
-    let mentorIntroduceKey = "mentorIntroduce"
+    let mentorIntroduceKey = "mentorDescription"
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {
