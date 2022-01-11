@@ -23,8 +23,8 @@ class HomeLowerHeaderView: UIView {
     func lowerHeaderViewLayout(){
         lowerHeaderView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-             lowerHeaderView.heightAnchor.constraint(equalToConstant: 100) ,
-             lowerHeaderView.widthAnchor.constraint(equalToConstant: 200)
-           ])
+            lowerHeaderView.heightAnchor.constraint(equalToConstant: 50),
+            lowerHeaderView.widthAnchor.constraint(equalToConstant: 400)
+        ])
     }
 }

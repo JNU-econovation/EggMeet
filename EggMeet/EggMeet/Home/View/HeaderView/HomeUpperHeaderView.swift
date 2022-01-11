@@ -23,9 +23,8 @@ class HomeUpperHeaderView: UIView {
     func upperHeaderViewLayout(){
         upperHeaderView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-               upperHeaderView.heightAnchor.constraint(equalToConstant: 100) ,
-               upperHeaderView.widthAnchor.constraint(equalToConstant: 200)
-           ])
-        print("upperheaderview set")
+            upperHeaderView.heightAnchor.constraint(equalToConstant: 80),
+            upperHeaderView.widthAnchor.constraint(equalToConstant: 400)
+        ])
     }
 }
