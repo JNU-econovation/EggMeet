@@ -44,6 +44,8 @@
 		9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */; };
 		9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A1278C231F003AEB90 /* HomeUpperHeaderView.swift */; };
 		9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */; };
+		9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */; };
+		9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +92,8 @@
 		9CE4B69F278C179F003AEB90 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 		9CE4B6A1278C231F003AEB90 /* HomeUpperHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeUpperHeaderView.swift; sourceTree = "<group>"; };
 		9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLowerHeaderView.swift; sourceTree = "<group>"; };
+		9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
+		9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTVC.xib; sourceTree = "<group>"; };
 		B54572B4BFE2D6FE223E9867 /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.debug.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -259,6 +263,7 @@
 		9CE4B69A278C0095003AEB90 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CE4B6A5278D7E26003AEB90 /* Cell */,
 				9CE4B69E278C13B3003AEB90 /* HeaderView */,
 				9CE4B69B278C00AD003AEB90 /* StoryBoard */,
 			);
@@ -281,6 +286,15 @@
 				9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */,
 			);
 			path = HeaderView;
+			sourceTree = "<group>";
+		};
+		9CE4B6A5278D7E26003AEB90 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */,
+				9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -343,6 +357,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */,
 				192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */,
 				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
@@ -414,6 +429,7 @@
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
+				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
