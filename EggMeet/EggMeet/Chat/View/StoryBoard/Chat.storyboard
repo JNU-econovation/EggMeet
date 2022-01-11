@@ -10,7 +10,7 @@
         <!--채팅-->
         <scene sceneID="8C3-KH-PMQ">
             <objects>
-                <tableViewController id="8KB-YS-Rp4" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ChatVC" id="8KB-YS-Rp4" customClass="ChatListViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="Yj0-GS-Tnx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,7 +53,9 @@
                             <outlet property="delegate" destination="8KB-YS-Rp4" id="w0h-cu-9P1"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="채팅" image="message" catalog="system" selectedImage="message" id="fBv-t4-X6V"/>
                     <navigationItem key="navigationItem" title="채팅" id="EoB-x6-BjC"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="84Z-lM-kZb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,6 +81,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="message" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
