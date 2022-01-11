@@ -12,7 +12,7 @@ import DropDown
 class SignUpMentoAreaSelectionVC: UIViewController{
     @IBOutlet weak var mentorAreaButton: UIButton!
     let mentorAreaDD: DropDown = DropDown()
-    let mentoAreaKey = "mentoArea"
+    let mentoAreaKey = "mentorCategory"
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {
