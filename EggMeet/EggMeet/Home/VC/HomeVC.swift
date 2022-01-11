@@ -15,6 +15,8 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nibName = UINib(nibName: "HomeTVC", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         setUp()
     }
     
@@ -31,6 +33,8 @@ class HomeVC: UIViewController {
     private func attribute() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+
         tableView.tableHeaderView = headerView.tableHeaderView
         headerView.setUp()
         updateHederViewLayout()
@@ -64,8 +68,8 @@ extension HomeVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      let cell = UITableViewCell()
-      cell.textLabel?.text = "\(indexPath.row)"
-      return cell
-    }
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTVC
+
+            return cell
+   }
 }
