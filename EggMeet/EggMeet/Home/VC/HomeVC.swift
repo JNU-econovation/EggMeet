@@ -27,20 +27,19 @@ class HomeVC: UIViewController {
     
     private func setUp() {
         attribute()
-        layout()
+        //layout()
     }
     
     private func attribute() {
         tableView.delegate = self
         tableView.dataSource = self
-        
-
-        tableView.tableHeaderView = headerView.tableHeaderView
-        headerView.setUp()
-        updateHederViewLayout()
     }
     
     private func layout() {
+        tableView.tableHeaderView = headerView.tableHeaderView
+        headerView.setUp()
+        updateHederViewLayout()
+        
         view.addSubview(tableView)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -59,17 +58,34 @@ class HomeVC: UIViewController {
 }
 
 extension HomeVC: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+           return 120
+       }
 }
 
 extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return 20
+        return 20
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTVC
-
-            return cell
-   }
+        
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GrowthPointVC") as? GrowthPointVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+        /*
+        switch indexPath.row {
+        case 0: self.performSegue(withIdentifier: "GrowthPointVC", sender: nil)
+        case 1: self.performSegue(withIdentifier: "realTimeObjectDetection", sender: nil)
+        case 2: self.performSegue(withIdentifier: "facialAnalysis", sender: nil)
+        default:
+            self.navigationController?.pushViewController("GrowthPointVC", animated: false)
+            return
+        }*/
+    }
 }
