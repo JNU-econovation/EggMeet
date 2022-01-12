@@ -16,7 +16,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jox-Ek-Ret" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="806" y="-359"/>
+            <point key="canvasLocation" x="782" y="-497"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -50,7 +50,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Home"/>
                                 <connections>
-                                    <segue destination="GaW-2T-Guu" kind="show" id="QGa-0r-OC8"/>
+                                    <action selector="windHome:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NI0-8n-dP5"/>
                                 </connections>
                             </button>
                         </subviews>

@@ -14,10 +14,15 @@ import Foundation
 
 class ViewController: UIViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+    }
+    
+    @IBAction func windHome(_ sender: Any){
+        let sb = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let nextVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     func setupView(){

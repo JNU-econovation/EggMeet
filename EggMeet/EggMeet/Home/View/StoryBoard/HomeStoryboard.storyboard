@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
+        <!--HomeVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="HomeSB" id="Y6W-OH-hqX" customClass="HomeVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="Y6W-OH-hqX" customClass="HomeVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -110,7 +110,7 @@
                             <constraint firstItem="j93-Ve-usp" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="9" id="YP6-Nf-yWZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" selectedImage="homekit" id="2g7-gh-dyI"/>
+                    <navigationItem key="navigationItem" id="j8X-1c-hod"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="E5e-OJ-BZ3" id="Xnl-Ok-DSI"/>
@@ -118,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="973.91304347826099" y="89.732142857142847"/>
+            <point key="canvasLocation" x="1884.057971014493" y="89.732142857142847"/>
         </scene>
         <!--성장포인트-->
         <scene sceneID="0Eo-o9-gjv">
@@ -157,7 +157,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="OhK-jt-Zjo"/>
+                        <segue destination="sLJ-lv-coF" kind="relationship" relationship="viewControllers" id="OhK-jt-Zjo"/>
                         <segue destination="OXB-SO-XUY" kind="relationship" relationship="viewControllers" id="dBi-ok-SdM"/>
                         <segue destination="z6w-rC-VXR" kind="relationship" relationship="viewControllers" id="dmB-Wv-KbO"/>
                         <segue destination="ZbK-r9-xYz" kind="relationship" relationship="viewControllers" id="USf-9K-JJU"/>
@@ -192,6 +192,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHa-C7-D8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-234" y="563"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="ABe-ZL-KUj">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sLJ-lv-coF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" selectedImage="homekit" id="2g7-gh-dyI"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rJ6-1e-Pao">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="nj8-c7-2tU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ac5-UG-mJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="973.91304347826099" y="89.732142857142847"/>
         </scene>
     </scenes>
     <resources>
