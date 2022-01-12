@@ -15,6 +15,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.tintColor = .black
         let nibName = UINib(nibName: "HomeTVC", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         setUp()
@@ -54,6 +55,15 @@ class HomeVC: UIViewController {
         headerView.stackView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 130)
         tableView.tableHeaderView = headerView.stackView
         tableView.layoutIfNeeded()
+    }
+    
+    @IBAction func windFilterVC(_ sender: Any) {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeFilterVC") as! HomeFilterVC
+        self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+        
     }
 }
 
