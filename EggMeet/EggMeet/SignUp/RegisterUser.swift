@@ -89,7 +89,7 @@ struct RegisterUser {
             "nickname": "test",
             "age": 10,
             "sex": "MALE",
-            "email": "dbsdltjd123@naver.com",
+            "email": "dbsdltjd123@hanmail.net",
             "location": "ALL",
             "description": "test",
             "pictureIndex": 0,
