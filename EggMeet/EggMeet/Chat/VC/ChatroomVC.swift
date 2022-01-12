@@ -7,29 +7,27 @@
 
 import Foundation
 import UIKit
+import SocketIO
 
-class ChatroomVC: UIViewController {
+class ChatroomVC: UIViewController, UITextFieldDelegate {
     var nickname: String?
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var botViewLayout: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
+
+
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
     }
     
-    @IBAction func disconnectSocket(_ sender: Any){
-        SocketIOManager.shared.closeConnection()
+    override func viewWillDisappear(_ animated: Bool) {
     }
     
-    @IBAction func connectSocket(_ sender: Any){
-        SocketIOManager.shared.establishConnection()
-    }
-    
-    @IBAction func sendData(_ sender: Any){
-        SocketIOManager.shared.sendMessage(message: self.textField.text!, nickname: "ns")
-    }
-    
+
     func updateUI() {
         if let nickname = nickname {
             self.navigationItem.title = "\(nickname)"
@@ -37,3 +35,4 @@ class ChatroomVC: UIViewController {
         }
     }
 }
+
