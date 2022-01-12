@@ -50,6 +50,7 @@
 		9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */; };
 		9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */; };
 		9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */; };
+		9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLowerHeaderView.swift; sourceTree = "<group>"; };
 		9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTVC.xib; sourceTree = "<group>"; };
+		9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterVC.swift; sourceTree = "<group>"; };
 		B54572B4BFE2D6FE223E9867 /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.debug.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -237,6 +239,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C25EE5D278ED6E000CBBB11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9CE4B67B278078EF003AEB90 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -265,6 +274,7 @@
 		9CE4B694278BFB00003AEB90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C25EE5D278ED6E000CBBB11 /* Model */,
 				9CE4B69A278C0095003AEB90 /* View */,
 				9CE4B699278C0065003AEB90 /* VC */,
 			);
@@ -276,6 +286,7 @@
 			children = (
 				9CE4B697278BFFAE003AEB90 /* HomeVC.swift */,
 				9CE4B69C278C07A5003AEB90 /* GrowthPointVC.swift */,
+				9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -452,6 +463,7 @@
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
+				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
