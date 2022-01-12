@@ -19,9 +19,11 @@
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
+		198744D1278DCA3500D21CAD /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198744D0278DCA3500D21CAD /* SocketIOManager.swift */; };
 		1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1991D0C6278C676A0081EDF5 /* Chat.storyboard */; };
-		1991D0C9278C68540081EDF5 /* ChatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991D0C8278C68540081EDF5 /* ChatListViewController.swift */; };
+		1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991D0C8278C68540081EDF5 /* ChatListVC.swift */; };
 		1991D0CC278C69280081EDF5 /* ChatProfileVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991D0CB278C69280081EDF5 /* ChatProfileVO.swift */; };
+		199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DD176278D98E800E35723 /* ChatroomVC.swift */; };
 		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
 		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
 		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
@@ -46,6 +48,7 @@
 		9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */; };
 		9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */; };
 		9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */; };
+		9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,9 +69,11 @@
 		193DAC0327887423009F71AA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
+		198744D0278DCA3500D21CAD /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		1991D0C6278C676A0081EDF5 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
-		1991D0C8278C68540081EDF5 /* ChatListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewController.swift; sourceTree = "<group>"; };
+		1991D0C8278C68540081EDF5 /* ChatListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
 		1991D0CB278C69280081EDF5 /* ChatProfileVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProfileVO.swift; sourceTree = "<group>"; };
+		199DD176278D98E800E35723 /* ChatroomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomVC.swift; sourceTree = "<group>"; };
 		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
 		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
 		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
@@ -94,6 +99,7 @@
 		9CE4B6A3278C2330003AEB90 /* HomeLowerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLowerHeaderView.swift; sourceTree = "<group>"; };
 		9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVC.swift; sourceTree = "<group>"; };
 		9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTVC.xib; sourceTree = "<group>"; };
+		9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterVC.swift; sourceTree = "<group>"; };
 		B54572B4BFE2D6FE223E9867 /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.debug.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,9 +164,18 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+		198744CF278DCA1E00D21CAD /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				198744D0278DCA3500D21CAD /* SocketIOManager.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 		1991D0C2278C672B0081EDF5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
+				198744CF278DCA1E00D21CAD /* Socket */,
 				1991D0CA278C69110081EDF5 /* Model */,
 				1991D0C4278C67500081EDF5 /* View */,
 				1991D0C3278C674C0081EDF5 /* VC */,
@@ -171,7 +186,8 @@
 		1991D0C3278C674C0081EDF5 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				1991D0C8278C68540081EDF5 /* ChatListViewController.swift */,
+				1991D0C8278C68540081EDF5 /* ChatListVC.swift */,
+				199DD176278D98E800E35723 /* ChatroomVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -217,6 +233,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C25EE5D278ED6E000CBBB11 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9CE4B67B278078EF003AEB90 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +268,7 @@
 		9CE4B694278BFB00003AEB90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C25EE5D278ED6E000CBBB11 /* Model */,
 				9CE4B69A278C0095003AEB90 /* View */,
 				9CE4B699278C0065003AEB90 /* VC */,
 			);
@@ -256,6 +280,7 @@
 			children = (
 				9CE4B697278BFFAE003AEB90 /* HomeVC.swift */,
 				9CE4B69C278C07A5003AEB90 /* GrowthPointVC.swift */,
+				9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -422,6 +447,8 @@
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
+				199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */,
+				198744D1278DCA3500D21CAD /* SocketIOManager.swift in Sources */,
 				196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */,
 				192C407D27785BF4003055DD /* EggMeet.xcdatamodeld in Sources */,
 				192C408D27786A32003055DD /* MainViewController.swift in Sources */,
@@ -429,6 +456,7 @@
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
+				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
@@ -440,7 +468,7 @@
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
 				9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */,
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
-				1991D0C9278C68540081EDF5 /* ChatListViewController.swift in Sources */,
+				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
