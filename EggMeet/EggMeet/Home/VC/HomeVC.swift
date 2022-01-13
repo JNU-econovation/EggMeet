@@ -18,6 +18,8 @@ class HomeVC: UIViewController {
         let nibName = UINib(nibName: "HomeTVC", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         attribute()
+        
+        getUserData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +39,10 @@ class HomeVC: UIViewController {
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
+    }
+    
+    func getUserData(){
+        HomeNetwork.shared.getHomeData()
     }
 }
 

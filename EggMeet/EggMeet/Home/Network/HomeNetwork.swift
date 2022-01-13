@@ -13,22 +13,25 @@ struct HomeNetwork {
     let ud = UserDefaults.standard
     
     func getHomeData() {
-        let url = getAPI_URL(target: "/user") + "?email=\(ud.string(forKey: "email"))"
+        let testEmail = "dbsdltjd123@hanmail.net"
+        //let url = getAPI_URL(target: "/user") + "?email=\(ud.string(forKey: "email"))"
+        let url = getAPI_URL(target: "/user") + "?email=\(testEmail)"
         NSLog("api URL : \(url)")
         
-        let dataRequest = AF.request(url,
-                                     method: .get,
-                                     parameters: nil,
-                                     encoding: URLEncoding.default,
-                                     headers: ["Content-Type":"application/json"])
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 10
         
-        dataRequest.responseData { dataResponse in
+        AF.request(request).responseData { dataResponse in
             switch dataResponse.result {
             case .success:
                 print("성공")
                 guard let statusCode = dataResponse.response?.statusCode else {return}
                 guard let value = dataResponse.value else {return}
                 print("value : \(value)")
+                print(dataResponse.debugDescription)
+               
             case .failure(let error):
                 print("실패")
                 print("error : \(error)")
@@ -39,7 +42,7 @@ struct HomeNetwork {
     
     func getAPI_URL(target: String) -> String{
         let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
-        let apiURL: String = "http://" + mainAddress + target
+        let apiURL: String = "http://"+mainAddress + target
         return apiURL
     }
     
