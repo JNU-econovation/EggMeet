@@ -87,6 +87,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="stop WS"/>
                                 <connections>
                                     <action selector="stopWebSocket:" destination="MoS-1D-CbN" eventType="touchUpInside" id="uRX-AV-eJw"/>
+                                    <segue destination="E63-gS-YCa" kind="unwind" unwindAction="unwind:" id="bpG-gi-BK2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV0-lh-yga">
@@ -117,6 +118,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EmP-wh-yWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="E63-gS-YCa" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2252" y="10.344827586206897"/>
         </scene>

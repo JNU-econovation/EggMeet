@@ -37,6 +37,7 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
     
     @IBAction func stopWebSocket(_ sender: Any) {
         close()
+        
     }
     
     @IBAction func passMessage(_ sender: Any) {
@@ -89,12 +90,8 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
             case .failure(let error):
                 print("Receive Error: \(error)")
             }
-            
             self?.receive()
         })
-        
-        
-        
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?){
