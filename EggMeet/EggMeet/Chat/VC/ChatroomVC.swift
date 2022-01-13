@@ -13,19 +13,22 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
     var nickname: String?
     private var webSocket: URLSessionWebSocketTask?
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
+    @IBOutlet weak var messageTextView: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let session = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
         var mainAddress :String = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
-        let wsURL: String = "ws://118.221.12.92:8082/ws/chat"
+        let wsURL: String = "ws://" + mainAddress + "/ws/chat"
         let url = URL(string: wsURL)
         NSLog("server URL : \(wsURL)")
         webSocket = session.webSocketTask(with: url!)
-        webSocket = session.webSocketTask(with: url!)
         webSocket?.resume()
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.messageTextView.endEditing(true)
+        }
     override func viewWillDisappear(_ animated: Bool) {
     }
     
@@ -35,6 +38,7 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
     
     @IBAction func passMessage(_ sender: Any) {
         send()
+        self.messageTextView.text = ""
     }
     
     func updateUI() {
@@ -56,13 +60,15 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
     }
     
     func send() {
+        let message = self.messageTextView.text ?? ""
         DispatchQueue.global().asyncAfter(deadline: .now()+1) {
-            self.webSocket?.send(.string("hello"), completionHandler: {error in
+            self.webSocket?.send(.string(message), completionHandler: {error in
                 if let error = error {
                     NSLog("send error: \(error)")
                 }
             })
         }
+        
     }
     func receive() {
         webSocket?.receive(completionHandler: { [weak self] result in
@@ -91,9 +97,6 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
         NSLog("Did connect to socket")
         ping()
         receive()
-        send()
-        
-        
     }
     
     func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
