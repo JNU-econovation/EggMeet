@@ -10,12 +10,14 @@ import SocketIO
 
 class SocketIOManager: NSObject{
     static let shared = SocketIOManager()
-    var manager = SocketManager(socketURL: URL(string: "http://localhost:9000")!, config: [.log(true), .compress])
+    let mainAddress: String = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
+    lazy var WebSocketURL = "http://" + mainAddress
+    lazy var manager = SocketManager(socketURL: URL(string: WebSocketURL)!, config: [.log(true), .compress])
     var socket: SocketIOClient!
     
     override init(){
         super.init()
-        socket = self.manager.socket(forNamespace: "/test")
+        socket = self.manager.socket(forNamespace: "/ws/chat")
         
         socket.on("test") { dataArray, ack in
             print(dataArray)

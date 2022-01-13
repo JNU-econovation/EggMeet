@@ -7,72 +7,34 @@
 
 import Foundation
 import UIKit
-import SocketIO
+import Starscream
 
-class ChatroomVC: UIViewController, UITextFieldDelegate {
+class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
     var nickname: String?
+    private var webSocket: URLSessionWebSocketTask?
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var botViewLayout: NSLayoutConstraint!
-    @IBOutlet weak var tableView: UITableView!
-    var myChat: [chatType] = []
-    var socket: SocketIOClient!
-    var keyboardHeight: CGFloat!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.socket = SocketIOManager.shared.socket
-        bindMsg()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         
-        // initGestureRecognizer()
-        // registerForKeyboardNotifications()
-        updateUI()
+        let session = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
+        var mainAddress :String = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
+        let wsURL: String = "ws://118.221.12.92:8082/ws/chat"
+        let url = URL(string: wsURL)
+        NSLog("server URL : \(wsURL)")
+        webSocket = session.webSocketTask(with: url!)
+        webSocket = session.webSocketTask(with: url!)
+        webSocket?.resume()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        SocketIOManager.shared.closeConnection()
-        // unregisterForKeyboardNotifications()
     }
     
-    // 서버로 부터 메세지 받을 때 채팅창 업데이트
-    func bindMsg(){
-        self.socket.on("test") { (dataArray, socketAck) in
-            var chat = chatType()
-            print("--------------------")
-            print(type(of: dataArray))
-            let data = dataArray[0] as! NSDictionary
-            
-            chat.type = data["type"] as! Int
-            chat.message = data["message"] as! String
-            self.myChat.append(chat)
-            print(chat)
-            
-            self.updateChat(count: self.myChat.count) { print("Get Message") }
-        }
+    @IBAction func stopWebSocket(_ sender: Any) {
+        close()
     }
     
-    // 채팅 업데이트
-    func updateChat(count: Int, completion: @escaping ()->Void) {
-        let indexPath = IndexPath(row: count-1, section: 0)
-        self.tableView.beginUpdates()
-        self.tableView.insertRows(at: [indexPath], with: .none)
-        self.tableView.endUpdates()
-        
-        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
-        
-        completion()
-    }
-    
-    // 전송 버튼
-    @IBAction func sendMsgButtonClick(_ sender: Any){
-        let text = self.textField.text!
-        self.socket.emit("test", text)
-        self.myChat.append(chatType(type:0, message: text))
-        self.updateChat(count: self.myChat.count) {
-            print("Send Message")
-        }
+    @IBAction func passMessage(_ sender: Any) {
+        send()
     }
     
     func updateUI() {
@@ -81,29 +43,62 @@ class ChatroomVC: UIViewController, UITextFieldDelegate {
             chatOpponentNameLabel.text = "\(nickname)"
         }
     }
+    
+    func ping() {
+        webSocket?.sendPing(pongReceiveHandler: { error in
+            if let error = error {
+                NSLog("Ping error: \(error)")
+            }
+        })
+    }
+    func close() {
+        webSocket?.cancel(with: .goingAway, reason: "Demo ended".data(using: .utf8))
+    }
+    
+    func send() {
+        DispatchQueue.global().asyncAfter(deadline: .now()+1) {
+            self.webSocket?.send(.string("hello"), completionHandler: {error in
+                if let error = error {
+                    NSLog("send error: \(error)")
+                }
+            })
+        }
+    }
+    func receive() {
+        webSocket?.receive(completionHandler: { [weak self] result in
+            switch result {
+            case .success(let message):
+                switch message {
+                case .data(let data):
+                    print("get Data : \(data)")
+                case .string(let message):
+                    print("Got String : \(message)")
+                @unknown default:
+                    break
+                }
+            case .failure(let error):
+                print("Receive Error: \(error)")
+            }
+            
+            self?.receive()
+        })
+        
+        
+        
+    }
+    
+    func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?){
+        NSLog("Did connect to socket")
+        ping()
+        receive()
+        send()
+        
+        
+    }
+    
+    func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
+        print("did close connection with reason")
+    }
 }
 
-extension ChatroomVC: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.myChat.count
-    }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellId = self.myChat[indexPath.row].type == 0 ? "MyCell" : "YourCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! ChatTVC
-        cell.chatLabel.text = self.myChat[indexPath.row].message
-        return cell
-    }
-}
 
-extension ChatroomVC: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        let chat = myChat[indexPath.row]
-        
-        let widthOfText = view.frame.width - 122 - 40
-        let size = CGSize(width: widthOfText, height: 1000)
-        let attributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 17)]
-        let estimatedFrame = NSString(string: chat.message).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
-        
-        return estimatedFrame.height + 14 + 14 + 4
-    }
-}
