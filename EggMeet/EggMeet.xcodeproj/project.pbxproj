@@ -36,6 +36,8 @@
 		19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC49E2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift */; };
 		19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */; };
 		1FDF114D24F96E2867CD8DE8 /* Pods_EggMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213EDAFC3CEFDC860F9CF9BD /* Pods_EggMeet.framework */; };
+		9C25EE602790008F00CBBB11 /* HomeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE5F2790008F00CBBB11 /* HomeNetwork.swift */; };
+		9C25EE6227900B3600CBBB11 /* HomeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6127900B3600CBBB11 /* HomeResponseModel.swift */; };
 		9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */; };
 		9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */; };
 		9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */; };
@@ -89,6 +91,8 @@
 		19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpEndVC.swift; sourceTree = "<group>"; };
 		213EDAFC3CEFDC860F9CF9BD /* Pods_EggMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EggMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45457B4AF0FF7C34AEC5106F /* Pods-EggMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.release.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.release.xcconfig"; sourceTree = "<group>"; };
+		9C25EE5F2790008F00CBBB11 /* HomeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetwork.swift; sourceTree = "<group>"; };
+		9C25EE6127900B3600CBBB11 /* HomeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponseModel.swift; sourceTree = "<group>"; };
 		9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameVC.swift; sourceTree = "<group>"; };
 		9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationVC.swift; sourceTree = "<group>"; };
 		9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelfIntroduceVC.swift; sourceTree = "<group>"; };
@@ -242,8 +246,17 @@
 		9C25EE5D278ED6E000CBBB11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9C25EE6127900B3600CBBB11 /* HomeResponseModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9C25EE5E278FFEEA00CBBB11 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				9C25EE5F2790008F00CBBB11 /* HomeNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		9CE4B67B278078EF003AEB90 /* SignUp */ = {
@@ -274,6 +287,7 @@
 		9CE4B694278BFB00003AEB90 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9C25EE5E278FFEEA00CBBB11 /* Network */,
 				9C25EE5D278ED6E000CBBB11 /* Model */,
 				9CE4B69A278C0095003AEB90 /* View */,
 				9CE4B699278C0065003AEB90 /* VC */,
@@ -461,7 +475,9 @@
 				192C408D27786A32003055DD /* MainViewController.swift in Sources */,
 				19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */,
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
+				9C25EE602790008F00CBBB11 /* HomeNetwork.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
+				9C25EE6227900B3600CBBB11 /* HomeResponseModel.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
 				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,

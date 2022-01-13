@@ -11,14 +11,13 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private let headerView = HomeHeaderView()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = .black
         let nibName = UINib(nibName: "HomeTVC", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
-        setUp()
+        attribute()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -26,37 +25,11 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = true
     }
     
-    private func setUp() {
-        attribute()
-        //layout()
-    }
-    
     private func attribute() {
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
-    private func layout() {
-        tableView.tableHeaderView = headerView.tableHeaderView
-        headerView.setUp()
-        updateHederViewLayout()
-        
-        view.addSubview(tableView)
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: view.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
-        ])
-    }
-    
-    private func updateHederViewLayout() {
-        headerView.stackView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 130)
-        tableView.tableHeaderView = headerView.stackView
-        tableView.layoutIfNeeded()
-    }
-    
+
     @IBAction func windFilterVC(_ sender: Any) {
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeFilterVC") as! HomeFilterVC
         self.navigationController?.pushViewController(nextVC, animated: true)
