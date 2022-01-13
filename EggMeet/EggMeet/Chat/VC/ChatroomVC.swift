@@ -25,6 +25,7 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
         NSLog("server URL : \(wsURL)")
         webSocket = session.webSocketTask(with: url!)
         webSocket?.resume()
+        
     }
     
     //
