@@ -22,7 +22,7 @@ class SignUpNickNameVC: UIViewController {
     @IBAction func windSignUpLocationView(_ sender: Any){
         ud.set(self.nicknameTextField.text, forKey: nicknameKey)
         
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpLocationVC") as? SignUpLocationVC else {return}
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpAgeVC") as? SignUpAgeVC else {return}
         print("실행")
         self.navigationController?.pushViewController(nextVC, animated: true)
         

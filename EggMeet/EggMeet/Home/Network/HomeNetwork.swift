@@ -35,7 +35,6 @@ struct HomeNetwork {
             case .failure(let error):
                 print("실패")
                 print("error : \(error)")
-                
             }
         }
     }
