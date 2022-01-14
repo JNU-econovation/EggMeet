@@ -7,42 +7,38 @@
 
 import Foundation
 import UIKit
-import Starscream
+import StompClientLib
 
-class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
+class ChatroomVC: UIViewController, StompClientLibDelegate{
     var nickname: String?
-    private var webSocket: URLSessionWebSocketTask?
+    var socketClient = StompClientLib()
+    var url = NSURL()
+    let topic = "/ws/chat"
+    
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chatOpponentNameLabel.text = self.nickname
-        let session = URLSession(configuration: .default, delegate: self, delegateQueue: OperationQueue())
-        var mainAddress :String = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
-        let wsURL: String = "ws://" + mainAddress + "/ws/chat"
-        let url = URL(string: wsURL)
-        NSLog("server URL : \(wsURL)")
-        webSocket = session.webSocketTask(with: url!)
-        webSocket?.resume()
-        
+        registerSocket()
     }
     
-    //
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.messageTextView.endEditing(true)
         }
     
     override func viewWillDisappear(_ animated: Bool) {
+        socketClient.disconnect()
     }
     
     @IBAction func stopWebSocket(_ sender: Any) {
-        close()
         
     }
     
     @IBAction func passMessage(_ sender: Any) {
-        send()
+        // pass Message Logic
+        socketClient.sendMessage(message: "StompClientLib Foo", toDestination: "/stomp/chat", withHeaders: nil, withReceipt: nil)
         self.messageTextView.text = ""
     }
     
@@ -52,58 +48,50 @@ class ChatroomVC: UIViewController, URLSessionWebSocketDelegate {
             chatOpponentNameLabel.text = "\(nickname)"
         }
     }
-
-    func ping() {
-        webSocket?.sendPing(pongReceiveHandler: { error in
-            if let error = error {
-                NSLog("Ping error: \(error)")
-            }
-        })
-    }
-    func close() {
-        webSocket?.cancel(with: .goingAway, reason: "Demo ended".data(using: .utf8))
+    
+    func registerSocket(){
+        // 완전한 URL을 의미한다.
+        let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
+        let completeURL = "ws://" + baseURL + "/stomp-chat"
+        url = NSURL(string: completeURL)!
+        print(url)
+        NSLog("URL : \(completeURL)")
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as URL), delegate: self as StompClientLibDelegate)
     }
     
-    func send() {
-        let message = self.messageTextView.text ?? ""
-        DispatchQueue.global().asyncAfter(deadline: .now()+1) {
-            self.webSocket?.send(.string(message), completionHandler: {error in
-                if let error = error {
-                    NSLog("send error: \(error)")
-                }
-            })
-        }
-        
-    }
-    func receive() {
-        webSocket?.receive(completionHandler: { [weak self] result in
-            switch result {
-            case .success(let message):
-                switch message {
-                case .data(let data):
-                    print("get Data : \(data)")
-                case .string(let message):
-                    // 스트링 데이터를 받아서 내가 보낸건지 판단 후, View 처리 해야함.
-                    print("Got String : \(message)")
-                @unknown default:
-                    break
-                }
-            case .failure(let error):
-                print("Receive Error: \(error)")
-            }
-            self?.receive()
-        })
+    func stompClientDidConnect(client: StompClientLib!) {
+        let topic = self.topic
+        print("socket is connected : \(topic)")
+        socketClient.subscribe(destination: topic)
     }
     
-    func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didOpenWithProtocol protocol: String?){
-        NSLog("Did connect to socket")
-        ping()
-        receive()
+    func stompClientDidDisconnect(client: StompClientLib!) {
+        NSLog("Socket is Disconnected")
     }
     
-    func urlSession(_ session: URLSession, webSocketTask: URLSessionWebSocketTask, didCloseWith closeCode: URLSessionWebSocketTask.CloseCode, reason: Data?) {
-        print("did close connection with reason")
+    func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
+        NSLog("DESTINATION : \(destination)")
+        print("JSON BODY : \(String(describing: jsonBody))")
+        print("STRING BODY : \(stringBody ?? "nil")")
     }
+    
+    func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
+         print("DESTINATION : \(destination)")
+         print("String JSON BODY : \(String(describing: jsonBody))")
+     }
+     
+     func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {
+         print("Receipt : \(receiptId)")
+     }
+     
+     func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
+         print("Error : \(String(describing: message))")
+     }
+     
+     func serverDidSendPing() {
+         print("Server Ping")
+     }
+    
+     
 }
-
 
