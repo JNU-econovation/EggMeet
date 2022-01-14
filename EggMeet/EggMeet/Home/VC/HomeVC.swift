@@ -42,10 +42,7 @@ class HomeVC: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
     }
-    
-    func getUserData(){
-        HomeNetwork.shared.getHomeData()
-    }
+
     func testDataSet(){
         homeList.append(contentsOf: [
             HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "songa", isOfflineAvailable: true, isOnlineAvailable: true, pictureIndex: 2, sex: .FEMALE),
@@ -78,5 +75,11 @@ extension HomeVC: UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GrowthPointVC") as? GrowthPointVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
+
+extension HomeVC {
+    func getUserData(){
+        HomeNetwork.shared.getHomeData()
     }
 }
