@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19256CE827913BEB0038336E /* BanUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19256CE727913BEB0038336E /* BanUserVC.swift */; };
 		192C407327785BF4003055DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C407227785BF4003055DD /* AppDelegate.swift */; };
 		192C407527785BF4003055DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C407427785BF4003055DD /* SceneDelegate.swift */; };
 		192C407727785BF4003055DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C407627785BF4003055DD /* ViewController.swift */; };
@@ -61,6 +62,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19256CE727913BEB0038336E /* BanUserVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BanUserVC.swift; sourceTree = "<group>"; };
 		192C406F27785BF4003055DD /* EggMeet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EggMeet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		192C407227785BF4003055DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		192C407427785BF4003055DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */,
 				192C408A277869AD003055DD /* User.swift */,
 				192C408C27786A32003055DD /* MainViewController.swift */,
+				19256CE727913BEB0038336E /* BanUserVC.swift */,
 			);
 			path = EggMeet;
 			sourceTree = "<group>";
@@ -508,6 +511,7 @@
 				19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */,
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
 				1984331D278ECAE700245BB7 /* ChatTVC.swift in Sources */,
+				19256CE827913BEB0038336E /* BanUserVC.swift in Sources */,
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
 				9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */,
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
