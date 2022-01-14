@@ -165,7 +165,9 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
                 
                 // 기존 유저 -> 홈 화면 segue
                 if response.response?.statusCode == 200{
-                    self.performSegue(withIdentifier: "HomeVC", sender: nil)
+                    let sb = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+                    let nextVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                    self.navigationController?.pushViewController(nextVC, animated: true)
                 // 신규 유저 -> register 204
                 } else{
                     guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
