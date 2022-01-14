@@ -13,7 +13,7 @@ import Alamofire
 import Foundation
 
 class ViewController: UIViewController {
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -154,18 +154,37 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
         } catch {
             NSLog("http Body Error")    // 에러 출력
         }
+        
         AF.request(request).responseString{ (response) in
             switch response.result {
-            case .success:
+            case .success(let res):
                 // statusCode 에 따라서 구현
-
-                // 기존 유저 이면 ->
-                // 기존 유저 아니면 -> 회원가입
                 NSLog("Post 성공")
                 NSLog("StatusCode:\(response.response?.statusCode)")
                 NSLog("response: \(response.debugDescription)")
-                guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
-                self.navigationController?.pushViewController(nextVC, animated: true)
+                
+                // 기존 유저 -> 홈 화면 segue
+                if response.response?.statusCode == 200{
+                    // accessToken UserDefaults에 저장
+                    do {
+                        if let data = response.data {
+                            guard let jsonData = res.data(using: .utf8) else {return}
+                            let token = try! JSONDecoder().decode(LoginTokenModel.self, from: jsonData)
+                            print("Finally accessToken : \(token.accessToken)")
+                            let accessToken = token.accessToken
+                            let ud = UserDefaults.standard
+                            ud.set(accessToken, forKey: "accessToken")
+                        }
+                    } catch {}
+                    let sb = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+                    let nextVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                // 신규 유저 -> register 204
+                } else{
+                    guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}
+                    self.navigationController?.pushViewController(nextVC, animated: true)
+                }
+                
             case .failure(let error):
                 NSLog("error \(error)")
             }
@@ -181,17 +200,28 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.timeoutInterval = 10
-            
+    
         AF.request(request).responseString{ (response) in
             switch response.result {
             case .success:
+                if let data = response.data {
+                    let json = String(data: data, encoding: .utf8)
+                    NSLog("Response data : \(json)")
+                    NSLog("typeof : \(type(of: json))")
+                    if json == "false"{
+                        NSLog("밴 유저 아님.")
+                        isBannedUser = false
+                    } else {
+                        NSLog("밴 유저임.")
+                        isBannedUser = true
+                    }
+                }
                 NSLog("/user/ban GET 성공.")
                 NSLog("StatusCode:\(response.response?.statusCode)")
                 NSLog("response: \(response.debugDescription)")
-                
-                
-                // 로직에 따라 밴 처리
-                
+            
+                // 밴 아닌 유저
+
             case .failure(let error):
                 NSLog("error : \(error)")
                 

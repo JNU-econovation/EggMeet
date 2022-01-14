@@ -53,10 +53,10 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         // 완전한 URL을 의미한다.
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let completeURL = "ws://" + baseURL + "/stomp-chat"
-        url = NSURL(string: completeURL)!
-        print(url)
+        let wsurl = NSURL(string: completeURL)!
+        print(wsurl)
         NSLog("URL : \(completeURL)")
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: url as URL), delegate: self as StompClientLibDelegate)
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
     }
     
     func stompClientDidConnect(client: StompClientLib!) {
