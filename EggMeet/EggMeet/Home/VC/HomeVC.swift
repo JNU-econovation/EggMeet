@@ -80,6 +80,6 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC {
     func getUserData(){
-        HomeNetwork.shared.getHomeData()
+        HomeNetwork.shared.getUserMentorData()
     }
 }
