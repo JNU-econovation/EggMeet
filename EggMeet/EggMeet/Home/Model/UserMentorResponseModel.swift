@@ -12,6 +12,7 @@ struct UserMentorResponseModel: Codable {
     let age: Int
     let category: Category
     let growthPoint: Int
+    let id: Int
     let location: Location
     let mentorRating: Float
     let nickname: String
