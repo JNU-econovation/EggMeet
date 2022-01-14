@@ -32,5 +32,32 @@ class HomeTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+}
+
+extension HomeTVC {
+    func initCell(image: String, nickname: String, rating: String, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Bool, age: Int, sex: Sex){
+        profileImageView.image = UIImage(named: image)
+        starImageView.image = UIImage(named: rating)
+        
+        nicknameLabel.text = nickname
+        mentorGrowthPointLabel.text = "\(mentorGrowthPoint) 포인트"
+        firstCategoryLabel.text = "\(firstCategory)"
+        
+        switch location {
+            case .ALL : firstHashtagLabel.text = "#전체"
+            default :firstHashtagLabel.text = "#\(location)"
+        }
+        
+        switch isOnline{
+            case true : secondHashtagLabel.text = "#온라인"
+            case false : secondHashtagLabel.text = "#오프라인" }
+        
+        thirdHashtagLabel.text = "#\(age)대"
+        
+        switch sex {
+        case .UNDEFINED : fourthHashtagLabel.text = ""
+        case .FEMALE : fourthHashtagLabel.text = "#여성"
+        case .MALE : fourthHashtagLabel.text = "#남성"
+        }
+    }
 }
