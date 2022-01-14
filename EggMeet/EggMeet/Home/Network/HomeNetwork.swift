@@ -13,10 +13,11 @@ struct HomeNetwork {
     let ud = UserDefaults.standard
     
     func getHomeData() -> HomeResponseModel {
-        let testEmail = "dbsdltjd123@hanmail.net"
+        let testEmail = "1998thddk@gmail.com"
         // let url = getAPI_URL(target: "/user") + "?email=\(ud.string(forKey: "email"))"
         let url = getAPI_URL(target: "/user") + "?email=\(testEmail)"
         NSLog("api URL : \(url)")
+        
         
         let accessToken: String = ud.string(forKey: "socialToken")!
         var request = URLRequest(url: URL(string: url)!)
@@ -40,6 +41,7 @@ struct HomeNetwork {
             case .failure(let error):
                 print("실패")
                 print("error : \(error)")
+                print(error.errorDescription)
             }
         }
         return homeList
