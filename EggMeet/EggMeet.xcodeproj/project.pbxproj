@@ -17,6 +17,7 @@
 		192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 192C408027785BF5003055DD /* LaunchScreen.storyboard */; };
 		192C408B277869AD003055DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408A277869AD003055DD /* User.swift */; };
 		192C408D27786A32003055DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408C27786A32003055DD /* MainViewController.swift */; };
+		193C624E279302BD0036C09C /* ChatroomID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C624D279302BD0036C09C /* ChatroomID.swift */; };
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
@@ -77,6 +78,7 @@
 		192C408927785C0C003055DD /* EggMeet.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeet.entitlements; sourceTree = "<group>"; };
 		192C408A277869AD003055DD /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		192C408C27786A32003055DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		193C624D279302BD0036C09C /* ChatroomID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomID.swift; sourceTree = "<group>"; };
 		193DABFC278856FE009F71AA /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		193DAC0227887414009F71AA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		193DAC0327887423009F71AA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				1991D0CB278C69280081EDF5 /* ChatProfileVO.swift */,
 				1984331A278EC1CA00245BB7 /* chatType.swift */,
+				193C624D279302BD0036C09C /* ChatroomID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */,
 				19FEC49B2782E28100F18D8F /* SignUpSetChannelVC.swift in Sources */,
 				9C25EE602790008F00CBBB11 /* HomeNetwork.swift in Sources */,
+				193C624E279302BD0036C09C /* ChatroomID.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
 				9C25EE6227900B3600CBBB11 /* HomeResponseModel.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,

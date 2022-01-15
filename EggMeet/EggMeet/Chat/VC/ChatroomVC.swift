@@ -14,7 +14,8 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     var nickname: String?
     var socketClient = StompClientLib()
     var url = NSURL()
-    var topic = "/ws/chat"
+    var subscribeTopic = "/sub/chat/room/"
+    var chatroomID: Int = 0
     
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
@@ -23,6 +24,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         chatOpponentNameLabel.text = self.nickname
+        createChatRoom()
         registerSocket()
         
         
@@ -69,7 +71,8 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     }
     
     func stompClientDidConnect(client: StompClientLib!) {
-        let topic = self.topic
+        let topic = self.subscribeTopic + "\(chatroomID)"
+        NSLog("\(topic)")
         print("socket is connected : \(topic)")
         socketClient.subscribe(destination: topic)
     }
@@ -106,11 +109,16 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         let id: Int = 1     // chatroom number
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let postURL = "http://" + baseURL + "/chat/room"
-        let params : Parameters = [
-            "id" : id
-        ]
+        let param = ChatroomID(id: id)
         
-        
+        AF.request(postURL, method: .post, parameters: param, encoder: JSONParameterEncoder.default).response { response in
+            debugPrint(response)
+            if response.response?.statusCode == 200 {
+                self.chatroomID = id
+            } else {
+                print("")
+            }
+        }
     }
     
      
