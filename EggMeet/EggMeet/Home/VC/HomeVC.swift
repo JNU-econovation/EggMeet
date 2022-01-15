@@ -81,9 +81,9 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC {
     func getUserData(){
-        let data = HomeNetwork.shared.getUserMentorData() as! [UserMentorResponseModel]
-        print(data)
-        homeList.append(contentsOf: data)
-        self.tableView.reloadData()
+        HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
+            self.homeList.append(contentsOf: mentorList)
+            self.tableView.reloadData()
+        }
     }
 }
