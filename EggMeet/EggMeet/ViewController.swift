@@ -13,7 +13,7 @@ import Alamofire
 import Foundation
 
 class ViewController: UIViewController {
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
@@ -157,7 +157,7 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
         
         AF.request(request).responseString{ (response) in
             switch response.result {
-            case .success:
+            case .success(let res):
                 // statusCode 에 따라서 구현
                 NSLog("Post 성공")
                 NSLog("StatusCode:\(response.response?.statusCode)")
@@ -165,7 +165,19 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
                 
                 // 기존 유저 -> 홈 화면 segue
                 if response.response?.statusCode == 200{
-                    self.performSegue(withIdentifier: "HomeVC", sender: nil)
+                    // accessToken UserDefaults에 저장
+                    do {
+                        if let data = response.data {
+                            guard let jsonData = res.data(using: .utf8) else {return}
+                            let token = try! JSONDecoder().decode(LoginTokenModel.self, from: jsonData)
+                            print("Finally accessToken : \(token.accessToken)")
+                            let accessToken = token.accessToken
+                            let ud = UserDefaults.standard
+                            ud.set(accessToken, forKey: "accessToken")
+                        }
+                    } catch {}
+                    self.performSegue(withIdentifier: "windLoginHome", sender: self)
+                   
                 // 신규 유저 -> register 204
                 } else{
                     guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpNickNameVC") as? SignUpNickNameVC else {return}

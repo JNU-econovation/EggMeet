@@ -12,7 +12,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var homeList: [HomeResponseModel] = [HomeResponseModel]()
+    private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        //getUserData()
-        testDataSet()
+        getUserData()
+        //testDataSet()
     }
     
     private func attribute() {
@@ -42,16 +42,14 @@ class HomeVC: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
     }
-    
-    func getUserData(){
-        HomeNetwork.shared.getHomeData()
-    }
+
     func testDataSet(){
+        /*
         homeList.append(contentsOf: [
             HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "songa", isOfflineAvailable: true, isOnlineAvailable: true, pictureIndex: 2, sex: .FEMALE),
             HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "yunseong", isOfflineAvailable: true, isOnlineAvailable: false, pictureIndex: 2, sex: .MALE),
             HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "hyunji", isOfflineAvailable: true, isOnlineAvailable: true, pictureIndex: 2, sex: .UNDEFINED)
-        ])
+        ])*/
     }
 }
 
@@ -69,7 +67,7 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTVC
         let data = homeList[indexPath.row]
-        cell.initCell(image: "data.pictureIndex", nickname: data.nickname, rating: "data.mentorRating", mentorGrowthPoint: data.mentorGrowthPoint, firstCategory: data.menteeCategory, location: data.location, isOnline: data.isOnlineAvailable, age: data.age, sex: data.sex)
+        cell.initCell(image: "data.pictureIndex", nickname: data.nickname, rating: "data.mentorRating", mentorGrowthPoint: data.growthPoint, firstCategory: data.category, location: data.location, isOnline: data.isOnlineAvailable, age: data.age, sex: data.sex)
         
         return cell
     }
@@ -78,5 +76,14 @@ extension HomeVC: UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GrowthPointVC") as? GrowthPointVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+}
+
+extension HomeVC {
+    func getUserData(){
+        HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
+            self.homeList.append(contentsOf: mentorList)
+            self.tableView.reloadData()
+        }
     }
 }
