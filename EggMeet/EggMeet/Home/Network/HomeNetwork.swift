@@ -12,7 +12,7 @@ struct HomeNetwork {
     static let shared = HomeNetwork()
     let ud = UserDefaults.standard
     
-    func getUserMentorData() -> [UserMentorResponseModel] {
+    func getUserMentorData(completion: @escaping ([UserMentorResponseModel]) -> Void)  {
         let url = getAPI_URL(target: "/user/mentor")
         NSLog("api URL : \(url)")
         
@@ -40,6 +40,7 @@ struct HomeNetwork {
                         mentorList.append(UserMentorResponseModel.init(age: age, category: .PROGRAMMING_C, growthPoint: growthPoint, id: id, location: .ALL, mentorRating: mentorRating, nickname: nickname, isOfflineAvailable: false, isOnlineAvailable: true, sex: .UNDEFINED))
                         print(data)
                     }
+                    completion(mentorList)
                 } catch {print(error)}
             case .failure(let error):
                 print("Error Code: \(error._code)")
@@ -51,7 +52,6 @@ struct HomeNetwork {
             }
         }
         print(mentorList)
-        return mentorList
     }
     
     func getAPI_URL(target: String) -> String{
