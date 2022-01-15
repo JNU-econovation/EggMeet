@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct HomeResponseModel: Codable {
     let age: Int
@@ -25,5 +26,3 @@ struct HomeResponseModel: Codable {
     let pictureIndex: Int
     let sex: Sex
 }
-
-

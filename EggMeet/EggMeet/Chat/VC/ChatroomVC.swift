@@ -8,12 +8,14 @@
 import Foundation
 import UIKit
 import StompClientLib
+import Alamofire
 
 class ChatroomVC: UIViewController, StompClientLibDelegate{
     var nickname: String?
     var socketClient = StompClientLib()
     var url = NSURL()
-    let topic = "/ws/chat"
+    var topic = "/ws/chat"
+    
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -21,7 +23,9 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         chatOpponentNameLabel.text = self.nickname
+        
         registerSocket()
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -38,8 +42,13 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     
     @IBAction func passMessage(_ sender: Any) {
         // pass Message Logic
-        socketClient.sendMessage(message: "StompClientLib Foo", toDestination: "/stomp/chat", withHeaders: nil, withReceipt: nil)
-        self.messageTextView.text = ""
+        let messageString = messageTextView.text
+        if messageString == ""{
+            return
+        } else {
+            socketClient.sendMessage(message: messageString!, toDestination: "/stomp/chat", withHeaders: nil, withReceipt: nil)
+            self.messageTextView.text = ""
+        }
     }
     
     func updateUI() {
@@ -75,6 +84,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         print("STRING BODY : \(stringBody ?? "nil")")
     }
     
+    
     func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
          print("DESTINATION : \(destination)")
          print("String JSON BODY : \(String(describing: jsonBody))")
@@ -91,6 +101,10 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
      func serverDidSendPing() {
          print("Server Ping")
      }
+    
+    func createChatRoom(){
+        let id: Int = 1
+    }
     
      
 }
