@@ -84,7 +84,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Home"/>
                                 <connections>
-                                    <segue destination="GaW-2T-Guu" kind="show" id="63K-RW-huz"/>
+                                    <segue destination="GaW-2T-Guu" kind="show" identifier="windLoginHome" id="63K-RW-huz"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,6 +95,7 @@
                     <connections>
                         <segue destination="35j-nH-0BS" kind="show" identifier="segue" id="e7h-H2-rZg"/>
                         <segue destination="C70-d9-E4a" kind="presentation" id="p1R-f6-pqT"/>
+                        <segue destination="GaW-2T-Guu" kind="show" id="v09-sy-p1N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1191,6 +1192,9 @@
             <point key="canvasLocation" x="-850.39999999999998" y="976.46176911544239"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="63K-RW-huz"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
