@@ -20,13 +20,12 @@ class HomeVC: UIViewController {
         let nibName = UINib(nibName: "HomeTVC", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         attribute()
+        getHomeFirstData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
-        getUserData()
-        //testDataSet()
     }
     
     private func attribute() {
@@ -41,15 +40,6 @@ class HomeVC: UIViewController {
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
-    }
-
-    func testDataSet(){
-        /*
-        homeList.append(contentsOf: [
-            HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "songa", isOfflineAvailable: true, isOnlineAvailable: true, pictureIndex: 2, sex: .FEMALE),
-            HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "yunseong", isOfflineAvailable: true, isOnlineAvailable: false, pictureIndex: 2, sex: .MALE),
-            HomeResponseModel.init(age: 20, description: "hi", location: .ALL, menteeCategory: .PROGRAMMING_C, menteeDescription: "happy", menteeRating: 4.5, mentorCareer: "hi", mentorDescription: "hi", mentorGrowthPoint: 3, mentorLink: "http", mentorRating: 4.3, nickname: "hyunji", isOfflineAvailable: true, isOnlineAvailable: true, pictureIndex: 2, sex: .UNDEFINED)
-        ])*/
     }
 }
 
@@ -80,7 +70,7 @@ extension HomeVC: UITableViewDataSource {
 }
 
 extension HomeVC {
-    func getUserData(){
+    func getHomeFirstData(){
         HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
             self.homeList.append(contentsOf: mentorList)
             self.tableView.reloadData()
