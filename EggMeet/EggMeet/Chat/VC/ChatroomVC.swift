@@ -23,8 +23,8 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         chatOpponentNameLabel.text = self.nickname
-        
         registerSocket()
+        
         
     }
     
@@ -103,7 +103,14 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
      }
     
     func createChatRoom(){
-        let id: Int = 1
+        let id: Int = 1     // chatroom number
+        let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
+        let postURL = "http://" + baseURL + "/chat/room"
+        let params : Parameters = [
+            "id" : id
+        ]
+        
+        
     }
     
      
