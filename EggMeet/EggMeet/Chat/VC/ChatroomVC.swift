@@ -27,7 +27,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         chatOpponentNameLabel.text = self.nickname
         createChatRoom()
         registerSocket()
-        
+
         
     }
     
@@ -52,10 +52,9 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
             let ud = UserDefaults.standard
             let topic = self.publishTopic
             let writer = ud.string(forKey: "nickname")!
-            NSLog("writer variable : \(writer)")
             let params = chatDto(roomId: self.chatroomID, writer:writer, message: messageString)
             params.debugPrint()
-            socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+            socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
             self.messageTextView.text = ""
         }
     }
@@ -75,6 +74,11 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         print(wsurl)
         NSLog("URL : \(completeURL)")
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
+        // Auto Disconnect after 3 sec
+        socketClient.autoDisconnect(time: 3)
+        // Reconnect after 4 sec
+        socketClient.reconnect(request: NSURLRequest(url: wsurl as URL) , delegate: self as StompClientLibDelegate, time: 4.0)
+        
     }
     
     // subscribe function
@@ -90,10 +94,11 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         NSLog("Socket is Disconnected")
     }
     
+    // send 시, 해당 로그를 출력한다.
     func stompClient(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: AnyObject?, akaStringBody stringBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
         NSLog("DESTINATION : \(destination)")
-        print("JSON BODY : \(String(describing: jsonBody))")
-        print("STRING BODY : \(stringBody ?? "nil")")
+        NSLog("JSON BODY : \(String(describing: jsonBody))")
+        NSLog("STRING BODY : \(stringBody ?? "nil")")
     }
     
     
