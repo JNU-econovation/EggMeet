@@ -21,6 +21,7 @@
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
+		19797FE12793100800680B21 /* chatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE02793100800680B21 /* chatDto.swift */; };
 		1984331B278EC1CA00245BB7 /* chatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984331A278EC1CA00245BB7 /* chatType.swift */; };
 		1984331D278ECAE700245BB7 /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984331C278ECAE700245BB7 /* ChatTVC.swift */; };
 		198744D1278DCA3500D21CAD /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198744D0278DCA3500D21CAD /* SocketIOManager.swift */; };
@@ -84,6 +85,7 @@
 		193DAC0327887423009F71AA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
+		19797FE02793100800680B21 /* chatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDto.swift; sourceTree = "<group>"; };
 		1984331A278EC1CA00245BB7 /* chatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatType.swift; sourceTree = "<group>"; };
 		1984331C278ECAE700245BB7 /* ChatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
 		198744D0278DCA3500D21CAD /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				1991D0CB278C69280081EDF5 /* ChatProfileVO.swift */,
 				1984331A278EC1CA00245BB7 /* chatType.swift */,
 				193C624D279302BD0036C09C /* ChatroomID.swift */,
+				19797FE02793100800680B21 /* chatDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -544,6 +547,7 @@
 				9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */,
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
 				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
+				19797FE12793100800680B21 /* chatDto.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,

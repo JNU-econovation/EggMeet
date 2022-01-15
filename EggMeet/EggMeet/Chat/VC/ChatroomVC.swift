@@ -14,7 +14,8 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     var nickname: String?
     var socketClient = StompClientLib()
     var url = NSURL()
-    var subscribeTopic = "/sub/chat/room/"
+    let subscribeTopic = "/sub/chat/room/"
+    let publishTopic = "/pub/chat/room/message"
     var chatroomID: Int = 0
     
     
@@ -44,11 +45,17 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     
     @IBAction func passMessage(_ sender: Any) {
         // pass Message Logic
-        let messageString = messageTextView.text
+        let messageString = messageTextView.text!
         if messageString == ""{
             return
         } else {
-            socketClient.sendMessage(message: messageString!, toDestination: "/stomp/chat", withHeaders: nil, withReceipt: nil)
+            let ud = UserDefaults.standard
+            let topic = self.publishTopic
+            let writer = ud.string(forKey: "nickname")!
+            NSLog("writer variable : \(writer)")
+            let params = chatDto(roomId: self.chatroomID, writer:writer, message: messageString)
+            params.debugPrint()
+            socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
             self.messageTextView.text = ""
         }
     }
@@ -70,6 +77,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
     }
     
+    // subscribe function
     func stompClientDidConnect(client: StompClientLib!) {
         let topic = self.subscribeTopic + "\(chatroomID)"
         NSLog("\(topic)")
@@ -77,6 +85,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         socketClient.subscribe(destination: topic)
     }
     
+    // disconnect
     func stompClientDidDisconnect(client: StompClientLib!) {
         NSLog("Socket is Disconnected")
     }
@@ -105,6 +114,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
          print("Server Ping")
      }
     
+    // createChatRoom from id
     func createChatRoom(){
         let id: Int = 1     // chatroom number
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
