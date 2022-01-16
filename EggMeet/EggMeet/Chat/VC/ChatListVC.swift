@@ -67,7 +67,7 @@ class ChatListVC: UITableViewController {
         if segue.identifier == "ChatroomSegue" {
             let vc = segue.destination as? ChatroomVC
             if let nickname = sender as? String {
-                vc?.nickname = nickname
+                vc?.opponentNickname = nickname
             }
         }
     }
