@@ -25,6 +25,9 @@ class HomeFilterVC: UIViewController {
     let firstCategoryDD: DropDown = DropDown()
     let secondCategoryDD: DropDown = DropDown()
     
+    var location: String = ""
+    var category: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setAgeRadioButtons()
@@ -147,24 +150,32 @@ class HomeFilterVC: UIViewController {
     }
     
     @IBAction func touchFirstLocationButton(){
-        firstLocationDD.dataSource = [ "전체", "서울", "경기", "인천", "강원", "충남", "대전", "충북", "세종", "부산", "울산", "대구", "경북", "경남", "전남", "광주", "전북", "제주", "전국"]
+        firstLocationDD.dataSource = [     "ALL",
+                                           "GWANGJU_BUKGU",
+                                           "GWANGJU_SEOGU",
+                                           "GWANGJU_NAMDONGGU",
+                                           "GWANGJU_GWANGSANGU"]
         firstLocationDD.textColor = UIColor.black
         firstLocationDD.selectedTextColor = UIColor.blue
         firstLocationDD.backgroundColor = UIColor.white
         firstLocationDD.show()
         firstLocationDD.selectionAction = { [unowned self] (index: Int, item: String) in
+            location = item
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
         }
     }
     
     @IBAction func touchFirstCategoryButton() {
-        firstCategoryDD.dataSource = [ "프로그래밍 / 데이터 사이언스","외국어", "취업준비","자격증 / 시험", "사진 / 영상촬영 및 편집", "디자인 및 그래픽", "마케팅", "투자 / 재테크", "경험 / 조언 / 노하우"]
+        firstCategoryDD.dataSource = [ "PROGRAMMING_PYTHON", "PROGRAMMING_JAVA",
+                                       "PROGRAMMING_C",
+                                       "PROGRAMMING_CPP"]
         firstCategoryDD.textColor = UIColor.black
         firstCategoryDD.selectedTextColor = UIColor.blue
         firstCategoryDD.backgroundColor = UIColor.white
         firstCategoryDD.show()
         firstCategoryDD.selectionAction = { [unowned self] (index: Int, item: String) in
+            category = item
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
         }
