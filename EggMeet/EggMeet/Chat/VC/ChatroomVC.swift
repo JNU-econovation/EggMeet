@@ -17,14 +17,18 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
     var chatroomID: Int = 1
-    
+    var chatContentList: [chatDto] = [chatDto]()
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet var chatTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         chatOpponentNameLabel.text = self.opponentNickname
+        chatTableView.delegate = self
+        chatTableView.dataSource = self
+        
         if !isExistChatRoom(){
             createChatRoom()
         }
@@ -144,7 +148,19 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     func updateChat(){
         
     }
-    
-     
 }
+
+extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return chatContentList.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
+        cell.nicknameLabel.text = self.chatContentList[indexPath.row].writer
+        cell.contentLabel.text = self.chatContentList[indexPath.row].message
+        
+        return cell
+    }
+}
+
 
