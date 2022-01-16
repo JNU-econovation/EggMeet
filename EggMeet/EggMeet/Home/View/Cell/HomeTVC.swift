@@ -35,7 +35,7 @@ class HomeTVC: UITableViewCell {
 }
 
 extension HomeTVC {
-    func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex){
+    func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
         profileImageView.image = UIImage(named: image)
         starImageView.image = UIImage(named: "rating")
         
@@ -63,6 +63,11 @@ extension HomeTVC {
         case .UNDEFINED : fourthHashtagLabel.text = ""
         case .FEMALE : fourthHashtagLabel.text = "#여성"
         case .MALE : fourthHashtagLabel.text = "#남성"
+        }
+        
+        switch isMentor {
+        case false : growthCostLabel.text = ""; mentorGrowthPointLabel.text = ""
+        default : growthCostLabel.text = "성장비용"
         }
     }
 }

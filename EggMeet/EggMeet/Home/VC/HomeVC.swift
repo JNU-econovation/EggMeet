@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
+    private var isMentor: Bool = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func touchFindMentorButton(_ sender: Any) {
+        isMentor = true
         self.homeList.removeAll()
         HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
             self.homeList.append(contentsOf: mentorList)
@@ -51,7 +53,12 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func touchFindMenteeButton(_ sender: Any) {
-        
+        isMentor = false
+        self.homeList.removeAll()
+        HomeNetwork.shared.getUserMenteeData(){ [self] menteeList in
+            self.homeList.append(contentsOf: menteeList)
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -69,7 +76,7 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTVC
         let data = homeList[indexPath.row]
-        cell.initCell(image: "data.pictureIndex", nickname: data.nickname, rating: data.mentorRating, mentorGrowthPoint: data.growthPoint, firstCategory: data.category, location: data.location, isOnline: data.onlineAvailable, isOffline : data.offlineAvailable, age: data.age, sex: data.sex)
+        cell.initCell(image: "data.pictureIndex", nickname: data.nickname, rating: data.mentorRating, mentorGrowthPoint: data.growthPoint, firstCategory: data.category, location: data.location, isOnline: data.onlineAvailable, isOffline : data.offlineAvailable, age: data.age, sex: data.sex, isMentor: isMentor)
         
         return cell
     }
