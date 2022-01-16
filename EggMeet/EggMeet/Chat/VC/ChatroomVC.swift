@@ -57,7 +57,10 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         } else {
             let ud = UserDefaults.standard
             let topic = self.publishTopic
-            let writer = ud.string(forKey: "nickname")!
+            var writer = ud.string(forKey: "nickname")!
+            if writer == ""{
+                writer = "unknown"
+            }
             let params = chatDto(roomId: self.chatroomID, writer:writer, message: messageString)
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
@@ -171,8 +174,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
-        tableView.rowHeight = UITableView.automaticDimension
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
         NSLog("comming cellForRowAt")
         cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
         cell.contentLabel?.text = self.chatContentList[indexPath.row].message

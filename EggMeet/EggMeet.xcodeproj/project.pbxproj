@@ -23,7 +23,6 @@
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
 		19797FE12793100800680B21 /* chatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE02793100800680B21 /* chatDto.swift */; };
 		19797FE32793E42500680B21 /* ChatNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE22793E42500680B21 /* ChatNavigationController.swift */; };
-		19797FE52793EE4D00680B21 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE42793EE4D00680B21 /* ChatTableViewCell.swift */; };
 		1984331B278EC1CA00245BB7 /* chatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984331A278EC1CA00245BB7 /* chatType.swift */; };
 		198744D1278DCA3500D21CAD /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198744D0278DCA3500D21CAD /* SocketIOManager.swift */; };
 		1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1991D0C6278C676A0081EDF5 /* Chat.storyboard */; };
@@ -32,6 +31,7 @@
 		199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DD176278D98E800E35723 /* ChatroomVC.swift */; };
 		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
 		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
+		19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5A9F52794454E00954AFA /* ChatTVC.swift */; };
 		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
 		19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */; };
 		19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */; };
@@ -88,7 +88,6 @@
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
 		19797FE02793100800680B21 /* chatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDto.swift; sourceTree = "<group>"; };
 		19797FE22793E42500680B21 /* ChatNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationController.swift; sourceTree = "<group>"; };
-		19797FE42793EE4D00680B21 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
 		1984331A278EC1CA00245BB7 /* chatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatType.swift; sourceTree = "<group>"; };
 		198744D0278DCA3500D21CAD /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		1991D0C6278C676A0081EDF5 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
@@ -97,6 +96,7 @@
 		199DD176278D98E800E35723 /* ChatroomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomVC.swift; sourceTree = "<group>"; };
 		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
 		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
+		19F5A9F52794454E00954AFA /* ChatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
 		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
 		19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaCategoryVC.swift; sourceTree = "<group>"; };
 		19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaDescriptionVC.swift; sourceTree = "<group>"; };
@@ -229,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				1991D0C5278C675A0081EDF5 /* StoryBoard */,
-				19797FE42793EE4D00680B21 /* ChatTableViewCell.swift */,
+				19F5A9F52794454E00954AFA /* ChatTVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -521,7 +521,6 @@
 				9C25EE6627900F2000CBBB11 /* Sex.swift in Sources */,
 				9C25EE6C27904DFF00CBBB11 /* SignUpSexVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
-				19797FE52793EE4D00680B21 /* ChatTableViewCell.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
 				199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */,
 				9C25EE6E279166D900CBBB11 /* UserMentorResponseModel.swift in Sources */,
@@ -543,6 +542,7 @@
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
+				19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */,
 				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
 				19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */,
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
