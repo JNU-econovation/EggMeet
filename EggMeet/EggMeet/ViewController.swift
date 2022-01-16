@@ -31,7 +31,7 @@ class ViewController: UIViewController {
         appleButton.translatesAutoresizingMaskIntoConstraints = false
         appleButton.addTarget(self, action: #selector(didTapAppleButton), for: .touchUpInside)
         appleButton.frame = CGRect(x:0, y:0, width: 272, height: 42)
-        appleButton.layer.cornerRadius = 12
+        appleButton.cornerRadius = 12
         view.addSubview(appleButton)
         NSLayoutConstraint.activate([appleButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 197),
                                      appleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 51),
