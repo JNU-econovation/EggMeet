@@ -64,7 +64,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-yq-CWo">
-                                <rect key="frame" x="102" y="523" width="164" height="31"/>
+                                <rect key="frame" x="138" y="153" width="110" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="회원가입테스트"/>
@@ -72,17 +72,8 @@
                                     <segue destination="VFS-lx-X5e" kind="show" identifier="" id="g3V-bF-VrW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-3S-Gya">
-                                <rect key="frame" x="102" y="601" width="171" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="카카오톡 로그인"/>
-                                <connections>
-                                    <action selector="onKakaoLoginByAppTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jnr-Ih-1dS"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkJ-Du-Ot6">
-                                <rect key="frame" x="138" y="562" width="98" height="31"/>
+                                <rect key="frame" x="144" y="176" width="98" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Home"/>
@@ -96,14 +87,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-3S-Gya">
+                                <rect key="frame" x="51.5" y="568.5" width="272" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="L1h-x3-tXY"/>
+                                    <constraint firstAttribute="width" constant="272" id="Pa3-9b-QvY"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="kakao_login">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="onKakaoLoginByAppTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jnr-Ih-1dS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NSY-nZ-v7r"/>
+                            <constraint firstItem="WHa-3S-Gya" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PfV-6F-zpk"/>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VNc-Ox-x4W"/>
                             <constraint firstItem="jbT-FP-NcF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-204" id="Z0v-Nz-G0Q"/>
                             <constraint firstItem="jbT-FP-NcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bgZ-4m-tAh"/>
+                            <constraint firstItem="WHa-3S-Gya" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="256" id="jJO-Je-Tdo"/>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tpl-nm-xNd"/>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yjd-OO-rgo"/>
                         </constraints>
@@ -1213,6 +1220,7 @@
         <segue reference="63K-RW-huz"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="kakao_login" width="544" height="86"/>
         <image name="login_background" width="187.5" height="333.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
