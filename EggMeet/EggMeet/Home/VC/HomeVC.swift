@@ -41,6 +41,18 @@ class HomeVC: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         
     }
+    
+    @IBAction func touchFindMentorButton(_ sender: Any) {
+        self.homeList.removeAll()
+        HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
+            self.homeList.append(contentsOf: mentorList)
+            self.tableView.reloadData()
+        }
+    }
+    
+    @IBAction func touchFindMenteeButton(_ sender: Any) {
+        
+    }
 }
 
 extension HomeVC: UITableViewDelegate {

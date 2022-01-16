@@ -28,6 +28,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="멘토 찾기"/>
+                                <connections>
+                                    <action selector="touchFindMentorButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FAN-O6-f8A"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pr-aG-7Q8">
                                 <rect key="frame" x="130" y="70" width="95" height="45"/>
@@ -35,6 +38,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="멘티찾기"/>
+                                <connections>
+                                    <action selector="touchFindMenteeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="klf-6E-VZf"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jF-ns-0ba">
                                 <rect key="frame" x="293" y="74" width="45" height="31"/>
