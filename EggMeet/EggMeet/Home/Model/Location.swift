@@ -7,10 +7,10 @@
 
 import Foundation
 
-enum Location: Codable{
-    case ALL,
-    GWANGJU_BUKGU,
-    GWANGJU_SEOGU,
-    GWANGJU_NAMDONGGU,
-    GWANGJU_GWANGSANGU
+enum Location: String, Codable{
+    case ALL = "ALL",
+    GWANGJU_BUKGU = "GWANGJU_BUKGU",
+    GWANGJU_SEOGU = "GWANGJU_SEOGU",
+    GWANGJU_NAMDONGGU = "GWANGJU_NAMDONGGU",
+    GWANGJU_GWANGSANGU = "GWANGJU_GWANGSANGU"
 }
