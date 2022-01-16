@@ -15,6 +15,8 @@ class HomeVC: UIViewController {
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
     private var growthPointSort: String = ""
+    private var location: String = ""
+    private var category: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,7 +43,14 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
-        
+        let filterVC = segue.source as! HomeFilterVC
+        location = filterVC.location
+        category = filterVC.category
+        homeList.removeAll()
+        switch isMentor {
+        case true : getHomeMentorData()
+        case false : getHomeMenteeData()
+        }
     }
     
     @IBAction func touchFindMentorButton(_ sender: Any) {
@@ -108,14 +117,14 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC {
     func getHomeMentorData(){
-        HomeNetwork.shared.getUserMentorData(growthPointSort: growthPointSort){ [self] mentorList in
+        HomeNetwork.shared.getUserMentorData(location: location, category: category, growthPointSort: growthPointSort){ [self] mentorList in
             self.homeList.append(contentsOf: mentorList)
             self.tableView.reloadData()
         }
     }
     
     func getHomeMenteeData() {
-        HomeNetwork.shared.getUserMenteeData(){ [self] menteeList in
+        HomeNetwork.shared.getUserMenteeData(location: location, category: category){ [self] menteeList in
             self.homeList.append(contentsOf: menteeList)
             self.tableView.reloadData()
         }

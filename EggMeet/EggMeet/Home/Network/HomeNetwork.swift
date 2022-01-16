@@ -12,8 +12,8 @@ struct HomeNetwork {
     static let shared = HomeNetwork()
     let ud = UserDefaults.standard
     
-    func getUserMentorData(growthPointSort: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        let url = getAPI_URL(target: "/user/mentor")+"?growthPointSort=\(growthPointSort)"
+    func getUserMentorData(location: String, category: String, growthPointSort: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        let url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&category=\(category)&growthPointSort=\(growthPointSort)"
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
@@ -61,8 +61,8 @@ struct HomeNetwork {
     }
 }
 extension HomeNetwork {
-    func getUserMenteeData(completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        let url = getAPI_URL(target: "/user/mentee")
+    func getUserMenteeData(location: String, category: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        let url = getAPI_URL(target: "/user/mentee")+"?location=\(location)&category=\(category)"
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
