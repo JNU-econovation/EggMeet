@@ -15,7 +15,7 @@ class HomeVC: UIViewController {
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
     private var growthPointSort: String = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = .black
@@ -34,7 +34,7 @@ class HomeVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
     @IBAction func windFilterVC(_ sender: Any) {
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeFilterVC") as! HomeFilterVC
         self.navigationController?.pushViewController(nextVC, animated: true)
@@ -64,12 +64,26 @@ class HomeVC: UIViewController {
         case false : getHomeMenteeData()
         }
     }
+    
+    @IBAction func touchSortChangedButton(_ sender: Any) {
+        switch growthPointSort {
+        case "ASCENDING" : growthPointSort = "DESCENDING"
+        case "DESCENDING" : growthPointSort = "ASCENDING"
+        default : growthPointSort = ""
+        }
+        
+        self.homeList.removeAll()
+        switch isMentor {
+        case true : getHomeMentorData()
+        case false : getHomeMenteeData()
+        }
+    }
 }
 
 extension HomeVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           return 120
-       }
+        return 120
+    }
 }
 
 extension HomeVC: UITableViewDataSource {

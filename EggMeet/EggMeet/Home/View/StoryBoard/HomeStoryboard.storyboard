@@ -97,6 +97,9 @@
                                         <rect key="frame" x="189" y="0.0" width="53.5" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="fibrechannel" catalog="system"/>
+                                        <connections>
+                                            <action selector="touchSortChangedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mlb-J3-f9K"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-c0-kMa">
                                         <rect key="frame" x="246.5" y="0.0" width="60.5" height="31"/>
