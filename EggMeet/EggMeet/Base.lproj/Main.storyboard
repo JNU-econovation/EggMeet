@@ -63,6 +63,15 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_background" translatesAutoresizingMaskIntoConstraints="NO" id="nKi-Rt-dD8">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-yq-CWo">
+                                <rect key="frame" x="102" y="523" width="164" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="회원가입테스트"/>
+                                <connections>
+                                    <segue destination="VFS-lx-X5e" kind="show" identifier="" id="g3V-bF-VrW"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHa-3S-Gya">
                                 <rect key="frame" x="102" y="601" width="171" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -81,21 +90,20 @@
                                     <segue destination="GaW-2T-Guu" kind="show" identifier="windLoginHome" id="63K-RW-huz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-yq-CWo">
-                                <rect key="frame" x="102" y="523" width="164" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="회원가입테스트"/>
-                                <connections>
-                                    <segue destination="VFS-lx-X5e" kind="show" identifier="" id="g3V-bF-VrW"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jbT-FP-NcF">
+                                <rect key="frame" x="130.5" y="114" width="114" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="NSY-nZ-v7r"/>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="VNc-Ox-x4W"/>
+                            <constraint firstItem="jbT-FP-NcF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-204" id="Z0v-Nz-G0Q"/>
+                            <constraint firstItem="jbT-FP-NcF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bgZ-4m-tAh"/>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tpl-nm-xNd"/>
                             <constraint firstItem="nKi-Rt-dD8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yjd-OO-rgo"/>
                         </constraints>

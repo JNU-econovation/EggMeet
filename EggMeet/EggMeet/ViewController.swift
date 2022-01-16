@@ -26,14 +26,18 @@ class ViewController: UIViewController {
     }
     
     func setupView(){
+        
         let appleButton = ASAuthorizationAppleIDButton()
         appleButton.translatesAutoresizingMaskIntoConstraints = false
         appleButton.addTarget(self, action: #selector(didTapAppleButton), for: .touchUpInside)
-        
+        appleButton.frame = CGRect(x:0, y:0, width: 272, height: 42)
         view.addSubview(appleButton)
-        NSLayoutConstraint.activate([appleButton.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-                                     appleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
-                                     appleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30)])
+        NSLayoutConstraint.activate([appleButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 197),
+                                     appleButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 51),
+                                     appleButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -51),
+                                     appleButton.widthAnchor.constraint(equalToConstant: 272),
+                                     appleButton.heightAnchor.constraint(equalToConstant: 42)])
+        
     }
     
     @objc func didTapAppleButton(){
