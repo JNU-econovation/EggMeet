@@ -16,7 +16,7 @@ struct UserMentorResponseModel: Codable {
     let location: Location
     let mentorRating: Float
     let nickname: String
-    let isOfflineAvailable: Bool
-    let isOnlineAvailable: Bool
+    let offlineAvailable: Int
+    let onlineAvailable: Int
     let sex: Sex
 }
