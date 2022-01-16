@@ -11,21 +11,27 @@ import StompClientLib
 import Alamofire
 
 class ChatroomVC: UIViewController, StompClientLibDelegate{
-    var nickname: String?
+    var opponentNickname: String?
     var socketClient = StompClientLib()
     var url = NSURL()
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
-    var chatroomID: Int = 0
-    
+    var chatroomID: Int = 1
+    var chatContentList: [chatDto] = [chatDto]()
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
+    @IBOutlet var chatTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatOpponentNameLabel.text = self.nickname
-        createChatRoom()
+        self.chatOpponentNameLabel.text = self.opponentNickname
+        self.chatTableView.delegate = self
+        self.chatTableView.dataSource = self
+        self.chatTableView.rowHeight = UITableView.automaticDimension
+        if !isExistChatRoom(){
+            createChatRoom()
+        }
         registerSocket()
 
         
@@ -43,7 +49,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         
     }
     
-    @IBAction func passMessage(_ sender: Any) {
+    @IBAction func passMessage(_ sender: UIButton) {
         // pass Message Logic
         let messageString = messageTextView.text!
         if messageString == ""{
@@ -60,7 +66,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     }
     
     func updateUI() {
-        if let nickname = nickname {
+        if let nickname = opponentNickname {
             self.navigationItem.title = "\(nickname)"
             chatOpponentNameLabel.text = "\(nickname)"
         }
@@ -74,11 +80,6 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         print(wsurl)
         NSLog("URL : \(completeURL)")
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
-        // Auto Disconnect after 3 sec
-        socketClient.autoDisconnect(time: 3)
-        // Reconnect after 4 sec
-        socketClient.reconnect(request: NSURLRequest(url: wsurl as URL) , delegate: self as StompClientLibDelegate, time: 4.0)
-        
     }
     
     // subscribe function
@@ -99,12 +100,22 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         NSLog("DESTINATION : \(destination)")
         NSLog("JSON BODY : \(String(describing: jsonBody))")
         NSLog("STRING BODY : \(stringBody ?? "nil")")
+        
+        if let data = stringBody?.data(using: .utf8){
+            let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+            let chatContent :chatDto = chatDto(roomId: chatJSON["roomId"] as! Int, writer: chatJSON["writer"] as! String, message: chatJSON["message"] as! String)
+            self.chatContentList.append(chatContent)
+            NSLog("success append chat Content : \(chatContent)")
+            NSLog("chatContentList : \(self.chatContentList)")
+        }
+        self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
     }
     
     
     func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
          print("DESTINATION : \(destination)")
          print("String JSON BODY : \(String(describing: jsonBody))")
+        
      }
      
      func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {
@@ -136,6 +147,44 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         }
     }
     
-     
+    func isExistChatRoom() -> Bool{
+        if self.chatroomID == 0{
+            return false
+        } else{
+            return true
+        }
+    }
+    
+    func updateChat(){
+        
+    }
 }
+
+extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("section : \(section)")
+        return self.chatContentList.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
+        tableView.rowHeight = UITableView.automaticDimension
+        NSLog("comming cellForRowAt")
+        cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
+        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+        
+        NSLog("cell.nickname.label : \(cell.nicknameLabel.text!)")
+        NSLog("cell.content.label : \(cell.contentLabel.text!)")
+        
+        NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writer)")
+        NSLog("success cell in text content : \(self.chatContentList[indexPath.row].message)")
+        
+        return cell
+    }
+}
+
 
