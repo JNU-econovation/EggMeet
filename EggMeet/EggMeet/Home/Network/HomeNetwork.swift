@@ -12,8 +12,8 @@ struct HomeNetwork {
     static let shared = HomeNetwork()
     let ud = UserDefaults.standard
     
-    func getUserMentorData(completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        let url = getAPI_URL(target: "/user/mentor")
+    func getUserMentorData(growthPointSort: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        let url = getAPI_URL(target: "/user/mentor")+"?growthPointSort=\(growthPointSort)"
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
@@ -31,7 +31,6 @@ struct HomeNetwork {
                 do {
                     
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
-                    print(dataList)
                     
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthPoint = data["growthPoint"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
@@ -53,7 +52,6 @@ struct HomeNetwork {
                 debugPrint(error as Any)
             }
         }
-        print(mentorList)
     }
     
     func getAPI_URL(target: String) -> String{
@@ -82,8 +80,7 @@ extension HomeNetwork {
                 do {
                     
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
-                    print(dataList)
-                    
+                   
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
                             print("error happened")
@@ -92,7 +89,6 @@ extension HomeNetwork {
                         
                         menteeList.append(UserMentorResponseModel.init(age: age, category: Category.init(rawValue: category) ?? .PROGRAMMING_C, growthPoint: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
                     }
-                    
                     completion(menteeList)
                 } catch {print(error)}
             case .failure(let error):
@@ -103,6 +99,5 @@ extension HomeNetwork {
                 }
             }
         }
-        print(menteeList)
     }
 }

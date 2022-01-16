@@ -14,6 +14,7 @@ class HomeVC: UIViewController {
     
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
+    private var growthPointSort: String = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class HomeVC: UIViewController {
         let nibName = UINib(nibName: "HomeTVC", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         attribute()
-        getHomeFirstData()
+        getHomeMentorData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,18 +47,21 @@ class HomeVC: UIViewController {
     @IBAction func touchFindMentorButton(_ sender: Any) {
         isMentor = true
         self.homeList.removeAll()
-        HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
-            self.homeList.append(contentsOf: mentorList)
-            self.tableView.reloadData()
-        }
+        getHomeMentorData()
     }
     
     @IBAction func touchFindMenteeButton(_ sender: Any) {
         isMentor = false
         self.homeList.removeAll()
-        HomeNetwork.shared.getUserMenteeData(){ [self] menteeList in
-            self.homeList.append(contentsOf: menteeList)
-            self.tableView.reloadData()
+        getHomeMenteeData()
+    }
+    
+    @IBAction func touchGrowthPointSortButton(_ sender: Any) {
+        growthPointSort = "ASCENDING"
+        self.homeList.removeAll()
+        switch isMentor {
+        case true : getHomeMentorData()
+        case false : getHomeMenteeData()
         }
     }
 }
@@ -89,9 +93,16 @@ extension HomeVC: UITableViewDataSource {
 }
 
 extension HomeVC {
-    func getHomeFirstData(){
-        HomeNetwork.shared.getUserMentorData(){ [self] mentorList in
+    func getHomeMentorData(){
+        HomeNetwork.shared.getUserMentorData(growthPointSort: growthPointSort){ [self] mentorList in
             self.homeList.append(contentsOf: mentorList)
+            self.tableView.reloadData()
+        }
+    }
+    
+    func getHomeMenteeData() {
+        HomeNetwork.shared.getUserMenteeData(){ [self] menteeList in
+            self.homeList.append(contentsOf: menteeList)
             self.tableView.reloadData()
         }
     }
