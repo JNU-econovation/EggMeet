@@ -35,9 +35,9 @@ class HomeTVC: UITableViewCell {
 }
 
 extension HomeTVC {
-    func initCell(image: String, nickname: String, rating: String, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Bool, age: Int, sex: Sex){
+    func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
         profileImageView.image = UIImage(named: image)
-        starImageView.image = UIImage(named: rating)
+        starImageView.image = UIImage(named: "rating")
         
         nicknameLabel.text = nickname
         mentorGrowthPointLabel.text = "\(mentorGrowthPoint) 포인트"
@@ -47,17 +47,27 @@ extension HomeTVC {
             case .ALL : firstHashtagLabel.text = "#전체"
             default :firstHashtagLabel.text = "#\(location)"
         }
+        var onlineText = ""
         
         switch isOnline{
-            case true : secondHashtagLabel.text = "#온라인"
-            case false : secondHashtagLabel.text = "#오프라인" }
+            case 1 : onlineText = "#온라인"
+            default : onlineText = "" }
         
+        switch isOffline{
+            case 1 : onlineText += "#오프라인"
+            default : secondHashtagLabel.text = "" }
+        secondHashtagLabel.text = onlineText
         thirdHashtagLabel.text = "#\(age)대"
         
         switch sex {
         case .UNDEFINED : fourthHashtagLabel.text = ""
         case .FEMALE : fourthHashtagLabel.text = "#여성"
         case .MALE : fourthHashtagLabel.text = "#남성"
+        }
+        
+        switch isMentor {
+        case false : growthCostLabel.text = ""; mentorGrowthPointLabel.text = ""
+        default : growthCostLabel.text = "성장비용"
         }
     }
 }
