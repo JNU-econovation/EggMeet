@@ -57,7 +57,10 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         } else {
             let ud = UserDefaults.standard
             let topic = self.publishTopic
-            let writer = ud.string(forKey: "nickname")!
+            var writer = ud.string(forKey: "nickname")!
+            if writer == ""{
+                writer = "unknown"
+            }
             let params = chatDto(roomId: self.chatroomID, writer:writer, message: messageString)
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
@@ -158,6 +161,28 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     func updateChat(){
         
     }
+    
+    func addKeyboardNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification){
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            // view.nextButton.frame.origin.y -= keyboardHeight
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification: Notification){
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            // preparedView.nextButton.frame.origin.y += keyboardHeight
+        }
+    }
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -171,8 +196,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTableViewCell", for: indexPath) as! ChatTableViewCell
-        tableView.rowHeight = UITableView.automaticDimension
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
         NSLog("comming cellForRowAt")
         cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
         cell.contentLabel?.text = self.chatContentList[indexPath.row].message
