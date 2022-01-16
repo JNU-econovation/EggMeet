@@ -178,9 +178,9 @@
 				192C407827785BF4003055DD /* Main.storyboard */,
 				192C407E27785BF5003055DD /* Assets.xcassets */,
 				192C408027785BF5003055DD /* LaunchScreen.storyboard */,
-				192C408327785BF5003055DD /* Info.plist */,
 				192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */,
 				192C408A277869AD003055DD /* User.swift */,
+				192C408327785BF5003055DD /* Info.plist */,
 				192C408C27786A32003055DD /* MainViewController.swift */,
 				19256CE727913BEB0038336E /* BanUserVC.swift */,
 			);
