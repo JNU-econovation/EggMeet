@@ -11,12 +11,12 @@ import StompClientLib
 import Alamofire
 
 class ChatroomVC: UIViewController, StompClientLibDelegate{
-    var nickname: String?
+    var opponentNickname: String?
     var socketClient = StompClientLib()
     var url = NSURL()
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
-    var chatroomID: Int = 0
+    var chatroomID: Int = 1
     
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
@@ -24,8 +24,10 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatOpponentNameLabel.text = self.nickname
-        createChatRoom()
+        chatOpponentNameLabel.text = self.opponentNickname
+        if !isExistChatRoom(){
+            createChatRoom()
+        }
         registerSocket()
 
         
@@ -60,7 +62,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
     }
     
     func updateUI() {
-        if let nickname = nickname {
+        if let nickname = opponentNickname {
             self.navigationItem.title = "\(nickname)"
             chatOpponentNameLabel.text = "\(nickname)"
         }
@@ -74,11 +76,6 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         print(wsurl)
         NSLog("URL : \(completeURL)")
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
-        // Auto Disconnect after 3 sec
-        socketClient.autoDisconnect(time: 3)
-        // Reconnect after 4 sec
-        socketClient.reconnect(request: NSURLRequest(url: wsurl as URL) , delegate: self as StompClientLibDelegate, time: 4.0)
-        
     }
     
     // subscribe function
@@ -134,6 +131,18 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
                 print("")
             }
         }
+    }
+    
+    func isExistChatRoom() -> Bool{
+        if self.chatroomID == 0{
+            return false
+        } else{
+            return true
+        }
+    }
+    
+    func updateChat(){
+        
     }
     
      

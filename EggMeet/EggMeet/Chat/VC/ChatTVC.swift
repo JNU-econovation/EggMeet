@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 class ChatTVC: UITableViewCell {
-
+    @IBOutlet var name: UILabel!
+    @IBOutlet var content: UILabel!
+    
 }
 
