@@ -9,7 +9,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--홈-->
+        <!--Home SearchVC-->
+        <scene sceneID="a6B-iw-J0a">
+            <objects>
+                <viewController storyboardIdentifier="HomeSearchVC" id="tdY-5K-I44" customClass="HomeSearchVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NfM-Qb-kxv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcn-SN-CD7">
+                                <rect key="frame" x="0.0" y="129" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tOb-Mz-gdN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2kK-MN-3fq"/>
+                    <connections>
+                        <outlet property="searchBar" destination="bcn-SN-CD7" id="wYa-tf-Cdx"/>
+                        <segue destination="RXv-ck-iXP" kind="unwind" identifier="unwindFromSearchVC" unwindAction="unwindFromSearchVC:" id="JkD-yh-tnl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xLK-lu-zfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="RXv-ck-iXP" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2712" y="-627"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HomeVC" id="Y6W-OH-hqX" customClass="HomeVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,6 +76,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>
+                                <connections>
+                                    <segue destination="tdY-5K-I44" kind="show" id="j3F-sz-JBQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofr-En-G1s">
                                 <rect key="frame" x="332" y="74" width="44" height="31"/>
@@ -126,7 +157,7 @@
                             <constraint firstItem="j93-Ve-usp" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="9" id="YP6-Nf-yWZ"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" selectedImage="homekit" id="cPc-pV-dj4"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="4DD-Yy-hhd"/>
                     <navigationItem key="navigationItem" id="j8X-1c-hod"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -135,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884.057971014493" y="89.732142857142847"/>
+            <point key="canvasLocation" x="2794.202898550725" y="89.732142857142847"/>
         </scene>
         <!--성장포인트-->
         <scene sceneID="0Eo-o9-gjv">
@@ -161,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="udc-qb-QvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="907"/>
+            <point key="canvasLocation" x="1225" y="777"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MJg-b0-KzI">
@@ -174,15 +205,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="9DD-cA-QlC"/>
-                        <segue destination="ZbK-r9-xYz" kind="relationship" relationship="viewControllers" id="o0Z-J3-Fwp"/>
-                        <segue destination="OXB-SO-XUY" kind="relationship" relationship="viewControllers" id="2mo-Pc-nYx"/>
-                        <segue destination="z6w-rC-VXR" kind="relationship" relationship="viewControllers" id="Xrb-HI-Kya"/>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="vjG-X2-kke"/>
+                        <segue destination="ZbK-r9-xYz" kind="relationship" relationship="viewControllers" id="PU9-A9-NEG"/>
+                        <segue destination="OXB-SO-XUY" kind="relationship" relationship="viewControllers" id="vdQ-cD-hmN"/>
+                        <segue destination="z6w-rC-VXR" kind="relationship" relationship="viewControllers" id="j9U-QJ-M4h"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw9-Ro-0sY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275" y="68"/>
+            <point key="canvasLocation" x="1435" y="27"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="ceq-Mm-2NT">
@@ -198,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ks5-FD-DYZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-901" y="927"/>
+            <point key="canvasLocation" x="1943" y="778"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="pxx-of-OW1">
@@ -209,7 +240,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHa-C7-D8v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-234" y="563"/>
+            <point key="canvasLocation" x="643" y="473"/>
         </scene>
         <!--필터-->
         <scene sceneID="tlo-Sw-SSf">
@@ -326,9 +357,31 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gw-ax-ZEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="w5Y-zz-yFH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2679.7101449275365" y="89.732142857142847"/>
+            <point key="canvasLocation" x="3589.8550724637685" y="89.732142857142847"/>
+        </scene>
+        <!--홈-->
+        <scene sceneID="3IV-Y3-TKC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rdX-fP-4Ko" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="홈" image="homekit" catalog="system" selectedImage="homekit" id="cPc-pV-dj4"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zHB-Ap-chH">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="Sdw-oW-XFY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X9l-1h-VPW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1883" y="-707"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="vjG-X2-kke"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="fibrechannel" catalog="system" width="128" height="92"/>
