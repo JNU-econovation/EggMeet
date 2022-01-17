@@ -29,12 +29,11 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
         self.chatTableView.rowHeight = UITableView.automaticDimension
+        // addKeyboardNotification()
         if !isExistChatRoom(){
             createChatRoom()
         }
         registerSocket()
-
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -108,7 +107,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
             let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
             let chatContent :chatDto = chatDto(roomId: chatJSON["roomId"] as! Int, writer: chatJSON["writer"] as! String, message: chatJSON["message"] as! String)
             self.chatContentList.append(chatContent)
-            NSLog("success append chat Content : \(chatContent)")
+            NSLog("success append chat Con=tent : \(chatContent)")
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
@@ -172,7 +171,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            // view.nextButton.frame.origin.y -= keyboardHeight
+            self.view.frame.origin.y -= keyboardHeight
         }
     }
     
@@ -180,7 +179,7 @@ class ChatroomVC: UIViewController, StompClientLibDelegate{
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-            // preparedView.nextButton.frame.origin.y += keyboardHeight
+            self.view.frame.origin.y += keyboardHeight
         }
     }
 }
