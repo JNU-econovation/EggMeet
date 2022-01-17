@@ -35,7 +35,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLK-lu-zfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="RXv-ck-iXP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2712" y="-627"/>
+            <point key="canvasLocation" x="3590" y="-658"/>
         </scene>
         <!--Home-->
         <scene sceneID="s0d-6b-0kx">
@@ -96,6 +96,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system"/>
+                                <connections>
+                                    <segue destination="wqc-l4-Hqk" kind="show" id="x1g-kM-3aZ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="j93-Ve-usp">
                                 <rect key="frame" x="9" y="134" width="396" height="31"/>
@@ -358,6 +361,22 @@
                 <exit id="w5Y-zz-yFH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3589.8550724637685" y="89.732142857142847"/>
+        </scene>
+        <!--Home NoticeVC-->
+        <scene sceneID="xQZ-C4-Ata">
+            <objects>
+                <viewController storyboardIdentifier="HomeNoticeVC" id="wqc-l4-Hqk" customClass="HomeNoticeVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uLf-MI-riW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="fjT-as-aqq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="77N-x3-aeQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lYa-ci-SQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3590" y="796"/>
         </scene>
         <!--홈-->
         <scene sceneID="3IV-Y3-TKC">
