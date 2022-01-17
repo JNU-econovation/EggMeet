@@ -22,6 +22,7 @@ class HomeVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
         let nibName = UINib(nibName: "HomeTVC", bundle: nil)
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         attribute()
