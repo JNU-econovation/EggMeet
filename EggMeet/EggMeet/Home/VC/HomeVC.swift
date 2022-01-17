@@ -17,6 +17,7 @@ class HomeVC: UIViewController {
     private var growthPointSort: String = ""
     private var location: String = ""
     private var category: String = ""
+    var searchKeyword: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,7 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isHidden =  true
     }
     
     private func attribute() {
@@ -37,8 +38,8 @@ class HomeVC: UIViewController {
         tableView.dataSource = self
     }
     
-    @IBAction func windFilterVC(_ sender: Any) {
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeFilterVC") as! HomeFilterVC
+    @IBAction func windHomeSearchVC(_ sender: Any) {
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeSearchVC") as! HomeSearchVC
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
@@ -51,6 +52,11 @@ class HomeVC: UIViewController {
         case true : getHomeMentorData()
         case false : getHomeMenteeData()
         }
+    }
+    
+    @IBAction func unwindFromSearchVC(_ unwindSegue: UIStoryboardSegue) {
+        let searchVC = unwindSegue.source as! HomeSearchVC
+        searchKeyword = searchVC.searchKeyword
     }
     
     @IBAction func touchFindMentorButton(_ sender: Any) {
