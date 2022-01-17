@@ -319,44 +319,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="에그밋에서 사용할 닉네임을 입력해 주세요 :)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-UA-t5S">
-                                <rect key="frame" x="38" y="114" width="297" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그밋에서 사용할 닉네임을 입력해 주세요 :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-UA-t5S">
+                                <rect key="frame" x="30" y="114" width="315" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="나중에 얼마든지 변경할 수 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRs-Mf-csu">
-                                <rect key="frame" x="86" y="155" width="174" height="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나중에 얼마든지 변경할 수 있어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRs-Mf-csu">
+                                <rect key="frame" x="30" y="165" width="315" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-ue-0oW">
-                                <rect key="frame" x="122" y="566" width="102" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-ue-0oW">
+                                <rect key="frame" x="120" y="566" width="135" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
                                 <connections>
                                     <action selector="windSignUpLocationView:" destination="VFS-lx-X5e" eventType="touchUpInside" id="tBf-Qz-wpe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DK-j5-ZCh">
-                                <rect key="frame" x="113" y="505" width="120" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DK-j5-ZCh">
+                                <rect key="frame" x="120" y="505" width="135" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="중복 확인"/>
                                 <connections>
                                     <action selector="checkNicknameAvailable:" destination="VFS-lx-X5e" eventType="touchUpInside" id="iJL-wV-lAO"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-QD-Olk">
-                                <rect key="frame" x="38" y="358" width="297" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-QD-Olk">
+                                <rect key="frame" x="30" y="405" width="315" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="D4Y-UX-OIh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-XW-Mnk">
-                                <rect key="frame" x="63" y="291" width="235" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-XW-Mnk">
+                                <rect key="frame" x="30" y="301" width="315" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -364,10 +365,24 @@
                         <viewLayoutGuide key="safeArea" id="WnD-5O-LaG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0Vd-QD-Olk" firstAttribute="top" secondItem="w0K-XW-Mnk" secondAttribute="bottom" constant="70" id="87b-C0-SQ2"/>
+                            <constraint firstItem="6DK-j5-ZCh" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="120" id="8rZ-cv-GBn"/>
+                            <constraint firstItem="WnD-5O-LaG" firstAttribute="trailing" secondItem="uaJ-UA-t5S" secondAttribute="trailing" constant="30" id="Cw3-Ct-ue6"/>
+                            <constraint firstItem="uaJ-UA-t5S" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="30" id="Pu3-2Q-7kN"/>
                             <constraint firstItem="WnD-5O-LaG" firstAttribute="bottom" secondItem="f9J-ue-0oW" secondAttribute="bottom" constant="70" id="TJr-Tt-ptf"/>
-                            <constraint firstItem="rRs-Mf-csu" firstAttribute="top" secondItem="uaJ-UA-t5S" secondAttribute="bottom" constant="20" id="XjR-fd-lML"/>
+                            <constraint firstItem="rRs-Mf-csu" firstAttribute="top" secondItem="uaJ-UA-t5S" secondAttribute="bottom" constant="30" id="XjR-fd-lML"/>
                             <constraint firstItem="f9J-ue-0oW" firstAttribute="top" secondItem="6DK-j5-ZCh" secondAttribute="bottom" constant="30" id="bAp-nW-8e8"/>
+                            <constraint firstItem="w0K-XW-Mnk" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="30" id="dvw-j2-jqB"/>
+                            <constraint firstItem="f9J-ue-0oW" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="120" id="eQF-Y9-cyj"/>
+                            <constraint firstItem="WnD-5O-LaG" firstAttribute="trailing" secondItem="f9J-ue-0oW" secondAttribute="trailing" constant="120" id="eyv-pD-m6q"/>
+                            <constraint firstItem="w0K-XW-Mnk" firstAttribute="top" secondItem="rRs-Mf-csu" secondAttribute="bottom" constant="120" id="hnM-Hj-SLH"/>
+                            <constraint firstItem="0Vd-QD-Olk" firstAttribute="leading" secondItem="yQl-7C-bWT" secondAttribute="leading" constant="30" id="jAH-nU-Je0"/>
+                            <constraint firstItem="WnD-5O-LaG" firstAttribute="trailing" secondItem="rRs-Mf-csu" secondAttribute="trailing" constant="30" id="mR4-wi-xEk"/>
                             <constraint firstItem="uaJ-UA-t5S" firstAttribute="top" secondItem="WnD-5O-LaG" secondAttribute="top" constant="70" id="r41-6E-QSM"/>
+                            <constraint firstAttribute="trailing" secondItem="0Vd-QD-Olk" secondAttribute="trailing" constant="30" id="v90-L3-EW5"/>
+                            <constraint firstItem="WnD-5O-LaG" firstAttribute="trailing" secondItem="6DK-j5-ZCh" secondAttribute="trailing" constant="120" id="yNY-IB-EkT"/>
+                            <constraint firstItem="WnD-5O-LaG" firstAttribute="trailing" secondItem="w0K-XW-Mnk" secondAttribute="trailing" constant="30" id="yow-Sp-Rhv"/>
+                            <constraint firstItem="rRs-Mf-csu" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="30" id="zxO-pp-b1H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fMd-2Z-vFW"/>
