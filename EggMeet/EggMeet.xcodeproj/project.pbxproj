@@ -22,8 +22,8 @@
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
 		19797FE12793100800680B21 /* chatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE02793100800680B21 /* chatDto.swift */; };
+		19797FE32793E42500680B21 /* ChatNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE22793E42500680B21 /* ChatNavigationController.swift */; };
 		1984331B278EC1CA00245BB7 /* chatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984331A278EC1CA00245BB7 /* chatType.swift */; };
-		1984331D278ECAE700245BB7 /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984331C278ECAE700245BB7 /* ChatTVC.swift */; };
 		198744D1278DCA3500D21CAD /* SocketIOManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198744D0278DCA3500D21CAD /* SocketIOManager.swift */; };
 		1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1991D0C6278C676A0081EDF5 /* Chat.storyboard */; };
 		1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991D0C8278C68540081EDF5 /* ChatListVC.swift */; };
@@ -31,6 +31,7 @@
 		199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DD176278D98E800E35723 /* ChatroomVC.swift */; };
 		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
 		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
+		19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5A9F52794454E00954AFA /* ChatTVC.swift */; };
 		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
 		19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */; };
 		19FEC4992782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */; };
@@ -86,8 +87,8 @@
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
 		19797FE02793100800680B21 /* chatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDto.swift; sourceTree = "<group>"; };
+		19797FE22793E42500680B21 /* ChatNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationController.swift; sourceTree = "<group>"; };
 		1984331A278EC1CA00245BB7 /* chatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatType.swift; sourceTree = "<group>"; };
-		1984331C278ECAE700245BB7 /* ChatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
 		198744D0278DCA3500D21CAD /* SocketIOManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketIOManager.swift; sourceTree = "<group>"; };
 		1991D0C6278C676A0081EDF5 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		1991D0C8278C68540081EDF5 /* ChatListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
@@ -95,6 +96,7 @@
 		199DD176278D98E800E35723 /* ChatroomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomVC.swift; sourceTree = "<group>"; };
 		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
 		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
+		19F5A9F52794454E00954AFA /* ChatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
 		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
 		19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaCategoryVC.swift; sourceTree = "<group>"; };
 		19FEC4982782E22500F18D8F /* SignUpSetMenteeAreaDescriptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaDescriptionVC.swift; sourceTree = "<group>"; };
@@ -176,9 +178,9 @@
 				192C407827785BF4003055DD /* Main.storyboard */,
 				192C407E27785BF5003055DD /* Assets.xcassets */,
 				192C408027785BF5003055DD /* LaunchScreen.storyboard */,
-				192C408327785BF5003055DD /* Info.plist */,
 				192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */,
 				192C408A277869AD003055DD /* User.swift */,
+				192C408327785BF5003055DD /* Info.plist */,
 				192C408C27786A32003055DD /* MainViewController.swift */,
 				19256CE727913BEB0038336E /* BanUserVC.swift */,
 			);
@@ -218,7 +220,7 @@
 			children = (
 				1991D0C8278C68540081EDF5 /* ChatListVC.swift */,
 				199DD176278D98E800E35723 /* ChatroomVC.swift */,
-				1984331C278ECAE700245BB7 /* ChatTVC.swift */,
+				19797FE22793E42500680B21 /* ChatNavigationController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -227,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				1991D0C5278C675A0081EDF5 /* StoryBoard */,
+				19F5A9F52794454E00954AFA /* ChatTVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				1984331B278EC1CA00245BB7 /* chatType.swift in Sources */,
 				9C25EE6427900E7900CBBB11 /* Location.swift in Sources */,
 				9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */,
+				19797FE32793E42500680B21 /* ChatNavigationController.swift in Sources */,
 				19FEC49D2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift in Sources */,
 				193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */,
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
@@ -538,10 +542,10 @@
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
+				19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */,
 				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
 				19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */,
 				192C407527785BF4003055DD /* SceneDelegate.swift in Sources */,
-				1984331D278ECAE700245BB7 /* ChatTVC.swift in Sources */,
 				19256CE827913BEB0038336E /* BanUserVC.swift in Sources */,
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
 				9CE4B69D278C07A5003AEB90 /* GrowthPointVC.swift in Sources */,
