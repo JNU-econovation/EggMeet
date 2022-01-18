@@ -39,7 +39,8 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
     
     func buildTextViewStyle(){
         self.menteeAreaDescriptionTextView.layer.borderWidth = 1.0
-        self.menteeAreaDescriptionTextView.layer.borderColor = UIColor.black.cgColor
+        self.menteeAreaDescriptionTextView.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
+        self.menteeAreaDescriptionTextView.layer.cornerRadius = 12
     }
     
     
