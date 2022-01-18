@@ -13,12 +13,15 @@ PODS:
     - KakaoSDKCommon/Common (= 2.8.3)
   - KakaoSDKUser (2.8.3):
     - KakaoSDKAuth (= 2.8.3)
+  - Pageboy (3.6.2)
   - Socket.IO-Client-Swift (15.2.0):
     - Starscream (~> 3.1)
   - SocketRocket (0.6.0)
   - Starscream (3.1.1)
   - StompClientLib (1.4.1):
     - SocketRocket
+  - Tabman (2.11.1):
+    - Pageboy (~> 3.6.0)
 
 DEPENDENCIES:
   - DLRadioButton (~> 1.4)
@@ -29,6 +32,7 @@ DEPENDENCIES:
   - Socket.IO-Client-Swift (~> 15.2.0)
   - Starscream
   - StompClientLib
+  - Tabman (~> 2.9)
 
 SPEC REPOS:
   trunk:
@@ -38,10 +42,12 @@ SPEC REPOS:
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
+    - Pageboy
     - Socket.IO-Client-Swift
     - SocketRocket
     - Starscream
     - StompClientLib
+    - Tabman
 
 SPEC CHECKSUMS:
   Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
@@ -50,11 +56,13 @@ SPEC CHECKSUMS:
   KakaoSDKAuth: 36597989cec6dd54707c2fc6501091bb9e32e3f0
   KakaoSDKCommon: b86ad0c899b93eaf0edb94c6deb5f0dbf7116398
   KakaoSDKUser: 7debff9ff539b095aa4858469163fed7e3bce73e
+  Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
   Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   StompClientLib: ac40390e9660c574675f1c933bec81c8e2811a4f
+  Tabman: 792ac76fd1ec95af175c93db880a3c47cabedc91
 
-PODFILE CHECKSUM: c3da82177a00f8331555bf84e8e9b1ea6a8ed9e4
+PODFILE CHECKSUM: 65d3e67fa2f01b93d668b130d2cb6fbb1babfef8
 
 COCOAPODS: 1.11.2
