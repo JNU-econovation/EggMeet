@@ -260,15 +260,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 멘토 분야와 관련된 경력이 있다면 작성해주세요!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Iz-VN-K9j">
-                                <rect key="frame" x="42" y="86" width="245" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-05-H68">
-                                <rect key="frame" x="151" y="531" width="73" height="31"/>
+                                <rect key="frame" x="151" y="561" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
@@ -276,32 +269,84 @@
                                     <action selector="windSignUpSetGrowthPointView:" destination="L2b-gd-SbA" eventType="touchUpInside" id="nZV-kZ-mC3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsu-Jl-YHB">
-                                <rect key="frame" x="151" y="483" width="73" height="31"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dsu-Jl-YHB">
+                                <rect key="frame" x="154" y="517" width="73" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="건너뛰기"/>
+                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="건너뛰기"/>
+                                    </attributedString>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="skipAndWindSignUpSetGrowthPointView:" destination="L2b-gd-SbA" eventType="touchUpInside" id="S7F-MH-jtF"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-YY-P0U">
-                                <rect key="frame" x="63" y="269" width="240" height="177"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zpe-YY-P0U">
+                                <rect key="frame" x="27.5" y="241" width="320" height="141"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="141" id="YbS-cB-vFM"/>
+                                    <constraint firstAttribute="width" constant="320" id="fFK-5x-sID"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="만약 멘토 분야와 관련된 경력(학력, 직장) 이 있다면 작성해주세요. 없다면 작성하지 않아도 좋습니다:)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-Qh-1jp">
-                                <rect key="frame" x="42" y="162" width="293" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만약 멘토 분야와 관련된 경력(학력, 직장) 이 있다면 작성해주세요. 없다면 작성하지 않아도 좋습니다:)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVE-Qh-1jp">
+                                <rect key="frame" x="31.5" y="161.5" width="312" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="312" id="ABE-bi-dLT"/>
+                                    <constraint firstAttribute="height" constant="40" id="d2I-jT-CZz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" 멘토 분야와 관련된 경력이 있다면 작성해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zKZ-VC-SW7">
+                                <rect key="frame" x="10" y="111" width="355" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="355" id="b32-ZB-YSM"/>
+                                    <constraint firstAttribute="height" constant="43" id="wkz-ZJ-ikj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="허위 경력을 기재한 사실이 발견될 경우 불이익을 받을 수 있습니다. 사실만을 작성해주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pM7-u6-WU2">
+                                <rect key="frame" x="70.5" y="417.5" width="234" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="MdG-hb-CY0"/>
+                                    <constraint firstAttribute="width" constant="234" id="Pyg-QH-rvL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <color key="textColor" red="0.71764705882352942" green="0.086274509803921567" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 준비되지 않았다면 건너뛰어도 됩니다:)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPG-RT-TbD">
+                                <rect key="frame" x="109.5" y="497" width="156" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="2K5-6b-QPa"/>
+                                    <constraint firstAttribute="width" constant="156" id="q1Y-fZ-jWG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Rvl-4r-JdF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pM7-u6-WU2" firstAttribute="centerX" secondItem="0lb-nc-nQc" secondAttribute="centerX" id="D9b-Qc-IQ6"/>
+                            <constraint firstItem="HVE-Qh-1jp" firstAttribute="centerX" secondItem="0lb-nc-nQc" secondAttribute="centerX" id="Ejr-jC-Dli"/>
+                            <constraint firstItem="pM7-u6-WU2" firstAttribute="centerY" secondItem="0lb-nc-nQc" secondAttribute="centerY" constant="100" id="Pvq-y2-VAo"/>
+                            <constraint firstItem="zpe-YY-P0U" firstAttribute="centerX" secondItem="0lb-nc-nQc" secondAttribute="centerX" id="SQy-DY-ogt"/>
+                            <constraint firstItem="HPG-RT-TbD" firstAttribute="centerY" secondItem="0lb-nc-nQc" secondAttribute="centerY" constant="169" id="cHb-Vr-I9r"/>
+                            <constraint firstItem="zKZ-VC-SW7" firstAttribute="centerX" secondItem="0lb-nc-nQc" secondAttribute="centerX" id="hnH-sd-GMh"/>
+                            <constraint firstItem="HPG-RT-TbD" firstAttribute="centerX" secondItem="0lb-nc-nQc" secondAttribute="centerX" id="oTF-dl-Kuu"/>
+                            <constraint firstItem="HVE-Qh-1jp" firstAttribute="centerY" secondItem="0lb-nc-nQc" secondAttribute="centerY" constant="-152" id="oX7-r4-aX9"/>
+                            <constraint firstItem="zpe-YY-P0U" firstAttribute="centerY" secondItem="0lb-nc-nQc" secondAttribute="centerY" constant="-22" id="rtM-Xm-Jnj"/>
+                            <constraint firstItem="zKZ-VC-SW7" firstAttribute="centerY" secondItem="0lb-nc-nQc" secondAttribute="centerY" constant="-201" id="vDy-E2-cSH"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="mentorAreaCareerTextField" destination="zpe-YY-P0U" id="3jg-Zx-fe6"/>
@@ -724,10 +769,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="나의 지식 혹은 상대에게 공유하는 대가로 몇 성장포인트를 받을까요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Y-tl-Yxs">
-                                <rect key="frame" x="58" y="69" width="256" height="61"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 지식 혹은 경험을 상대에게 공유하는 대가로 몇 성장포인트를 받을까요?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z4Y-tl-Yxs">
+                                <rect key="frame" x="50.5" y="111.5" width="274" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="274" id="gyd-ST-paF"/>
+                                    <constraint firstAttribute="height" constant="50" id="mLk-Qc-CCf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -750,7 +798,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-fe-h3e">
-                                <rect key="frame" x="99" y="226" width="169" height="31"/>
+                                <rect key="frame" x="99" y="257" width="169" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="성장포인트가 무엇인가요?"/>
@@ -759,14 +807,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="에그밋은 그 어떠한 기준으로도 여러분의 지식과 경험의 값을 재단하지 않습니다. 스스로의 판단으로 멘티에게 받을 성장비용을 정해주세요. (최소 0pt ~ 최대 5pt)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-wL-PaM">
-                                <rect key="frame" x="30" y="138" width="315" height="80"/>
+                                <rect key="frame" x="30" y="169" width="315" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlT-Yl-eDt">
-                                <rect key="frame" x="131" y="278" width="113" height="31"/>
+                                <rect key="frame" x="131" y="309" width="113" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="성장포인트 설정"/>
@@ -777,6 +825,10 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="24v-jM-7yA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Z4Y-tl-Yxs" firstAttribute="centerY" secondItem="wvi-Ym-UPz" secondAttribute="centerY" constant="-197" id="M5i-RA-Z1N"/>
+                            <constraint firstItem="Z4Y-tl-Yxs" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="YU1-l2-P9x"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="setGrowthPointButton" destination="FlT-Yl-eDt" id="j9U-vO-AjY"/>
