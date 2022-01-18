@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+let NICKNAME_CELL_TAG = 100
+let LASTEST_DATE_CELL_TAG = 101
+let DESCRIPTION_CELL_TAG = 102
+
 class ChatListVC: UITableViewController {
     
     var testDataset = [
@@ -45,9 +49,9 @@ class ChatListVC: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatListCell")!
         
-        let nickname = cell.viewWithTag(100) as? UILabel
-        let lastestDate = cell.viewWithTag(101) as? UILabel
-        let description = cell.viewWithTag(102) as? UILabel
+        let nickname = cell.viewWithTag(NICKNAME_CELL_TAG) as? UILabel
+        let lastestDate = cell.viewWithTag(LASTEST_DATE_CELL_TAG) as? UILabel
+        let description = cell.viewWithTag(DESCRIPTION_CELL_TAG) as? UILabel
         
         nickname?.text = row.nickname
         lastestDate?.text = row.lastestDate
@@ -55,7 +59,7 @@ class ChatListVC: UITableViewController {
         
         return cell
     }
-    
+
     // 사용자가 행을 선택했을 때
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = self.testList[indexPath.row]
