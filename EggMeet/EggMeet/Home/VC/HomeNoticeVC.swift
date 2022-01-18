@@ -20,10 +20,13 @@ class HomeNoticeVC: TabmanViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         
         let tableVC = UIStoryboard.init(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeNoticeTableVC") as! HomeNoticeTableVC
+        let tableVC2 = UIStoryboard.init(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeNoticeTableVC") as! HomeNoticeTableVC
+        let tableVC3 = UIStoryboard.init(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeNoticeTableVC") as! HomeNoticeTableVC
+        let tableVC4 = UIStoryboard.init(name: "HomeStoryboard", bundle: nil).instantiateViewController(withIdentifier: "HomeNoticeTableVC") as! HomeNoticeTableVC
         viewControllers.append(tableVC)
-        viewControllers.append(tableVC)
-        viewControllers.append(tableVC)
-        viewControllers.append(tableVC)
+        viewControllers.append(tableVC2)
+        viewControllers.append(tableVC3)
+        viewControllers.append(tableVC4)
         
         self.dataSource = self
         
@@ -52,12 +55,12 @@ class HomeNoticeVC: TabmanViewController {
             button.tintColor = .black
             button.selectedTintColor = .black
             button.font = UIFont.systemFont(ofSize: 16)
-            button.selectedFont = UIFont.systemFont(ofSize: 16, weight: .medium)
+            button.selectedFont = UIFont.systemFont(ofSize: 16, weight: .bold)
         }
         
         // 인디케이터 (영상에서 주황색 아래 바 부분)
-        ctBar.indicator.weight = .custom(value: 7)
-        ctBar.indicator.tintColor = .yellow
+        ctBar.indicator.weight = .custom(value: 8)
+        ctBar.indicator.tintColor = .systemYellow
     }
 }
 extension HomeNoticeVC: PageboyViewControllerDataSource, TMBarDataSource {
@@ -67,9 +70,9 @@ extension HomeNoticeVC: PageboyViewControllerDataSource, TMBarDataSource {
         // MARK: -Tab 안 글씨들
         switch index {
         case 0:
-            return TMBarItem(title: "전체")
+            return TMBarItem(title: " 전체 ")
         case 1:
-            return TMBarItem(title: "채팅")
+            return TMBarItem(title: " 채팅 ")
         case 2:
             return TMBarItem(title: "멘토신청")
         case 3:
@@ -87,6 +90,7 @@ extension HomeNoticeVC: PageboyViewControllerDataSource, TMBarDataSource {
 
     func viewController(for pageboyViewController: PageboyViewController,
                         at index: PageboyViewController.PageIndex) -> UIViewController? {
+        print("index : \(index)")
         return viewControllers[index]
     }
 
