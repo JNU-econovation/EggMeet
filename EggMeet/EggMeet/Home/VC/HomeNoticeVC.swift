@@ -28,6 +28,8 @@ class HomeNoticeVC: TabmanViewController {
         viewControllers.append(tableVC3)
         viewControllers.append(tableVC4)
         
+        self.isScrollEnabled = false
+        
         self.dataSource = self
         
         let bar = TMBar.ButtonBar()
@@ -41,7 +43,8 @@ class HomeNoticeVC: TabmanViewController {
     }
     
     func settingTabBar (ctBar : TMBar.ButtonBar) {
-        ctBar.layout.transitionStyle = .snap
+        ctBar.layout.transitionStyle = .none
+        
         // 왼쪽 여백주기
         ctBar.layout.contentInset = UIEdgeInsets(top: 0.0, left: 13.0, bottom: 0.0, right: 20.0)
         
