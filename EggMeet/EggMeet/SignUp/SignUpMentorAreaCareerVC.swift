@@ -12,6 +12,7 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var mentorAreaCareerTextField: UITextView!
+    @IBOutlet var explainLabel: UILabel!
     
     let ud = UserDefaults.standard
     let mentorAreaCareerKey: String = "mentorAreaCareer"
@@ -42,10 +43,8 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
     }
     
     func buildTextViewStyle(){
-        navigationController?.navigationBar.barTintColor = UIColor.green
         self.mentorAreaCareerTextField.layer.borderWidth = 1.0
         self.mentorAreaCareerTextField.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
         self.mentorAreaCareerTextField.layer.cornerRadius = 12
-        
     }
 }
