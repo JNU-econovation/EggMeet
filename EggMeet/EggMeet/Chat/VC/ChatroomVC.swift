@@ -12,16 +12,17 @@ import Alamofire
 
 let CHAT_SECTION_NUM = 1
 let STATUS_OK = 200
-
+let TEST_CHAT_ROOM_ID = 1
 
 class ChatroomVC: UIViewController{
     var opponentNickname: String?
     var socketClient = StompClientLib()
     var url = NSURL()
+    var chatroomID: Int = TEST_CHAT_ROOM_ID
+    var chatContentList: [chatDto] = [chatDto]()
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
-    var chatroomID: Int = 1
-    var chatContentList: [chatDto] = [chatDto]()
+    
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -54,16 +55,22 @@ class ChatroomVC: UIViewController{
         if messageString == ""{
             return
         } else {
-            let ud = UserDefaults.standard
             let topic = self.publishTopic
-            var writer = ud.string(forKey: "nickname")!
-            if writer == ""{
-                writer = "unknown"
-            }
+            let writer = setMyChatroomName()
             let params = chatDto(roomId: self.chatroomID, writer:writer, message: messageString)
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
             self.messageTextView.text = ""
+        }
+    }
+    
+    func setMyChatroomName() -> String{
+        let ud = UserDefaults.standard
+        let myName = ud.string(forKey: "nickname")!
+        if  myName == ""{
+            return "unKnowned"
+        } else {
+            return myName
         }
     }
     
