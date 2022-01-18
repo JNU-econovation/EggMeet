@@ -88,13 +88,7 @@ class ChatroomVC: UIViewController{
         let wsurl = NSURL(string: completeURL)!
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
     }
-    
-    func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
-         print("DESTINATION : \(destination)")
-         print("String JSON BODY : \(String(describing: jsonBody))")
         
-     }
-    
     // createChatRoom from id
     func createChatRoom(){
         let id: Int = CHAT_SECTION_NUM     // chatroom number
@@ -119,14 +113,9 @@ class ChatroomVC: UIViewController{
             return true
         }
     }
-    
-    func updateChat(){
-        
-    }
-    
+
     func addKeyboardNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
@@ -216,4 +205,9 @@ extension ChatroomVC: StompClientLibDelegate {
     func serverDidSendPing() {
         print("Server Ping")
     }
+    
+    func stompClientJSONBody(client: StompClientLib!, didReceiveMessageWithJSONBody jsonBody: String?, withHeader header: [String : String]?, withDestination destination: String) {
+         print("DESTINATION : \(destination)")
+         print("String JSON BODY : \(String(describing: jsonBody))")
+     }
 }
