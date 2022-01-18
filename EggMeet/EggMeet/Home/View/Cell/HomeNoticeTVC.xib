@@ -27,7 +27,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="메세지가 도착했습니다." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTL-X0-7ZE">
                         <rect key="frame" x="98" y="24" width="305" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -42,9 +42,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="imageView" destination="Uxl-fw-z05" id="jLj-Ka-5Dk"/>
                 <outlet property="noticeLabel" destination="sTL-X0-7ZE" id="tm5-Qg-1i7"/>
                 <outlet property="timeLabel" destination="j2D-gv-6Am" id="maU-Ty-gFL"/>
+                <outlet property="userImageView" destination="Uxl-fw-z05" id="PaB-XV-BD9"/>
             </connections>
             <point key="canvasLocation" x="57.24637681159421" y="87.388392857142847"/>
         </tableViewCell>

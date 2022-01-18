@@ -11,7 +11,7 @@ class HomeNoticeTVC: UITableViewCell {
     
     @IBOutlet weak var noticeLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var userImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,5 +23,4 @@ class HomeNoticeTVC: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
