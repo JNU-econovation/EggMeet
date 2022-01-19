@@ -1772,11 +1772,8 @@
         <image name="progress_bar_full" width="754" height="16"/>
         <image name="progressbar_nickname" width="150" height="32"/>
         <image name="skip_button" width="278" height="88"/>
-<<<<<<< HEAD
         <image name="welcome_comment" width="343.5" height="78.5"/>
-=======
         <image name="textfield_nickname" width="1284" height="140"/>
->>>>>>> 004941d6191efd1dd3f7bfbc96f6404f9de396bb
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
