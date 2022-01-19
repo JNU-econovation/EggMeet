@@ -44,9 +44,9 @@ class SignUpSetChannelVC : UIViewController{
         isOnlineChecked = !isOnlineChecked
         ud.set(isOnlineChecked, forKey: isOnlineAvailableKey)
         if isOnlineChecked {
-            sender.setTitle("온라인 체크", for:.normal)
+            // toggle
         } else {
-            sender.setTitle("온라인", for: .normal)
+            // toggle
         }
     }
     
