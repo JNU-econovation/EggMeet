@@ -12,8 +12,14 @@ struct HomeNetwork {
     static let shared = HomeNetwork()
     let ud = UserDefaults.standard
     
-    func getUserMentorData(location: String, category: String, growthPointSort: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        let url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&sex=\(sex)&age=\(age)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)&growthPointSort=\(growthPointSort)"
+    func getUserMentorData(location: String, category: String, growthPointSort: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        var url: String = ""
+        if age == 0 {
+            url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&sex=\(sex)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)&growthPointSort=\(growthPointSort)"
+        }else{
+            url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&sex=\(sex)&age=\(age)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)&growthPointSort=\(growthPointSort)"
+        }
+       
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!

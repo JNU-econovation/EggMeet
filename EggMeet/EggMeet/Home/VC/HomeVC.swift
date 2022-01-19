@@ -19,7 +19,7 @@ class HomeVC: UIViewController {
     private var category: String = ""
     var searchKeyword: String = ""
     private var sex: String = ""
-    private var age: String = ""
+    private var age: Int = 0
     private var isOnlineAvailable: Bool = true
     private var isOfflineAvailable: Bool = true
     

@@ -28,7 +28,7 @@ class HomeFilterVC: UIViewController {
     var location: String = ""
     var category: String = ""
     var sex: String = ""
-    var age: String = ""
+    var age: Int = 0
     var isOnlineAvailable: Bool = true
     var isOfflineAvailable: Bool = true
     
@@ -100,10 +100,18 @@ class HomeFilterVC: UIViewController {
     @objc func touchAgeRadioButton(_ sender:DLRadioButton) {
         if sender.isSelected {
             print(sender.currentTitle!)
-            age = sender.currentTitle!
+            switch sender.currentTitle! {
+            case "10대" : age = 10
+            case "20대" : age = 20
+            case "30대" : age = 30
+            case "40대" : age = 40
+            case "50대" : age = 50
+            case "60대" : age = 60
+            default : age = 20
+            }
         }else{
             print("취소 : \(sender.currentTitle!)")
-            age = ""
+            age = 0
         }
     }
     
