@@ -30,18 +30,15 @@ struct HomeNetwork {
             case .success(let value):
                 do {
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
-                    
-                    print(dataResponse.debugDescription)
-                    
-                    /*
+                   
                     for data in dataList {
-                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthPoint = data["growthPoint"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
+                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthCost = data["growthCost"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
                             print("error happened")
                             return
                         }
                         
-                        mentorList.append(UserMentorResponseModel.init(age: age, category: Category.init(rawValue: category) ?? .PROGRAMMING_C, growthPoint: growthPoint, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
-                    }*/
+                        mentorList.append(UserMentorResponseModel.init(age: age, category: Category.init(rawValue: category) ?? .PROGRAMMING_C, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                    }
                     
                     completion(mentorList)
                 } catch {print(error.localizedDescription)}
@@ -83,15 +80,13 @@ extension HomeNetwork {
                     
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
                     
-                    print(dataResponse.debugDescription)
-                   
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
                             print("error happened")
                             return
                         }
                         
-                        menteeList.append(UserMentorResponseModel.init(age: age, category: Category.init(rawValue: category) ?? .PROGRAMMING_C, growthPoint: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        menteeList.append(UserMentorResponseModel.init(age: age, category: Category.init(rawValue: category) ?? .PROGRAMMING_C, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
                     }
                     completion(menteeList)
                 } catch {print(error)}

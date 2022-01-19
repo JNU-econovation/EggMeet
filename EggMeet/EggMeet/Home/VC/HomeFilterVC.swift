@@ -99,6 +99,7 @@ class HomeFilterVC: UIViewController {
     
     @objc func touchAgeRadioButton(_ sender:DLRadioButton) {
         print(sender.currentTitle!)
+        age = sender.currentTitle!
     }
     
     func setGenderRadioButtons(){
@@ -118,6 +119,9 @@ class HomeFilterVC: UIViewController {
         
         womanRadioButton.addTarget(self, action: #selector(touchGenderRadioButton(_:)), for: .touchUpInside)
         manradioButton.addTarget(self, action: #selector(touchGenderRadioButton(_:)), for: .touchUpInside)
+        womanRadioButton.addTarget(self, action: #selector(cancelGenderRadioButton(_:)), for: .touchCancel)
+        
+        manradioButton.isMultipleSelectionEnabled = true
         
         genderView.addSubview(womanRadioButton)
         genderView.addSubview(manradioButton)
@@ -125,7 +129,14 @@ class HomeFilterVC: UIViewController {
     
     @objc func touchGenderRadioButton(_ sender:DLRadioButton) {
         print(sender.currentTitle!)
+        sex = sender.currentTitle!
     }
+    
+    @objc func cancelGenderRadioButton(_ sender:DLRadioButton) {
+        print("취소 : \(sender.currentTitle!)")
+        sex = ""
+    }
+  
     
     func setChannelRadioButtons(){
         let onlineRadioButton = DLRadioButton()
