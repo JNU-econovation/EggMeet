@@ -394,35 +394,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그밋에서 사용할 닉네임을 입력해 주세요 :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-UA-t5S">
-                                <rect key="frame" x="30" y="114" width="315" height="21"/>
+                                <rect key="frame" x="30" y="114" width="311" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나중에 얼마든지 변경할 수 있어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRs-Mf-csu">
-                                <rect key="frame" x="30" y="165" width="315" height="16"/>
+                                <rect key="frame" x="30" y="165" width="311" height="16"/>
                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-ue-0oW">
-                                <rect key="frame" x="120" y="566" width="135" height="31"/>
+                                <rect key="frame" x="120" y="561" width="131" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="0OO-QY-BXP"/>
+                                    <constraint firstAttribute="width" constant="131" id="8iK-5J-tLv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음으로">
+                                    <backgroundConfiguration key="background" image="nickname_button"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="windSignUpLocationView:" destination="VFS-lx-X5e" eventType="touchUpInside" id="tBf-Qz-wpe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DK-j5-ZCh">
-                                <rect key="frame" x="120" y="505" width="135" height="31"/>
+                                <rect key="frame" x="120" y="495" width="131" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="BDd-9p-cOk"/>
+                                    <constraint firstAttribute="height" constant="36" id="Z1Q-4y-8CZ"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="중복 확인"/>
+                                <buttonConfiguration key="configuration" style="plain" title="중복 확인">
+                                    <backgroundConfiguration key="background" image="nickname_button"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="checkNicknameAvailable:" destination="VFS-lx-X5e" eventType="touchUpInside" id="iJL-wV-lAO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-QD-Olk">
-                                <rect key="frame" x="30" y="405" width="315" height="15"/>
+                                <rect key="frame" x="30" y="405" width="311" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="D4Y-UX-OIh"/>
                                 </constraints>
@@ -430,11 +442,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-XW-Mnk">
-                                <rect key="frame" x="30" y="301" width="315" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="textfield_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-XW-Mnk">
+                                <rect key="frame" x="30" y="301" width="311" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="OFt-MZ-aSW">
+                                <rect key="frame" x="0.0" y="44" width="36.5" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="IyE-ZT-AiQ"/>
+                                    <constraint firstAttribute="width" constant="36.5" id="mv9-wT-oO8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WnD-5O-LaG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -442,6 +461,8 @@
                             <constraint firstItem="0Vd-QD-Olk" firstAttribute="top" secondItem="w0K-XW-Mnk" secondAttribute="bottom" constant="70" id="87b-C0-SQ2"/>
                             <constraint firstItem="6DK-j5-ZCh" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="120" id="8rZ-cv-GBn"/>
                             <constraint firstItem="WnD-5O-LaG" firstAttribute="trailing" secondItem="uaJ-UA-t5S" secondAttribute="trailing" constant="30" id="Cw3-Ct-ue6"/>
+                            <constraint firstItem="OFt-MZ-aSW" firstAttribute="top" secondItem="WnD-5O-LaG" secondAttribute="top" id="Fhx-lF-Hs3"/>
+                            <constraint firstItem="OFt-MZ-aSW" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" id="Il0-H1-1dx"/>
                             <constraint firstItem="uaJ-UA-t5S" firstAttribute="leading" secondItem="WnD-5O-LaG" secondAttribute="leading" constant="30" id="Pu3-2Q-7kN"/>
                             <constraint firstItem="WnD-5O-LaG" firstAttribute="bottom" secondItem="f9J-ue-0oW" secondAttribute="bottom" constant="70" id="TJr-Tt-ptf"/>
                             <constraint firstItem="rRs-Mf-csu" firstAttribute="top" secondItem="uaJ-UA-t5S" secondAttribute="bottom" constant="30" id="XjR-fd-lML"/>
@@ -1501,43 +1522,68 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="태어난 해를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h71-ip-1kN">
-                                <rect key="frame" x="32" y="89" width="170" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태어난 해를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h71-ip-1kN">
+                                <rect key="frame" x="109" y="156" width="170" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="정확한 나이는 공개되지 않습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-1k-P3z">
-                                <rect key="frame" x="32" y="134" width="160" height="15"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정확한 나이는 공개되지 않습니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-1k-P3z">
+                                <rect key="frame" x="116" y="199" width="160" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="생년월일을 허위로 기재할 경우, 발견 시  서비스 이용에 불이익이 있을 수 있으니 주의해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38J-oa-UZu">
-                                <rect key="frame" x="16" y="412" width="302" height="90"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" systemColor="systemRedColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-6I-813">
-                                <rect key="frame" x="16" y="180" width="343" height="224"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-6I-813">
+                                <rect key="frame" x="61" y="259" width="269" height="216"/>
                             </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-QT-k8K">
-                                <rect key="frame" x="138" y="581" width="114" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCV-QT-k8K">
+                                <rect key="frame" x="122" y="595" width="131" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="Bjl-4P-GeC"/>
+                                    <constraint firstAttribute="height" constant="36" id="lDr-o3-klC"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="다음으로"/>
+                                <buttonConfiguration key="configuration" style="plain" title="다음으로">
+                                    <backgroundConfiguration key="background" image="nickname_button"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="windSignUpSexView:" destination="0Z5-hQ-QOo" eventType="touchUpInside" id="ZVL-Hw-gj1"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-3T-fFz">
+                                <rect key="frame" x="0.0" y="0.0" width="76" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="CS4-4V-agZ"/>
+                                    <constraint firstAttribute="height" constant="8" id="LoF-5f-Z6o"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일을 허위로 기재할 경우, 발견 시  서비스 이용에 불이익이 있을 수 있으니 주의해 주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38J-oa-UZu">
+                                <rect key="frame" x="30" y="520" width="315" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KbW-mY-SH8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KJt-1k-P3z" firstAttribute="top" secondItem="BIR-Yc-7if" secondAttribute="topMargin" constant="199" id="1PM-hG-el0"/>
+                            <constraint firstItem="h71-ip-1kN" firstAttribute="leading" secondItem="BIR-Yc-7if" secondAttribute="leadingMargin" constant="93" id="51l-ES-mWx"/>
+                            <constraint firstItem="BCV-QT-k8K" firstAttribute="leading" secondItem="KbW-mY-SH8" secondAttribute="leading" constant="122" id="6Bf-28-ggf"/>
+                            <constraint firstItem="KJt-1k-P3z" firstAttribute="leading" secondItem="BIR-Yc-7if" secondAttribute="leadingMargin" constant="100" id="7M4-d4-Von"/>
+                            <constraint firstItem="Ggb-6I-813" firstAttribute="leading" secondItem="BIR-Yc-7if" secondAttribute="leadingMargin" constant="45" id="AEb-If-0xE"/>
+                            <constraint firstItem="BCV-QT-k8K" firstAttribute="top" secondItem="Ggb-6I-813" secondAttribute="bottom" constant="120" id="SOX-zF-aug"/>
+                            <constraint firstItem="38J-oa-UZu" firstAttribute="leading" secondItem="KbW-mY-SH8" secondAttribute="leading" constant="30" id="T7O-e4-Dcy"/>
+                            <constraint firstItem="Ggb-6I-813" firstAttribute="top" secondItem="BIR-Yc-7if" secondAttribute="topMargin" constant="259" id="Urr-sy-6cS"/>
+                            <constraint firstItem="38J-oa-UZu" firstAttribute="top" secondItem="Ggb-6I-813" secondAttribute="bottom" constant="45" id="h4D-zk-jnb"/>
+                            <constraint firstAttribute="trailing" secondItem="Ggb-6I-813" secondAttribute="trailing" constant="45" id="mma-zV-znD"/>
+                            <constraint firstItem="h71-ip-1kN" firstAttribute="top" secondItem="BIR-Yc-7if" secondAttribute="topMargin" constant="156" id="mn2-TA-nW0"/>
+                            <constraint firstItem="KbW-mY-SH8" firstAttribute="trailing" secondItem="BCV-QT-k8K" secondAttribute="trailing" constant="122" id="ny7-R8-EPY"/>
+                            <constraint firstItem="gnQ-3T-fFz" firstAttribute="top" secondItem="KbW-mY-SH8" secondAttribute="top" id="oCM-5A-uph"/>
+                            <constraint firstItem="KbW-mY-SH8" firstAttribute="trailing" secondItem="38J-oa-UZu" secondAttribute="trailing" constant="30" id="sma-MF-MOq"/>
+                            <constraint firstItem="gnQ-3T-fFz" firstAttribute="leading" secondItem="KbW-mY-SH8" secondAttribute="leading" id="tRU-dy-oOl"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="picker" destination="Ggb-6I-813" id="DFD-R7-kHy"/>
@@ -1559,8 +1605,11 @@
         <image name="mentee_categorybar_detail" width="642" height="70"/>
         <image name="mentee_categorybar_general" width="642" height="70"/>
         <image name="next_button_disable" width="278" height="88"/>
+        <image name="nickname_button" width="139" height="44"/>
         <image name="progress_bar_full" width="754" height="16"/>
+        <image name="progressbar_nickname" width="150" height="32"/>
         <image name="skip_button" width="278" height="88"/>
+        <image name="textfield_nickname" width="1284" height="140"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
