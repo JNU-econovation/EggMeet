@@ -27,6 +27,10 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
         }
 
     @IBAction func windSignUpSetChannelView (_ sender: Any){
+        if self.menteeAreaDescriptionTextView.text == "" {
+            showAlert()
+            return
+        }
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSetChannelVC") as? SignUpSetChannelVC else {return}
         ud.set(self.menteeAreaDescriptionTextView.text, forKey: menteeAreaDescriptionKey)
         self.navigationController?.pushViewController(nextVC, animated: true)
@@ -43,6 +47,13 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
         self.menteeAreaDescriptionTextView.layer.borderWidth = 1.0
         self.menteeAreaDescriptionTextView.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
         self.menteeAreaDescriptionTextView.layer.cornerRadius = 12
+    }
+    
+    func showAlert(){
+        let alert = UIAlertController(title: "주의", message: "내용을 작성해주세요!", preferredStyle: UIAlertController.Style.alert)
+        let cancelButton = UIAlertAction(title: "확인", style: .default , handler: nil)
+        alert.addAction(cancelButton)
+        present(alert, animated: true, completion: nil)
     }
 }
 
