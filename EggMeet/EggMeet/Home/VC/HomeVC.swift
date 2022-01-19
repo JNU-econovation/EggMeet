@@ -139,7 +139,7 @@ extension HomeVC {
     }
     
     func getHomeMenteeData() {
-        HomeNetwork.shared.getUserMenteeData(location: location, category: category){ [self] menteeList in
+        HomeNetwork.shared.getUserMenteeData(location: location, category: category, sex: sex, isOnlineAvailable: isOnlineAvailable, isOfflineAvailable: isOfflineAvailable, age: age){ [self] menteeList in
             self.homeList.append(contentsOf: menteeList)
             self.tableView.reloadData()
         }

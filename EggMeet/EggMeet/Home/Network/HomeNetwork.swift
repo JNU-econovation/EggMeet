@@ -68,8 +68,13 @@ struct HomeNetwork {
     }
 }
 extension HomeNetwork {
-    func getUserMenteeData(location: String, category: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        let url = getAPI_URL(target: "/user/mentee")+"?location=\(location)&category=\(category)"
+    func getUserMenteeData(location: String, category: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        var url: String = ""
+        if age == 0 {
+            url = getAPI_URL(target: "/user/mentee")+"?location=\(location)&sex=\(sex)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)"
+        }else{
+            url = getAPI_URL(target: "/user/mentee")+"?location=\(location)&sex=\(sex)&age=\(age)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)"
+        }
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
