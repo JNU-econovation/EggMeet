@@ -23,7 +23,6 @@ class ChatroomVC: UIViewController{
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
     
-    
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet var chatTableView: UITableView!

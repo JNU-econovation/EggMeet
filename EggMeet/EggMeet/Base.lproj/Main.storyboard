@@ -266,10 +266,8 @@
                                     <constraint firstAttribute="height" constant="36" id="OQW-cr-7m8"/>
                                     <constraint firstAttribute="width" constant="131" id="X4u-us-L3T"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="next_button_disable" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="next_button_disable"/>
                                 <connections>
                                     <action selector="windSignUpSetGrowthPointView:" destination="L2b-gd-SbA" eventType="touchUpInside" id="nZV-kZ-mC3"/>
                                 </connections>
@@ -280,11 +278,8 @@
                                     <constraint firstAttribute="height" constant="36" id="Hcp-4d-NBP"/>
                                     <constraint firstAttribute="width" constant="131" id="Ypj-nc-OEC"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="skip_button" imageContentMode="scaleAspectFill"/>
-                                    <attributedString key="attributedTitle"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="" backgroundImage="skip_button"/>
                                 <connections>
                                     <action selector="skipAndWindSignUpSetGrowthPointView:" destination="L2b-gd-SbA" eventType="touchUpInside" id="S7F-MH-jtF"/>
                                 </connections>
@@ -814,10 +809,8 @@
                                     <constraint firstAttribute="width" constant="131" id="Xta-cP-Arc"/>
                                     <constraint firstAttribute="height" constant="36" id="ayl-8W-KpR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="skip_button" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="skip_button"/>
                                 <connections>
                                     <action selector="skipAndWindSignUpSetMenteeAreaCategoryView:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="dYc-wY-Bcz"/>
                                 </connections>
@@ -828,10 +821,8 @@
                                     <constraint firstAttribute="height" constant="36" id="OK8-pg-dek"/>
                                     <constraint firstAttribute="width" constant="131" id="u2V-ZI-zgR"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="next_button_disable" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="next_button_disable"/>
                                 <connections>
                                     <action selector="windSignUpSetMenteeAreaCategoryView:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="Nnv-xz-1HW"/>
                                 </connections>
@@ -851,7 +842,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="growpoint_categorybar"/>
+                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="growpoint_categorybar"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="touchUpSetGrowthPoint:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="WaB-7V-8iI"/>
@@ -874,13 +865,13 @@
                                 <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-fe-h3e">
-                                <rect key="frame" x="124.5" y="310" width="126.5" height="43"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SJq-fe-h3e">
+                                <rect key="frame" x="136" y="310" width="103" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="epv-LJ-rar"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
                                         <fragment content="성장포인트가 무엇인가요?">
                                             <attributes>
@@ -889,7 +880,7 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                </buttonConfiguration>
+                                </state>
                                 <connections>
                                     <action selector="windExplainGrowthPointView:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="Psz-ca-1B5"/>
                                 </connections>
@@ -951,10 +942,8 @@
                                     <constraint firstAttribute="height" constant="36" id="324-eQ-Qds"/>
                                     <constraint firstAttribute="width" constant="131" id="JnH-bv-O3i"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="skip_button" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="skip_button"/>
                                 <connections>
                                     <action selector="skipAndWindSignUpSetMenteeAreaDescriptionView:" destination="BkO-TB-3sr" eventType="touchUpInside" id="CEV-Rf-p3W"/>
                                 </connections>
@@ -965,10 +954,8 @@
                                     <constraint firstAttribute="height" constant="36" id="Ne5-v8-whl"/>
                                     <constraint firstAttribute="width" constant="131" id="hIS-nz-4aA"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="next_button_disable" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="next_button_disable"/>
                                 <connections>
                                     <action selector="windSignUpSetMenteeAreaDescriptionView:" destination="BkO-TB-3sr" eventType="touchUpInside" id="Yod-Sj-ccC"/>
                                 </connections>
@@ -1008,7 +995,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="mentee_categorybar_general"/>
+                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="mentee_categorybar_general"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="touchUpCategoryButton:" destination="BkO-TB-3sr" eventType="touchUpInside" id="7aZ-Gy-dd8"/>
@@ -1022,7 +1009,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="mentee_categorybar_detail"/>
+                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="mentee_categorybar_detail"/>
                                 </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress_bar_full" translatesAutoresizingMaskIntoConstraints="NO" id="y7K-eo-Q1S">
@@ -1083,24 +1070,20 @@
                                     <constraint firstAttribute="width" constant="131" id="b5W-LK-D46"/>
                                     <constraint firstAttribute="height" constant="36" id="f9o-wl-OHi"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="skip_button" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="skip_button"/>
                                 <connections>
                                     <action selector="skipAndWindSignUpSetChannelView:" destination="Mm3-Qw-Tx7" eventType="touchUpInside" id="w0q-7X-ic6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-gn-8iK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgg-gn-8iK">
                                 <rect key="frame" x="122" y="570.5" width="131" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="c9I-nE-BMj"/>
                                     <constraint firstAttribute="width" constant="131" id="uUc-XV-vNn"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" image="next_button_disable" imageContentMode="scaleAspectFill"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="next_button_disable" backgroundImage="next_button_disable"/>
                                 <connections>
                                     <action selector="windSignUpSetChannelView:" destination="Mm3-Qw-Tx7" eventType="touchUpInside" id="9hF-Ci-kFU"/>
                                 </connections>
