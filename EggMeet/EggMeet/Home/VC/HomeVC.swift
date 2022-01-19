@@ -11,6 +11,8 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterLocationLabel: UILabel!
+    @IBOutlet weak var filterCategoryLabel: UILabel!
     
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
@@ -60,6 +62,18 @@ class HomeVC: UIViewController {
         switch isMentor {
         case true : getHomeMentorData()
         case false : getHomeMenteeData()
+        }
+        
+        if category == "" {
+            filterCategoryLabel.text = "전체"
+        }else{
+            filterCategoryLabel.text = category
+        }
+        
+        if location == "" {
+            filterLocationLabel.text = "전체"
+        }else{
+            filterLocationLabel.text = location
         }
     }
     
