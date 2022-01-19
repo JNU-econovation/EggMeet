@@ -27,6 +27,10 @@ class HomeFilterVC: UIViewController {
     
     var location: String = ""
     var category: String = ""
+    var sex: String = ""
+    var age: String = ""
+    var isOnlineAvailable: Bool = true
+    var isOfflineAvailable: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()

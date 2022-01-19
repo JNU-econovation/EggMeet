@@ -29,9 +29,11 @@ struct HomeNetwork {
             switch dataResponse.result {
             case .success(let value):
                 do {
-                    
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
                     
+                    print(dataResponse.debugDescription)
+                    
+                    /*
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthPoint = data["growthPoint"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
                             print("error happened")
@@ -39,10 +41,10 @@ struct HomeNetwork {
                         }
                         
                         mentorList.append(UserMentorResponseModel.init(age: age, category: Category.init(rawValue: category) ?? .PROGRAMMING_C, growthPoint: growthPoint, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
-                    }
+                    }*/
                     
                     completion(mentorList)
-                } catch {print(error)}
+                } catch {print(error.localizedDescription)}
             case .failure(let error):
                 print("Error Code: \(error._code)")
                 print("Error Messsage: \(error.localizedDescription)")
@@ -80,6 +82,8 @@ extension HomeNetwork {
                 do {
                     
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
+                    
+                    print(dataResponse.debugDescription)
                    
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
