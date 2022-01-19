@@ -98,8 +98,13 @@ class HomeFilterVC: UIViewController {
     }
     
     @objc func touchAgeRadioButton(_ sender:DLRadioButton) {
-        print(sender.currentTitle!)
-        age = sender.currentTitle!
+        if sender.isSelected {
+            print(sender.currentTitle!)
+            age = sender.currentTitle!
+        }else{
+            print("취소 : \(sender.currentTitle!)")
+            age = ""
+        }
     }
     
     func setGenderRadioButtons(){
@@ -119,24 +124,26 @@ class HomeFilterVC: UIViewController {
         
         womanRadioButton.addTarget(self, action: #selector(touchGenderRadioButton(_:)), for: .touchUpInside)
         manradioButton.addTarget(self, action: #selector(touchGenderRadioButton(_:)), for: .touchUpInside)
-        womanRadioButton.addTarget(self, action: #selector(cancelGenderRadioButton(_:)), for: .touchCancel)
         
-        manradioButton.isMultipleSelectionEnabled = true
+        womanRadioButton.isMultipleSelectionEnabled = true
         
         genderView.addSubview(womanRadioButton)
         genderView.addSubview(manradioButton)
     }
     
     @objc func touchGenderRadioButton(_ sender:DLRadioButton) {
-        print(sender.currentTitle!)
-        sex = sender.currentTitle!
+        if sender.isSelected {
+            print(sender.currentTitle!)
+            switch sender.currentTitle! {
+            case "여성" : sex = "FEMALE"
+            case "남성" : sex = "MALE"
+            default : sex = ""
+            }
+        }else{
+            print("취소 : \(sender.currentTitle!)")
+            sex = ""
+        }
     }
-    
-    @objc func cancelGenderRadioButton(_ sender:DLRadioButton) {
-        print("취소 : \(sender.currentTitle!)")
-        sex = ""
-    }
-  
     
     func setChannelRadioButtons(){
         let onlineRadioButton = DLRadioButton()
@@ -156,12 +163,28 @@ class HomeFilterVC: UIViewController {
         onlineRadioButton.addTarget(self, action: #selector(touchChannelRadioButton(_:)), for: .touchUpInside)
         offlineRadioButton.addTarget(self, action: #selector(touchChannelRadioButton(_:)), for: .touchUpInside)
         
+        onlineRadioButton.isMultipleSelectionEnabled = true
+        
         channelView.addSubview(onlineRadioButton)
         channelView.addSubview(offlineRadioButton)
     }
     
     @objc func touchChannelRadioButton(_ sender:DLRadioButton) {
-        print(sender.currentTitle!)
+        if sender.isSelected {
+            switch sender.currentTitle! {
+            case "온라인" : isOnlineAvailable = true
+            case "오프라인" : isOfflineAvailable = true
+            default : return
+            }
+            print(sender.currentTitle!)
+        }else{
+            switch sender.currentTitle! {
+            case "온라인" : isOnlineAvailable = false
+            case "오프라인" : isOfflineAvailable = false
+            default : return
+            }
+            print("취소 : \(sender.currentTitle!)")
+        }
     }
     
     @IBAction func touchFirstLocationButton(){

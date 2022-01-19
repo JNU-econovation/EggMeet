@@ -12,8 +12,8 @@ struct HomeNetwork {
     static let shared = HomeNetwork()
     let ud = UserDefaults.standard
     
-    func getUserMentorData(location: String, category: String, growthPointSort: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        let url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&category=\(category)&growthPointSort=\(growthPointSort)"
+    func getUserMentorData(location: String, category: String, growthPointSort: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: String, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        let url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&sex=\(sex)&age=\(age)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)&growthPointSort=\(growthPointSort)"
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
@@ -30,7 +30,9 @@ struct HomeNetwork {
             case .success(let value):
                 do {
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
-                   
+                    
+                    print(dataList)
+                    
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthCost = data["growthCost"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
                             print("error happened")
@@ -79,6 +81,8 @@ extension HomeNetwork {
                 do {
                     
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
+                    
+                    print(dataList)
                     
                     for data in dataList {
                         guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
