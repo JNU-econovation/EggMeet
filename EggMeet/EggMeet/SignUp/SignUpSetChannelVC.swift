@@ -43,11 +43,7 @@ class SignUpSetChannelVC : UIViewController{
     @IBAction func touchUpOnlineButton(_ sender: UIButton){
         isOnlineChecked = !isOnlineChecked
         ud.set(isOnlineChecked, forKey: isOnlineAvailableKey)
-        if isOnlineChecked {
-            // toggle
-        } else {
-            // toggle
-        }
+        sender.isSelected.toggle()
     }
     
     @IBAction func touchUpOfflineButton(_ sender: UIButton){

@@ -11,6 +11,7 @@ import UIKit
 class SignUpSetMenteeAreaDescriptionVC : UIViewController{
     
     @IBOutlet weak var menteeAreaDescriptionTextView: UITextView!
+    @IBOutlet var textViewCountLabel: UILabel!
     
     let ud = UserDefaults.standard
     let menteeAreaDescriptionKey: String = "menteeAreaDescription"
@@ -18,6 +19,7 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
     override func viewDidLoad() {
         buildTextViewStyle()
         super.viewDidLoad()
+        textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -42,6 +44,17 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
         self.menteeAreaDescriptionTextView.layer.borderColor = UIColor(red: 0.769, green: 0.769, blue: 0.769, alpha: 1).cgColor
         self.menteeAreaDescriptionTextView.layer.cornerRadius = 12
     }
-    
-    
+}
+
+extension SignUpSetMenteeAreaDescriptionVC: UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
+        if menteeAreaDescriptionTextView.text.count != 0 {
+            // image 설정
+        }else if menteeAreaDescriptionTextView.text.count > 500 {
+            menteeAreaDescriptionTextView.deleteBackward()
+        } else if menteeAreaDescriptionTextView.text.count == 0 {
+            // image 설정
+        }
+    }
 }

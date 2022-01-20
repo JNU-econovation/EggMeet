@@ -22,20 +22,12 @@ class SignUpCheckTermsOfServiceVC: UIViewController {
     
     @IBAction func touchUpAgreeTermsOfServiceButton(_ sender: UIButton){
         isAgreeTermsOfService = !isAgreeTermsOfService
-        if isAgreeTermsOfService {
-            sender.setTitle("체크 됨", for: .normal)
-        } else {
-            sender.setTitle("체크 안됨", for: .normal)
-        }
+        sender.isSelected.toggle()
     }
     
     @IBAction func touchUpAgreePersonalInfoButton(_ sender: UIButton){
         isAgreePersonalInfo = !isAgreePersonalInfo
-        if isAgreePersonalInfo {
-            sender.setTitle("체크 됨", for: .normal)
-        } else {
-            sender.setTitle("체크 안됨", for: .normal)
-        }
+        sender.isSelected.toggle()
     }
     
     @IBAction func windSignUpCheckTermsOfMaliciousContentView (_ sender: Any){
