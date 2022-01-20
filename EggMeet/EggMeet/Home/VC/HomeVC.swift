@@ -11,6 +11,8 @@ import UIKit
 class HomeVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterLocationLabel: UILabel!
+    @IBOutlet weak var filterCategoryLabel: UILabel!
     
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
@@ -18,6 +20,10 @@ class HomeVC: UIViewController {
     private var location: String = ""
     private var category: String = ""
     var searchKeyword: String = ""
+    private var sex: String = ""
+    private var age: Int = 0
+    private var isOnlineAvailable: Bool = true
+    private var isOfflineAvailable: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,10 +54,26 @@ class HomeVC: UIViewController {
         let filterVC = segue.source as! HomeFilterVC
         location = filterVC.location
         category = filterVC.category
+        sex = filterVC.sex
+        age = filterVC.age
+        isOnlineAvailable = filterVC.isOnlineAvailable
+        isOfflineAvailable = filterVC.isOfflineAvailable
         homeList.removeAll()
         switch isMentor {
         case true : getHomeMentorData()
         case false : getHomeMenteeData()
+        }
+        
+        if category == "" {
+            filterCategoryLabel.text = "전체"
+        }else{
+            filterCategoryLabel.text = category
+        }
+        
+        if location == "" {
+            filterLocationLabel.text = "전체"
+        }else{
+            filterLocationLabel.text = location
         }
     }
     
@@ -124,14 +146,14 @@ extension HomeVC: UITableViewDataSource {
 
 extension HomeVC {
     func getHomeMentorData(){
-        HomeNetwork.shared.getUserMentorData(location: location, category: category, growthPointSort: growthPointSort){ [self] mentorList in
+        HomeNetwork.shared.getUserMentorData(location: location, category: category, growthPointSort: growthPointSort, sex: sex, isOnlineAvailable: isOnlineAvailable, isOfflineAvailable: isOfflineAvailable, age: age){ [self] mentorList in
             self.homeList.append(contentsOf: mentorList)
             self.tableView.reloadData()
         }
     }
     
     func getHomeMenteeData() {
-        HomeNetwork.shared.getUserMenteeData(location: location, category: category){ [self] menteeList in
+        HomeNetwork.shared.getUserMenteeData(location: location, category: category, sex: sex, isOnlineAvailable: isOnlineAvailable, isOfflineAvailable: isOfflineAvailable, age: age){ [self] menteeList in
             self.homeList.append(contentsOf: menteeList)
             self.tableView.reloadData()
         }
