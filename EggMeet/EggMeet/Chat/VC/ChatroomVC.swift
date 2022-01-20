@@ -22,6 +22,7 @@ class ChatroomVC: UIViewController{
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
     var keyHeight: CGFloat?
+    lazy var isKeyBoardShow: Bool = false
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -36,8 +37,8 @@ class ChatroomVC: UIViewController{
             createChatRoom()
         }
         registerSocket()
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.addKeyboardNotifications()
     }
@@ -45,6 +46,10 @@ class ChatroomVC: UIViewController{
     override func viewWillDisappear(_ animated: Bool) {
         self.removeKeyboardNotifications()
         socketClient.disconnect()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
     
     @IBAction func passMessage(_ sender: UIButton) {
@@ -121,21 +126,22 @@ class ChatroomVC: UIViewController{
     }
     
     @objc func keyboardWillShow(_ noti: NSNotification){
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y -= keyboardHeight
-        }
+        NSLog("Show!")
+                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.view.frame.origin.y -= keyboardHeight
+                    self.isKeyBoardShow = true
+            }
     }
     
     @objc func keyboardWillHide(_ noti: NSNotification){
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y += keyboardHeight
+                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.view.frame.origin.y += keyboardHeight
         }
     }
-
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
