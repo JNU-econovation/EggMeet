@@ -1426,6 +1426,8 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="disable_offline_button"/>
+                                <state key="disabled" image="disable_offline_button"/>
+                                <state key="selected" image="enable_online_button"/>
                                 <connections>
                                     <action selector="touchUpOfflineButton:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="ht3-Md-M2h"/>
                                 </connections>
