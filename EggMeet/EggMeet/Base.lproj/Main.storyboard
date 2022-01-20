@@ -239,9 +239,20 @@
                                     <action selector="windSignUpMentorAreaCareerView:" destination="nFd-fJ-OoC" eventType="touchUpInside" id="5kC-TJ-Pv4"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_mentor_description" translatesAutoresizingMaskIntoConstraints="NO" id="MQh-qE-msr">
+                                <rect key="frame" x="0.0" y="0.0" width="219" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="218.75" id="r2K-1x-ULF"/>
+                                    <constraint firstAttribute="height" constant="8" id="vRp-OS-T52"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ok-AC-kva"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MQh-qE-msr" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" id="RrW-fO-mT4"/>
+                            <constraint firstItem="MQh-qE-msr" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" id="yLY-uu-kIb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Bf-SE-pTd"/>
                     <connections>
@@ -529,9 +540,20 @@
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_gender" translatesAutoresizingMaskIntoConstraints="NO" id="1ZD-cj-da2">
+                                <rect key="frame" x="0.0" y="0.0" width="94" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="sBN-4j-1Rh"/>
+                                    <constraint firstAttribute="width" constant="93.75" id="uCz-X1-ayw"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nfZ-Xy-qFv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1ZD-cj-da2" firstAttribute="leading" secondItem="nfZ-Xy-qFv" secondAttribute="leading" id="0Cs-Ly-Dnc"/>
+                            <constraint firstItem="1ZD-cj-da2" firstAttribute="top" secondItem="nfZ-Xy-qFv" secondAttribute="top" id="PCU-Pd-xH3"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="sexSelectionView" destination="6bk-OB-VVL" id="QFc-1U-51l"/>
@@ -596,9 +618,20 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="전체"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_location" translatesAutoresizingMaskIntoConstraints="NO" id="sH9-El-7Fk">
+                                <rect key="frame" x="0.0" y="0.0" width="125" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="4if-7h-P4e"/>
+                                    <constraint firstAttribute="height" constant="8" id="RTU-bQ-3VE"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGo-Fg-LEk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sH9-El-7Fk" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" id="0LF-FO-hWK"/>
+                            <constraint firstItem="sH9-El-7Fk" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" id="T85-7e-zOb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fpa-jt-dmb"/>
                     <connections>
@@ -666,9 +699,20 @@
                                     <segue destination="em6-zt-suY" kind="presentation" id="MQ2-JW-PB3"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_self_description" translatesAutoresizingMaskIntoConstraints="NO" id="51J-mB-usj">
+                                <rect key="frame" x="0.0" y="0.0" width="165.5" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165.25" id="U2e-IS-UQ4"/>
+                                    <constraint firstAttribute="height" constant="8" id="ZVa-HX-X7E"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MCR-fO-u3Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="51J-mB-usj" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" id="PDp-FK-wnh"/>
+                            <constraint firstItem="51J-mB-usj" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" id="iX1-1U-Hca"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="dkm-uB-6rz"/>
                     <connections>
@@ -734,9 +778,20 @@
                                     <action selector="touchMentorAreaButton" destination="ces-hf-4fh" eventType="touchUpInside" id="DHE-Dd-WeE"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_mentor_category" translatesAutoresizingMaskIntoConstraints="NO" id="0ui-Uq-6sk">
+                                <rect key="frame" x="0.0" y="0.0" width="187.5" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="187.5" id="aBo-u6-RrD"/>
+                                    <constraint firstAttribute="height" constant="8" id="gud-sP-X2N"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1Y-YB-jdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0ui-Uq-6sk" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" id="Ily-q1-PjH"/>
+                            <constraint firstItem="0ui-Uq-6sk" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" id="Qrb-oe-ksd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
                     <connections>
@@ -1722,10 +1777,10 @@
                                     <action selector="windSignUpSexView:" destination="0Z5-hQ-QOo" eventType="touchUpInside" id="ZVL-Hw-gj1"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-3T-fFz">
-                                <rect key="frame" x="0.0" y="0.0" width="76" height="8"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_age" translatesAutoresizingMaskIntoConstraints="NO" id="gnQ-3T-fFz">
+                                <rect key="frame" x="0.0" y="0.0" width="62.5" height="8"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="76" id="CS4-4V-agZ"/>
+                                    <constraint firstAttribute="width" constant="62.5" id="CS4-4V-agZ"/>
                                     <constraint firstAttribute="height" constant="8" id="LoF-5f-Z6o"/>
                                 </constraints>
                             </imageView>
@@ -1787,7 +1842,13 @@
         <image name="next_button_disable" width="278" height="88"/>
         <image name="nickname_button" width="139" height="44"/>
         <image name="progress_bar_full" width="754" height="16"/>
+        <image name="progressbar_age" width="250" height="32"/>
+        <image name="progressbar_gender" width="375" height="32"/>
+        <image name="progressbar_location" width="500" height="32"/>
+        <image name="progressbar_mentor_category" width="750" height="32"/>
+        <image name="progressbar_mentor_description" width="875" height="32"/>
         <image name="progressbar_nickname" width="150" height="32"/>
+        <image name="progressbar_self_description" width="661" height="32"/>
         <image name="skip_button" width="278" height="88"/>
         <image name="textfield_nickname" width="1284" height="140"/>
         <image name="welcome_comment" width="343.5" height="78.5"/>
