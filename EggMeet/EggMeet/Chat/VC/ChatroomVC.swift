@@ -17,7 +17,6 @@ let TEST_CHAT_ROOM_ID = 1
 class ChatroomVC: UIViewController{
     var opponentNickname: String?
     var socketClient = StompClientLib()
-    var url = NSURL()
     var chatroomID: Int = TEST_CHAT_ROOM_ID
     var chatContentList: [chatDto] = [chatDto]()
     let subscribeTopic = "/sub/chat/room/"
@@ -32,7 +31,6 @@ class ChatroomVC: UIViewController{
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
-        self.chatTableView.rowHeight = UITableView.automaticDimension
         // addKeyboardNotification()
         if !isExistChatRoom(){
             createChatRoom()
@@ -158,6 +156,14 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         NSLog("cell.content.label : \(cell.contentLabel.text!)")
         NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writer)")
         NSLog("success cell in text content : \(self.chatContentList[indexPath.row].message)")
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
     }
     
     
