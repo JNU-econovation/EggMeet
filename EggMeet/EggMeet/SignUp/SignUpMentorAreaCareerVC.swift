@@ -19,9 +19,9 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
     let mentorAreaCareerKey: String = "mentorAreaCareer"
     
     override func viewDidLoad() {
-        buildTextViewStyle()
-        textViewCountLabel.text = "\(mentorAreaCareerTextView.text.count)/500"
         super.viewDidLoad()
+        buildTextViewStyle()
+        mentorAreaCareerTextView.delegate = self
     }
     
     // 화면 터치시 키보드 내려감.
@@ -31,7 +31,7 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
         }
     
     override func viewWillAppear(_ animated: Bool) {
-        
+        textViewCountLabel.text = "\(mentorAreaCareerTextView.text.count)/500"
     }
 
     @IBAction func windSignUpSetGrowthPointView(_ sender: Any){
@@ -69,13 +69,14 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
 
 extension SignUpMentorAreaCareerVC : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        textViewCountLabel.text = "\(mentorAreaCareerTextView.text.count)/500"
+        self.textViewCountLabel.text = "\(self.mentorAreaCareerTextView.text.count)/500"
         if mentorAreaCareerTextView.text.count != 0 {
-            // image 설정
-        }else if mentorAreaCareerTextView.text.count > 500 {
-            mentorAreaCareerTextView.deleteBackward()
-        } else if mentorAreaCareerTextView.text.count == 0 {
-            // image 설정
+            // enable image
+        } else {
+            // disable image
+        }
+        if mentorAreaCareerTextView.text.count > 500{
+            self.mentorAreaCareerTextView.deleteBackward()
         }
     }
 }
