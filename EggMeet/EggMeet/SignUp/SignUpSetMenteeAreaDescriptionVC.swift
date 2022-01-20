@@ -19,7 +19,7 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
     override func viewDidLoad() {
         buildTextViewStyle()
         super.viewDidLoad()
-        textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
+        // textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
