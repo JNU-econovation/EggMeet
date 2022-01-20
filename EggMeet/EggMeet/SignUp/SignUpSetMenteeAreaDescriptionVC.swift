@@ -19,7 +19,8 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
     override func viewDidLoad() {
         buildTextViewStyle()
         super.viewDidLoad()
-        // textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
+        self.textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
+        menteeAreaDescriptionTextView.delegate = self
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -59,13 +60,14 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
 
 extension SignUpSetMenteeAreaDescriptionVC: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
-        textViewCountLabel.text = "\(menteeAreaDescriptionTextView.text.count)/500"
+        self.textViewCountLabel.text = "\(self.menteeAreaDescriptionTextView.text.count)/500"
         if menteeAreaDescriptionTextView.text.count != 0 {
-            // image 설정
-        }else if menteeAreaDescriptionTextView.text.count > 500 {
-            menteeAreaDescriptionTextView.deleteBackward()
-        } else if menteeAreaDescriptionTextView.text.count == 0 {
-            // image 설정
+            // enable image
+        } else {
+            // disable image
+        }
+        if menteeAreaDescriptionTextView.text.count > 500{
+            self.menteeAreaDescriptionTextView.deleteBackward()
         }
     }
 }

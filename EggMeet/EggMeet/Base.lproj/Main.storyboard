@@ -374,7 +374,7 @@
                     <connections>
                         <outlet property="explainLabel" destination="HVE-Qh-1jp" id="jdD-Pv-j3p"/>
                         <outlet property="mentorAreaCareerTextView" destination="zpe-YY-P0U" id="Dzi-Jf-saS"/>
-                        <outlet property="textViewCount" destination="WFG-mk-tfm" id="mNW-Zs-Lfy"/>
+                        <outlet property="textViewCountLabel" destination="WFG-mk-tfm" id="ScO-Va-NSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrJ-6W-Waa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
