@@ -49,10 +49,6 @@ class SignUpSetChannelVC : UIViewController{
     @IBAction func touchUpOfflineButton(_ sender: UIButton){
         isOfflineChecked = !isOfflineChecked
         ud.set(isOfflineChecked, forKey: isOfflineAvailableKey)
-        if isOfflineChecked {
-            sender.setTitle("직접 대면 체크", for: .normal)
-        } else {
-            sender.setTitle("직접 대면", for: .normal)
-        }
+        sender.isSelected.toggle()
     }
 }
