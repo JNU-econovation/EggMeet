@@ -19,6 +19,7 @@ class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         self.navigationItem.title = "닉네임";
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
         print("viewDidload")
     }
     

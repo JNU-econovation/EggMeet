@@ -226,7 +226,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="멘토링 소개글..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akA-F3-CCT">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="akA-F3-CCT">
                                 <rect key="frame" x="27" y="182" width="321" height="203"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -543,9 +543,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bk-OB-VVL">
-                                <rect key="frame" x="50" y="140" width="275" height="100"/>
+                                <rect key="frame" x="50" y="170" width="275" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="VYC-TR-oYg"/>
+                                    <constraint firstAttribute="height" constant="100" id="g8J-vZ-5AE"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_gender" translatesAutoresizingMaskIntoConstraints="NO" id="1ZD-cj-da2">
@@ -582,7 +582,7 @@
                             <constraint firstItem="Q9D-eD-wbl" firstAttribute="top" secondItem="nfZ-Xy-qFv" secondAttribute="top" constant="437" id="izc-Z1-tJj"/>
                             <constraint firstItem="rpA-J8-hAT" firstAttribute="leading" secondItem="nfZ-Xy-qFv" secondAttribute="leading" constant="18" id="kJe-TW-HjB"/>
                             <constraint firstItem="6bk-OB-VVL" firstAttribute="leading" secondItem="nfZ-Xy-qFv" secondAttribute="leading" constant="50" id="q5i-LT-Z4L"/>
-                            <constraint firstItem="6bk-OB-VVL" firstAttribute="top" secondItem="nfZ-Xy-qFv" secondAttribute="top" constant="140" id="wSF-IM-2JZ"/>
+                            <constraint firstItem="6bk-OB-VVL" firstAttribute="top" secondItem="nfZ-Xy-qFv" secondAttribute="top" constant="170" id="wSF-IM-2JZ"/>
                             <constraint firstItem="Q9D-eD-wbl" firstAttribute="leading" secondItem="nfZ-Xy-qFv" secondAttribute="leading" constant="122" id="xb7-KQ-xKW"/>
                         </constraints>
                     </view>
@@ -712,7 +712,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="dfsdf" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="onb-ow-i1F">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="onb-ow-i1F">
                                 <rect key="frame" x="27" y="200" width="321" height="203"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
