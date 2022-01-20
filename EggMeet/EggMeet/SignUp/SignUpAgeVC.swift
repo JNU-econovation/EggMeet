@@ -25,6 +25,7 @@ class SignUpAgeVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
 
         self.navigationItem.title = "나이";
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     func setAgePickerContents() {
@@ -57,7 +58,6 @@ class SignUpAgeVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSexVC") as? SignUpSexVC else {return}
         print("실행")
         self.navigationController?.pushViewController(nextVC, animated: true)
-        
     }
 
 }

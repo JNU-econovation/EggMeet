@@ -18,10 +18,9 @@ class SignUpSexVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.navigationItem.title = "성별";
         self.navigationController?.navigationBar.tintColor = .black
-        
+        self.navigationController?.navigationBar.topItem?.title = ""
         setGenderRadioButtons()
     }
     
@@ -34,19 +33,17 @@ class SignUpSexVC: UIViewController {
         manradioButton.setTitle("남성", for: .normal)
         undefinedButton.setTitle("밝히지 않음", for: .normal)
         
-        // 라디오버튼 이미지로 변경하는 코드
-        /*
-        radioButton1.icon = UIImage(systemName: "hand.thumbsdown") ?? radioButton1.icon
-
-        radioButton1.iconSelected = UIImage(systemName: "hand.thumbsup") ?? radioButton1.iconSelected */
+        womanRadioButton.icon = UIImage(named: "gender_woman_deselected") ?? womanRadioButton.icon
+        manradioButton.icon = UIImage(named: "gender_man_deselcted") ?? manradioButton.icon
+        undefinedButton.icon = UIImage(named: "gender_undefined_deselected") ?? undefinedButton.icon
         
-        womanRadioButton.frame = CGRect(x: 0, y: 0, width: 70, height: 30)
-        manradioButton.frame = CGRect(x: 80, y: 0, width: 70, height: 30)
-        undefinedButton.frame = CGRect(x: 160, y: 0, width: 150, height: 30)
+        womanRadioButton.iconSelected = UIImage(named: "gender_woman") ?? womanRadioButton.iconSelected
+        manradioButton.iconSelected = UIImage(named: "gender_man_selcted") ?? manradioButton.iconSelected
+        undefinedButton.iconSelected = UIImage(named: "gender_undefined_selected") ?? undefinedButton.iconSelected
         
-        womanRadioButton.setTitleColor( .black , for: .normal)
-        manradioButton.setTitleColor( .black , for: .normal)
-        undefinedButton.setTitleColor( .black , for: .normal)
+        womanRadioButton.frame = CGRect(x: 0, y: 0, width: 76, height: 74)
+        manradioButton.frame = CGRect(x: 99, y: 0, width: 76, height: 74)
+        undefinedButton.frame = CGRect(x: 200, y: 0, width: 76, height: 74)
         
         womanRadioButton.otherButtons.append(manradioButton)
         womanRadioButton.otherButtons.append(undefinedButton)
