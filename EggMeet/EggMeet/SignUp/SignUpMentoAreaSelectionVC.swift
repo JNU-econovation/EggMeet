@@ -19,6 +19,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
         super.viewDidLoad()
         self.navigationItem.title = "멘토 분야 선택";
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @IBAction func windSignUpMentoDetailIntroduceView(_ sender: Any){

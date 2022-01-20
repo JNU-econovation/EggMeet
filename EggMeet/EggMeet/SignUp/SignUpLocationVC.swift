@@ -19,6 +19,7 @@ class SignUpLocationVC: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "활동 지역";
         self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){

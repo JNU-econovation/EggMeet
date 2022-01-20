@@ -18,6 +18,9 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
         setTextViewStyle()
         self.navigationItem.title = "멘토 상세 소개";
         self.navigationController?.navigationBar.tintColor = .black
+        mentorIntroduceTextView.layer.borderColor = UIColor.systemGray4.cgColor
+        mentorIntroduceTextView.layer.cornerRadius = 10
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @IBAction func windSignUpMentorAreaCareerView(_ sender: Any){
