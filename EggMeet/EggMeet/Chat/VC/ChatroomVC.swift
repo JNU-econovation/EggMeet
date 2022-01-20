@@ -37,6 +37,7 @@ class ChatroomVC: UIViewController{
             createChatRoom()
         }
         registerSocket()
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         self.addKeyboardNotifications()
@@ -126,28 +127,19 @@ class ChatroomVC: UIViewController{
     
     @objc func keyboardWillShow(_ noti: NSNotification){
         NSLog("Show!")
-        if self.isKeyBoardShow == true{
-            return
-        } else {
                 if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
                 let keyboardRectangle = keyboardFrame.cgRectValue
                 let keyboardHeight = keyboardRectangle.height
                 self.view.frame.origin.y -= keyboardHeight
                     self.isKeyBoardShow = true
             }
-        }
     }
     
     @objc func keyboardWillHide(_ noti: NSNotification){
-        NSLog("Hide!")
-        if self.isKeyBoardShow == false{
-            return
-        } else {
                 if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
                 let keyboardRectangle = keyboardFrame.cgRectValue
                 let keyboardHeight = keyboardRectangle.height
                 self.view.frame.origin.y += keyboardHeight
-            }
         }
     }
 }
