@@ -18,6 +18,8 @@ class SignUpSelfIntroduceVC: UIViewController {
         setTextViewStyle()
         self.navigationItem.title = "자기 소개";
         self.navigationController?.navigationBar.tintColor = .black
+        selfIntroduceTextView.layer.borderColor = UIColor.systemGray4.cgColor
+        selfIntroduceTextView.layer.cornerRadius = 10
     }
     
     @IBAction func windSignUpMentoAreaSelectionView(_ sender: Any){
