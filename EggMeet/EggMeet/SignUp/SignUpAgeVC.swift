@@ -22,10 +22,13 @@ class SignUpAgeVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSourc
         setAgePickerContents()
         picker.delegate = self
         picker.dataSource = self
-
-        self.navigationItem.title = "나이";
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "나이";
     }
     
     func setAgePickerContents() {

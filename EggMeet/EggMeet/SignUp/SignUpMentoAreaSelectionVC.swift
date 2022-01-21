@@ -11,20 +11,28 @@ import DropDown
 
 class SignUpMentoAreaSelectionVC: UIViewController{
     @IBOutlet weak var mentorAreaButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     let mentorAreaDD: DropDown = DropDown()
     let mentoAreaKey = "mentorCategory"
     let ud = UserDefaults.standard
+    var isCategorySelected: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationItem.title = "멘토 분야 선택";
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @IBAction func windSignUpMentoDetailIntroduceView(_ sender: Any){
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentoDetailIntroduceVC") as? SignUpMentoDetailIntroduceVC else {return}
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        if isCategorySelected {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentoDetailIntroduceVC") as? SignUpMentoDetailIntroduceVC else {return}
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
     
     @IBAction func skipAndWindSignUpMentoDetailIntroduceView(_ sender: Any){
@@ -43,6 +51,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
             print("인덱스 : \(index)")
             ud.set(item, forKey: mentoAreaKey)
         }
+        isCategorySelected = true
     }
     
 }

@@ -22,14 +22,15 @@ class ChatroomVC: UIViewController{
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
     var keyHeight: CGFloat?
-    lazy var isKeyBoardShow: Bool = false
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet var chatTableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
@@ -40,16 +41,11 @@ class ChatroomVC: UIViewController{
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.addKeyboardNotifications()
+    
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.removeKeyboardNotifications()
         socketClient.disconnect()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(true)
     }
     
     @IBAction func passMessage(_ sender: UIButton) {
@@ -112,34 +108,6 @@ class ChatroomVC: UIViewController{
             return false
         } else{
             return true
-        }
-    }
-    
-    func addKeyboardNotifications(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func removeKeyboardNotifications(){
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(_ noti: NSNotification){
-        NSLog("Show!")
-                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-                let keyboardRectangle = keyboardFrame.cgRectValue
-                let keyboardHeight = keyboardRectangle.height
-                self.view.frame.origin.y -= keyboardHeight
-                    self.isKeyBoardShow = true
-            }
-    }
-    
-    @objc func keyboardWillHide(_ noti: NSNotification){
-                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-                let keyboardRectangle = keyboardFrame.cgRectValue
-                let keyboardHeight = keyboardRectangle.height
-                self.view.frame.origin.y += keyboardHeight
         }
     }
 }

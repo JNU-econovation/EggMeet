@@ -11,15 +11,21 @@ import DropDown
 
 class SignUpLocationVC: UIViewController {
     @IBOutlet weak var locationAreaButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "활동 지역";
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "활동지역";
     }
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){
