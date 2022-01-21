@@ -765,21 +765,33 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uk0-BU-9JI">
-                                <rect key="frame" x="86" y="150" width="203" height="13"/>
+                                <rect key="frame" x="86" y="150" width="203" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="203" id="9ZZ-gQ-Ow2"/>
-                                    <constraint firstAttribute="height" constant="13" id="b1t-VL-gyE"/>
+                                    <constraint firstAttribute="height" constant="43" id="b1t-VL-gyE"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="self_description_suggestion"/>
+                                <state key="normal" title="Button" image="self_description_alert_button"/>
                                 <connections>
                                     <segue destination="em6-zt-suY" kind="presentation" id="MQ2-JW-PB3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000/500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UzD-wM-hdF">
+                                <rect key="frame" x="305" y="403" width="43" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="42o-BF-in1"/>
+                                    <constraint firstAttribute="height" constant="23" id="Vrh-ko-nvk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MCR-fO-u3Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="MCR-fO-u3Z" firstAttribute="trailing" secondItem="UzD-wM-hdF" secondAttribute="trailing" constant="27" id="23X-48-vkM"/>
+                            <constraint firstItem="UzD-wM-hdF" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="403" id="2CO-oV-YQB"/>
                             <constraint firstItem="chs-mG-WO8" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="122" id="5VR-mc-cQ0"/>
                             <constraint firstItem="3tz-df-eqI" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="62" id="6e4-qo-NoX"/>
                             <constraint firstItem="uk0-BU-9JI" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="86" id="DsU-w9-JWo"/>
@@ -805,6 +817,7 @@
                     <navigationItem key="navigationItem" id="dkm-uB-6rz"/>
                     <connections>
                         <outlet property="selfIntroduceTextView" destination="onb-ow-i1F" id="MdB-k8-vb9"/>
+                        <outlet property="textViewCountLabel" destination="UzD-wM-hdF" id="yC8-g9-Xov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OcO-Tl-eqh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2027,7 +2040,7 @@
         <image name="progressbar_mentor_description" width="875" height="32"/>
         <image name="progressbar_nickname" width="150" height="32"/>
         <image name="progressbar_self_description" width="661" height="32"/>
-        <image name="self_description_suggestion" width="806" height="37"/>
+        <image name="self_description_alert_button" width="812" height="172"/>
         <image name="skip_button" width="278" height="88"/>
         <image name="textfield_nickname" width="1284" height="140"/>
         <image name="welcome_comment" width="343.5" height="78.5"/>
