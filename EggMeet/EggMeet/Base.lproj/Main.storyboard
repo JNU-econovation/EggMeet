@@ -320,7 +320,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-05-H68">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FSe-05-H68">
                                 <rect key="frame" x="122" y="570.5" width="131" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="OQW-cr-7m8"/>
@@ -434,6 +434,7 @@
                     <connections>
                         <outlet property="explainLabel" destination="HVE-Qh-1jp" id="jdD-Pv-j3p"/>
                         <outlet property="mentorAreaCareerTextView" destination="zpe-YY-P0U" id="Dzi-Jf-saS"/>
+                        <outlet property="nextButton" destination="FSe-05-H68" id="CZn-hp-lDa"/>
                         <outlet property="textViewCountLabel" destination="WFG-mk-tfm" id="ScO-Va-NSU"/>
                     </connections>
                 </viewController>
