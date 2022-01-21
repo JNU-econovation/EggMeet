@@ -11,6 +11,7 @@ import UIKit
 class SignUpSelfIntroduceVC: UIViewController {
     @IBOutlet weak var selfIntroduceTextView: UITextView!
     @IBOutlet weak var textViewCountLabel: UILabel!
+    
     let selfIntroduceKey = "description"
     let ud = UserDefaults.standard
     
@@ -45,6 +46,12 @@ class SignUpSelfIntroduceVC: UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.selfIntroduceTextView.endEditing(true)
         }
+    
+    @IBAction func windPopupView(_ sender: Any){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "SignUpIntroducePopUpVC") as! SignUpIntroducePopUpVC
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
 }
 
 extension SignUpSelfIntroduceVC : UITextViewDelegate {
