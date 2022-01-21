@@ -11,16 +11,22 @@ import UIKit
 class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var nicknameWarningLabel: UILabel!
+    @IBOutlet weak var textFieldCountLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     let nicknameKey = "nickname"
     let ud = UserDefaults.standard
     private var isNicknameSet = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "닉네임";
+        self.nicknameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        print("viewDidload")
+        self.navigationItem.title = "닉네임";
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){
@@ -96,5 +102,18 @@ extension SignUpNickNameVC {
         let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
         let apiURL: String = "http://"+mainAddress + target
         return apiURL
+    }
+}
+
+extension SignUpNickNameVC {
+    @objc func textFieldDidChange(_ sender: Any) {
+        if self.nicknameTextField.text!.count > 20 {
+            self.nicknameTextField.resignFirstResponder()
+        }else if self.nicknameTextField.text!.count == 0 {
+            self.nextButton.setImage(UIImage(named: "next_button_disable"), for: .normal)
+        }else{
+            self.textFieldCountLabel.text = "\(self.nicknameTextField.text!.count)/20"
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
+        }
     }
 }
