@@ -264,13 +264,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 준비되지 않았다면 건너뛰어도 됩니다:)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5TW-SQ-FeB">
+                                <rect key="frame" x="110" y="438" width="156" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="vGE-7n-7o1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <color key="textColor" red="0.48627450980392156" green="0.48627450980392156" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ok-AC-kva"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5ok-AC-kva" firstAttribute="trailing" secondItem="y7k-Hb-5Rr" secondAttribute="trailing" constant="72" id="1hT-i5-W5o"/>
                             <constraint firstItem="5ok-AC-kva" firstAttribute="trailing" secondItem="Q7P-vi-9zm" secondAttribute="trailing" constant="27" id="2GN-bM-v4P"/>
+                            <constraint firstItem="5TW-SQ-FeB" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="438" id="5KH-Rr-hLe"/>
                             <constraint firstItem="y7k-Hb-5Rr" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="73" id="9xO-VW-2Hg"/>
+                            <constraint firstItem="5ok-AC-kva" firstAttribute="trailing" secondItem="5TW-SQ-FeB" secondAttribute="trailing" constant="109" id="BWd-Rt-ACF"/>
                             <constraint firstItem="Q7P-vi-9zm" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="385" id="DhZ-Sl-Uqk"/>
                             <constraint firstItem="aF6-xQ-Ocp" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="455" id="MFF-Tg-ZZp"/>
                             <constraint firstItem="akA-F3-CCT" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="27" id="Mfs-of-gxd"/>
@@ -285,6 +296,7 @@
                             <constraint firstItem="5ok-AC-kva" firstAttribute="trailing" secondItem="crb-wl-suN" secondAttribute="trailing" constant="122" id="lts-zt-V0O"/>
                             <constraint firstItem="ZkJ-Df-khv" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="74" id="mJI-sf-Cyl"/>
                             <constraint firstItem="aF6-xQ-Ocp" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="122" id="rJU-O5-KXy"/>
+                            <constraint firstItem="5TW-SQ-FeB" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="110" id="s49-kP-4Dd"/>
                             <constraint firstItem="MQh-qE-msr" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" id="yLY-uu-kIb"/>
                             <constraint firstItem="ZkJ-Df-khv" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="37" id="z5s-d3-PW8"/>
                         </constraints>
@@ -682,6 +694,16 @@
                                     <constraint firstAttribute="height" constant="8" id="RTU-bQ-3VE"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다음에 입력할까요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5G-WG-Emk">
+                                <rect key="frame" x="153" y="363" width="69" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="fuH-mI-GaY"/>
+                                    <constraint firstAttribute="height" constant="11" id="nTN-Bl-MKD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <color key="textColor" red="0.48750084640000002" green="0.48758864400000002" blue="0.48749530320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGo-Fg-LEk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -696,11 +718,14 @@
                             <constraint firstItem="Esc-gZ-CTx" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="122" id="HaL-f8-ZWH"/>
                             <constraint firstItem="Esc-gZ-CTx" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="437" id="Ofl-Z0-fTI"/>
                             <constraint firstItem="sH9-El-7Fk" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" id="T85-7e-zOb"/>
+                            <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="G5G-WG-Emk" secondAttribute="trailing" constant="153" id="VMA-oL-lBG"/>
                             <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="boQ-u2-I8s" secondAttribute="trailing" constant="122" id="X9C-av-p5o"/>
                             <constraint firstItem="IvO-Wn-GAH" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="50" id="Zap-LV-Opc"/>
                             <constraint firstItem="tC8-8S-PJq" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="104" id="c1p-QD-IiB"/>
                             <constraint firstItem="IvO-Wn-GAH" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="153" id="c8v-i8-fe1"/>
                             <constraint firstItem="x4d-bs-rwz" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="15" id="cB2-ok-I4V"/>
+                            <constraint firstItem="G5G-WG-Emk" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="363" id="eqb-J9-d9p"/>
+                            <constraint firstItem="G5G-WG-Emk" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="153" id="hlQ-IZ-gZk"/>
                             <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="tC8-8S-PJq" secondAttribute="trailing" constant="106" id="thi-wg-qhm"/>
                             <constraint firstItem="tC8-8S-PJq" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="106" id="wEY-Vo-Z3w"/>
                             <constraint firstItem="boQ-u2-I8s" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="122" id="xBa-RI-nOM"/>
@@ -799,6 +824,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="다음에 입력할까요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pd-EG-n5Z">
+                                <rect key="frame" x="153" y="438" width="69" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="11" id="4rM-rg-R8O"/>
+                                    <constraint firstAttribute="width" constant="69" id="Npg-fQ-VCX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <color key="textColor" red="0.48750084640000002" green="0.48758864400000002" blue="0.48749530320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MCR-fO-u3Z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -807,6 +842,8 @@
                             <constraint firstItem="UzD-wM-hdF" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="403" id="2CO-oV-YQB"/>
                             <constraint firstItem="chs-mG-WO8" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="122" id="5VR-mc-cQ0"/>
                             <constraint firstItem="3tz-df-eqI" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="62" id="6e4-qo-NoX"/>
+                            <constraint firstItem="2pd-EG-n5Z" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="438" id="6uk-GZ-til"/>
+                            <constraint firstItem="2pd-EG-n5Z" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="153" id="995-Qv-bSd"/>
                             <constraint firstItem="uk0-BU-9JI" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="86" id="DsU-w9-JWo"/>
                             <constraint firstItem="uk0-BU-9JI" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="150" id="Efo-xI-aQ4"/>
                             <constraint firstItem="chs-mG-WO8" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="450" id="Kbl-bK-uQM"/>
@@ -821,6 +858,7 @@
                             <constraint firstItem="R6k-2M-5Ry" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="46" id="cXf-UG-SXN"/>
                             <constraint firstItem="MCR-fO-u3Z" firstAttribute="trailing" secondItem="onb-ow-i1F" secondAttribute="trailing" constant="27" id="gQU-tg-4z7"/>
                             <constraint firstItem="51J-mB-usj" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" id="iX1-1U-Hca"/>
+                            <constraint firstItem="MCR-fO-u3Z" firstAttribute="trailing" secondItem="2pd-EG-n5Z" secondAttribute="trailing" constant="153" id="kvn-5I-Sed"/>
                             <constraint firstItem="onb-ow-i1F" firstAttribute="leading" secondItem="MCR-fO-u3Z" secondAttribute="leading" constant="27" id="rgu-7O-e0Y"/>
                             <constraint firstItem="onb-ow-i1F" firstAttribute="top" secondItem="MCR-fO-u3Z" secondAttribute="top" constant="200" id="wHN-mb-PfB"/>
                             <constraint firstItem="MCR-fO-u3Z" firstAttribute="trailing" secondItem="3tz-df-eqI" secondAttribute="trailing" constant="62" id="xXF-PD-rxF"/>
@@ -907,6 +945,15 @@
                                     <constraint firstAttribute="height" constant="8" id="gud-sP-X2N"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아직 준비되지 않았다면 건너뛰어도 됩니다:)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5B-qY-DSs">
+                                <rect key="frame" x="110" y="438" width="156" height="11"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="156" id="fJs-Z6-aOS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
+                                <color key="textColor" red="0.48628133540000001" green="0.4862622023" blue="0.48627519609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1Y-YB-jdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -928,9 +975,12 @@
                             <constraint firstItem="yK1-nT-Vz5" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="104" id="geA-LA-Ke6"/>
                             <constraint firstItem="eC6-FQ-wSP" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="27" id="gvd-cu-Bgg"/>
                             <constraint firstItem="u1Y-YB-jdX" firstAttribute="trailing" secondItem="eC6-FQ-wSP" secondAttribute="trailing" constant="27" id="l63-rj-3aW"/>
+                            <constraint firstItem="F5B-qY-DSs" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="110" id="leL-HI-xdo"/>
                             <constraint firstItem="yK1-nT-Vz5" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="132" id="qT3-KD-uXP"/>
                             <constraint firstItem="VG6-2o-o3M" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="264" id="swd-FL-Njh"/>
                             <constraint firstItem="g8H-ZQ-UBB" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="122" id="tvi-HK-nXH"/>
+                            <constraint firstItem="u1Y-YB-jdX" firstAttribute="trailing" secondItem="F5B-qY-DSs" secondAttribute="trailing" constant="109" id="vI8-45-WZe"/>
+                            <constraint firstItem="F5B-qY-DSs" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="438" id="yMj-3r-WQD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
