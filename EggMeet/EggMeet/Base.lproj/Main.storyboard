@@ -1536,7 +1536,7 @@
                                     <constraint firstAttribute="width" constant="131" id="Wjs-AW-kA8"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="next_button_disable"/>
+                                <state key="normal" image="enable_next_button"/>
                                 <connections>
                                     <action selector="windSignUpCheckTermsOfServiceView:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="Jv9-Ic-2Zv"/>
                                 </connections>
@@ -1584,7 +1584,7 @@
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="disable_offline_button"/>
                                 <state key="disabled" image="disable_offline_button"/>
-                                <state key="selected" image="enable_online_button"/>
+                                <state key="selected" image="enable_offline_button"/>
                                 <connections>
                                     <action selector="touchUpOfflineButton:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="ht3-Md-M2h"/>
                                 </connections>
@@ -2092,6 +2092,8 @@
         <image name="disable_offline_button" width="188" height="184"/>
         <image name="disable_online_button" width="188" height="184"/>
         <image name="enable_checkbox" width="31.5" height="31.5"/>
+        <image name="enable_next_button" width="278" height="88"/>
+        <image name="enable_offline_button" width="188" height="184"/>
         <image name="enable_online_button" width="168" height="164"/>
         <image name="find_friend_button" width="294" height="88"/>
         <image name="flat_egg" width="222" height="294"/>
