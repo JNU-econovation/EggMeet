@@ -1501,6 +1501,7 @@
                     </view>
                     <connections>
                         <outlet property="menteeAreaDescriptionTextView" destination="AMy-0t-Ojt" id="IgT-Bk-0Lk"/>
+                        <outlet property="nextButton" destination="wgg-gn-8iK" id="BAc-gN-AGe"/>
                         <outlet property="textViewCountLabel" destination="zFy-XG-aci" id="wQY-vU-ErB"/>
                     </connections>
                 </viewController>
