@@ -66,7 +66,7 @@
             </objects>
             <point key="canvasLocation" x="1257.9710144927537" y="10.714285714285714"/>
         </scene>
-        <!--ChatroomVC-->
+        <!--Name-->
         <scene sceneID="4uc-hG-D86">
             <objects>
                 <viewController storyboardIdentifier="ChatroomVC" id="MoS-1D-CbN" customClass="ChatroomVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
@@ -173,8 +173,10 @@
                             <constraint firstItem="7ou-Nh-Kow" firstAttribute="leading" secondItem="vsI-sI-esu" secondAttribute="leading" constant="10" id="qX5-ru-CXT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="yFq-MK-gE5">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="lyy-3K-bBc"/>
+                    <navigationItem key="navigationItem" title="Name" id="yFq-MK-gE5">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="chevron.left" catalog="system" id="lyy-3K-bBc">
+                            <color key="tintColor" systemColor="labelColor"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chatOpponentNameLabel" destination="yWC-ly-HZP" id="iP0-Up-Tkp"/>
@@ -206,6 +208,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
         <systemColor name="labelColor">
