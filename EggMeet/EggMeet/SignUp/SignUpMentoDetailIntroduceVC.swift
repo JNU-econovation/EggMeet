@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpMentoDetailIntroduceVC: UIViewController{
     @IBOutlet weak var mentorIntroduceTextView: UITextView!
+    @IBOutlet weak var textViewCountLabel: UILabel!
     let mentorIntroduceKey = "mentorDescription"
     let ud = UserDefaults.standard
     
@@ -21,6 +22,7 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
         mentorIntroduceTextView.layer.borderColor = UIColor.systemGray4.cgColor
         mentorIntroduceTextView.layer.cornerRadius = 10
         self.navigationController?.navigationBar.topItem?.title = ""
+        mentorIntroduceTextView.delegate = self
     }
     
     @IBAction func windSignUpMentorAreaCareerView(_ sender: Any){
@@ -43,4 +45,18 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.mentorIntroduceTextView.endEditing(true)
         }
+}
+
+extension SignUpMentoDetailIntroduceVC : UITextViewDelegate {
+    func textViewDidChange(_ textView: UITextView) {
+        self.textViewCountLabel.text = "\(self.mentorIntroduceTextView.text.count)/500"
+        if mentorIntroduceTextView.text.count != 0 {
+            // enable image
+        } else {
+            // disable image
+        }
+        if mentorIntroduceTextView.text.count > 500{
+            self.mentorIntroduceTextView.deleteBackward()
+        }
+    }
 }

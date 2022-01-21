@@ -254,12 +254,24 @@
                                     <constraint firstAttribute="height" constant="8" id="vRp-OS-T52"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="000/500" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7P-vi-9zm">
+                                <rect key="frame" x="303" y="385" width="45" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="jCr-22-mVE"/>
+                                    <constraint firstAttribute="height" constant="23" id="jiB-nC-McF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5ok-AC-kva"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5ok-AC-kva" firstAttribute="trailing" secondItem="y7k-Hb-5Rr" secondAttribute="trailing" constant="72" id="1hT-i5-W5o"/>
+                            <constraint firstItem="5ok-AC-kva" firstAttribute="trailing" secondItem="Q7P-vi-9zm" secondAttribute="trailing" constant="27" id="2GN-bM-v4P"/>
                             <constraint firstItem="y7k-Hb-5Rr" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="73" id="9xO-VW-2Hg"/>
+                            <constraint firstItem="Q7P-vi-9zm" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="385" id="DhZ-Sl-Uqk"/>
                             <constraint firstItem="aF6-xQ-Ocp" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="455" id="MFF-Tg-ZZp"/>
                             <constraint firstItem="akA-F3-CCT" firstAttribute="leading" secondItem="5ok-AC-kva" secondAttribute="leading" constant="27" id="Mfs-of-gxd"/>
                             <constraint firstItem="y7k-Hb-5Rr" firstAttribute="top" secondItem="5ok-AC-kva" secondAttribute="top" constant="88" id="PXW-HK-HJ8"/>
@@ -280,6 +292,7 @@
                     <navigationItem key="navigationItem" id="7Bf-SE-pTd"/>
                     <connections>
                         <outlet property="mentorIntroduceTextView" destination="akA-F3-CCT" id="Dnv-4J-OKF"/>
+                        <outlet property="textViewCountLabel" destination="Q7P-vi-9zm" id="OFy-ZM-byO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N57-Gr-wuK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
