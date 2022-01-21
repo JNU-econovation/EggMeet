@@ -18,12 +18,16 @@ class SignUpSelfIntroduceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextViewStyle()
-        self.navigationItem.title = "자기 소개";
-        self.navigationController?.navigationBar.tintColor = .black
         selfIntroduceTextView.layer.borderColor = UIColor.systemGray4.cgColor
         selfIntroduceTextView.layer.cornerRadius = 10
-        self.navigationController?.navigationBar.topItem?.title = ""
         selfIntroduceTextView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "자기소개";
     }
     
     @IBAction func windSignUpMentoAreaSelectionView(_ sender: Any){

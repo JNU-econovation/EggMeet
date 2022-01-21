@@ -18,12 +18,14 @@ class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "닉네임";
+        self.nicknameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        print("viewDidload")
-        
-        self.nicknameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        self.navigationItem.title = "닉네임";
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){

@@ -18,10 +18,14 @@ class SignUpSexVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "성별";
+        setGenderRadioButtons()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        setGenderRadioButtons()
+        self.navigationItem.title = "성별";
     }
     
     func setGenderRadioButtons(){

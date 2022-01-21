@@ -17,9 +17,13 @@ class SignUpLocationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "활동 지역";
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "활동지역";
     }
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){

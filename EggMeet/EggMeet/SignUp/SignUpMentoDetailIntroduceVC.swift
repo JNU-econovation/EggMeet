@@ -17,12 +17,16 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         setTextViewStyle()
-        self.navigationItem.title = "멘토 상세 소개";
-        self.navigationController?.navigationBar.tintColor = .black
         mentorIntroduceTextView.layer.borderColor = UIColor.systemGray4.cgColor
         mentorIntroduceTextView.layer.cornerRadius = 10
-        self.navigationController?.navigationBar.topItem?.title = ""
         mentorIntroduceTextView.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "멘토상세소개";
     }
     
     @IBAction func windSignUpMentorAreaCareerView(_ sender: Any){
