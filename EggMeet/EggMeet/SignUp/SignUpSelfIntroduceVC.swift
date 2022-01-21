@@ -11,6 +11,7 @@ import UIKit
 class SignUpSelfIntroduceVC: UIViewController {
     @IBOutlet weak var selfIntroduceTextView: UITextView!
     @IBOutlet weak var textViewCountLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     
     let selfIntroduceKey = "description"
     let ud = UserDefaults.standard
@@ -33,8 +34,10 @@ class SignUpSelfIntroduceVC: UIViewController {
     @IBAction func windSignUpMentoAreaSelectionView(_ sender: Any){
         ud.set(self.selfIntroduceTextView.text, forKey: selfIntroduceKey)
         
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentoAreaSelectionVC") as? SignUpMentoAreaSelectionVC else {return}
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        if self.selfIntroduceTextView.text.count != 0 {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentoAreaSelectionVC") as? SignUpMentoAreaSelectionVC else {return}
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
     
     @IBAction func skipAndWindSignUpMentoAreaSelectionView(_ sender: Any){
@@ -62,9 +65,9 @@ extension SignUpSelfIntroduceVC : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.textViewCountLabel.text = "\(self.selfIntroduceTextView.text.count)/500"
         if selfIntroduceTextView.text.count != 0 {
-            // enable image
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         } else {
-            // disable image
+            self.nextButton.setImage(UIImage(named: "next_button_disable"), for: .normal)
         }
         if selfIntroduceTextView.text.count > 500{
             self.selfIntroduceTextView.deleteBackward()

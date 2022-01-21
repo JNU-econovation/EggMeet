@@ -11,6 +11,8 @@ import DropDown
 
 class SignUpLocationVC: UIViewController {
     @IBOutlet weak var locationAreaButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
+    
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
     let ud = UserDefaults.standard

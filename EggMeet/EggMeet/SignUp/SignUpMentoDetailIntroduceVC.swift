@@ -11,6 +11,7 @@ import UIKit
 class SignUpMentoDetailIntroduceVC: UIViewController{
     @IBOutlet weak var mentorIntroduceTextView: UITextView!
     @IBOutlet weak var textViewCountLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     let mentorIntroduceKey = "mentorDescription"
     let ud = UserDefaults.standard
     
@@ -31,9 +32,10 @@ class SignUpMentoDetailIntroduceVC: UIViewController{
     
     @IBAction func windSignUpMentorAreaCareerView(_ sender: Any){
         ud.set(mentorIntroduceTextView.text, forKey: mentorIntroduceKey)
-        
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentorAreaCareerVC") as? SignUpMentorAreaCareerVC else {return}
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        if mentorIntroduceTextView.text.count != 0 {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpMentorAreaCareerVC") as? SignUpMentorAreaCareerVC else {return}
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
     
     @IBAction func skipAndWindSignUpMentorAreaCareerView(_ sender: Any){
@@ -55,9 +57,9 @@ extension SignUpMentoDetailIntroduceVC : UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.textViewCountLabel.text = "\(self.mentorIntroduceTextView.text.count)/500"
         if mentorIntroduceTextView.text.count != 0 {
-            // enable image
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         } else {
-            // disable image
+            self.nextButton.setImage(UIImage(named: "next_button_disable"), for: .normal)
         }
         if mentorIntroduceTextView.text.count > 500{
             self.mentorIntroduceTextView.deleteBackward()

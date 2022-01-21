@@ -304,6 +304,7 @@
                     <navigationItem key="navigationItem" id="7Bf-SE-pTd"/>
                     <connections>
                         <outlet property="mentorIntroduceTextView" destination="akA-F3-CCT" id="Dnv-4J-OKF"/>
+                        <outlet property="nextButton" destination="crb-wl-suN" id="Wbb-hA-pM2"/>
                         <outlet property="textViewCountLabel" destination="Q7P-vi-9zm" id="OFy-ZM-byO"/>
                     </connections>
                 </viewController>
@@ -474,7 +475,7 @@
                                     <constraint firstAttribute="height" constant="36" id="zzH-1E-TJD"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="다음으로" image="next_able_button" backgroundImage="nickname_button"/>
+                                <state key="normal" title="다음으로" image="next_button_disable" backgroundImage="nickname_button"/>
                                 <connections>
                                     <action selector="windSignUpLocationView:" destination="VFS-lx-X5e" eventType="touchUpInside" id="tBf-Qz-wpe"/>
                                 </connections>
@@ -551,6 +552,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="fMd-2Z-vFW"/>
                     <connections>
+                        <outlet property="nextButton" destination="f9J-ue-0oW" id="Gom-yj-2ta"/>
                         <outlet property="nicknameTextField" destination="w0K-XW-Mnk" id="H3g-LE-Zl6"/>
                         <outlet property="nicknameWarningLabel" destination="0Vd-QD-Olk" id="vHg-aK-nwL"/>
                         <outlet property="textFieldCountLabel" destination="aM5-pl-J1T" id="YBG-LM-sye"/>
@@ -600,7 +602,7 @@
                                     <constraint firstAttribute="width" constant="131" id="yJ6-D5-Uy7"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="next_able_button"/>
+                                <state key="normal" title="Button" image="next_button_disable"/>
                                 <connections>
                                     <action selector="windSignUpLocationView:" destination="aLn-61-I1P" eventType="touchUpInside" id="Z53-yc-cix"/>
                                 </connections>
@@ -625,6 +627,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="nextButton" destination="Q9D-eD-wbl" id="TCR-C0-N79"/>
                         <outlet property="sexSelectionView" destination="6bk-OB-VVL" id="QFc-1U-51l"/>
                     </connections>
                 </viewController>
@@ -734,6 +737,7 @@
                     <navigationItem key="navigationItem" id="Fpa-jt-dmb"/>
                     <connections>
                         <outlet property="locationAreaButton" destination="IvO-Wn-GAH" id="Run-fJ-8im"/>
+                        <outlet property="nextButton" destination="Esc-gZ-CTx" id="slL-Oi-0dU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ir0-nw-VFF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -867,6 +871,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="dkm-uB-6rz"/>
                     <connections>
+                        <outlet property="nextButton" destination="6Ra-Tw-nei" id="7lu-9l-nWP"/>
                         <outlet property="selfIntroduceTextView" destination="onb-ow-i1F" id="MdB-k8-vb9"/>
                         <outlet property="textViewCountLabel" destination="UzD-wM-hdF" id="yC8-g9-Xov"/>
                     </connections>
@@ -986,6 +991,7 @@
                     <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
                     <connections>
                         <outlet property="mentorAreaButton" destination="eC6-FQ-wSP" id="TbF-aw-uht"/>
+                        <outlet property="nextButton" destination="O3D-2s-adn" id="MSx-Yc-eci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o8K-7f-yJe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

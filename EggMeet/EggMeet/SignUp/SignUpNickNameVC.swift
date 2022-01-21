@@ -12,6 +12,7 @@ class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var nicknameWarningLabel: UILabel!
     @IBOutlet weak var textFieldCountLabel: UILabel!
+    @IBOutlet weak var nextButton: UIButton!
     let nicknameKey = "nickname"
     let ud = UserDefaults.standard
     private var isNicknameSet = false
@@ -108,7 +109,11 @@ extension SignUpNickNameVC {
     @objc func textFieldDidChange(_ sender: Any) {
         if self.nicknameTextField.text!.count > 20 {
             self.nicknameTextField.resignFirstResponder()
+        }else if self.nicknameTextField.text!.count == 0 {
+            self.nextButton.setImage(UIImage(named: "next_button_disable"), for: .normal)
+        }else{
+            self.textFieldCountLabel.text = "\(self.nicknameTextField.text!.count)/20"
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         }
-        self.textFieldCountLabel.text = "\(self.nicknameTextField.text!.count)/20"
     }
 }
