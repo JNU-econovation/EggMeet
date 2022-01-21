@@ -17,11 +17,12 @@ let TEST_CHAT_ROOM_ID = 1
 class ChatroomVC: UIViewController{
     var opponentNickname: String?
     var socketClient = StompClientLib()
-    var url = NSURL()
     var chatroomID: Int = TEST_CHAT_ROOM_ID
     var chatContentList: [chatDto] = [chatDto]()
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/message"
+    var keyHeight: CGFloat?
+    lazy var isKeyBoardShow: Bool = false
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -32,20 +33,23 @@ class ChatroomVC: UIViewController{
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
-        self.chatTableView.rowHeight = UITableView.automaticDimension
-        // addKeyboardNotification()
         if !isExistChatRoom(){
             createChatRoom()
         }
         registerSocket()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        self.addKeyboardNotifications()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.removeKeyboardNotifications()
+        socketClient.disconnect()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.messageTextView.endEditing(true)
-        }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        socketClient.disconnect()
+        view.endEditing(true)
     }
     
     @IBAction func passMessage(_ sender: UIButton) {
@@ -81,14 +85,12 @@ class ChatroomVC: UIViewController{
     }
     
     func registerSocket(){
-        // 완전한 URL을 의미한다.
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let completeURL = "ws://" + baseURL + "/stomp-chat"
         let wsurl = NSURL(string: completeURL)!
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
     }
         
-    // createChatRoom from id
     func createChatRoom(){
         let id: Int = CHAT_SECTION_NUM     // chatroom number
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
@@ -112,25 +114,32 @@ class ChatroomVC: UIViewController{
             return true
         }
     }
-
-    func addKeyboardNotification() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    
+    func addKeyboardNotifications(){
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc func keyboardWillShow(_ notification: Notification){
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y -= keyboardHeight
-        }
+    func removeKeyboardNotifications(){
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    @objc func keyboardWillHide(_ notification: Notification){
-        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y += keyboardHeight
+    @objc func keyboardWillShow(_ noti: NSNotification){
+        NSLog("Show!")
+                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.view.frame.origin.y -= keyboardHeight
+                    self.isKeyBoardShow = true
+            }
+    }
+    
+    @objc func keyboardWillHide(_ noti: NSNotification){
+                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
+                let keyboardRectangle = keyboardFrame.cgRectValue
+                let keyboardHeight = keyboardRectangle.height
+                self.view.frame.origin.y += keyboardHeight
         }
     }
 }
@@ -160,6 +169,14 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         NSLog("success cell in text content : \(self.chatContentList[indexPath.row].message)")
     }
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
     
 }
 
@@ -174,7 +191,7 @@ extension ChatroomVC: StompClientLibDelegate {
             let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
             let chatContent :chatDto = chatDto(roomId: chatJSON["roomId"] as! Int, writer: chatJSON["writer"] as! String, message: chatJSON["message"] as! String)
             self.chatContentList.append(chatContent)
-            NSLog("success append chat Con=tent : \(chatContent)")
+            NSLog("success append chat Content : \(chatContent)")
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)

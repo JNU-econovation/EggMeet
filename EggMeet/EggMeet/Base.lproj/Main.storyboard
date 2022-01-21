@@ -408,7 +408,7 @@
                     <connections>
                         <outlet property="explainLabel" destination="HVE-Qh-1jp" id="jdD-Pv-j3p"/>
                         <outlet property="mentorAreaCareerTextView" destination="zpe-YY-P0U" id="Dzi-Jf-saS"/>
-                        <outlet property="textViewCount" destination="WFG-mk-tfm" id="mNW-Zs-Lfy"/>
+                        <outlet property="textViewCountLabel" destination="WFG-mk-tfm" id="ScO-Va-NSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JrJ-6W-Waa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1006,9 +1006,12 @@
                                     <action selector="windSignUpSetMenteeAreaCategoryView:" destination="Oqz-Yd-4be" eventType="touchUpInside" id="Nnv-xz-1HW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="에그밋은 그 어떠한 기준으로도 여러분의 지식과 경험의 값을 재단하지 않습니다. 스스로의 판단으로 멘티에게 받을 성장비용을 정해주세요. (최소 0pt ~ 최대 5pt)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-wL-PaM">
-                                <rect key="frame" x="30" y="196" width="315" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그밋은 그 어떠한 기준으로도 여러분의 지식과 경험의 값을 재단하지 않습니다. 스스로의 판단으로 멘티에게 받을 성장비용을 정해주세요. (최소 0pt ~ 최대 5pt)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-wL-PaM">
+                                <rect key="frame" x="53.5" y="182.5" width="268" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="1T1-9u-bjI"/>
+                                    <constraint firstAttribute="width" constant="268" id="VzG-o9-QIn"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.396078431372549" green="0.396078431372549" blue="0.396078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1073,8 +1076,10 @@
                             <constraint firstItem="SJq-fe-h3e" firstAttribute="centerY" secondItem="wvi-Ym-UPz" secondAttribute="centerY" constant="-2" id="Lzl-dP-vtT"/>
                             <constraint firstItem="Z4Y-tl-Yxs" firstAttribute="centerY" secondItem="wvi-Ym-UPz" secondAttribute="centerY" constant="-197" id="M5i-RA-Z1N"/>
                             <constraint firstItem="WYS-sI-jo5" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="MJv-fz-np7"/>
+                            <constraint firstItem="8ec-wL-PaM" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="N1b-1V-DXz"/>
                             <constraint firstItem="cL5-rj-C7X" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="Qpg-4r-ELe"/>
                             <constraint firstItem="SJq-fe-h3e" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="VP2-7V-iMw"/>
+                            <constraint firstItem="8ec-wL-PaM" firstAttribute="top" secondItem="Z4Y-tl-Yxs" secondAttribute="bottom" constant="21" id="XiL-jl-wIq"/>
                             <constraint firstItem="Z4Y-tl-Yxs" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="YU1-l2-P9x"/>
                             <constraint firstItem="FlT-Yl-eDt" firstAttribute="centerX" secondItem="wvi-Ym-UPz" secondAttribute="centerX" id="gLH-GC-K1y"/>
                             <constraint firstItem="WYS-sI-jo5" firstAttribute="centerY" secondItem="wvi-Ym-UPz" secondAttribute="centerY" constant="169" id="iAs-1L-br8"/>
@@ -1099,13 +1104,65 @@
                     <view key="view" contentMode="scaleToFill" id="fk2-0X-oJc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성장포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM9-ov-8r1">
+                                <rect key="frame" x="152.5" y="141" width="70" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="dKh-Cu-3e2"/>
+                                    <constraint firstAttribute="width" constant="70" id="uhd-Ag-3uf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성장포인트는 에그밋 서비스를 통해 이루어지는 지식공유를 매개하는 수단으로, 지식 공유에 대한 대가로 멘티가 멘토에게 지불하는 포인트입니다." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yvv-RX-AVR">
+                                <rect key="frame" x="20" y="194" width="335" height="87"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="87" id="9mS-fZ-i1P"/>
+                                    <constraint firstAttribute="width" constant="335" id="ayq-s3-sLZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성장 비용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0HN-Sp-MDs">
+                                <rect key="frame" x="157.5" y="371" width="60" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="IUN-IU-kT6"/>
+                                    <constraint firstAttribute="height" constant="43" id="tdW-Dl-4Wu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="모든 사용자는 본인이 멘토링을 제공 할 시, 1회당 멘티로부터 받을 성장 포인트(성장비용)를 설정할 수 있습니다. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rKR-tO-cwY">
+                                <rect key="frame" x="67" y="424" width="241" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="6Ws-tk-6aI"/>
+                                    <constraint firstAttribute="height" constant="75" id="7yt-v4-mgx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="HoQ-bi-VvO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yvv-RX-AVR" firstAttribute="top" secondItem="HM9-ov-8r1" secondAttribute="bottom" constant="10" id="1si-L5-wo9"/>
+                            <constraint firstItem="HM9-ov-8r1" firstAttribute="centerX" secondItem="fk2-0X-oJc" secondAttribute="centerX" id="HFM-aw-LPN"/>
+                            <constraint firstItem="rKR-tO-cwY" firstAttribute="top" secondItem="0HN-Sp-MDs" secondAttribute="bottom" constant="10" id="Lg3-j4-0jM"/>
+                            <constraint firstItem="yvv-RX-AVR" firstAttribute="centerX" secondItem="fk2-0X-oJc" secondAttribute="centerX" id="N28-Xi-0vZ"/>
+                            <constraint firstItem="0HN-Sp-MDs" firstAttribute="centerX" secondItem="fk2-0X-oJc" secondAttribute="centerX" id="a8n-U1-r9w"/>
+                            <constraint firstItem="0HN-Sp-MDs" firstAttribute="top" secondItem="yvv-RX-AVR" secondAttribute="bottom" constant="90" id="g3n-Ll-zzX"/>
+                            <constraint firstItem="rKR-tO-cwY" firstAttribute="centerX" secondItem="fk2-0X-oJc" secondAttribute="centerX" id="rXN-X2-hci"/>
+                            <constraint firstItem="HM9-ov-8r1" firstAttribute="centerY" secondItem="fk2-0X-oJc" secondAttribute="centerY" constant="-171" id="yQP-EC-GVZ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ngf-bL-X4o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4404" y="1675"/>
+            <point key="canvasLocation" x="4404" y="1674.5127436281859"/>
         </scene>
         <!--멘티 분야 선택-->
         <scene sceneID="kbf-05-fXJ">
@@ -1426,6 +1483,8 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="disable_offline_button"/>
+                                <state key="disabled" image="disable_offline_button"/>
+                                <state key="selected" image="enable_online_button"/>
                                 <connections>
                                     <action selector="touchUpOfflineButton:" destination="5aJ-Ak-S8n" eventType="touchUpInside" id="ht3-Md-M2h"/>
                                 </connections>
@@ -1850,19 +1909,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태어난 해를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h71-ip-1kN">
-                                <rect key="frame" x="85" y="97" width="230" height="21"/>
+                                <rect key="frame" x="85" y="97" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정확한 나이는 공개되지 않습니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-1k-P3z">
-                                <rect key="frame" x="105" y="140" width="190" height="14.5"/>
+                                <rect key="frame" x="105" y="140" width="165" height="14.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-6I-813">
-                                <rect key="frame" x="40" y="200" width="320" height="117"/>
+                                <rect key="frame" x="40" y="200" width="295" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="7Xu-mr-fuD"/>
                                     <constraint firstAttribute="height" constant="117" id="WSh-vN-K3D"/>
@@ -1888,7 +1947,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일을 허위로 기재할 경우, 발견 시  서비스 이용에 불이익이 있을 수 있으니 주의해 주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38J-oa-UZu">
-                                <rect key="frame" x="15" y="362" width="370" height="26.5"/>
+                                <rect key="frame" x="15" y="362" width="345" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
