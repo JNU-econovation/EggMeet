@@ -104,21 +104,24 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="150" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JmQ-LO-t0c">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="146" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JmQ-LO-t0c">
                                 <rect key="frame" x="11" y="102" width="375" height="513"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTVC" rowHeight="150" id="CVL-V0-b4X" customClass="ChatTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="375" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTVC" rowHeight="146" id="CVL-V0-b4X" customClass="ChatTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CVL-V0-b4X" id="44f-SJ-rOn">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-b0-VG9">
-                                                    <rect key="frame" x="259.5" y="50" width="69.5" height="19"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-b0-VG9">
+                                                    <rect key="frame" x="259.5" y="50" width="69.5" height="65"/>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="3zz-6c-iOB"/>
+                                                    </constraints>
                                                     <attributedString key="attributedText">
                                                         <fragment content="Contents">
                                                             <attributes>
@@ -142,7 +145,7 @@
                                                 <constraint firstItem="kcB-14-rKX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="44f-SJ-rOn" secondAttribute="leading" constant="200" id="4ii-iT-h6Y"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="gDG-b0-VG9" secondAttribute="trailing" constant="30" id="6su-mL-FHl"/>
                                                 <constraint firstItem="gDG-b0-VG9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="44f-SJ-rOn" secondAttribute="leadingMargin" constant="100" id="X1A-gh-FFW"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="gDG-b0-VG9" secondAttribute="bottom" constant="70" id="h6G-36-zJM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="gDG-b0-VG9" secondAttribute="bottom" constant="20" id="h6G-36-zJM"/>
                                                 <constraint firstAttribute="trailing" secondItem="kcB-14-rKX" secondAttribute="trailing" constant="30" id="mum-a2-Br8"/>
                                                 <constraint firstItem="kcB-14-rKX" firstAttribute="top" secondItem="44f-SJ-rOn" secondAttribute="top" constant="10" id="tph-6U-qAe"/>
                                                 <constraint firstItem="gDG-b0-VG9" firstAttribute="top" secondItem="kcB-14-rKX" secondAttribute="bottom" constant="20" id="vsq-mI-ndF"/>
