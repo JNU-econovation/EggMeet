@@ -11,6 +11,7 @@ import UIKit
 class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var nicknameTextField: UITextField!
     @IBOutlet weak var nicknameWarningLabel: UILabel!
+    @IBOutlet weak var textFieldCountLabel: UILabel!
     let nicknameKey = "nickname"
     let ud = UserDefaults.standard
     private var isNicknameSet = false
@@ -21,6 +22,8 @@ class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         print("viewDidload")
+        
+        self.nicknameTextField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){
@@ -96,5 +99,14 @@ extension SignUpNickNameVC {
         let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
         let apiURL: String = "http://"+mainAddress + target
         return apiURL
+    }
+}
+
+extension SignUpNickNameVC {
+    @objc func textFieldDidChange(_ sender: Any) {
+        if self.nicknameTextField.text!.count > 20 {
+            self.nicknameTextField.resignFirstResponder()
+        }
+        self.textFieldCountLabel.text = "\(self.nicknameTextField.text!.count)/20"
     }
 }
