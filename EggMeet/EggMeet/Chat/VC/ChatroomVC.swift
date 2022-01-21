@@ -41,11 +41,10 @@ class ChatroomVC: UIViewController{
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.addKeyboardNotifications()
+    
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.removeKeyboardNotifications()
         socketClient.disconnect()
     }
     
@@ -109,35 +108,6 @@ class ChatroomVC: UIViewController{
             return false
         } else{
             return true
-        }
-    }
-    
-    func addKeyboardNotifications(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func removeKeyboardNotifications(){
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(_ noti: NSNotification){
-        NSLog("Show!")
-                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-                let keyboardRectangle = keyboardFrame.cgRectValue
-                let keyboardHeight = keyboardRectangle.height
-                self.view.frame.origin.y -= keyboardHeight
-            }
-        
-    }
-    
-    @objc func keyboardWillHide(_ noti: NSNotification){
-        NSLog("Hide!")
-                if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-                let keyboardRectangle = keyboardFrame.cgRectValue
-                let keyboardHeight = keyboardRectangle.height
-                self.view.frame.origin.y += keyboardHeight
         }
     }
 }
