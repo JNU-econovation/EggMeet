@@ -109,7 +109,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatTVC" rowHeight="146" id="CVL-V0-b4X" customClass="ChatTVC" customModule="EggMeet" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatTVC" rowHeight="146" id="CVL-V0-b4X" customClass="ChatTVC" customModule="EggMeet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.5" width="375" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CVL-V0-b4X" id="44f-SJ-rOn">
@@ -154,6 +154,47 @@
                                         <connections>
                                             <outlet property="contentLabel" destination="gDG-b0-VG9" id="zfK-Fd-1C6"/>
                                             <outlet property="nicknameLabel" destination="kcB-14-rKX" id="qZx-Tv-IWx"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChatOpponentTVC" id="ij7-ck-c8W" customClass="ChatOpponentTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="190.5" width="375" height="146"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ij7-ck-c8W" id="bgb-LD-6zZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="146"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpponentName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-9A-zhq">
+                                                    <rect key="frame" x="30" y="10" width="121" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="oVs-uv-5kr"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eel-hb-aSY">
+                                                    <rect key="frame" x="46" y="50" width="61" height="65"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="9jS-hk-LqJ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I2a-9A-zhq" secondAttribute="trailing" constant="200" id="1QU-gv-as5"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="eel-hb-aSY" secondAttribute="trailing" constant="100" id="827-hy-FzV"/>
+                                                <constraint firstItem="I2a-9A-zhq" firstAttribute="leading" secondItem="bgb-LD-6zZ" secondAttribute="leading" constant="30" id="EzB-KK-Bl7"/>
+                                                <constraint firstItem="eel-hb-aSY" firstAttribute="leading" secondItem="bgb-LD-6zZ" secondAttribute="leadingMargin" constant="30" id="Qdl-Bx-EFM"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eel-hb-aSY" secondAttribute="bottom" constant="20" id="eAa-6j-YzT"/>
+                                                <constraint firstItem="I2a-9A-zhq" firstAttribute="top" secondItem="bgb-LD-6zZ" secondAttribute="top" constant="10" id="gDw-5s-sRR"/>
+                                                <constraint firstItem="eel-hb-aSY" firstAttribute="top" secondItem="I2a-9A-zhq" secondAttribute="bottom" constant="20" id="rhT-j2-foV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentLabel" destination="eel-hb-aSY" id="4LH-H6-80s"/>
+                                            <outlet property="opponentNicknameLabel" destination="I2a-9A-zhq" id="CDS-qm-5HJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
