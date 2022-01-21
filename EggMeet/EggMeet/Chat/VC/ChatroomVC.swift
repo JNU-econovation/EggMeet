@@ -123,11 +123,19 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
-        cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
-        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
-        printCellDataLog(cell: cell, indexPath: indexPath)
-        return cell
+        let ud = UserDefaults.standard
+        let writer = ud.string(forKey: "nickname")
+        
+        if self.chatContentList[indexPath.row].writer == writer {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
+            cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
+            cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            return cell
+        }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
+            cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
+            cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            return cell
     }
     
     func printCellDataLog(cell: ChatTVC, indexPath: IndexPath){
@@ -163,6 +171,7 @@ extension ChatroomVC: StompClientLibDelegate {
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
+        
     }
     
     // disconnect
