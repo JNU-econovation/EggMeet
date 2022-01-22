@@ -125,16 +125,21 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let ud = UserDefaults.standard
         let writer = ud.string(forKey: "nickname")
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "HH:mm"
+        let current_time = dateformat.string(from: Date())
         
         if self.chatContentList[indexPath.row].writer == writer {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
             cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            cell.timeLabel?.text = current_time
             return cell
         }
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
             cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
             cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            cell.timeLabel?.text = current_time
             return cell
     }
     
