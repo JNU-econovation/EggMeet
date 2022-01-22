@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -682,9 +683,6 @@
                                 <rect key="frame" x="50" y="153" width="49" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="지역"/>
-                                <connections>
-                                    <action selector="touchLocationAreaButton" destination="QiW-3M-FxQ" eventType="touchUpInside" id="kHx-hZ-faC"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-hT-hJD">
                                 <rect key="frame" x="224" y="153" width="49" height="31"/>
@@ -708,12 +706,55 @@
                                 <color key="textColor" red="0.48750084640000002" green="0.48758864400000002" blue="0.48749530320000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qj8-Hf-Ydw">
+                                <rect key="frame" x="39" y="183" width="296" height="112"/>
+                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="lrj-A9-1Bp"/>
+                                    <constraint firstAttribute="width" constant="296" id="tv6-A8-6in"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rlm-OO-Twz">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="zKf-CT-dUK" customClass="LocationCollectionViewCell" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XHM-wk-FJj">
+                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAf-Dd-Qnc">
+                                                    <rect key="frame" x="17" y="5" width="26.5" height="12"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wAf-Dd-Qnc" secondAttribute="trailing" constant="18" id="UOP-xD-MAY"/>
+                                                <constraint firstItem="wAf-Dd-Qnc" firstAttribute="leading" secondItem="XHM-wk-FJj" secondAttribute="leading" constant="17" id="Vbg-uA-lIM"/>
+                                                <constraint firstAttribute="bottom" secondItem="wAf-Dd-Qnc" secondAttribute="bottom" constant="5" id="Yzf-dt-f8Y"/>
+                                                <constraint firstItem="wAf-Dd-Qnc" firstAttribute="top" secondItem="XHM-wk-FJj" secondAttribute="top" constant="5" id="uLF-wr-cN9"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="locationLabel" destination="wAf-Dd-Qnc" id="XRg-e7-0Qc"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VGo-Fg-LEk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="sH9-El-7Fk" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" id="0LF-FO-hWK"/>
                             <constraint firstItem="boQ-u2-I8s" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="380" id="3vT-zK-OYP"/>
+                            <constraint firstItem="Qj8-Hf-Ydw" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="39" id="4ya-Q0-fSc"/>
                             <constraint firstItem="x4d-bs-rwz" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="61" id="6Xx-3O-7jT"/>
                             <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="Esc-gZ-CTx" secondAttribute="trailing" constant="122" id="92Z-QA-8eX"/>
                             <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="zUp-hT-hJD" secondAttribute="trailing" constant="102" id="Atn-bW-eBn"/>
@@ -729,14 +770,17 @@
                             <constraint firstItem="IvO-Wn-GAH" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="153" id="c8v-i8-fe1"/>
                             <constraint firstItem="x4d-bs-rwz" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="15" id="cB2-ok-I4V"/>
                             <constraint firstItem="G5G-WG-Emk" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="363" id="eqb-J9-d9p"/>
+                            <constraint firstItem="Qj8-Hf-Ydw" firstAttribute="top" secondItem="VGo-Fg-LEk" secondAttribute="top" constant="183" id="gk9-kf-QKk"/>
                             <constraint firstItem="G5G-WG-Emk" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="153" id="hlQ-IZ-gZk"/>
                             <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="tC8-8S-PJq" secondAttribute="trailing" constant="106" id="thi-wg-qhm"/>
                             <constraint firstItem="tC8-8S-PJq" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="106" id="wEY-Vo-Z3w"/>
                             <constraint firstItem="boQ-u2-I8s" firstAttribute="leading" secondItem="VGo-Fg-LEk" secondAttribute="leading" constant="122" id="xBa-RI-nOM"/>
+                            <constraint firstItem="VGo-Fg-LEk" firstAttribute="trailing" secondItem="Qj8-Hf-Ydw" secondAttribute="trailing" constant="40" id="zde-xm-H8g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fpa-jt-dmb"/>
                     <connections>
+                        <outlet property="collcectionView" destination="Qj8-Hf-Ydw" id="Y2e-Lv-6iC"/>
                         <outlet property="locationAreaButton" destination="IvO-Wn-GAH" id="Run-fJ-8im"/>
                         <outlet property="nextButton" destination="Esc-gZ-CTx" id="slL-Oi-0dU"/>
                     </connections>
@@ -2009,19 +2053,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태어난 해를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h71-ip-1kN">
-                                <rect key="frame" x="85" y="97" width="230" height="21"/>
+                                <rect key="frame" x="85" y="97" width="205" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정확한 나이는 공개되지 않습니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-1k-P3z">
-                                <rect key="frame" x="105" y="140" width="190" height="14.5"/>
+                                <rect key="frame" x="105" y="140" width="165" height="14.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-6I-813">
-                                <rect key="frame" x="40" y="200" width="320" height="117"/>
+                                <rect key="frame" x="40" y="200" width="295" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="7Xu-mr-fuD"/>
                                     <constraint firstAttribute="height" constant="117" id="WSh-vN-K3D"/>
@@ -2047,7 +2091,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일을 허위로 기재할 경우, 발견 시  서비스 이용에 불이익이 있을 수 있으니 주의해 주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38J-oa-UZu">
-                                <rect key="frame" x="15" y="362" width="370" height="26.5"/>
+                                <rect key="frame" x="15" y="362" width="345" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
