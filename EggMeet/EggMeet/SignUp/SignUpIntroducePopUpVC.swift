@@ -11,16 +11,16 @@ import UIKit
 class SignUpIntroducePopUpVC: UIViewController {
 
     @IBOutlet weak var closeButton: UIButton!
+    @IBOutlet weak var alertView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         closeButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        // Do any additional setup after loading the view.
+        self.view.bringSubviewToFront(closeButton)
     }
     
     @objc func dismissView(){
         dismiss(animated: false, completion: nil)
     }
-
 }

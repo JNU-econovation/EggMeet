@@ -26,9 +26,11 @@ class ChatroomVC: UIViewController{
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet var chatTableView: UITableView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
@@ -36,14 +38,13 @@ class ChatroomVC: UIViewController{
             createChatRoom()
         }
         registerSocket()
+        
     }
-    
     override func viewWillAppear(_ animated: Bool) {
-        self.addKeyboardNotifications()
+    
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.removeKeyboardNotifications()
         socketClient.disconnect()
     }
     
@@ -109,33 +110,6 @@ class ChatroomVC: UIViewController{
             return true
         }
     }
-    
-    func addKeyboardNotifications(){
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    func removeKeyboardNotifications(){
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @objc func keyboardWillShow(_ noti: NSNotification){
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y -= keyboardHeight
-        }
-    }
-    
-    @objc func keyboardWillHide(_ noti: NSNotification){
-        if let keyboardFrame: NSValue = noti.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue{
-            let keyboardRectangle = keyboardFrame.cgRectValue
-            let keyboardHeight = keyboardRectangle.height
-            self.view.frame.origin.y += keyboardHeight
-        }
-    }
-
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -149,11 +123,19 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
-        cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
-        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
-        printCellDataLog(cell: cell, indexPath: indexPath)
-        return cell
+        let ud = UserDefaults.standard
+        let writer = ud.string(forKey: "nickname")
+        
+        if self.chatContentList[indexPath.row].writer == writer {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
+            cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
+            cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            return cell
+        }
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
+            cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
+            cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            return cell
     }
     
     func printCellDataLog(cell: ChatTVC, indexPath: IndexPath){
@@ -189,6 +171,7 @@ extension ChatroomVC: StompClientLibDelegate {
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
+        
     }
     
     // disconnect

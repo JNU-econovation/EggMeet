@@ -14,6 +14,7 @@ pod 'DLRadioButton', '~> 1.4'
 pod 'Starscream'
 pod 'StompClientLib'
 pod 'Tabman', '~> 2.9'
+pod 'IQKeyboardManagerSwift'
 
   # Pods for EggMeet
 
