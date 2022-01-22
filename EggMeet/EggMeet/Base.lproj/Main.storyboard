@@ -1025,6 +1025,18 @@
                                 <color key="textColor" red="0.48628133540000001" green="0.4862622023" blue="0.48627519609999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Np3-PH-ZXb">
+                                <rect key="frame" x="40" y="225" width="71" height="16"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.55294117647058827" green="0.55294117647058827" blue="0.55294117647058827" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세부항목 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6b-Bh-4se">
+                                <rect key="frame" x="40" y="275" width="71" height="16"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                <color key="textColor" red="0.55294889209999998" green="0.55292731520000005" blue="0.55294191839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="u1Y-YB-jdX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1033,8 +1045,10 @@
                             <constraint firstItem="u1Y-YB-jdX" firstAttribute="trailing" secondItem="O3D-2s-adn" secondAttribute="trailing" constant="122" id="3Po-Dg-SXW"/>
                             <constraint firstItem="u1Y-YB-jdX" firstAttribute="trailing" secondItem="yK1-nT-Vz5" secondAttribute="trailing" constant="104" id="3Q5-AS-CHY"/>
                             <constraint firstItem="VG6-2o-o3M" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="27" id="6O3-ey-auM"/>
+                            <constraint firstItem="Np3-PH-ZXb" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="40" id="9mt-0t-P2T"/>
                             <constraint firstItem="O3D-2s-adn" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="122" id="B72-zY-63N"/>
                             <constraint firstItem="HCa-xf-ylC" firstAttribute="top" secondItem="0ui-Uq-6sk" secondAttribute="bottom" constant="71" id="BhC-I9-xjP"/>
+                            <constraint firstItem="s6b-Bh-4se" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="275" id="EWX-kd-1rb"/>
                             <constraint firstItem="0ui-Uq-6sk" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" id="Ily-q1-PjH"/>
                             <constraint firstItem="eC6-FQ-wSP" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="214" id="Kp2-MC-whH"/>
                             <constraint firstItem="g8H-ZQ-UBB" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="455" id="Les-Gi-fmE"/>
@@ -1047,9 +1061,11 @@
                             <constraint firstItem="eC6-FQ-wSP" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="27" id="gvd-cu-Bgg"/>
                             <constraint firstItem="u1Y-YB-jdX" firstAttribute="trailing" secondItem="eC6-FQ-wSP" secondAttribute="trailing" constant="27" id="l63-rj-3aW"/>
                             <constraint firstItem="F5B-qY-DSs" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="110" id="leL-HI-xdo"/>
+                            <constraint firstItem="Np3-PH-ZXb" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="225" id="n2k-cC-xuw"/>
                             <constraint firstItem="yK1-nT-Vz5" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="132" id="qT3-KD-uXP"/>
                             <constraint firstItem="VG6-2o-o3M" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="264" id="swd-FL-Njh"/>
                             <constraint firstItem="g8H-ZQ-UBB" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="122" id="tvi-HK-nXH"/>
+                            <constraint firstItem="s6b-Bh-4se" firstAttribute="leading" secondItem="u1Y-YB-jdX" secondAttribute="leading" constant="40" id="u2A-UB-4Qx"/>
                             <constraint firstItem="u1Y-YB-jdX" firstAttribute="trailing" secondItem="F5B-qY-DSs" secondAttribute="trailing" constant="109" id="vI8-45-WZe"/>
                             <constraint firstItem="F5B-qY-DSs" firstAttribute="top" secondItem="u1Y-YB-jdX" secondAttribute="top" constant="438" id="yMj-3r-WQD"/>
                         </constraints>
@@ -1057,7 +1073,9 @@
                     <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
                     <connections>
                         <outlet property="mentorAreaButton" destination="eC6-FQ-wSP" id="TbF-aw-uht"/>
+                        <outlet property="mentorCategoryLabel" destination="Np3-PH-ZXb" id="Kgk-PY-REs"/>
                         <outlet property="mentorDetailAreaButton" destination="VG6-2o-o3M" id="Jjf-ZE-cJ5"/>
+                        <outlet property="mentorDetailCategoryLabel" destination="s6b-Bh-4se" id="ZEP-Kx-SF4"/>
                         <outlet property="nextButton" destination="O3D-2s-adn" id="MSx-Yc-eci"/>
                     </connections>
                 </viewController>
@@ -2075,19 +2093,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="태어난 해를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h71-ip-1kN">
-                                <rect key="frame" x="85" y="97" width="205" height="21"/>
+                                <rect key="frame" x="85" y="97" width="230" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정확한 나이는 공개되지 않습니다!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJt-1k-P3z">
-                                <rect key="frame" x="105" y="140" width="165" height="14.5"/>
+                                <rect key="frame" x="105" y="140" width="190" height="14.5"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ggb-6I-813">
-                                <rect key="frame" x="40" y="200" width="295" height="117"/>
+                                <rect key="frame" x="40" y="200" width="320" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="282" id="7Xu-mr-fuD"/>
                                     <constraint firstAttribute="height" constant="117" id="WSh-vN-K3D"/>
@@ -2113,7 +2131,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생년월일을 허위로 기재할 경우, 발견 시  서비스 이용에 불이익이 있을 수 있으니 주의해 주세요." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38J-oa-UZu">
-                                <rect key="frame" x="15" y="362" width="345" height="26.5"/>
+                                <rect key="frame" x="15" y="362" width="370" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>

@@ -13,6 +13,9 @@ class SignUpMentoAreaSelectionVC: UIViewController{
     @IBOutlet weak var mentorAreaButton: UIButton!
     @IBOutlet weak var mentorDetailAreaButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var mentorCategoryLabel: UILabel!
+    @IBOutlet weak var mentorDetailCategoryLabel: UILabel!
+    
     let mentorAreaDD: DropDown = DropDown()
     let mentorDetailAreaDD: DropDown = DropDown()
     let mentoAreaKey = "mentorCategory"
@@ -31,6 +34,8 @@ class SignUpMentoAreaSelectionVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mentorCategoryLabel.adjustsFontSizeToFitWidth = true
+        mentorDetailCategoryLabel.adjustsFontSizeToFitWidth = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,6 +69,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
             print("인덱스 : \(index)")
             ud.set(item, forKey: mentoAreaKey)
             mentorAreaSelectedIndex = index
+            mentorCategoryLabel.text = item
         }
         isCategorySelected = true
     }
@@ -79,6 +85,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
             ud.set(item, forKey: mentorDetailAreaKey)
+            mentorDetailCategoryLabel.text = item
         }
         isCategorySelected = true
     }
