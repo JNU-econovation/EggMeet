@@ -14,7 +14,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var collcectionView: UICollectionView!
     
-    var list = ["1", "2", "3", "4" ,"5", "6", "7", "8", "9", "10"]
+    var list = ["전체", "서울", "부산", "대구" ,"광주", "대전", "울산", "인천", "경기", "강원", "충남", "충북", "세종", "전남", "전북", "경북", "경남", "제주"]
     
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
@@ -25,6 +25,17 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         
         self.collcectionView.delegate = self
         self.collcectionView.dataSource = self
+        setCollectionView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.tintColor = .black
+        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationItem.title = "활동지역";
+    }
+    
+    func setCollectionView(){
         let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         flowLayout.minimumLineSpacing = 7
         flowLayout.minimumInteritemSpacing = 10
@@ -34,14 +45,6 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         flowLayout.sectionInset.right = 7
         flowLayout.itemSize = CGSize(width: 48, height: 18)
         self.collcectionView.collectionViewLayout = flowLayout
-       
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.tintColor = .black
-        self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationItem.title = "활동지역";
     }
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){
@@ -55,19 +58,6 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         self.navigationController?.pushViewController(nextVC, animated: true)
         print("건너뛰기")
     }
-    
-    @IBAction func touchLocationAreaButton(){
-        locationAreaDD.dataSource = [ "전체", "서울", "경기", "인천", "강원", "충남", "대전", "충북", "세종", "부산", "울산", "대구", "경북", "경남", "전남", "광주", "전북", "제주", "전국"]
-        locationAreaDD.textColor = UIColor.black
-        locationAreaDD.selectedTextColor = UIColor.blue
-        locationAreaDD.backgroundColor = UIColor.white
-        locationAreaDD.show()
-        locationAreaDD.selectionAction = { [unowned self] (index: Int, item: String) in
-            print("선택한 아이템 : \(item)")
-            print("인덱스 : \(index)")
-            ud.set(item, forKey: locationKey)
-        }
-    }
 }
 
 extension SignUpLocationVC {
@@ -80,7 +70,7 @@ extension SignUpLocationVC {
             
             //cell.backgroundColor = .lightGray
             cell.locationLabel.text = list[indexPath.row]
-            cell.locationLabel.textColor = .systemGray3
+            cell.locationLabel.textColor = .gray
             //cell.locationLabel.backgroundColor = .yellow
             
             return cell
@@ -101,9 +91,9 @@ extension SignUpLocationVC: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("click index=\(indexPath.row)")
+        print("click cell = \(list[indexPath.row])")
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
-        //selectStartYearPos = indexPath.row
+        ud.set(list[indexPath.row], forKey: locationKey)
         
     }
 

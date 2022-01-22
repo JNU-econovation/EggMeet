@@ -680,14 +680,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IvO-Wn-GAH">
-                                <rect key="frame" x="50" y="153" width="49" height="31"/>
+                                <rect key="frame" x="50" y="153" width="76.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="지역"/>
+                                <buttonConfiguration key="configuration" style="plain" title="지역 선택"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zUp-hT-hJD">
-                                <rect key="frame" x="224" y="153" width="49" height="31"/>
+                                <rect key="frame" x="168.5" y="153" width="104.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="전체"/>
+                                <buttonConfiguration key="configuration" style="plain" title="세부 지역 선택"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_location" translatesAutoresizingMaskIntoConstraints="NO" id="sH9-El-7Fk">
                                 <rect key="frame" x="0.0" y="0.0" width="125" height="8"/>
@@ -721,22 +721,22 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="cell" reuseIdentifier="cell" id="zKf-CT-dUK" customClass="LocationCollectionViewCell" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="52.5" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XHM-wk-FJj">
-                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="22"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="52.5" height="22"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAf-Dd-Qnc">
-                                                    <rect key="frame" x="17" y="5" width="26.5" height="12"/>
+                                                    <rect key="frame" x="13" y="5" width="26.5" height="12"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="wAf-Dd-Qnc" secondAttribute="trailing" constant="18" id="UOP-xD-MAY"/>
-                                                <constraint firstItem="wAf-Dd-Qnc" firstAttribute="leading" secondItem="XHM-wk-FJj" secondAttribute="leading" constant="17" id="Vbg-uA-lIM"/>
+                                                <constraint firstAttribute="trailing" secondItem="wAf-Dd-Qnc" secondAttribute="trailing" constant="13" id="UOP-xD-MAY"/>
+                                                <constraint firstItem="wAf-Dd-Qnc" firstAttribute="leading" secondItem="XHM-wk-FJj" secondAttribute="leading" constant="13" id="Vbg-uA-lIM"/>
                                                 <constraint firstAttribute="bottom" secondItem="wAf-Dd-Qnc" secondAttribute="bottom" constant="5" id="Yzf-dt-f8Y"/>
                                                 <constraint firstItem="wAf-Dd-Qnc" firstAttribute="top" secondItem="XHM-wk-FJj" secondAttribute="top" constant="5" id="uLF-wr-cN9"/>
                                             </constraints>
