@@ -34,6 +34,7 @@ class ChatroomVC: UIViewController{
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
+        setupTextViewUI()
         if !isExistChatRoom(){
             createChatRoom()
         }
@@ -63,6 +64,9 @@ class ChatroomVC: UIViewController{
         }
     }
     
+    @IBAction func popView(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
     func setMyChatroomName() -> String{
         let ud = UserDefaults.standard
         let myName = ud.string(forKey: "nickname")!
@@ -110,6 +114,10 @@ class ChatroomVC: UIViewController{
             return true
         }
     }
+    
+    func setupTextViewUI(){
+        self.messageTextView.layer.cornerRadius = 5
+    }
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -125,16 +133,25 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let ud = UserDefaults.standard
         let writer = ud.string(forKey: "nickname")
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "HH:mm"
+        let current_time = dateformat.string(from: Date())
         
         if self.chatContentList[indexPath.row].writer == writer {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
             cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            cell.contentLabel?.layer.masksToBounds = true
+            cell.contentLabel?.layer.cornerRadius = 5
+            cell.timeLabel?.text = current_time
             return cell
         }
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
             cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
             cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+            cell.contentLabel?.layer.masksToBounds = true
+            cell.contentLabel?.layer.cornerRadius = 5
+            cell.timeLabel?.text = current_time
             return cell
     }
     
