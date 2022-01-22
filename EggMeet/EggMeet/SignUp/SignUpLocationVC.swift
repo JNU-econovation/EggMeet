@@ -13,9 +13,13 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     @IBOutlet weak var locationAreaButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var collcectionView: UICollectionView!
+    @IBOutlet weak var locationCategoryButton: UIButton!
+    @IBOutlet weak var locationDetailCategoryButton: UIButton!
     
     var list = ["전체", "서울", "부산", "대구" ,"광주", "대전", "울산", "인천", "경기", "강원", "충남", "충북", "세종", "전남", "전북", "경북", "경남", "제주"]
     var selectCellIndex: Int = 0
+    var isTouchedLocationButton: Bool = true
+    var isTouchedDetailLocationButton: Bool = false
     
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
@@ -58,6 +62,31 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
         print("건너뛰기")
+    }
+    
+    @IBAction func touchLocationCategoryButton(_ sender: Any) {
+        
+        switch isTouchedLocationButton {
+        case true :
+            locationCategoryButton.setImage(UIImage(named: "location_category_deselcted"), for: .normal)
+            isTouchedLocationButton = false
+            collcectionView.isHidden = true
+        case false :
+            locationCategoryButton.setImage(UIImage(named: "location_category_selected"), for: .normal)
+            isTouchedLocationButton = true
+            collcectionView.isHidden = false
+        }
+    }
+    
+    @IBAction func touchLocationDetailCategoryButton(_ sender: Any) {
+        switch isTouchedDetailLocationButton {
+        case true :
+            locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_deselcted"), for: .normal)
+            isTouchedDetailLocationButton = false
+        case false :
+            locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_selected"), for: .normal)
+            isTouchedDetailLocationButton = true
+        }
     }
 }
 
