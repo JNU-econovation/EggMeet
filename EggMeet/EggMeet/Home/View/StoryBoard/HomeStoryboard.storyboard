@@ -211,32 +211,6 @@
             </objects>
             <point key="canvasLocation" x="2794.202898550725" y="89.732142857142847"/>
         </scene>
-        <!--성장포인트-->
-        <scene sceneID="0Eo-o9-gjv">
-            <objects>
-                <viewController storyboardIdentifier="GrowthPointVC" id="OXB-SO-XUY" customClass="GrowthPointVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="UPC-oM-coO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성장포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NfX-MU-xlz">
-                                <rect key="frame" x="155" y="262" width="74" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="E55-3v-zia"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="성장포인트" image="moon" catalog="system" selectedImage="moon.stars" id="Xig-O4-Bic"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="udc-qb-QvF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1225" y="777"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="MJg-b0-KzI">
             <objects>
@@ -250,8 +224,8 @@
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="vjG-X2-kke"/>
                         <segue destination="ZbK-r9-xYz" kind="relationship" relationship="viewControllers" id="PU9-A9-NEG"/>
-                        <segue destination="OXB-SO-XUY" kind="relationship" relationship="viewControllers" id="vdQ-cD-hmN"/>
-                        <segue destination="hge-HE-f2x" kind="relationship" relationship="viewControllers" id="o72-Y2-ZEG"/>
+                        <segue destination="8rt-n8-Ecz" kind="relationship" relationship="viewControllers" id="t2N-Rc-wu2"/>
+                        <segue destination="hge-HE-f2x" kind="relationship" relationship="viewControllers" id="p6c-Vw-b0V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw9-Ro-0sY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -267,6 +241,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOz-jY-ccY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2459" y="552"/>
+        </scene>
+        <!--CalendarVC-->
+        <scene sceneID="siI-aQ-jSH">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="CalendarVC" storyboardName="CalendarStoryboard" referencedIdentifier="CalendarVC" id="8rt-n8-Ecz" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="WGE-gO-Cm6"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ViT-uk-Jko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1931" y="626"/>
         </scene>
         <!--ChatVC-->
         <scene sceneID="pxx-of-OW1">
@@ -465,8 +449,6 @@
         <image name="fibrechannel" catalog="system" width="128" height="92"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="moon" catalog="system" width="128" height="121"/>
-        <image name="moon.stars" catalog="system" width="124" height="128"/>
         <image name="square.split.2x1.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

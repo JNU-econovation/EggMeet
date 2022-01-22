@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--mypage-->
+        <!--마이페이지-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MypageVC" id="Y6W-OH-hqX" customClass="MypageVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
@@ -49,7 +49,7 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="mypage" id="cjG-Tq-ANT"/>
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.fill" catalog="system" id="cjG-Tq-ANT"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GrowthPointContainerView" destination="IQg-36-d49" id="wGC-Us-4XE"/>
@@ -342,6 +342,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="mygrowthpoint">
             <color red="0.97299998998641968" green="0.96899998188018799" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

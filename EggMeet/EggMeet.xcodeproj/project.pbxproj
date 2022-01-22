@@ -55,6 +55,8 @@
 		9CC0D5A82796BCCC00E4885B /* HomeNoticeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A62796BCCC00E4885B /* HomeNoticeTVC.swift */; };
 		9CC0D5A92796BCCC00E4885B /* HomeNoticeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A72796BCCC00E4885B /* HomeNoticeTVC.xib */; };
 		9CC0D5AD279BD8E000E4885B /* LocationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5AC279BD8E000E4885B /* LocationCollectionViewCell.swift */; };
+		9CC0D5B2279C0FF200E4885B /* CalendarStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CC0D5B1279C0FF200E4885B /* CalendarStoryboard.storyboard */; };
+		9CC0D5B4279C100500E4885B /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5B3279C100500E4885B /* CalendarVC.swift */; };
 		9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */; };
 		9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */; };
 		9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */; };
@@ -127,6 +129,8 @@
 		9CC0D5A62796BCCC00E4885B /* HomeNoticeTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeTVC.swift; sourceTree = "<group>"; };
 		9CC0D5A72796BCCC00E4885B /* HomeNoticeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeNoticeTVC.xib; sourceTree = "<group>"; };
 		9CC0D5AC279BD8E000E4885B /* LocationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCollectionViewCell.swift; sourceTree = "<group>"; };
+		9CC0D5B1279C0FF200E4885B /* CalendarStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CalendarStoryboard.storyboard; sourceTree = "<group>"; };
+		9CC0D5B3279C100500E4885B /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
 		9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameVC.swift; sourceTree = "<group>"; };
 		9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationVC.swift; sourceTree = "<group>"; };
 		9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelfIntroduceVC.swift; sourceTree = "<group>"; };
@@ -182,6 +186,7 @@
 		192C407127785BF4003055DD /* EggMeet */ = {
 			isa = PBXGroup;
 			children = (
+				9CC0D5AE279C0FB100E4885B /* Calendar */,
 				CD1B969C279AF061009A0DF6 /* Mypage */,
 				CD1B95E52799D885009A0DF6 /* Config */,
 				9C25EE6F279177F700CBBB11 /* Login */,
@@ -320,6 +325,31 @@
 				9CC0D5AC279BD8E000E4885B /* LocationCollectionViewCell.swift */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9CC0D5AE279C0FB100E4885B /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0D5B0279C0FCE00E4885B /* VC */,
+				9CC0D5AF279C0FC200E4885B /* View */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		9CC0D5AF279C0FC200E4885B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0D5B1279C0FF200E4885B /* CalendarStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9CC0D5B0279C0FCE00E4885B /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0D5B3279C100500E4885B /* CalendarVC.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 		9CE4B67B278078EF003AEB90 /* SignUp */ = {
@@ -525,6 +555,7 @@
 			files = (
 				9CC0D5A92796BCCC00E4885B /* HomeNoticeTVC.xib in Resources */,
 				9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */,
+				9CC0D5B2279C0FF200E4885B /* CalendarStoryboard.storyboard in Resources */,
 				192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */,
 				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
@@ -639,6 +670,7 @@
 				9CE4B6872781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift in Sources */,
 				1991D0CC278C69280081EDF5 /* ChatProfileVO.swift in Sources */,
 				9C25EE6827900F6400CBBB11 /* Category.swift in Sources */,
+				9CC0D5B4279C100500E4885B /* CalendarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
