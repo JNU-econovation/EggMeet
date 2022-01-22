@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -14,7 +14,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeSearchVC" id="tdY-5K-I44" customClass="HomeSearchVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NfM-Qb-kxv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bcn-SN-CD7">
@@ -46,7 +46,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2i-lW-NA8">
-                                <rect key="frame" x="10" y="74" width="76.5" height="31"/>
+                                <rect key="frame" x="10" y="118" width="76.5" height="31"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="멘토 찾기"/>
@@ -55,7 +55,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pr-aG-7Q8">
-                                <rect key="frame" x="106.5" y="74" width="72.5" height="31"/>
+                                <rect key="frame" x="106.5" y="118" width="72.5" height="31"/>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="멘티찾기"/>
@@ -64,7 +64,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofr-En-G1s">
-                                <rect key="frame" x="332" y="74" width="30" height="30"/>
+                                <rect key="frame" x="332" y="118" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="HGY-kg-kSA"/>
                                     <constraint firstAttribute="height" constant="30" id="gln-1R-BYv"/>
@@ -77,7 +77,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b15-Dm-vBk">
-                                <rect key="frame" x="367" y="74" width="30" height="30"/>
+                                <rect key="frame" x="367" y="118" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Fwm-Tr-ycp"/>
                                     <constraint firstAttribute="height" constant="30" id="hoG-EQ-wDF"/>
@@ -162,7 +162,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0jF-ns-0ba">
-                                <rect key="frame" x="297" y="74" width="30" height="30"/>
+                                <rect key="frame" x="297" y="118" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="TEG-hK-MYK"/>
                                     <constraint firstAttribute="width" constant="30" id="c5e-xh-aho"/>
@@ -261,7 +261,7 @@
         <!--마이페이지-->
         <scene sceneID="ceq-Mm-2NT">
             <objects>
-                <viewController id="z6w-rC-VXR" sceneMemberID="viewController">
+                <viewController id="z6w-rC-VXR" customClass="ViewController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hiu-JV-Te6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -290,7 +290,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeFilterVC" title="필터" id="GTg-vp-j4t" customClass="HomeFilterVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="COR-hb-BZK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAz-w5-Nug">
@@ -407,7 +407,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeNoticeVC" id="wqc-l4-Hqk" customClass="HomeNoticeVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uLf-MI-riW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fjT-as-aqq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -464,7 +464,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vjG-X2-kke"/>
+        <segue reference="Sdw-oW-XFY"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
