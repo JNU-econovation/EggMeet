@@ -992,7 +992,7 @@
                                     <constraint firstAttribute="width" constant="321" id="Piv-Fs-0by"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="mentee_categorybar_detail"/>
+                                <state key="normal" title="Button" image="categorybar_without_text"/>
                                 <connections>
                                     <action selector="touchMentorDetailAreaButton" destination="ces-hf-4fh" eventType="touchUpInside" id="7K2-8d-av0"/>
                                 </connections>
@@ -1004,7 +1004,7 @@
                                     <constraint firstAttribute="width" constant="321" id="QB0-2n-oYB"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="mentee_categorybar_general"/>
+                                <state key="normal" image="categorybar_without_text"/>
                                 <connections>
                                     <action selector="touchMentorAreaButton" destination="ces-hf-4fh" eventType="touchUpInside" id="DHE-Dd-WeE"/>
                                 </connections>
@@ -2154,6 +2154,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="agree_button" width="302" height="88"/>
+        <image name="categorybar_without_text" width="1284" height="140"/>
         <image name="disable_checkbox" width="32" height="32"/>
         <image name="disable_offline_button" width="188" height="184"/>
         <image name="disable_online_button" width="188" height="184"/>
