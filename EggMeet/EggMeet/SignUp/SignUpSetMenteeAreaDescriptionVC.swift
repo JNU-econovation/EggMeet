@@ -12,6 +12,7 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
     
     @IBOutlet weak var menteeAreaDescriptionTextView: UITextView!
     @IBOutlet var textViewCountLabel: UILabel!
+    @IBOutlet var nextButton: UIButton!
     
     let ud = UserDefaults.standard
     let menteeAreaDescriptionKey: String = "menteeAreaDescription"
@@ -62,9 +63,11 @@ extension SignUpSetMenteeAreaDescriptionVC: UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         self.textViewCountLabel.text = "\(self.menteeAreaDescriptionTextView.text.count)/500"
         if menteeAreaDescriptionTextView.text.count != 0 {
-            // enable image
+            let enableImage = UIImage(named: "enable_next_button")
+            self.nextButton.setImage(enableImage, for: .normal)
         } else {
-            // disable image
+            let disableImage = UIImage(named: "next_button_disable")
+            self.nextButton.setImage(disableImage, for: .normal)
         }
         if menteeAreaDescriptionTextView.text.count > 500{
             self.menteeAreaDescriptionTextView.deleteBackward()
