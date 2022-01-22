@@ -19,7 +19,6 @@ class HomeVC: UIViewController {
     private var growthPointSort: String = ""
     private var location: String = ""
     private var category: String = ""
-    var searchKeyword: String = ""
     private var sex: String = ""
     private var age: Int = 0
     private var isOnlineAvailable: Bool = true
@@ -79,7 +78,9 @@ class HomeVC: UIViewController {
     
     @IBAction func unwindFromSearchVC(_ unwindSegue: UIStoryboardSegue) {
         let searchVC = unwindSegue.source as! HomeSearchVC
-        searchKeyword = searchVC.searchKeyword
+        let searchKeyword = searchVC.searchKeyword
+        print(searchKeyword)
+        getSearchKeywordData(searchKeyword: searchKeyword)
     }
     
     @IBAction func touchFindMentorButton(_ sender: Any) {
@@ -156,6 +157,21 @@ extension HomeVC {
         HomeNetwork.shared.getUserMenteeData(location: location, category: category, sex: sex, isOnlineAvailable: isOnlineAvailable, isOfflineAvailable: isOfflineAvailable, age: age){ [self] menteeList in
             self.homeList.append(contentsOf: menteeList)
             self.tableView.reloadData()
+        }
+    }
+    
+    func getSearchKeywordData(searchKeyword: String) {
+        self.homeList.removeAll()
+        switch isMentor {
+        case true :
+            HomeNetwork.shared.getSearchMentorKeywordData(keyword: searchKeyword){ [self] dataList in
+                self.homeList.append(contentsOf: dataList)
+                self.tableView.reloadData()
+            }
+        case false : HomeNetwork.shared.getSearchMenteeKeywordData(keyword: searchKeyword){ [self] dataList in
+            self.homeList.append(contentsOf: dataList)
+            self.tableView.reloadData()
+        }
         }
     }
 }

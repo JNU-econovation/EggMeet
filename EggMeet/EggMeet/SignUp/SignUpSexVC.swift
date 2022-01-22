@@ -11,17 +11,23 @@ import DLRadioButton
 
 class SignUpSexVC: UIViewController {
     @IBOutlet weak var sexSelectionView: UIView!
+    @IBOutlet weak var nextButton: UIButton!
     
     let sexKey = "sex"
     let ud = UserDefaults.standard
     var selectedSex: String = ""
+    var isButtonSelected: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "성별";
+        setGenderRadioButtons()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        setGenderRadioButtons()
+        self.navigationItem.title = "성별";
     }
     
     func setGenderRadioButtons(){
@@ -61,11 +67,15 @@ class SignUpSexVC: UIViewController {
     @objc func touchGenderRadioButton(_ sender:DLRadioButton) {
         print(sender.currentTitle!)
         selectedSex = sender.currentTitle! ?? "밝히지않음"
+        self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
+        isButtonSelected = true
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){
         ud.set(selectedSex, forKey: sexKey)
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpLocationVC") as? SignUpLocationVC else {return}
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        if isButtonSelected {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpLocationVC") as? SignUpLocationVC else {return}
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 }

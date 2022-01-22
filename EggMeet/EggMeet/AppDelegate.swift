@@ -10,6 +10,7 @@ import CoreData
 import AuthenticationServices
 import KakaoSDKCommon
 import KakaoSDKAuth
+import IQKeyboardManagerSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         sleep(1)
         KakaoSDK.initSDK(appKey: Bundle.main.infoDictionary!["KAKAO_SECRET_KEY"] as? String ?? "")
-
+        
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        
         return true
     }
 
