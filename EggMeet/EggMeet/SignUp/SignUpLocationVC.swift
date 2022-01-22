@@ -20,6 +20,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     var selectCellIndex: Int = 0
     var isTouchedLocationButton: Bool = true
     var isTouchedDetailLocationButton: Bool = false
+    var windNextVCAble: Bool = false
     
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
@@ -53,15 +54,14 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     }
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
-        self.navigationController?.pushViewController(nextVC, animated: true)
-        
-        print("다음으로")
+        if windNextVCAble {
+            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
+            self.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
     @IBAction func skipAndWindSignUpSelfIntroduceView(_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
-        print("건너뛰기")
     }
     
     @IBAction func touchLocationCategoryButton(_ sender: Any) {
@@ -69,10 +69,12 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         switch isTouchedLocationButton {
         case true :
             locationCategoryButton.setImage(UIImage(named: "location_category_deselcted"), for: .normal)
+            locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_selected"), for: .normal)
             isTouchedLocationButton = false
             collcectionView.isHidden = true
         case false :
             locationCategoryButton.setImage(UIImage(named: "location_category_selected"), for: .normal)
+            locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_deselcted"), for: .normal)
             isTouchedLocationButton = true
             collcectionView.isHidden = false
         }
@@ -82,9 +84,11 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         switch isTouchedDetailLocationButton {
         case true :
             locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_deselcted"), for: .normal)
+            //locationCategoryButton.setImage(UIImage(named: "location_category_selected"), for: .normal)
             isTouchedDetailLocationButton = false
         case false :
             locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_selected"), for: .normal)
+            //locationCategoryButton.setImage(UIImage(named: "location_category_deselcted"), for: .normal)
             isTouchedDetailLocationButton = true
         }
     }

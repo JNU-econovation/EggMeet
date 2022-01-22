@@ -70,6 +70,8 @@
 		9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A6278D8072003AEB90 /* HomeTVC.swift */; };
 		9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */; };
 		9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */; };
+		CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */; };
+		CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,8 +91,6 @@
 		1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOpponentTVC.swift; sourceTree = "<group>"; };
 		193C624D279302BD0036C09C /* ChatroomID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomID.swift; sourceTree = "<group>"; };
 		193DABFC278856FE009F71AA /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
-		193DAC0227887414009F71AA /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
-		193DAC0327887423009F71AA /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
 		19797FE02793100800680B21 /* chatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDto.swift; sourceTree = "<group>"; };
@@ -143,6 +143,10 @@
 		9CE4B6A7278D8072003AEB90 /* HomeTVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTVC.xib; sourceTree = "<group>"; };
 		9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFilterVC.swift; sourceTree = "<group>"; };
 		B54572B4BFE2D6FE223E9867 /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.debug.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
+		CD1B95E72799D99D009A0DF6 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		CD1B95E82799D9BA009A0DF6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
+		CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageStoryboard.storyboard; sourceTree = "<group>"; };
+		CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +182,11 @@
 		192C407127785BF4003055DD /* EggMeet */ = {
 			isa = PBXGroup;
 			children = (
+				CD1B969C279AF061009A0DF6 /* Mypage */,
+				CD1B95E52799D885009A0DF6 /* Config */,
 				9C25EE6F279177F700CBBB11 /* Login */,
 				1991D0C2278C672B0081EDF5 /* Chat */,
 				9CE4B694278BFB00003AEB90 /* Home */,
-				193DAC0127887403009F71AA /* Config */,
 				9CE4B67B278078EF003AEB90 /* SignUp */,
 				192C408927785C0C003055DD /* EggMeet.entitlements */,
 				192C407227785BF4003055DD /* AppDelegate.swift */,
@@ -199,6 +204,7 @@
 			path = EggMeet;
 			sourceTree = "<group>";
 		};
+
 		193DAC0127887403009F71AA /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +214,7 @@
 			path = Config;
 			sourceTree = "<group>";
 		};
+    
 		1991D0C2278C672B0081EDF5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -417,6 +424,56 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		CD1B95E52799D885009A0DF6 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				CD1B95E72799D99D009A0DF6 /* Debug.xcconfig */,
+				CD1B95E82799D9BA009A0DF6 /* Release.xcconfig */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		CD1B969C279AF061009A0DF6 /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				CD1B96A1279AF0C3009A0DF6 /* VC */,
+				CD1B96A0279AF0B6009A0DF6 /* View */,
+				CD1B969F279AF0AA009A0DF6 /* Model */,
+				CD1B969D279AF098009A0DF6 /* Network */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		CD1B969D279AF098009A0DF6 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CD1B969F279AF0AA009A0DF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD1B96A0279AF0B6009A0DF6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CD1B96A1279AF0C3009A0DF6 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -483,6 +540,7 @@
 				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
 				1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */,
+				CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */,
 				192C407A27785BF4003055DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -572,6 +630,7 @@
 				9C25EE6A2790423F00CBBB11 /* SignUpAgeVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
+				CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
 				19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */,
 				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
@@ -734,14 +793,14 @@
 		};
 		192C408727785BF5003055DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 193DAC0227887414009F71AA /* Debug.xcconfig */;
+			baseConfigurationReference = CD1B95E72799D99D009A0DF6 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EggMeet/EggMeet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CHQLLQPH65;
+				DEVELOPMENT_TEAM = G8XX337GMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EggMeet/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EggMeet;
@@ -765,14 +824,14 @@
 		};
 		192C408827785BF5003055DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 193DAC0327887423009F71AA /* Release.xcconfig */;
+			baseConfigurationReference = CD1B95E82799D9BA009A0DF6 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = EggMeet/EggMeet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = CHQLLQPH65;
+				DEVELOPMENT_TEAM = G8XX337GMH;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EggMeet/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EggMeet;
