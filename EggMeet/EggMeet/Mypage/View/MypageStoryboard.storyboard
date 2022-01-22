@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--마이페이지-->
+        <!--mypage-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MypageVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MypageVC" id="Y6W-OH-hqX" customClass="MypageVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,24 +49,12 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="highlighter" catalog="system" selectedImage="square.and.arrow.down.fill" id="7Jw-3k-sB9">
-                        <color key="badgeColor" systemColor="systemOrangeColor"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="mypage" id="cjG-Tq-ANT"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GrowthPointContainerView" destination="IQg-36-d49" id="wGC-Us-4XE"/>
                         <outlet property="MenueContainerView" destination="LXb-QZ-IUR" id="w8i-O3-Vzl"/>
-                        <outlet property="MyProfileContainerView" destination="te8-hv-Yoa" id="ZK7-z2-Xei"/>
-                        <outlet property="myGrowthStageImage" destination="hto-MG-8Mb" id="btD-jZ-B8T"/>
-                        <outlet property="myGrowthStageLabel" destination="UhS-IJ-PvK" id="gsd-7K-ZYM"/>
-                        <outlet property="myName" destination="Tas-dE-lpB" id="cYy-hx-eks"/>
-                        <outlet property="myNameTail" destination="ZAx-h0-MCw" id="za4-9P-Ige"/>
-                        <outlet property="myPossessPoint" destination="OKX-34-h6i" id="na3-iY-5vm"/>
-                        <outlet property="myPossessPointBackgrounc" destination="hbU-Z5-tYW" id="5fs-ha-gdq"/>
-                        <outlet property="myPossessionLabel" destination="3nK-gQ-iVM" id="ohS-xH-8wN"/>
-                        <outlet property="myProfileBackground" destination="Oo4-EO-enR" id="Jrn-ap-FTG"/>
-                        <outlet property="myProfileImage" destination="XX4-eV-Ibq" id="iq4-qm-u0d"/>
-                        <outlet property="mypageTitleLabel" destination="vof-5t-brX" id="ao5-Vt-22q"/>
-                        <outlet property="pointLabel" destination="mQp-xd-VuT" id="x5U-0m-afH"/>
+                        <outlet property="MyProfileContainerView" destination="te8-hv-Yoa" id="hGj-RL-bfs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -329,6 +317,7 @@
                     <view key="view" contentMode="scaleToFill" id="V8e-Dn-DZY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="152"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="d8n-J2-LqB"/>
                         <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
@@ -343,6 +332,7 @@
                     <view key="view" contentMode="scaleToFill" id="4pM-4y-LV9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cI5-J9-r6N"/>
                         <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
@@ -352,19 +342,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="highlighter" catalog="system" width="128" height="119"/>
-        <image name="square.and.arrow.down.fill" catalog="system" width="121" height="128"/>
         <namedColor name="mygrowthpoint">
-            <color red="0.97254901960784312" green="0.96862745098039216" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.97299998998641968" green="0.96899998188018799" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="myprofile">
-            <color red="1" green="0.9882352941176471" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.98799997568130493" blue="0.89800000190734863" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

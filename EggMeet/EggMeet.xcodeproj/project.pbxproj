@@ -204,17 +204,6 @@
 			path = EggMeet;
 			sourceTree = "<group>";
 		};
-
-		193DAC0127887403009F71AA /* Config */ = {
-			isa = PBXGroup;
-			children = (
-				193DAC0227887414009F71AA /* Debug.xcconfig */,
-				193DAC0327887423009F71AA /* Release.xcconfig */,
-			);
-			path = Config;
-			sourceTree = "<group>";
-		};
-    
 		1991D0C2278C672B0081EDF5 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,7 +789,7 @@
 				CODE_SIGN_ENTITLEMENTS = EggMeet/EggMeet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G8XX337GMH;
+				DEVELOPMENT_TEAM = CHQLLQPH65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EggMeet/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EggMeet;
@@ -831,7 +820,7 @@
 				CODE_SIGN_ENTITLEMENTS = EggMeet/EggMeet.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G8XX337GMH;
+				DEVELOPMENT_TEAM = CHQLLQPH65;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EggMeet/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = EggMeet;
