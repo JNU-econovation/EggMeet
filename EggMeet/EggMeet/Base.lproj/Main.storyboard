@@ -993,6 +993,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button" image="mentee_categorybar_detail"/>
+                                <connections>
+                                    <action selector="touchMentorDetailAreaButton" destination="ces-hf-4fh" eventType="touchUpInside" id="7K2-8d-av0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eC6-FQ-wSP">
                                 <rect key="frame" x="27" y="214" width="321" height="35"/>
@@ -1054,6 +1057,7 @@
                     <navigationItem key="navigationItem" id="UMt-T7-EWS"/>
                     <connections>
                         <outlet property="mentorAreaButton" destination="eC6-FQ-wSP" id="TbF-aw-uht"/>
+                        <outlet property="mentorDetailAreaButton" destination="VG6-2o-o3M" id="Jjf-ZE-cJ5"/>
                         <outlet property="nextButton" destination="O3D-2s-adn" id="MSx-Yc-eci"/>
                     </connections>
                 </viewController>
