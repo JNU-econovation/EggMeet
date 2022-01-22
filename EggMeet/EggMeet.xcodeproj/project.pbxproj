@@ -20,8 +20,10 @@
 		1934F20A2799BD6800C05B09 /* ChatOpponentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */; };
 		193C624E279302BD0036C09C /* ChatroomID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C624D279302BD0036C09C /* ChatroomID.swift */; };
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
+		1954A02E279C4A7300D8745B /* ChatListNavigationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1954A02D279C4A7300D8745B /* ChatListNavigationItem.swift */; };
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
+		1971B6A4279BF13400FF64BA /* SendMentorRequestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971B6A3279BF13400FF64BA /* SendMentorRequestTVC.swift */; };
 		19797FE12793100800680B21 /* chatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE02793100800680B21 /* chatDto.swift */; };
 		19797FE32793E42500680B21 /* ChatNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19797FE22793E42500680B21 /* ChatNavigationController.swift */; };
 		1984331B278EC1CA00245BB7 /* chatType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1984331A278EC1CA00245BB7 /* chatType.swift */; };
@@ -93,8 +95,10 @@
 		1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOpponentTVC.swift; sourceTree = "<group>"; };
 		193C624D279302BD0036C09C /* ChatroomID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomID.swift; sourceTree = "<group>"; };
 		193DABFC278856FE009F71AA /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		1954A02D279C4A7300D8745B /* ChatListNavigationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListNavigationItem.swift; sourceTree = "<group>"; };
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
+		1971B6A3279BF13400FF64BA /* SendMentorRequestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMentorRequestTVC.swift; sourceTree = "<group>"; };
 		19797FE02793100800680B21 /* chatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatDto.swift; sourceTree = "<group>"; };
 		19797FE22793E42500680B21 /* ChatNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatNavigationController.swift; sourceTree = "<group>"; };
 		1984331A278EC1CA00245BB7 /* chatType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatType.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 				1991D0C8278C68540081EDF5 /* ChatListVC.swift */,
 				199DD176278D98E800E35723 /* ChatroomVC.swift */,
 				19797FE22793E42500680B21 /* ChatNavigationController.swift */,
+				1954A02D279C4A7300D8745B /* ChatListNavigationItem.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 			children = (
 				1991D0C5278C675A0081EDF5 /* StoryBoard */,
 				19F5A9F52794454E00954AFA /* ChatTVC.swift */,
+				1971B6A3279BF13400FF64BA /* SendMentorRequestTVC.swift */,
 				1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */,
 			);
 			path = View;
@@ -614,6 +620,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1954A02E279C4A7300D8745B /* ChatListNavigationItem.swift in Sources */,
 				9CE4B6832780842E003AEB90 /* SignUpMentoAreaSelectionVC.swift in Sources */,
 				9C25EE722791781200CBBB11 /* LoginTokenModel.swift in Sources */,
 				9CC0D5AD279BD8E000E4885B /* LocationCollectionViewCell.swift in Sources */,
@@ -663,6 +670,7 @@
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
 				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
 				19797FE12793100800680B21 /* chatDto.swift in Sources */,
+				1971B6A4279BF13400FF64BA /* SendMentorRequestTVC.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
