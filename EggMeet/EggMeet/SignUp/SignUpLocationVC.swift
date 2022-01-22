@@ -15,6 +15,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     @IBOutlet weak var collcectionView: UICollectionView!
     
     var list = ["전체", "서울", "부산", "대구" ,"광주", "대전", "울산", "인천", "경기", "강원", "충남", "충북", "세종", "전남", "전북", "경북", "경남", "제주"]
+    var selectCellIndex: Int = 0
     
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
@@ -68,10 +69,17 @@ extension SignUpLocationVC {
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationCollectionViewCell
             
-            //cell.backgroundColor = .lightGray
             cell.locationLabel.text = list[indexPath.row]
             cell.locationLabel.textColor = .gray
-            //cell.locationLabel.backgroundColor = .yellow
+            cell.layer.cornerRadius = 2
+            cell.layer.borderColor = UIColor.gray.cgColor
+            cell.layer.borderWidth = 1
+            
+            if(indexPath.row == selectCellIndex){
+                cell.layer.borderColor = UIColor.black.cgColor
+                collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
+            }
+            cell.isSelected = indexPath.row == selectCellIndex
             
             return cell
         }
@@ -94,7 +102,7 @@ extension SignUpLocationVC: UICollectionViewDelegateFlowLayout {
         print("click cell = \(list[indexPath.row])")
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
         ud.set(list[indexPath.row], forKey: locationKey)
-        
+        selectCellIndex = indexPath.row
     }
 
     /*
