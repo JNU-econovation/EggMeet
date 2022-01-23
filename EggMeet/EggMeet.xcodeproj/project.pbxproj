@@ -86,6 +86,8 @@
 		9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B6AA278EBD0A003AEB90 /* HomeFilterVC.swift */; };
 		CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */; };
 		CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */; };
+		CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */; };
+		CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -175,6 +177,8 @@
 		CD1B95E82799D9BA009A0DF6 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MypageStoryboard.storyboard; sourceTree = "<group>"; };
 		CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageVC.swift; sourceTree = "<group>"; };
+		CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
+		CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrowthPointVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -525,6 +529,8 @@
 			isa = PBXGroup;
 			children = (
 				CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */,
+				CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */,
+				CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -707,6 +713,7 @@
 				9CC0D5A52796AC3E00E4885B /* HomeNoticeTableVC.swift in Sources */,
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
 				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
+				CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */,
 				19797FE12793100800680B21 /* chatDto.swift in Sources */,
 				1971B6A4279BF13400FF64BA /* SendMentorRequestTVC.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
@@ -719,6 +726,7 @@
 				1991D0CC278C69280081EDF5 /* ChatProfileVO.swift in Sources */,
 				9C25EE6827900F6400CBBB11 /* Category.swift in Sources */,
 				9CC0D5B4279C100500E4885B /* CalendarVC.swift in Sources */,
+				CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
