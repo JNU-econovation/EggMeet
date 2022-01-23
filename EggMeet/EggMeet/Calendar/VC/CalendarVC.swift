@@ -36,6 +36,11 @@ class CalendarVC: TabmanViewController {
         self.view.bringSubviewToFront(titleLabel)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    
     func settingTabBar (ctBar : TMBar.ButtonBar) {
         ctBar.layout.transitionStyle = .none
         

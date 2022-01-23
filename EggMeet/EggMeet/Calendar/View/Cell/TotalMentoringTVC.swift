@@ -14,6 +14,7 @@ class TotalMentoringTVC: UITableViewCell {
     @IBOutlet weak var cancelButton: UIButton!
     
     var editActionBlock: (() -> Void)? = nil
+    var cancelActionBlick: (() -> Void)? = nil
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,5 +26,9 @@ class TotalMentoringTVC: UITableViewCell {
     
     @IBAction func didTapEditButton(sender: UIButton) {
         editActionBlock?()
+    }
+    
+    @IBAction func didTapCancelButton(sender: UIButton) {
+        cancelActionBlick?()
     }
 }

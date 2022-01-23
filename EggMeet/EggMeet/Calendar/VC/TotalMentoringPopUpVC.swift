@@ -33,6 +33,15 @@ class TotalMentoringPopUpVC: UIViewController {
             rootView?.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
+    
+    @objc func dismissViewFromCancel(){
+        let rootView = presentingViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ScheduleCancelVC") as! ScheduleCancelVC
+        
+        dismiss(animated:true) {
+            rootView?.navigationController?.pushViewController(nextVC, animated: true)
+        }
+    }
 }
 
 extension TotalMentoringPopUpVC: UITableViewDelegate, UITableViewDataSource {
@@ -46,6 +55,9 @@ extension TotalMentoringPopUpVC: UITableViewDelegate, UITableViewDataSource {
         cell.editActionBlock = {
             print("touch 변경 버튼")
             self.dismissView()
+        }
+        cell.cancelActionBlick = {
+            self.dismissViewFromCancel()
         }
         return cell
     }
