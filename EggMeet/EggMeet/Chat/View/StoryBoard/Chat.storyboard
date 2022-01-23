@@ -360,7 +360,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeChatroom" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_chatroom" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
                                                     <rect key="frame" x="182" y="46" width="147" height="138"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="147" id="K0q-Dc-cRo"/>
@@ -374,6 +374,40 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="FaD-BS-rVf" secondAttribute="trailing" constant="30" id="arg-iZ-6ih"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="FaD-BS-rVf" secondAttribute="bottom" constant="10" id="kUY-I1-N7p"/>
                                                 <constraint firstItem="FaD-BS-rVf" firstAttribute="top" secondItem="hi0-K2-BF9" secondAttribute="bottom" constant="5" id="mVa-Cq-uvS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RegisterScheduleTVC" rowHeight="177" id="yhC-pb-GKg" customClass="RegisterScheduleTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="748.5" width="375" height="177"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yhC-pb-GKg" id="bkF-uS-uWu">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="177"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNU-Ri-FVY">
+                                                    <rect key="frame" x="287" y="21" width="42" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="66T-jF-AxY"/>
+                                                        <constraint firstAttribute="height" constant="20" id="ZKY-cN-fcI"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register_schedule" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-UW-yxK">
+                                                    <rect key="frame" x="182" y="46" width="147" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="114" id="0FF-Re-d7g"/>
+                                                        <constraint firstAttribute="width" constant="147" id="via-Tj-fxm"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="SNU-Ri-FVY" secondAttribute="trailing" constant="30" id="0KM-i1-KuP"/>
+                                                <constraint firstItem="SNU-Ri-FVY" firstAttribute="top" secondItem="bkF-uS-uWu" secondAttribute="topMargin" constant="10" id="0XB-EY-FB3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cCy-UW-yxK" secondAttribute="bottom" constant="10" id="IEr-65-Cm5"/>
+                                                <constraint firstItem="cCy-UW-yxK" firstAttribute="top" secondItem="SNU-Ri-FVY" secondAttribute="bottom" constant="5" id="YGe-rI-vI8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="cCy-UW-yxK" secondAttribute="trailing" constant="30" id="ZFd-fl-xOJ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -459,7 +493,8 @@
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="mentor_request" width="294" height="344"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="welcomeChatroom" width="294" height="234"/>
+        <image name="register_schedule" width="588" height="456"/>
+        <image name="welcome_chatroom" width="294" height="234"/>
         <image name="white_button" width="252" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

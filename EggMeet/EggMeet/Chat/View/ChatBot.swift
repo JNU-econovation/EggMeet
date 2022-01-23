@@ -9,6 +9,7 @@ import Foundation
 
 protocol ChatBot{
     func sendMentorRequest()
-    func sendSuccessMakeMentoring()
+    func sendWelcomeChatroom()
+    func sendRegisterSchedule()
     func sendChatBotTest()
 }
