@@ -158,7 +158,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzl-b2-oN3">
-                                <rect key="frame" x="52" y="732" width="59" height="31"/>
+                                <rect key="frame" x="52" y="566" width="59" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,13 +195,83 @@
                     <view key="view" contentMode="scaleToFill" id="9xc-q4-jGU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-7U-AGj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="99"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sQv-Oq-Hye">
+                                        <rect key="frame" x="79" y="32.5" width="40" height="36"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="48m-dt-jPW"/>
+                                            <constraint firstAttribute="width" constant="40" id="uZl-wL-whc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-5c-eBy">
+                                        <rect key="frame" x="133" y="27" width="73" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="IJN-zh-I3F"/>
+                                            <constraint firstAttribute="width" constant="73" id="mhE-IC-wi0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멘토님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-dO-ZT0">
+                                        <rect key="frame" x="221" y="29" width="52" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="hlf-8c-QwI"/>
+                                            <constraint firstAttribute="height" constant="43" id="z6R-Oa-Hkh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="7x5-8b-V0N"/>
+                                    <constraint firstItem="HSg-5c-eBy" firstAttribute="leading" secondItem="ktO-7U-AGj" secondAttribute="leading" constant="133" id="Ghw-tn-7HE"/>
+                                    <constraint firstItem="sQv-Oq-Hye" firstAttribute="leading" secondItem="ktO-7U-AGj" secondAttribute="leading" constant="79" id="JYR-Zu-6mr"/>
+                                    <constraint firstItem="HSg-5c-eBy" firstAttribute="top" secondItem="ktO-7U-AGj" secondAttribute="top" constant="27" id="QEX-3u-dgk"/>
+                                    <constraint firstItem="sQv-Oq-Hye" firstAttribute="top" secondItem="ktO-7U-AGj" secondAttribute="top" constant="31" id="T7y-av-UU8"/>
+                                    <constraint firstItem="Hxe-dO-ZT0" firstAttribute="top" secondItem="ktO-7U-AGj" secondAttribute="top" constant="29" id="VaI-R9-sg1"/>
+                                    <constraint firstItem="Hxe-dO-ZT0" firstAttribute="leading" secondItem="ktO-7U-AGj" secondAttribute="leading" constant="221" id="qAG-Vv-uKv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만남을 가질 날짜를 선택해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVq-l4-Jmy">
+                                <rect key="frame" x="58" y="160" width="298" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="LsU-6M-jnT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-1F-hwx">
+                                <rect key="frame" x="139" y="625" width="136" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이 날짜로 선택"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q22-gp-xJm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" constant="116" id="2kP-xz-Hge"/>
+                            <constraint firstItem="ktO-7U-AGj" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" id="4Fj-To-5fM"/>
+                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" constant="58" id="FxN-A2-Jsl"/>
+                            <constraint firstItem="ktO-7U-AGj" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" id="Pnv-zs-Ehh"/>
+                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="ktO-7U-AGj" secondAttribute="trailing" id="pyr-0H-GBt"/>
+                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="LVq-l4-Jmy" secondAttribute="trailing" constant="58" id="yvN-Tb-nCi"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vZ-sH-GD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="503" y="1531"/>
+            <point key="canvasLocation" x="502.89855072463774" y="1530.8035714285713"/>
         </scene>
         <!--My Meet ReviewVC-->
         <scene sceneID="6MV-k8-7jw">
@@ -238,6 +308,7 @@
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -249,6 +320,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
