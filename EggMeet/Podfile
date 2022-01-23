@@ -15,6 +15,7 @@ pod 'Starscream'
 pod 'StompClientLib'
 pod 'Tabman', '~> 2.9'
 pod 'IQKeyboardManagerSwift'
+pod 'FSCalendar'
 
   # Pods for EggMeet
 
