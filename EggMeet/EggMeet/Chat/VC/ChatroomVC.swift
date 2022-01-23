@@ -157,6 +157,9 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                 let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleTVC", for: indexPath) as!
                     RegisterScheduleTVC
                 return cell
+            case "/confirm-mentoring":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmMentoringTVC", for: indexPath) as! ConfirmMentoringTVC
+                return cell
             default:
                 NSLog("chat bot not send message")
             }
@@ -281,9 +284,17 @@ extension ChatroomVC : ChatBot {
         socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
     }
     
+    func sendConfirmMentoring(){
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/confirm-mentoring")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
     func sendChatBotTest(){
         sendMentorRequest()
         sendWelcomeChatroom()
         sendRegisterSchedule()
+        sendConfirmMentoring()
     }
 }

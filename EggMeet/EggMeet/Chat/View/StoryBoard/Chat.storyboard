@@ -411,6 +411,40 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ConfirmMentoringTVC" rowHeight="200" id="pk5-jM-bP3" customClass="ConfirmMentoringTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="925.5" width="375" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pk5-jM-bP3" id="Lkr-Hv-1k9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bvr-5u-hz0">
+                                                    <rect key="frame" x="287" y="21" width="42" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="FMr-US-6tZ"/>
+                                                        <constraint firstAttribute="height" constant="20" id="gQP-cf-DSx"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="confirm_mentoring" translatesAutoresizingMaskIntoConstraints="NO" id="htV-AD-iPR">
+                                                    <rect key="frame" x="182" y="46" width="147" height="133"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="147" id="6JZ-pq-AMB"/>
+                                                        <constraint firstAttribute="height" constant="138" id="txQ-Ur-Zia"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bvr-5u-hz0" secondAttribute="trailing" constant="30" id="1vi-eV-PHd"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="htV-AD-iPR" secondAttribute="bottom" constant="10" id="Jyh-Rl-ClW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="htV-AD-iPR" secondAttribute="trailing" constant="30" id="V9I-Va-atg"/>
+                                                <constraint firstItem="htV-AD-iPR" firstAttribute="top" secondItem="Bvr-5u-hz0" secondAttribute="bottom" constant="5" id="jeJ-8R-pUr"/>
+                                                <constraint firstItem="Bvr-5u-hz0" firstAttribute="top" secondItem="Lkr-Hv-1k9" secondAttribute="topMargin" constant="10" id="kbY-8X-vaP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrZ-sP-WBt">
@@ -491,6 +525,7 @@
     <resources>
         <image name="arrow.up.message.fill" catalog="system" width="128" height="113"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="confirm_mentoring" width="294" height="276"/>
         <image name="mentor_request" width="294" height="344"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="register_schedule" width="588" height="456"/>
