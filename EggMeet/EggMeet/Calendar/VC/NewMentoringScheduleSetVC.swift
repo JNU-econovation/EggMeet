@@ -20,6 +20,7 @@ class NewMentoringScheduleSetVC: UIViewController{
         dateFormatter.dateFormat = "yyyy년 MM월 dd일"
         calendarView.delegate = self
         calendarView.dataSource = self
+        calendarView.appearance.headerDateFormat = "YYYY년 M월"
     }
     
     override func viewWillAppear(_ animated: Bool) {
