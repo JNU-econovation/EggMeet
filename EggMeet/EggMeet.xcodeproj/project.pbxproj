@@ -63,7 +63,7 @@
 		9CC0D5B8279D12E700E4885B /* TotalScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5B7279D12E700E4885B /* TotalScheduleVC.swift */; };
 		9CC0D5BA279D12F900E4885B /* PartnerScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5B9279D12F900E4885B /* PartnerScheduleVC.swift */; };
 		9CC0D5BC279D130A00E4885B /* MyMeetReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5BB279D130A00E4885B /* MyMeetReviewVC.swift */; };
-		9CC0D5BE279D1BC500E4885B /* CalendarTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5BD279D1BC500E4885B /* CalendarTabVC.swift */; };
+		9CC0D5C0279D2EC400E4885B /* NewMentoringScheduleSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5BF279D2EC400E4885B /* NewMentoringScheduleSetVC.swift */; };
 		9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */; };
 		9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */; };
 		9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */; };
@@ -144,7 +144,7 @@
 		9CC0D5B7279D12E700E4885B /* TotalScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalScheduleVC.swift; sourceTree = "<group>"; };
 		9CC0D5B9279D12F900E4885B /* PartnerScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerScheduleVC.swift; sourceTree = "<group>"; };
 		9CC0D5BB279D130A00E4885B /* MyMeetReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMeetReviewVC.swift; sourceTree = "<group>"; };
-		9CC0D5BD279D1BC500E4885B /* CalendarTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarTabVC.swift; sourceTree = "<group>"; };
+		9CC0D5BF279D2EC400E4885B /* NewMentoringScheduleSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringScheduleSetVC.swift; sourceTree = "<group>"; };
 		9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameVC.swift; sourceTree = "<group>"; };
 		9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationVC.swift; sourceTree = "<group>"; };
 		9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelfIntroduceVC.swift; sourceTree = "<group>"; };
@@ -368,7 +368,7 @@
 				9CC0D5B7279D12E700E4885B /* TotalScheduleVC.swift */,
 				9CC0D5B9279D12F900E4885B /* PartnerScheduleVC.swift */,
 				9CC0D5BB279D130A00E4885B /* MyMeetReviewVC.swift */,
-				9CC0D5BD279D1BC500E4885B /* CalendarTabVC.swift */,
+				9CC0D5BF279D2EC400E4885B /* NewMentoringScheduleSetVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -644,6 +644,7 @@
 				9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */,
 				9CC0D5A327959CA800E4885B /* HomeNoticeVC.swift in Sources */,
 				19797FE32793E42500680B21 /* ChatNavigationController.swift in Sources */,
+				9CC0D5C0279D2EC400E4885B /* NewMentoringScheduleSetVC.swift in Sources */,
 				19FEC49D2782E41300F18D8F /* SignUpCheckTermsOfServiceVC.swift in Sources */,
 				9CC0D5BC279D130A00E4885B /* MyMeetReviewVC.swift in Sources */,
 				193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */,
@@ -691,7 +692,6 @@
 				1971B6A4279BF13400FF64BA /* SendMentorRequestTVC.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
-				9CC0D5BE279D1BC500E4885B /* CalendarTabVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
 				9CC0D5B6279D128C00E4885B /* NewMentoringRegisterVC.swift in Sources */,
 				19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */,
