@@ -9,5 +9,8 @@ import Foundation
 import UIKit
 
 class SendMentorRequestTVC: UITableViewCell {
+    @IBOutlet var chatBotView : UIView!
+    
+    
     
 }

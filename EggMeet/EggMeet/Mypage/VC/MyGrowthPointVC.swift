@@ -1,5 +1,5 @@
 //
-//  MypageVC.swift
+//  MyGrowthPointVC.swift
 //  EggMeet
 //
 //  Created by 황지우 on 2022/01/22.
@@ -7,22 +7,29 @@
 
 import UIKit
 
-class MypageVC: UIViewController {
+class MyGrowthPointVC: UIViewController {
 
-    @IBOutlet weak var MyPageTitle: UILabel!
-    @IBOutlet weak var MyProfileContainerView: UIView!
-    @IBOutlet weak var GrowthPointContainerView: UIView!
-    @IBOutlet weak var MenuContainerView: UIView!
+    
+    @IBOutlet weak var MyGrowthPointImage: UIImageView!
+    
+    
+    @IBOutlet weak var MyGrowthStageLabel: UILabel!
+    
+   
+    @IBOutlet weak var MyPossessGrowthPoint: UILabel!
+    
     
     
     override func viewDidLoad() {
-        MyPageTitle.adjustsFontSizeToFitWidth = true
         super.viewDidLoad()
+        MyPossessGrowthPoint.adjustsFontSizeToFitWidth = true
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func GoToSeeGrowthStages(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 
