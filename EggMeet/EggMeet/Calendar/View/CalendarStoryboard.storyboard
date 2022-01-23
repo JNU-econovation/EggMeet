@@ -348,6 +348,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="v8j-2Y-1Ee" id="ekx-4M-yLJ"/>
                         <outlet property="timeSelectButton" destination="JE9-QQ-vJu" id="VUH-Hi-trR"/>
                     </connections>
                 </viewController>

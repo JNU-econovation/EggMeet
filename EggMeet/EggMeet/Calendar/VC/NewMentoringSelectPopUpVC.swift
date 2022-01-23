@@ -10,9 +10,17 @@ import UIKit
 
 class NewMentorSelectPopUpVC: UIViewController {
     @IBOutlet weak var timeSelectButton: UIButton!
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var selectedDateStr = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        dateLabel.text = selectedDateStr
     }
     
     @objc func dismissView(){
@@ -20,7 +28,7 @@ class NewMentorSelectPopUpVC: UIViewController {
     }
     
     @IBAction func showScheduleConfirmationAlert(_ sender: Any){
-        let alert = UIAlertController(title:"2020년 5월 7일",message: "이 일시로 멘토링 일정을 등록합니다. ",preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: selectedDateStr,message: "이 일시로 멘토링 일정을 등록합니다. ",preferredStyle: UIAlertController.Style.alert)
         let cancel = UIAlertAction(title: "취소", style: .default, handler: nil)
         //확인 버튼 만들기
         let ok = UIAlertAction(title: "확인", style: .destructive, handler: {
