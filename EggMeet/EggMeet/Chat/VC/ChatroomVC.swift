@@ -42,7 +42,11 @@ class ChatroomVC: UIViewController{
         
     }
     override func viewWillAppear(_ animated: Bool) {
+        print("call viewWillAppear")
+    }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -170,6 +174,14 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         return UITableView.automaticDimension
     }
     
+    func scrollToBottom(){
+        print("numberOfSections : \(self.chatTableView.numberOfRows(inSection: CHAT_SECTION_NUM-1))")
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: (self.chatContentList.count - 1) , section: 0)
+            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
+    
     
 }
 
@@ -188,7 +200,7 @@ extension ChatroomVC: StompClientLibDelegate {
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
-        
+        scrollToBottom()
     }
     
     // disconnect
