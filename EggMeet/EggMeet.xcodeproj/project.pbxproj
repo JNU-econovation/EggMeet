@@ -34,7 +34,7 @@
 		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
 		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
 		19D9DF8E279D7A9E0050E7C3 /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */; };
-		19D9DF90279D816A0050E7C3 /* SuccessMakeMentoringTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF8F279D816A0050E7C3 /* SuccessMakeMentoringTVC.swift */; };
+		19D9DF90279D816A0050E7C3 /* WelcomeChatroomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF8F279D816A0050E7C3 /* WelcomeChatroomTVC.swift */; };
 		19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F5A9F52794454E00954AFA /* ChatTVC.swift */; };
 		19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */; };
 		19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */; };
@@ -117,7 +117,7 @@
 		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
 		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
 		19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
-		19D9DF8F279D816A0050E7C3 /* SuccessMakeMentoringTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessMakeMentoringTVC.swift; sourceTree = "<group>"; };
+		19D9DF8F279D816A0050E7C3 /* WelcomeChatroomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeChatroomTVC.swift; sourceTree = "<group>"; };
 		19F5A9F52794454E00954AFA /* ChatTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTVC.swift; sourceTree = "<group>"; };
 		19FEC4942782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetGrowthPointVC.swift; sourceTree = "<group>"; };
 		19FEC4962782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSetMenteeAreaCategoryVC.swift; sourceTree = "<group>"; };
@@ -258,7 +258,7 @@
 				1971B6A3279BF13400FF64BA /* SendMentorRequestTVC.swift */,
 				1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */,
 				19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */,
-				19D9DF8F279D816A0050E7C3 /* SuccessMakeMentoringTVC.swift */,
+				19D9DF8F279D816A0050E7C3 /* WelcomeChatroomTVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -660,7 +660,7 @@
 				193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */,
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
 				9C25EE6627900F2000CBBB11 /* Sex.swift in Sources */,
-				19D9DF90279D816A0050E7C3 /* SuccessMakeMentoringTVC.swift in Sources */,
+				19D9DF90279D816A0050E7C3 /* WelcomeChatroomTVC.swift in Sources */,
 				9C25EE6C27904DFF00CBBB11 /* SignUpSexVC.swift in Sources */,
 				9CC0D5A82796BCCC00E4885B /* HomeNoticeTVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,

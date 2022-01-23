@@ -343,11 +343,11 @@
                                             <outlet property="chatBotView" destination="WAG-6N-oLC" id="3zI-a6-jtO"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SuccessMakeMentoringTVC" rowHeight="203" id="gZ0-3u-TG2" customClass="SuccessMakeMentoringTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="543.5" width="375" height="203"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WelcomeChatroomTVC" rowHeight="205" id="gZ0-3u-TG2" customClass="WellcomeChatroomTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="543.5" width="375" height="205"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gZ0-3u-TG2" id="683-fs-Fjt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi0-K2-BF9">
@@ -360,8 +360,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="success_make_mentoring" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
-                                                    <rect key="frame" x="182" y="46" width="147" height="136"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcomeChatroom" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
+                                                    <rect key="frame" x="182" y="46" width="147" height="138"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="147" id="K0q-Dc-cRo"/>
                                                         <constraint firstAttribute="height" constant="117" id="XLx-WU-1cL"/>
@@ -459,7 +459,7 @@
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="mentor_request" width="294" height="344"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="success_make_mentoring" width="294" height="234"/>
+        <image name="welcomeChatroom" width="294" height="234"/>
         <image name="white_button" width="252" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

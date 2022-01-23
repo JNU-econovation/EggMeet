@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SuccessMakeMentoringTVC: UITableViewCell {
+class WellcomeChatroomTVC: UITableViewCell {
     
     
 }
