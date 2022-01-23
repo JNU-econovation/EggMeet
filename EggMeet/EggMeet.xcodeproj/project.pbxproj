@@ -76,6 +76,7 @@
 		CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */; };
 		CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */; };
 		CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */; };
+		CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -155,6 +156,7 @@
 		CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageVC.swift; sourceTree = "<group>"; };
 		CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrowthPointVC.swift; sourceTree = "<group>"; };
+		CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeeMyProfileStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +487,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */,
+				CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -564,6 +567,7 @@
 				9CC0D5B2279C0FF200E4885B /* CalendarStoryboard.storyboard in Resources */,
 				192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */,
 				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
+				CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
 				1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */,
 				CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */,
