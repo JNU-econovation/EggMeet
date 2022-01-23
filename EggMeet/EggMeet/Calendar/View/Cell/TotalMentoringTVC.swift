@@ -13,11 +13,17 @@ class TotalMentoringTVC: UITableViewCell {
     @IBOutlet weak var editButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
     
+    var editActionBlock: (() -> Void)? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    @IBAction func didTapEditButton(sender: UIButton) {
+        editActionBlock?()
     }
 }

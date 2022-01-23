@@ -25,7 +25,13 @@ class TotalMentoringPopUpVC: UIViewController {
     }
     
     @objc func dismissView(){
-        dismiss(animated:true, completion: nil)
+        let rootView = presentingViewController
+        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "NewMentoringScheduleSetVC") as! NewMentoringScheduleSetVC
+        
+        dismiss(animated:true) {
+            nextVC.navigationTitle = "멘토링 일정 변경"
+            rootView?.navigationController?.pushViewController(nextVC, animated: true)
+        }
     }
 }
 
@@ -37,7 +43,14 @@ extension TotalMentoringPopUpVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "totalCell", for: indexPath) as! TotalMentoringTVC
         cell.nicknameLabel.text = cellData[indexPath.row]
-        
+        cell.editActionBlock = {
+            print("touch 변경 버튼")
+            self.dismissView()
+        }
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
