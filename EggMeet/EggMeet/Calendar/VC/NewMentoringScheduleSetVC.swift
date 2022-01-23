@@ -28,6 +28,12 @@ class NewMentoringScheduleSetVC: UIViewController{
         self.navigationItem.title = "신규 멘토링 등록";
         self.navigationController?.navigationBar.isHidden =  false
     }
+    
+    @IBAction func touchDateSelectButton(_ sender: Any){
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewMentorSelectPopUpVC") as! NewMentorSelectPopUpVC
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
 }
 
 extension NewMentoringScheduleSetVC : FSCalendarDelegate, FSCalendarDataSource, FSCalendarDelegateAppearance {
