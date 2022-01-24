@@ -92,7 +92,10 @@ class ChatroomVC: UIViewController{
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let completeURL = "ws://" + baseURL + "/stomp-chat"
         let wsurl = NSURL(string: completeURL)!
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
+        let ud = UserDefaults.standard
+        let token = ud.string(forKey: "accessToken")!
+        NSLog("Accesstoken : \(token)")
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Autorization" : "Bearer \(token)"])
     }
         
     func createChatRoom(){
@@ -159,6 +162,9 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                 return cell
             case "/confirm-mentoring":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmMentoringTVC", for: indexPath) as! ConfirmMentoringTVC
+                return cell
+            case "/reject-mentoring":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "RejectMentoringTVC", for: indexPath) as! RejectMentoringTVC
                 return cell
             default:
                 NSLog("chat bot not send message")
@@ -291,10 +297,18 @@ extension ChatroomVC : ChatBot {
         socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
     }
     
+    func sendRejectMentoring() {
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/reject-mentoring")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
     func sendChatBotTest(){
         sendMentorRequest()
         sendWelcomeChatroom()
         sendRegisterSchedule()
         sendConfirmMentoring()
+        sendRejectMentoring()
     }
 }
