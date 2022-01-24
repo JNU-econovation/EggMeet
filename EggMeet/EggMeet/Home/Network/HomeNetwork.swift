@@ -67,6 +67,7 @@ struct HomeNetwork {
         return apiURL
     }
 }
+
 extension HomeNetwork {
     func getUserMenteeData(location: String, category: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
         var url: String = ""
@@ -205,4 +206,47 @@ extension HomeNetwork {
             }
         }
     }
+}
+
+extension HomeNetwork {
+    func getUserProfileData(id: Int, completion: @escaping (HomeProfileModel) -> Void)  {
+        
+        let url = getAPI_URL(target: "/user/profile")+"?id=\(id)"
+        NSLog("api URL : \(url)")
+        
+        let accessToken: String = ud.string(forKey: "accessToken")!
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.timeoutInterval = 10
+        
+        AF.request(request).responseData { (dataResponse) in
+            switch dataResponse.result {
+            case .success(let value):
+                do {
+                    let data = try JSONSerialization.jsonObject(with: value, options: []) as! [String: Any]
+                    
+                    print(data)
+                    
+                    guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let mentorGrowthCost = data["mentorGrowthCost"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let mentorCategory = data["mentorCategory"] as? String, let sex = data["sex"] as? String, let mentorLink = data["mentorLink"] as? String, let description = data["description"] as? String, let menteeCategory = data["menteeCategory"] as? String, let menteeDescription = data["menteeDescription"] as? String, let menteeRating = data["menteeRating"] as? Float, let mentorCareer = data["mentorCareer"] as? String, let mentorDescription = data["mentorDescription"] as? String else {
+                        print("error happened")
+                        return
+                    }
+                    
+                    var userData: HomeProfileModel = HomeProfileModel(age: age, description: description, location: location, menteeCategory: mentorCategory, menteeDescription: menteeDescription, menteeRating: menteeRating, mentorCareer: mentorCareer, mentorCategory: mentorCategory, mentorDescription: mentorDescription, mentorGrowthCost: mentorGrowthCost, mentorLink: mentorLink, mentorRating: mentorRating , nickname: nickname, isOfflineAvailable: offlineAvailable, isOnlineAvailable: onlineAvailable, pictureIndex: 0, sex: sex)
+                    
+                    completion(userData)
+                } catch {print(error.localizedDescription)}
+            case .failure(let error):
+                print("Error Code: \(error._code)")
+                print("Error Messsage: \(error.localizedDescription)")
+                if let data = dataResponse.data, let str = String(data: data, encoding: String.Encoding.utf8){
+                    print("Server Error: " + str)
+                }
+                debugPrint(error as Any)
+            }
+        }
+    }
+    
 }

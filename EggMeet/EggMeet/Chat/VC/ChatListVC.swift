@@ -64,7 +64,9 @@ class ChatListVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let row = self.testList[indexPath.row]
         NSLog("select Row : \(indexPath.row)")
-        performSegue(withIdentifier: "ChatroomSegue", sender: row.nickname)
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ChatroomVC") as? ChatroomVC else {return}
+        nextVC.opponentNickname = row.nickname
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

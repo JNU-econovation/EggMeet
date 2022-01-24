@@ -11,6 +11,7 @@ import UIKit
 class ChatTVC: UITableViewCell{
     @IBOutlet var nicknameLabel : UILabel!
     @IBOutlet var contentLabel : UILabel!
+    @IBOutlet var timeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

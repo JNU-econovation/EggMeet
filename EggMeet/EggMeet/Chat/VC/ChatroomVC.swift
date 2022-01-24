@@ -34,17 +34,22 @@ class ChatroomVC: UIViewController{
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
+        setupTextViewUI()
         if !isExistChatRoom(){
             createChatRoom()
         }
         registerSocket()
-        
     }
     override func viewWillAppear(_ animated: Bool) {
-    
+        print("call viewWillAppear")
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
+        print("viewDidAppear")
+        sendChatBotTest()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) { 
         socketClient.disconnect()
     }
     
@@ -63,6 +68,9 @@ class ChatroomVC: UIViewController{
         }
     }
     
+    @IBAction func popView(_ sender: UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
     func setMyChatroomName() -> String{
         let ud = UserDefaults.standard
         let myName = ud.string(forKey: "nickname")!
@@ -110,6 +118,11 @@ class ChatroomVC: UIViewController{
             return true
         }
     }
+    
+    func setupTextViewUI(){
+        self.messageTextView.layer.cornerRadius = 5
+    }
+    
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -125,17 +138,36 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let ud = UserDefaults.standard
         let writer = ud.string(forKey: "nickname")
+        let dateformat = DateFormatter()
+        dateformat.dateFormat = "HH:mm"
+        let currentTime = dateformat.string(from: Date())
         
         if self.chatContentList[indexPath.row].writer == writer {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
-            cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
-            cell.contentLabel?.text = self.chatContentList[indexPath.row].message
-            return cell
+            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, currentTime: currentTime)
+        } else if self.chatContentList[indexPath.row].writer == "system"{
+            switch self.chatContentList[indexPath.row].message{
+            case "/mentor-request":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "SendMentorRequestTVC", for: indexPath) as! SendMentorRequestTVC
+                return cell
+            case "/welcome-chatroom":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "WelcomeChatroomTVC", for: indexPath) as! WellcomeChatroomTVC
+                return cell
+            case "/register-schedule":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleTVC", for: indexPath) as!
+                    RegisterScheduleTVC
+                return cell
+            case "/confirm-mentoring":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmMentoringTVC", for: indexPath) as! ConfirmMentoringTVC
+                return cell
+            default:
+                NSLog("chat bot not send message")
+            }
+
         }
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
-            cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
-            cell.contentLabel?.text = self.chatContentList[indexPath.row].message
-            return cell
+            return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, currentTime: currentTime)
+
     }
     
     func printCellDataLog(cell: ChatTVC, indexPath: IndexPath){
@@ -153,7 +185,31 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         return UITableView.automaticDimension
     }
     
+    func scrollToBottom(){
+        print("numberOfSections : \(self.chatTableView.numberOfRows(inSection: CHAT_SECTION_NUM-1))")
+        DispatchQueue.main.async {
+            let indexPath = IndexPath(row: (self.chatContentList.count - 1) , section: 0)
+            self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        }
+    }
     
+    func makeSendMessageTableViewCell(cell: ChatTVC, indexPath: IndexPath, currentTime: String) -> UITableViewCell {
+        cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
+        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+        cell.contentLabel?.layer.masksToBounds = true
+        cell.contentLabel?.layer.cornerRadius = 5
+        cell.timeLabel?.text = currentTime
+        return cell
+    }
+    
+    func makeReceiveMessageTableViewCell(cell: ChatOpponentTVC, indexPath: IndexPath, currentTime: String) -> UITableViewCell{
+        cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
+        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+        cell.contentLabel?.layer.masksToBounds = true
+        cell.contentLabel?.layer.cornerRadius = 5
+        cell.timeLabel?.text = currentTime
+        return cell
+    }
 }
 
 extension ChatroomVC: StompClientLibDelegate {
@@ -171,7 +227,7 @@ extension ChatroomVC: StompClientLibDelegate {
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
-        
+        scrollToBottom()
     }
     
     // disconnect
@@ -203,4 +259,42 @@ extension ChatroomVC: StompClientLibDelegate {
          print("DESTINATION : \(destination)")
          print("String JSON BODY : \(String(describing: jsonBody))")
      }
+}
+
+
+extension ChatroomVC : ChatBot {
+    func sendMentorRequest(){
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/mentor-request")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
+    func sendWelcomeChatroom() {
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/welcome-chatroom")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
+    func sendRegisterSchedule() {
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/register-schedule")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
+    func sendConfirmMentoring(){
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/confirm-mentoring")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
+    func sendChatBotTest(){
+        sendMentorRequest()
+        sendWelcomeChatroom()
+        sendRegisterSchedule()
+        sendConfirmMentoring()
+    }
 }
