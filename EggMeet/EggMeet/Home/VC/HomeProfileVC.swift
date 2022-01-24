@@ -46,12 +46,25 @@ class HomeProfileVC: UIViewController {
         let menuBarItem = UIBarButtonItem(customView: moreButton)
         menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
         menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 18.7).isActive = true
-        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 4.3).isActive = true
+        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 5).isActive = true
         self.navigationItem.rightBarButtonItem = menuBarItem
     }
     
     @objc func showAccuseButtons(){
-       
+        print("show accuse button")
+        let alert = UIAlertController(title: "", message: "", preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "신고하기", style: .destructive, handler: { action in
+            // 신고 로직 작성
+        }))
+        alert.addAction(UIAlertAction(title: "차단하기", style: .destructive, handler: { action in
+            // 차단 로직 작성
+        }))
+        alert.addAction(UIAlertAction(title: "만남후기 작성", style: . default, handler: { action in
+            // 만남 후기 작성 로직 추가
+        }))
+
+        alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     func setProfileData(){
