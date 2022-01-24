@@ -92,6 +92,7 @@
 		CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */; };
 		CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */; };
 		CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */; };
+		CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,6 +188,7 @@
 		CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrowthPointVC.swift; sourceTree = "<group>"; };
 		CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeeMyProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMyProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -551,6 +553,7 @@
 				CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */,
 				CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */,
 				CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */,
+				CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				9CC0D5A52796AC3E00E4885B /* HomeNoticeTableVC.swift in Sources */,
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
 				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
+				CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */,
 				CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */,
 				19797FE12793100800680B21 /* chatDto.swift in Sources */,
 				9CC0D5C4279D970E00E4885B /* TotalMentoringPopUpVC.swift in Sources */,
