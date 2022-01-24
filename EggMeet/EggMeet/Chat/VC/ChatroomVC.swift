@@ -40,9 +40,6 @@ class ChatroomVC: UIViewController{
         }
         registerSocket()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print("call viewWillAppear")
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidAppear")
@@ -71,6 +68,7 @@ class ChatroomVC: UIViewController{
     @IBAction func popView(_ sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
+    
     func setMyChatroomName() -> String{
         let ud = UserDefaults.standard
         let myName = ud.string(forKey: "nickname")!
@@ -174,13 +172,6 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
             return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, currentTime: currentTime)
 
-    }
-    
-    func printCellDataLog(cell: ChatTVC, indexPath: IndexPath){
-        NSLog("cell.nickname.label : \(cell.nicknameLabel.text!)")
-        NSLog("cell.content.label : \(cell.contentLabel.text!)")
-        NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writer)")
-        NSLog("success cell in text content : \(self.chatContentList[indexPath.row].message)")
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
