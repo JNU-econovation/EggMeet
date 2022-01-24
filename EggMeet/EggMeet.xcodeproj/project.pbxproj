@@ -47,7 +47,7 @@
 		19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19FEC4A02782E9BD00F18D8F /* SignUpEndVC.swift */; };
 		1FDF114D24F96E2867CD8DE8 /* Pods_EggMeet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 213EDAFC3CEFDC860F9CF9BD /* Pods_EggMeet.framework */; };
 		9C25EE602790008F00CBBB11 /* HomeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE5F2790008F00CBBB11 /* HomeNetwork.swift */; };
-		9C25EE6227900B3600CBBB11 /* HomeResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6127900B3600CBBB11 /* HomeResponseModel.swift */; };
+		9C25EE6227900B3600CBBB11 /* HomeProfileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6127900B3600CBBB11 /* HomeProfileModel.swift */; };
 		9C25EE6427900E7900CBBB11 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6327900E7900CBBB11 /* Location.swift */; };
 		9C25EE6627900F2000CBBB11 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6527900F2000CBBB11 /* Sex.swift */; };
 		9C25EE6827900F6400CBBB11 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6727900F6400CBBB11 /* Category.swift */; };
@@ -139,7 +139,7 @@
 		213EDAFC3CEFDC860F9CF9BD /* Pods_EggMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EggMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		45457B4AF0FF7C34AEC5106F /* Pods-EggMeet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EggMeet.release.xcconfig"; path = "Target Support Files/Pods-EggMeet/Pods-EggMeet.release.xcconfig"; sourceTree = "<group>"; };
 		9C25EE5F2790008F00CBBB11 /* HomeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNetwork.swift; sourceTree = "<group>"; };
-		9C25EE6127900B3600CBBB11 /* HomeResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponseModel.swift; sourceTree = "<group>"; };
+		9C25EE6127900B3600CBBB11 /* HomeProfileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileModel.swift; sourceTree = "<group>"; };
 		9C25EE6327900E7900CBBB11 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		9C25EE6527900F2000CBBB11 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
 		9C25EE6727900F6400CBBB11 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -320,7 +320,7 @@
 		9C25EE5D278ED6E000CBBB11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9C25EE6127900B3600CBBB11 /* HomeResponseModel.swift */,
+				9C25EE6127900B3600CBBB11 /* HomeProfileModel.swift */,
 				9C25EE6327900E7900CBBB11 /* Location.swift */,
 				9C25EE6527900F2000CBBB11 /* Sex.swift */,
 				9C25EE6727900F6400CBBB11 /* Category.swift */,
@@ -712,7 +712,7 @@
 				193C624E279302BD0036C09C /* ChatroomID.swift in Sources */,
 				1934F20A2799BD6800C05B09 /* ChatOpponentTVC.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
-				9C25EE6227900B3600CBBB11 /* HomeResponseModel.swift in Sources */,
+				9C25EE6227900B3600CBBB11 /* HomeProfileModel.swift in Sources */,
 				9CC0D5C9279DAC8C00E4885B /* ScheduleCancelVC.swift in Sources */,
 				9CC0D5CB279E91D600E4885B /* HomeProfileVC.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,

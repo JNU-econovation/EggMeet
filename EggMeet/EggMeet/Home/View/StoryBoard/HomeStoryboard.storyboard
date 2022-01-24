@@ -424,7 +424,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.98548370600000001" green="0.94706481700842593" blue="0.11672450837622575" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="V3z-KF-2zI" secondAttribute="trailing" constant="123" id="a5r-iC-G1X"/>
+                                                    <constraint firstItem="V3z-KF-2zI" firstAttribute="leading" secondItem="1tf-hg-DIL" secondAttribute="leading" constant="175.5" id="Zej-Tg-rOd"/>
                                                     <constraint firstItem="xB2-xS-eAr" firstAttribute="leading" secondItem="1tf-hg-DIL" secondAttribute="leading" constant="21" id="fw5-ma-Uyr"/>
                                                     <constraint firstAttribute="height" constant="46" id="m02-Gv-cIl"/>
                                                     <constraint firstItem="V3z-KF-2zI" firstAttribute="top" secondItem="1tf-hg-DIL" secondAttribute="top" constant="13" id="nYM-L4-OjK"/>
@@ -463,13 +463,29 @@
                                                         <color key="textColor" name="AccentColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/ 회당 성장비용으로" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITb-Ep-inz">
+                                                        <rect key="frame" x="115" y="10" width="109" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="분야의 성장을 도와드릴 수 있어요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tJt-S4-Pog">
+                                                        <rect key="frame" x="165" y="37" width="189" height="17"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
+                                                    <constraint firstItem="tJt-S4-Pog" firstAttribute="leading" secondItem="qs6-Ts-Hq8" secondAttribute="leading" constant="165" id="Htc-HC-80a"/>
+                                                    <constraint firstItem="ITb-Ep-inz" firstAttribute="top" secondItem="qs6-Ts-Hq8" secondAttribute="top" constant="10" id="NED-4S-H8t"/>
                                                     <constraint firstItem="h7t-co-KWg" firstAttribute="leading" secondItem="qs6-Ts-Hq8" secondAttribute="leading" constant="25" id="aUx-LO-VcG"/>
                                                     <constraint firstAttribute="height" constant="72" id="csU-Ac-Vf1"/>
                                                     <constraint firstItem="eWf-eM-oj1" firstAttribute="leading" secondItem="qs6-Ts-Hq8" secondAttribute="leading" constant="25" id="deH-QR-MkS"/>
+                                                    <constraint firstItem="tJt-S4-Pog" firstAttribute="top" secondItem="ITb-Ep-inz" secondAttribute="bottom" constant="10" id="gZS-Gf-bWe"/>
                                                     <constraint firstItem="eWf-eM-oj1" firstAttribute="top" secondItem="qs6-Ts-Hq8" secondAttribute="top" constant="10" id="hMd-HG-ugn"/>
+                                                    <constraint firstItem="ITb-Ep-inz" firstAttribute="leading" secondItem="qs6-Ts-Hq8" secondAttribute="leading" constant="115" id="o4e-Ng-wWN"/>
                                                     <constraint firstItem="h7t-co-KWg" firstAttribute="top" secondItem="eWf-eM-oj1" secondAttribute="bottom" constant="10" id="xfO-9v-IHW"/>
                                                 </constraints>
                                             </view>
@@ -686,6 +702,21 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1117"/>
+                    <connections>
+                        <outlet property="ageLabel" destination="efK-6h-yPi" id="Qzv-5D-Z41"/>
+                        <outlet property="channelLabel" destination="VUd-0U-LHe" id="85R-IN-ycl"/>
+                        <outlet property="descriptionLabel" destination="JeY-W3-aYY" id="QkV-yl-Iyj"/>
+                        <outlet property="locationLabel" destination="J6q-oP-xFC" id="z63-Ti-dum"/>
+                        <outlet property="menteeCategoryLabel" destination="vuQ-8w-z83" id="o28-3T-WPk"/>
+                        <outlet property="menteeDescriptionLabel" destination="r5o-SH-CHv" id="mcp-Ee-GRq"/>
+                        <outlet property="mentorCareerLabel" destination="QCb-Tw-1Y8" id="tUD-fl-TGF"/>
+                        <outlet property="mentorCategoryLabel" destination="h7t-co-KWg" id="f3Z-TC-XDq"/>
+                        <outlet property="mentorDescriptionLabel" destination="OvD-SI-6dA" id="ROT-aK-PLv"/>
+                        <outlet property="mentorGrowthCostLabel" destination="eWf-eM-oj1" id="SFE-OB-Lgw"/>
+                        <outlet property="mentorLinkLabel" destination="V3z-KF-2zI" id="J6z-N8-lts"/>
+                        <outlet property="nicknameLabel" destination="Nb6-bq-QXJ" id="pXw-yx-jlV"/>
+                        <outlet property="sexLabel" destination="idq-yh-J0J" id="PJ8-qD-P7w"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCS-Z6-TY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
