@@ -140,8 +140,8 @@ extension HomeVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        //guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "GrowthPointVC") as? GrowthPointVC else {return}
-        //self.navigationController?.pushViewController(nextVC, animated: true)
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeProfileVC") as? HomeProfileVC else {return}
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
