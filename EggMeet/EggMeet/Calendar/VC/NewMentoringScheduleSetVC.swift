@@ -14,6 +14,7 @@ class NewMentoringScheduleSetVC: UIViewController{
     
     let dateFormatter = DateFormatter()
     var selectDateStr: String = ""
+    var navigationTitle: String = "신규 멘토링 등록"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +28,7 @@ class NewMentoringScheduleSetVC: UIViewController{
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationItem.title = "신규 멘토링 등록";
+        self.navigationItem.title = navigationTitle
         self.navigationController?.navigationBar.isHidden =  false
         
         selectDateStr = dateFormatter.string(from: Date())
@@ -36,6 +37,7 @@ class NewMentoringScheduleSetVC: UIViewController{
     @IBAction func touchDateSelectButton(_ sender: Any){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewMentorSelectPopUpVC") as! NewMentorSelectPopUpVC
         vc.selectedDateStr = selectDateStr
+        vc.navigationTitle = navigationTitle
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
