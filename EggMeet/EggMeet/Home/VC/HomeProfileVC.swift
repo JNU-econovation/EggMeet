@@ -35,7 +35,23 @@ class HomeProfileVC: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = ""
         self.navigationController?.navigationBar.isHidden =  false
+        setNavigationBarRightItem()
         setProfileData()
+    }
+    
+    func setNavigationBarRightItem(){
+        let moreButton = UIButton(frame: CGRect(x: 0, y: 0, width: 4.3, height: 18.7))
+        moreButton.setBackgroundImage(UIImage(named: "setting"), for: .normal)
+        moreButton.addTarget(self, action: #selector(self.showAccuseButtons), for: .touchUpInside)
+        let menuBarItem = UIBarButtonItem(customView: moreButton)
+        menuBarItem.customView?.translatesAutoresizingMaskIntoConstraints = false
+        menuBarItem.customView?.heightAnchor.constraint(equalToConstant: 18.7).isActive = true
+        menuBarItem.customView?.widthAnchor.constraint(equalToConstant: 4.3).isActive = true
+        self.navigationItem.rightBarButtonItem = menuBarItem
+    }
+    
+    @objc func showAccuseButtons(){
+       
     }
     
     func setProfileData(){
