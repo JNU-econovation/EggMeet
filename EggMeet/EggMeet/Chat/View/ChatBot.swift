@@ -12,5 +12,6 @@ protocol ChatBot{
     func sendWelcomeChatroom()
     func sendRegisterSchedule()
     func sendConfirmMentoring()
+    func sendRejectMentoring()
     func sendChatBotTest()
 }

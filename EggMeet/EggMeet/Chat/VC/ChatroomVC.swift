@@ -40,9 +40,6 @@ class ChatroomVC: UIViewController{
         }
         registerSocket()
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print("call viewWillAppear")
-    }
     
     override func viewDidAppear(_ animated: Bool) {
         print("viewDidAppear")
@@ -71,6 +68,7 @@ class ChatroomVC: UIViewController{
     @IBAction func popView(_ sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
+    
     func setMyChatroomName() -> String{
         let ud = UserDefaults.standard
         let myName = ud.string(forKey: "nickname")!
@@ -92,7 +90,10 @@ class ChatroomVC: UIViewController{
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let completeURL = "ws://" + baseURL + "/stomp-chat"
         let wsurl = NSURL(string: completeURL)!
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
+        let ud = UserDefaults.standard
+        let token = ud.string(forKey: "accessToken")!
+        NSLog("Accesstoken : \(token)")
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Autorization" : "Bearer \(token)"])
     }
         
     func createChatRoom(){
@@ -160,6 +161,9 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
             case "/confirm-mentoring":
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmMentoringTVC", for: indexPath) as! ConfirmMentoringTVC
                 return cell
+            case "/reject-mentoring":
+                let cell = tableView.dequeueReusableCell(withIdentifier: "RejectMentoringTVC", for: indexPath) as! RejectMentoringTVC
+                return cell
             default:
                 NSLog("chat bot not send message")
             }
@@ -168,13 +172,6 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
             return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, currentTime: currentTime)
 
-    }
-    
-    func printCellDataLog(cell: ChatTVC, indexPath: IndexPath){
-        NSLog("cell.nickname.label : \(cell.nicknameLabel.text!)")
-        NSLog("cell.content.label : \(cell.contentLabel.text!)")
-        NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writer)")
-        NSLog("success cell in text content : \(self.chatContentList[indexPath.row].message)")
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -291,10 +288,18 @@ extension ChatroomVC : ChatBot {
         socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
     }
     
+    func sendRejectMentoring() {
+        let topic = self.publishTopic
+        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/reject-mentoring")
+        params.debugPrint()
+        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
+    }
+    
     func sendChatBotTest(){
         sendMentorRequest()
         sendWelcomeChatroom()
         sendRegisterSchedule()
         sendConfirmMentoring()
+        sendRejectMentoring()
     }
 }
