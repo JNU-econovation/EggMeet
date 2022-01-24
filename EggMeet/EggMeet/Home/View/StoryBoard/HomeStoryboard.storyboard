@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -225,22 +225,22 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="vjG-X2-kke"/>
                         <segue destination="ZbK-r9-xYz" kind="relationship" relationship="viewControllers" id="PU9-A9-NEG"/>
                         <segue destination="8rt-n8-Ecz" kind="relationship" relationship="viewControllers" id="t2N-Rc-wu2"/>
-                        <segue destination="hge-HE-f2x" kind="relationship" relationship="viewControllers" id="p6c-Vw-b0V"/>
+                        <segue destination="7pN-LM-nCv" kind="relationship" relationship="viewControllers" id="0Yj-HW-9c1"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rw9-Ro-0sY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="27"/>
+            <point key="canvasLocation" x="1490" y="106"/>
         </scene>
-        <!--MypageVC-->
-        <scene sceneID="tcE-5r-54h">
+        <!--MypageStart-->
+        <scene sceneID="U4J-cm-1VE">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MypageVC" storyboardName="MypageStoryboard" referencedIdentifier="MypageVC" id="hge-HE-f2x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gCl-yn-y1G"/>
+                <viewControllerPlaceholder storyboardIdentifier="MypageStart" storyboardName="MypageStoryboard" referencedIdentifier="MypageStart" id="7pN-LM-nCv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6FE-O7-oaR"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tOz-jY-ccY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWw-Fc-QtH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2459" y="552"/>
+            <point key="canvasLocation" x="2148" y="478"/>
         </scene>
         <!--CalendarVC-->
         <scene sceneID="siI-aQ-jSH">

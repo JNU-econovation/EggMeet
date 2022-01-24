@@ -29,10 +29,7 @@ class MyProfileVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func goToSeeMyProfile(_ sender: Any) {
-        
-        print("나의 프로필 페이지로 이동")
-    }
+   
     
     /*
     // MARK: - Navigation
