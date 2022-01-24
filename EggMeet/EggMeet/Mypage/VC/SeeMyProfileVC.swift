@@ -1,37 +1,21 @@
 //
-//  MyGrowthPointVC.swift
+//  SeeMyProfileVC.swift
 //  EggMeet
 //
-//  Created by 황지우 on 2022/01/22.
+//  Created by 황지우 on 2022/01/24.
 //
 
 import UIKit
 
-class MyGrowthPointVC: UIViewController {
+class SeeMyProfileVC: UIViewController {
 
-    
-    @IBOutlet weak var MyGrowthPointImage: UIImageView!
-    
-    
-    @IBOutlet weak var MyGrowthStageLabel: UILabel!
-    
-   
-    @IBOutlet weak var MyPossessGrowthPoint: UILabel!
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        MyPossessGrowthPoint.adjustsFontSizeToFitWidth = true
 
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func GoToSeeGrowthStages(_ sender: UIButton) {
-        
-       
-    }
-    
+
     /*
     // MARK: - Navigation
 
