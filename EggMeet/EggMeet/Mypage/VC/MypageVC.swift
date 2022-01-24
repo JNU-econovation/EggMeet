@@ -22,6 +22,12 @@ class MypageVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func goToSeeMyProfile(_ sender: UIButton) {
+        
+        self.performSegue(withIdentifier: "ToSeeMyProfile", sender: self)
+        
+        
+    }
 
     /*
     // MARK: - Navigation
