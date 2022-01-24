@@ -33,6 +33,7 @@
 		199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DD176278D98E800E35723 /* ChatroomVC.swift */; };
 		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
 		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
+		19CB327D279EB92400D015E5 /* RejectMentoringTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19CB327C279EB92400D015E5 /* RejectMentoringTVC.swift */; };
 		19D9DF8E279D7A9E0050E7C3 /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */; };
 		19D9DF90279D816A0050E7C3 /* WelcomeChatroomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF8F279D816A0050E7C3 /* WelcomeChatroomTVC.swift */; };
 		19D9DF92279D860E0050E7C3 /* RegisterScheduleTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF91279D860E0050E7C3 /* RegisterScheduleTVC.swift */; };
@@ -69,6 +70,9 @@
 		9CC0D5BC279D130A00E4885B /* MyMeetReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5BB279D130A00E4885B /* MyMeetReviewVC.swift */; };
 		9CC0D5C0279D2EC400E4885B /* NewMentoringScheduleSetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5BF279D2EC400E4885B /* NewMentoringScheduleSetVC.swift */; };
 		9CC0D5C2279D4B4B00E4885B /* NewMentoringSelectPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5C1279D4B4A00E4885B /* NewMentoringSelectPopUpVC.swift */; };
+		9CC0D5C4279D970E00E4885B /* TotalMentoringPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5C3279D970E00E4885B /* TotalMentoringPopUpVC.swift */; };
+		9CC0D5C7279D9D2900E4885B /* TotalMentoringTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5C6279D9D2900E4885B /* TotalMentoringTVC.swift */; };
+		9CC0D5C9279DAC8C00E4885B /* ScheduleCancelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5C8279DAC8C00E4885B /* ScheduleCancelVC.swift */; };
 		9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */; };
 		9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */; };
 		9CE4B68127808410003AEB90 /* SignUpSelfIntroduceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */; };
@@ -88,6 +92,7 @@
 		CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */; };
 		CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */; };
 		CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */; };
+		CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +125,7 @@
 		199DD176278D98E800E35723 /* ChatroomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomVC.swift; sourceTree = "<group>"; };
 		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
 		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
+		19CB327C279EB92400D015E5 /* RejectMentoringTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RejectMentoringTVC.swift; sourceTree = "<group>"; };
 		19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
 		19D9DF8F279D816A0050E7C3 /* WelcomeChatroomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeChatroomTVC.swift; sourceTree = "<group>"; };
 		19D9DF91279D860E0050E7C3 /* RegisterScheduleTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterScheduleTVC.swift; sourceTree = "<group>"; };
@@ -157,6 +163,9 @@
 		9CC0D5BB279D130A00E4885B /* MyMeetReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMeetReviewVC.swift; sourceTree = "<group>"; };
 		9CC0D5BF279D2EC400E4885B /* NewMentoringScheduleSetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringScheduleSetVC.swift; sourceTree = "<group>"; };
 		9CC0D5C1279D4B4A00E4885B /* NewMentoringSelectPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringSelectPopUpVC.swift; sourceTree = "<group>"; };
+		9CC0D5C3279D970E00E4885B /* TotalMentoringPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMentoringPopUpVC.swift; sourceTree = "<group>"; };
+		9CC0D5C6279D9D2900E4885B /* TotalMentoringTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalMentoringTVC.swift; sourceTree = "<group>"; };
+		9CC0D5C8279DAC8C00E4885B /* ScheduleCancelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleCancelVC.swift; sourceTree = "<group>"; };
 		9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNickNameVC.swift; sourceTree = "<group>"; };
 		9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpLocationVC.swift; sourceTree = "<group>"; };
 		9CE4B68027808410003AEB90 /* SignUpSelfIntroduceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSelfIntroduceVC.swift; sourceTree = "<group>"; };
@@ -179,6 +188,7 @@
 		CD1B96E8279BF33D009A0DF6 /* MypageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageVC.swift; sourceTree = "<group>"; };
 		CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrowthPointVC.swift; sourceTree = "<group>"; };
+		CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeeMyProfileStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,7 +229,6 @@
 				CD1B95E52799D885009A0DF6 /* Config */,
 				9C25EE6F279177F700CBBB11 /* Login */,
 				1991D0C2278C672B0081EDF5 /* Chat */,
-				9CE4B694278BFB00003AEB90 /* Home */,
 				9CE4B67B278078EF003AEB90 /* SignUp */,
 				192C408927785C0C003055DD /* EggMeet.entitlements */,
 				192C407227785BF4003055DD /* AppDelegate.swift */,
@@ -269,6 +278,7 @@
 				19D9DF8F279D816A0050E7C3 /* WelcomeChatroomTVC.swift */,
 				19D9DF91279D860E0050E7C3 /* RegisterScheduleTVC.swift */,
 				19D9DF93279D8AE30050E7C3 /* ConfirmMentoringTVC.swift */,
+				19CB327C279EB92400D015E5 /* RejectMentoringTVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,6 +383,7 @@
 		9CC0D5AF279C0FC200E4885B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9CC0D5C5279D9D1300E4885B /* Cell */,
 				9CC0D5B1279C0FF200E4885B /* CalendarStoryboard.storyboard */,
 			);
 			path = View;
@@ -388,13 +399,24 @@
 				9CC0D5BB279D130A00E4885B /* MyMeetReviewVC.swift */,
 				9CC0D5BF279D2EC400E4885B /* NewMentoringScheduleSetVC.swift */,
 				9CC0D5C1279D4B4A00E4885B /* NewMentoringSelectPopUpVC.swift */,
+				9CC0D5C3279D970E00E4885B /* TotalMentoringPopUpVC.swift */,
+				9CC0D5C8279DAC8C00E4885B /* ScheduleCancelVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		9CC0D5C5279D9D1300E4885B /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9CC0D5C6279D9D2900E4885B /* TotalMentoringTVC.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9CE4B67B278078EF003AEB90 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				9CE4B694278BFB00003AEB90 /* Home */,
 				9CC0D5AA279BD8BD00E4885B /* View */,
 				9CE4B67C27807A50003AEB90 /* SignUpNickNameVC.swift */,
 				9CE4B67E2780801B003AEB90 /* SignUpLocationVC.swift */,
@@ -521,6 +543,7 @@
 			isa = PBXGroup;
 			children = (
 				CD1B96A2279AF104009A0DF6 /* MypageStoryboard.storyboard */,
+				CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -600,6 +623,7 @@
 				9CC0D5B2279C0FF200E4885B /* CalendarStoryboard.storyboard in Resources */,
 				192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */,
 				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
+				CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
 				1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */,
 				CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */,
@@ -677,6 +701,7 @@
 				9C25EE6C27904DFF00CBBB11 /* SignUpSexVC.swift in Sources */,
 				9CC0D5A82796BCCC00E4885B /* HomeNoticeTVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
+				9CC0D5C7279D9D2900E4885B /* TotalMentoringTVC.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
 				199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */,
 				9C25EE6E279166D900CBBB11 /* UserMentorResponseModel.swift in Sources */,
@@ -691,6 +716,7 @@
 				1934F20A2799BD6800C05B09 /* ChatOpponentTVC.swift in Sources */,
 				9CE4B6A0278C179F003AEB90 /* HomeHeaderView.swift in Sources */,
 				9C25EE6227900B3600CBBB11 /* HomeResponseModel.swift in Sources */,
+				9CC0D5C9279DAC8C00E4885B /* ScheduleCancelVC.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
 				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
@@ -715,6 +741,8 @@
 				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
 				CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */,
 				19797FE12793100800680B21 /* chatDto.swift in Sources */,
+				19CB327D279EB92400D015E5 /* RejectMentoringTVC.swift in Sources */,
+				9CC0D5C4279D970E00E4885B /* TotalMentoringPopUpVC.swift in Sources */,
 				1971B6A4279BF13400FF64BA /* SendMentorRequestTVC.swift in Sources */,
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,

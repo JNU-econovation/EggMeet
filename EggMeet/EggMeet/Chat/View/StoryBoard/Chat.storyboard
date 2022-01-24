@@ -445,6 +445,40 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RejectMentoringTVC" rowHeight="201" id="DSJ-AD-jQX" customClass="RejectMentoringTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="1125.5" width="375" height="201"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DSJ-AD-jQX" id="AWi-Ka-X3U">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="201"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tjP-ei-fvY">
+                                                    <rect key="frame" x="287" y="21" width="42" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="Ifw-1Z-SO1"/>
+                                                        <constraint firstAttribute="width" constant="42" id="LeU-zq-sBn"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="reject_mentoring" translatesAutoresizingMaskIntoConstraints="NO" id="ZDS-WT-kjD">
+                                                    <rect key="frame" x="182" y="46" width="147" height="134"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="165" id="djt-Sd-nnW"/>
+                                                        <constraint firstAttribute="width" constant="147" id="lBS-No-yLu"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="ZDS-WT-kjD" secondAttribute="bottom" constant="10" id="4qL-EK-bg1"/>
+                                                <constraint firstItem="tjP-ei-fvY" firstAttribute="top" secondItem="AWi-Ka-X3U" secondAttribute="topMargin" constant="10" id="TtG-XS-RQj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="ZDS-WT-kjD" secondAttribute="trailing" constant="30" id="d1g-NJ-r8P"/>
+                                                <constraint firstItem="ZDS-WT-kjD" firstAttribute="top" secondItem="tjP-ei-fvY" secondAttribute="bottom" constant="5" id="hdM-h7-5KQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="tjP-ei-fvY" secondAttribute="trailing" constant="30" id="nlQ-cu-xnA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DrZ-sP-WBt">
@@ -529,6 +563,7 @@
         <image name="mentor_request" width="294" height="344"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="register_schedule" width="588" height="456"/>
+        <image name="reject_mentoring" width="294" height="330"/>
         <image name="welcome_chatroom" width="294" height="234"/>
         <image name="white_button" width="252" height="30"/>
         <systemColor name="labelColor">
