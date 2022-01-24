@@ -61,9 +61,9 @@ class ChatroomVC: UIViewController{
         } else {
             let topic = self.publishTopic + "\(self.chatroomID)/message"
             let writer = setMyChatroomName()
-            let type = "USER"
-            let dateTime: Double = 101010
-            let params = chatDto(roomId: self.chatroomID, writer:writer, content: messageString, dateTime: dateTime, type: type)
+            let type = "SYSTEM"
+            let params = chatDto(roomId: self.chatroomID, writer:writer, content: messageString, dateTime: getCurrentTimeDouble(), type: type)
+            NSLog("publish topic : \(topic)")
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
             self.messageTextView.text = ""
@@ -94,7 +94,10 @@ class ChatroomVC: UIViewController{
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let completeURL = "ws://" + baseURL + "/stomp-chat"
         let wsurl = NSURL(string: completeURL)!
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
+        let ud = UserDefaults.standard
+        let accessToken = ud.string(forKey: "accessToken")!
+        NSLog("accessToken : \(accessToken)")
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Authorization" : "Bearer \(accessToken)"])
     }
         
     func createChatRoom(){
@@ -123,6 +126,18 @@ class ChatroomVC: UIViewController{
     
     func setupTextViewUI(){
         self.messageTextView.layer.cornerRadius = 5
+    }
+    
+    func getCurrentTimeDouble() -> Double{
+        return Date.now.timeIntervalSince1970
+    }
+    
+    func getTimeClockFormat(time: Double) -> String{
+        let date = Date(timeIntervalSince1970: time)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        let clockTime = formatter.string(from: date)
+        return clockTime
     }
     
 }
@@ -179,20 +194,22 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func makeSendMessageTableViewCell(cell: ChatTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell {
+        let dateTimeNowString = self.getTimeClockFormat(time: getCurrentTimeDouble())
         cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
         cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
         cell.contentLabel?.layer.cornerRadius = 5
-        cell.timeLabel?.text = "\(dateTime)"
+        cell.timeLabel?.text = dateTimeNowString
         return cell
     }
     
     func makeReceiveMessageTableViewCell(cell: ChatOpponentTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell{
+        let dateTimeString = self.getTimeClockFormat(time: self.chatContentList[indexPath.row].dateTime)
         cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
         cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
         cell.contentLabel?.layer.cornerRadius = 5
-        cell.timeLabel?.text = "\(dateTime)"
+        cell.timeLabel?.text = dateTimeString
         return cell
     }
 }
@@ -223,8 +240,8 @@ extension ChatroomVC: StompClientLibDelegate {
     // subscribe function
     func stompClientDidConnect(client: StompClientLib!) {
         let topic = self.subscribeTopic + "\(chatroomID)"
-        NSLog("\(topic)")
-        print("socket is connected : \(topic)")
+        NSLog("subscribe topic : \(topic)")
+        NSLog("socket is connected : \(topic)")
         socketClient.subscribe(destination: topic)
     }
     
