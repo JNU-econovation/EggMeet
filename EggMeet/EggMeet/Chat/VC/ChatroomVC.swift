@@ -42,6 +42,7 @@ class ChatroomVC: UIViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
         print("call viewWillAppear")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

@@ -89,18 +89,18 @@ struct RegisterUser {
             "nickname": "Yunseong",
             "age": 24,
             "sex": "MALE",
-            "email": "1998thddk@gmail.com" ?? "dbsdltjd123@hanmail.net",
+            "email": "dbsdltjd123@hanmail.net",
             "location": "GWANGJU_BUKGU",
             "description": "test",
             "pictureIndex": 0,
             "isOnlineAvailable": true,
             "isOfflineAvailable": true,
-            "mentorCategory": "PROGRAMMING_C",
+            "mentorCategory": "IT_WEB",
             "mentorDescription": "test",
             "mentorCareer": "test",
             "mentorLink": "test",
             "mentorGrowthPoint": 5,
-            "menteeCategory": "PROGRAMMING_CPP",
+            "menteeCategory": "IT_WEB",
             "menteeDescription": "test",
             "loginType": "APPLE",
             "socialToken": ud.string(forKey: "socialToken") ?? "",
@@ -113,7 +113,7 @@ struct RegisterUser {
     func requestRegisterInformation(){
         var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
         let apiURL: String = "http://" + mainAddress + "/auth/register"
-        let loginParam = setRegisterParameters() as Dictionary
+        let loginParam = setDummyDataRegisterParameters() as Dictionary
         
         var request = URLRequest(url: URL(string: apiURL)!)
         request.httpMethod = "POST"
