@@ -23,6 +23,7 @@ class MyGrowthPointVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         MyPossessGrowthPoint.adjustsFontSizeToFitWidth = true
+        setGrowthpointData()
 
         // Do any additional setup after loading the view.
     }
@@ -31,6 +32,17 @@ class MyGrowthPointVC: UIViewController {
         
        
     }
+    
+    func setGrowthpointData(){
+        MypageNetwork.shared.getMypageData() { data in
+            
+            self.MyPossessGrowthPoint.text = "\(data.growthPoint)"
+            
+            }
+            
+           
+    }
+    
     
     /*
     // MARK: - Navigation
