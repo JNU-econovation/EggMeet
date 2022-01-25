@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--캘린더-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="CalendarVC" id="Y6W-OH-hqX" customClass="CalendarVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 일정관리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yie-hy-fZj">
+                                <rect key="frame" x="17" y="60" width="93" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="93" id="ezI-kP-nnM"/>
+                                    <constraint firstAttribute="height" constant="43" id="wVT-fs-AuV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7z-3w-gDE">
+                                <rect key="frame" x="384.5" y="74" width="14.5" height="16.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="14.6" id="Esc-oG-4Oh"/>
+                                    <constraint firstAttribute="height" constant="16.300000000000001" id="gl8-L4-roZ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="yie-hy-fZj" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="ULq-5d-Nkr"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="A7z-3w-gDE" secondAttribute="trailing" constant="15" id="lU3-FZ-HY3"/>
+                            <constraint firstItem="yie-hy-fZj" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="17" id="oTQ-Qk-EHG"/>
+                            <constraint firstItem="A7z-3w-gDE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="v3d-n8-Bit"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="캘린더" image="calendar" catalog="system" id="wi5-uL-rzd"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="yie-hy-fZj" id="dXu-Bb-6Zb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="75.669642857142847"/>
+        </scene>
+        <!--Total ScheduleVC-->
+        <scene sceneID="ctg-4U-3u2">
+            <objects>
+                <viewController storyboardIdentifier="TotalScheduleVC" id="f72-ZV-33q" customClass="TotalScheduleVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7jv-Wp-lGQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 전체 멘토링 일정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f1-Ix-1ZX">
+                                <rect key="frame" x="111" y="62" width="193" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="PtO-iS-l6H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.41839095949999999" green="0.2607493401" blue="0.097989253700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A68-AM-fuM" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="141" width="414" height="349"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="349" id="Ely-ol-U9e"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tgH-4D-TtS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="A68-AM-fuM" firstAttribute="top" secondItem="tgH-4D-TtS" secondAttribute="top" constant="97" id="0Aj-Sa-HOU"/>
+                            <constraint firstItem="tgH-4D-TtS" firstAttribute="trailing" secondItem="5f1-Ix-1ZX" secondAttribute="trailing" constant="110" id="7Ke-Zm-SdO"/>
+                            <constraint firstItem="tgH-4D-TtS" firstAttribute="trailing" secondItem="A68-AM-fuM" secondAttribute="trailing" id="PNh-Ec-omS"/>
+                            <constraint firstItem="5f1-Ix-1ZX" firstAttribute="leading" secondItem="tgH-4D-TtS" secondAttribute="leading" constant="111" id="SM6-bN-cUU"/>
+                            <constraint firstItem="5f1-Ix-1ZX" firstAttribute="top" secondItem="tgH-4D-TtS" secondAttribute="top" constant="18" id="YWo-vi-Pz7"/>
+                            <constraint firstItem="A68-AM-fuM" firstAttribute="leading" secondItem="tgH-4D-TtS" secondAttribute="leading" id="gNl-oZ-jwN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="A68-AM-fuM" id="uE0-np-85R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WW2-wP-9LE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1851" y="785"/>
+        </scene>
+        <!--Total Mentoring Pop UpVC-->
+        <scene sceneID="qne-Q5-8yZ">
+            <objects>
+                <viewController storyboardIdentifier="TotalMentoringPopUpVC" id="hEU-Sk-VU2" customClass="TotalMentoringPopUpVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XF3-Uv-Al4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LAX-yk-ulK">
+                                <rect key="frame" x="0.0" y="513" width="414" height="349"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020년 10월 24일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYk-r9-x6z">
+                                        <rect key="frame" x="104" y="25" width="205" height="22"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="18"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OC9-dV-Byj">
+                                        <rect key="frame" x="0.0" y="57" width="414" height="292"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="totalCell" id="QxP-NI-IiP" customClass="TotalMentoringTVC" customModule="EggMeet" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="44.5" width="414" height="71.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QxP-NI-IiP" id="YdW-SD-vlm">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="71.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="오전 10시 30분" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXs-yo-TuU">
+                                                            <rect key="frame" x="7" y="11" width="98" height="43"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="43" id="47I-r1-HWl"/>
+                                                                <constraint firstAttribute="width" constant="98" id="TL1-kc-P8x"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asong 님" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZC-I8-K9H">
+                                                            <rect key="frame" x="204" y="10" width="48.5" height="51.5"/>
+                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="13"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CiN-ka-cNj">
+                                                            <rect key="frame" x="289" y="20" width="49" height="31.5"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="변경"/>
+                                                            <connections>
+                                                                <action selector="didTapEditButtonWithSender:" destination="QxP-NI-IiP" eventType="touchUpInside" id="RJc-fa-fSK"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhg-IT-KhB">
+                                                            <rect key="frame" x="329" y="20" width="49" height="31.5"/>
+                                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="취소"/>
+                                                            <connections>
+                                                                <action selector="didTapCancelButtonWithSender:" destination="QxP-NI-IiP" eventType="touchUpInside" id="W8O-Ij-Ebg"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="JZC-I8-K9H" secondAttribute="bottom" constant="10" id="DfB-Dv-az3"/>
+                                                        <constraint firstItem="JZC-I8-K9H" firstAttribute="top" secondItem="YdW-SD-vlm" secondAttribute="top" constant="10" id="P2J-0c-APG"/>
+                                                        <constraint firstAttribute="bottom" secondItem="CiN-ka-cNj" secondAttribute="bottom" constant="20" id="TlU-xf-pzI"/>
+                                                        <constraint firstItem="PXs-yo-TuU" firstAttribute="top" secondItem="YdW-SD-vlm" secondAttribute="top" constant="11" id="VRk-nZ-1vP"/>
+                                                        <constraint firstItem="xhg-IT-KhB" firstAttribute="leading" secondItem="YdW-SD-vlm" secondAttribute="leading" constant="329" id="ZO7-By-kwT"/>
+                                                        <constraint firstItem="PXs-yo-TuU" firstAttribute="leading" secondItem="YdW-SD-vlm" secondAttribute="leading" constant="7" id="bX7-41-iGH"/>
+                                                        <constraint firstItem="CiN-ka-cNj" firstAttribute="leading" secondItem="YdW-SD-vlm" secondAttribute="leading" constant="289" id="i5U-aR-HjR"/>
+                                                        <constraint firstItem="JZC-I8-K9H" firstAttribute="leading" secondItem="YdW-SD-vlm" secondAttribute="leading" constant="204" id="kZN-Ew-uYj"/>
+                                                        <constraint firstItem="CiN-ka-cNj" firstAttribute="top" secondItem="YdW-SD-vlm" secondAttribute="top" constant="20" id="roA-26-4DV"/>
+                                                        <constraint firstItem="xhg-IT-KhB" firstAttribute="top" secondItem="YdW-SD-vlm" secondAttribute="top" constant="20" id="sHg-8k-zXa"/>
+                                                        <constraint firstAttribute="bottom" secondItem="xhg-IT-KhB" secondAttribute="bottom" constant="20" id="xZo-VX-QJd"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="cancelButton" destination="xhg-IT-KhB" id="mwA-2c-PLE"/>
+                                                    <outlet property="editButton" destination="CiN-ka-cNj" id="5rM-zA-PUT"/>
+                                                    <outlet property="nicknameLabel" destination="JZC-I8-K9H" id="uQb-oe-MYp"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="kYk-r9-x6z" secondAttribute="trailing" constant="105" id="9QH-ky-sfL"/>
+                                    <constraint firstItem="kYk-r9-x6z" firstAttribute="leading" secondItem="LAX-yk-ulK" secondAttribute="leading" constant="104" id="9Zn-8i-pGP"/>
+                                    <constraint firstAttribute="bottom" secondItem="OC9-dV-Byj" secondAttribute="bottom" id="Dm8-0x-AM8"/>
+                                    <constraint firstItem="kYk-r9-x6z" firstAttribute="top" secondItem="LAX-yk-ulK" secondAttribute="top" constant="25" id="FjP-1E-5ZU"/>
+                                    <constraint firstItem="OC9-dV-Byj" firstAttribute="top" secondItem="kYk-r9-x6z" secondAttribute="bottom" constant="10" id="HeF-JT-XBn"/>
+                                    <constraint firstItem="OC9-dV-Byj" firstAttribute="leading" secondItem="LAX-yk-ulK" secondAttribute="leading" id="NR9-zq-VLO"/>
+                                    <constraint firstAttribute="trailing" secondItem="OC9-dV-Byj" secondAttribute="trailing" id="kcR-9Y-WBa"/>
+                                    <constraint firstAttribute="height" constant="349" id="obB-sH-vn3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IpO-N0-PUE"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LAX-yk-ulK" firstAttribute="leading" secondItem="IpO-N0-PUE" secondAttribute="leading" id="0D7-fg-NTH"/>
+                            <constraint firstItem="IpO-N0-PUE" firstAttribute="bottom" secondItem="LAX-yk-ulK" secondAttribute="bottom" id="IK9-EG-iGg"/>
+                            <constraint firstItem="IpO-N0-PUE" firstAttribute="trailing" secondItem="LAX-yk-ulK" secondAttribute="trailing" id="cQJ-ww-JjY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="OC9-dV-Byj" id="xow-bj-7EH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lhQ-lc-04f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1852.1739130434785" y="1484.5982142857142"/>
+        </scene>
+        <!--Partner ScheduleVC-->
+        <scene sceneID="7D2-j3-wLo">
+            <objects>
+                <viewController storyboardIdentifier="PartnerScheduleVC" id="JXC-3y-Bmh" customClass="PartnerScheduleVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qof-YW-7sm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="파트너별 일정 보기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ev-rV-mtk">
+                                <rect key="frame" x="121" y="74" width="172" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="UGS-iq-rDI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.41839095949999999" green="0.2607493401" blue="0.097989253700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pEf-mF-7ZJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pEf-mF-7ZJ" firstAttribute="trailing" secondItem="4ev-rV-mtk" secondAttribute="trailing" constant="121" id="LbN-iC-Eut"/>
+                            <constraint firstItem="4ev-rV-mtk" firstAttribute="top" secondItem="pEf-mF-7ZJ" secondAttribute="top" constant="30" id="WxA-NV-F53"/>
+                            <constraint firstItem="4ev-rV-mtk" firstAttribute="leading" secondItem="pEf-mF-7ZJ" secondAttribute="leading" constant="121" id="qjx-ih-kD6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qxl-Yb-fJy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-693" y="785"/>
+        </scene>
+        <!--New Mentoring RegisterVC-->
+        <scene sceneID="Xpm-iP-Iv0">
+            <objects>
+                <viewController storyboardIdentifier="NewMentoringRegisterVC" id="Uwe-b4-6gA" customClass="NewMentoringRegisterVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FiG-Gw-7Se">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신규 멘토링 등록" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFJ-8X-XlR">
+                                <rect key="frame" x="129" y="74" width="157" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="JQE-gA-3BD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.41839095949999999" green="0.2607493401" blue="0.097989253700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신규 멘토링 일정을 등록할 파트너를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-RC-LpK">
+                                <rect key="frame" x="50" y="144" width="314" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="xkj-vg-NkP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZA-Oo-Mzb">
+                                <rect key="frame" x="52" y="224" width="310" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="MTD-s4-fCO"/>
+                                </constraints>
+                                <string key="text">나의 멘토링 관리에서의 신규 멘토링 일정 등록은  
+한번 이상 만남을 가진 파트너에 대해서만  
+가능합니다. 새로운 파트너와의 만남 일정을 잡으려면  
+상대방의 프로필에서 멘토 / 멘티 신청을 해주세요!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzl-b2-oN3">
+                                <rect key="frame" x="52" y="566" width="59" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="멘토"/>
+                                <connections>
+                                    <action selector="windNewMentoringCalendarVC:" destination="Uwe-b4-6gA" eventType="touchUpInside" id="VJX-uv-pOM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I8O-uW-SNM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UFJ-8X-XlR" firstAttribute="leading" secondItem="I8O-uW-SNM" secondAttribute="leading" constant="129" id="AIR-b8-hx1"/>
+                            <constraint firstItem="vZA-Oo-Mzb" firstAttribute="top" secondItem="I8O-uW-SNM" secondAttribute="top" constant="180" id="OdU-k3-9Pb"/>
+                            <constraint firstItem="ZfJ-RC-LpK" firstAttribute="leading" secondItem="I8O-uW-SNM" secondAttribute="leading" constant="50" id="PYd-Mr-OYs"/>
+                            <constraint firstItem="UFJ-8X-XlR" firstAttribute="top" secondItem="I8O-uW-SNM" secondAttribute="top" constant="30" id="RuR-uH-wYU"/>
+                            <constraint firstItem="ZfJ-RC-LpK" firstAttribute="top" secondItem="I8O-uW-SNM" secondAttribute="top" constant="100" id="S1Z-6i-SVf"/>
+                            <constraint firstItem="I8O-uW-SNM" firstAttribute="trailing" secondItem="ZfJ-RC-LpK" secondAttribute="trailing" constant="50" id="Sed-68-iCC"/>
+                            <constraint firstItem="I8O-uW-SNM" firstAttribute="trailing" secondItem="vZA-Oo-Mzb" secondAttribute="trailing" constant="52" id="awn-7M-l44"/>
+                            <constraint firstItem="vZA-Oo-Mzb" firstAttribute="leading" secondItem="I8O-uW-SNM" secondAttribute="leading" constant="52" id="uep-Ad-e1E"/>
+                            <constraint firstItem="I8O-uW-SNM" firstAttribute="trailing" secondItem="UFJ-8X-XlR" secondAttribute="trailing" constant="128" id="xWl-wA-ERP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKb-4s-gC9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="502.89855072463774" y="784.82142857142856"/>
+        </scene>
+        <!--New Mentoring Schedule SetVC-->
+        <scene sceneID="CfS-FB-kFt">
+            <objects>
+                <viewController storyboardIdentifier="NewMentoringScheduleSetVC" id="nst-6u-z1R" customClass="NewMentoringScheduleSetVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9xc-q4-jGU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktO-7U-AGj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="99"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="sQv-Oq-Hye">
+                                        <rect key="frame" x="79" y="32.5" width="40" height="36"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="39" id="48m-dt-jPW"/>
+                                            <constraint firstAttribute="width" constant="40" id="uZl-wL-whc"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-5c-eBy">
+                                        <rect key="frame" x="133" y="27" width="73" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="IJN-zh-I3F"/>
+                                            <constraint firstAttribute="width" constant="73" id="mhE-IC-wi0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멘토님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-dO-ZT0">
+                                        <rect key="frame" x="221" y="29" width="52" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="52" id="hlf-8c-QwI"/>
+                                            <constraint firstAttribute="height" constant="43" id="z6R-Oa-Hkh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="99" id="7x5-8b-V0N"/>
+                                    <constraint firstItem="HSg-5c-eBy" firstAttribute="leading" secondItem="ktO-7U-AGj" secondAttribute="leading" constant="133" id="Ghw-tn-7HE"/>
+                                    <constraint firstItem="sQv-Oq-Hye" firstAttribute="leading" secondItem="ktO-7U-AGj" secondAttribute="leading" constant="79" id="JYR-Zu-6mr"/>
+                                    <constraint firstItem="HSg-5c-eBy" firstAttribute="top" secondItem="ktO-7U-AGj" secondAttribute="top" constant="27" id="QEX-3u-dgk"/>
+                                    <constraint firstItem="sQv-Oq-Hye" firstAttribute="top" secondItem="ktO-7U-AGj" secondAttribute="top" constant="31" id="T7y-av-UU8"/>
+                                    <constraint firstItem="Hxe-dO-ZT0" firstAttribute="top" secondItem="ktO-7U-AGj" secondAttribute="top" constant="29" id="VaI-R9-sg1"/>
+                                    <constraint firstItem="Hxe-dO-ZT0" firstAttribute="leading" secondItem="ktO-7U-AGj" secondAttribute="leading" constant="221" id="qAG-Vv-uKv"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="만남을 가질 날짜를 선택해주세요" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVq-l4-Jmy">
+                                <rect key="frame" x="58" y="160" width="298" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="LsU-6M-jnT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-1F-hwx">
+                                <rect key="frame" x="139" y="625" width="136" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <color key="tintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="이 날짜로 선택"/>
+                                <connections>
+                                    <action selector="touchDateSelectButton:" destination="nst-6u-z1R" eventType="touchUpInside" id="n4Y-sJ-oCo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-dn-y05" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="220" width="414" height="349"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="349" id="2ys-sF-v7J"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q22-gp-xJm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" constant="116" id="2kP-xz-Hge"/>
+                            <constraint firstItem="ktO-7U-AGj" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" id="4Fj-To-5fM"/>
+                            <constraint firstItem="fvf-dn-y05" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" constant="176" id="AIl-Sy-4mf"/>
+                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" constant="58" id="FxN-A2-Jsl"/>
+                            <constraint firstItem="ktO-7U-AGj" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" id="Pnv-zs-Ehh"/>
+                            <constraint firstItem="fvf-dn-y05" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" id="Xdr-gs-MPB"/>
+                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="fvf-dn-y05" secondAttribute="trailing" id="XuL-yL-Dx9"/>
+                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="ktO-7U-AGj" secondAttribute="trailing" id="pyr-0H-GBt"/>
+                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="LVq-l4-Jmy" secondAttribute="trailing" constant="58" id="yvN-Tb-nCi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendarView" destination="fvf-dn-y05" id="YlL-x5-sIt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3vZ-sH-GD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="502.89855072463774" y="1530.8035714285713"/>
+        </scene>
+        <!--New Mentor Select Pop UpVC-->
+        <scene sceneID="9Te-oQ-ffo">
+            <objects>
+                <viewController storyboardIdentifier="NewMentorSelectPopUpVC" id="AhM-nJ-LH6" customClass="NewMentorSelectPopUpVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V4W-nL-fJo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VOp-dd-eSe">
+                                <rect key="frame" x="0.0" y="546" width="414" height="350"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2021년 5월 7일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8j-2Y-1Ee">
+                                        <rect key="frame" x="104" y="26" width="205" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="Guh-FR-Pyf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Oa4-QI-alB">
+                                        <rect key="frame" x="0.0" y="87" width="414" height="188"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="188" id="fii-HD-pL9"/>
+                                        </constraints>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-QQ-vJu">
+                                        <rect key="frame" x="129" y="291" width="150" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="0.89413517661578146" blue="0.25071523887505642" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="이 시간으로 선택"/>
+                                        <connections>
+                                            <action selector="showAlert:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="eHj-g3-1e1"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="v8j-2Y-1Ee" secondAttribute="trailing" constant="105" id="03I-1Y-nHL"/>
+                                    <constraint firstAttribute="height" constant="350" id="2AS-jc-nNq"/>
+                                    <constraint firstItem="Oa4-QI-alB" firstAttribute="top" secondItem="v8j-2Y-1Ee" secondAttribute="bottom" constant="18" id="GuV-kN-ZV9"/>
+                                    <constraint firstItem="v8j-2Y-1Ee" firstAttribute="leading" secondItem="VOp-dd-eSe" secondAttribute="leading" constant="104" id="Iyl-Bd-bDK"/>
+                                    <constraint firstAttribute="trailing" secondItem="Oa4-QI-alB" secondAttribute="trailing" id="LO5-Nx-BEw"/>
+                                    <constraint firstItem="Oa4-QI-alB" firstAttribute="leading" secondItem="VOp-dd-eSe" secondAttribute="leading" id="p3S-rW-hkZ"/>
+                                    <constraint firstItem="v8j-2Y-1Ee" firstAttribute="top" secondItem="VOp-dd-eSe" secondAttribute="top" constant="26" id="t8l-BV-SDl"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4u2-F0-OKe"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VOp-dd-eSe" firstAttribute="leading" secondItem="4u2-F0-OKe" secondAttribute="leading" id="3Bi-LG-eIU"/>
+                            <constraint firstAttribute="trailing" secondItem="VOp-dd-eSe" secondAttribute="trailing" id="vQI-eo-3fv"/>
+                            <constraint firstAttribute="bottom" secondItem="VOp-dd-eSe" secondAttribute="bottom" id="w23-d7-I8N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateLabel" destination="v8j-2Y-1Ee" id="ekx-4M-yLJ"/>
+                        <outlet property="timeSelectButton" destination="JE9-QQ-vJu" id="VUH-Hi-trR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ey8-7j-JoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1239.1304347826087" y="1534.8214285714284"/>
+        </scene>
+        <!--My Meet ReviewVC-->
+        <scene sceneID="6MV-k8-7jw">
+            <objects>
+                <viewController storyboardIdentifier="MyMeetReviewVC" id="vQC-d0-Jhw" customClass="MyMeetReviewVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oEf-J8-VZK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 만남후기" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bOs-nl-5Cv">
+                                <rect key="frame" x="139" y="74" width="137" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="nai-NO-p7c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
+                                <color key="textColor" red="0.41839095949999999" green="0.2607493401" blue="0.097989253700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="j7F-Do-sTQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="j7F-Do-sTQ" firstAttribute="trailing" secondItem="bOs-nl-5Cv" secondAttribute="trailing" constant="138" id="1da-fV-Pj7"/>
+                            <constraint firstItem="bOs-nl-5Cv" firstAttribute="leading" secondItem="j7F-Do-sTQ" secondAttribute="leading" constant="139" id="8NX-mx-a6W"/>
+                            <constraint firstItem="bOs-nl-5Cv" firstAttribute="top" secondItem="j7F-Do-sTQ" secondAttribute="top" constant="30" id="k8O-ZR-W70"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y38-2E-aKu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="786"/>
+        </scene>
+        <!--Schedule CancelVC-->
+        <scene sceneID="KfU-1X-vbw">
+            <objects>
+                <viewController storyboardIdentifier="ScheduleCancelVC" id="qbL-dF-kxr" customClass="ScheduleCancelVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lzu-Qy-6QN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pal-OI-H4C">
+                                <rect key="frame" x="35" y="255" width="344" height="236"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">부득이하게 멘토링 일정을 취소할 경우에는,  
+꼭 멘토님께 메세지를 통해 사정을 설명해주세요. 
+별다른 사유 없이 양해를 구하지 않은  
+일방적인 만남 일정 취소를 하는 일이 발견될 경우,  
+서비스 이용에 재제를 받을 수 있음을 명심해 주세요.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FHm-W4-xLW">
+                                <rect key="frame" x="130" y="599" width="137" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="일정 취소"/>
+                                <connections>
+                                    <action selector="showScheduleEditAlert:" destination="qbL-dF-kxr" eventType="touchUpInside" id="1mx-w8-agC"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="I3E-HY-gKc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmT-VF-Db2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1852.1739130434785" y="2143.5267857142858"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
