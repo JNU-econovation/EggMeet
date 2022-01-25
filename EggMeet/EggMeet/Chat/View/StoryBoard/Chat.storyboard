@@ -231,14 +231,48 @@
                                             <outlet property="timeLabel" destination="Llp-dF-BIQ" id="WTK-3A-5kC"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WelcomeChatroomTVC" rowHeight="205" id="gZ0-3u-TG2" customClass="WellcomeChatroomTVC" customModule="EggMeet" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="315.5" width="375" height="205"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gZ0-3u-TG2" id="683-fs-Fjt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi0-K2-BF9">
+                                                    <rect key="frame" x="287" y="21" width="42" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="42" id="VAM-pm-pGq"/>
+                                                        <constraint firstAttribute="height" constant="20" id="t7e-JT-xhE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_chatroom" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
+                                                    <rect key="frame" x="182" y="46" width="147" height="138"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="147" id="K0q-Dc-cRo"/>
+                                                        <constraint firstAttribute="height" constant="117" id="XLx-WU-1cL"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hi0-K2-BF9" secondAttribute="trailing" constant="30" id="If5-GF-7zx"/>
+                                                <constraint firstItem="hi0-K2-BF9" firstAttribute="top" secondItem="683-fs-Fjt" secondAttribute="topMargin" constant="10" id="Pbc-bw-bPA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FaD-BS-rVf" secondAttribute="trailing" constant="30" id="arg-iZ-6ih"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FaD-BS-rVf" secondAttribute="bottom" constant="10" id="kUY-I1-N7p"/>
+                                                <constraint firstItem="FaD-BS-rVf" firstAttribute="top" secondItem="hi0-K2-BF9" secondAttribute="bottom" constant="5" id="mVa-Cq-uvS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SendMentorRequestTVC" rowHeight="228" id="MNU-LF-gcj" customClass="SendMentorRequestTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="315.5" width="375" height="228"/>
+                                        <rect key="frame" x="0.0" y="520.5" width="375" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MNU-LF-gcj" id="Wdz-ZV-IRD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-7d-BGq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-7d-BGq">
                                                     <rect key="frame" x="287" y="21" width="42" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="Rev-1c-mgG"/>
@@ -248,7 +282,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-6N-oLC">
+                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-6N-oLC">
                                                     <rect key="frame" x="182" y="46" width="147" height="172"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentor_request" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-wf-vGx">
@@ -310,40 +344,6 @@
                                         <connections>
                                             <outlet property="chatBotView" destination="WAG-6N-oLC" id="3zI-a6-jtO"/>
                                         </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="WelcomeChatroomTVC" rowHeight="205" id="gZ0-3u-TG2" customClass="WellcomeChatroomTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="543.5" width="375" height="205"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gZ0-3u-TG2" id="683-fs-Fjt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi0-K2-BF9">
-                                                    <rect key="frame" x="287" y="21" width="42" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="42" id="VAM-pm-pGq"/>
-                                                        <constraint firstAttribute="height" constant="20" id="t7e-JT-xhE"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="welcome_chatroom" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
-                                                    <rect key="frame" x="182" y="46" width="147" height="138"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="147" id="K0q-Dc-cRo"/>
-                                                        <constraint firstAttribute="height" constant="117" id="XLx-WU-1cL"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="hi0-K2-BF9" secondAttribute="trailing" constant="30" id="If5-GF-7zx"/>
-                                                <constraint firstItem="hi0-K2-BF9" firstAttribute="top" secondItem="683-fs-Fjt" secondAttribute="topMargin" constant="10" id="Pbc-bw-bPA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FaD-BS-rVf" secondAttribute="trailing" constant="30" id="arg-iZ-6ih"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="FaD-BS-rVf" secondAttribute="bottom" constant="10" id="kUY-I1-N7p"/>
-                                                <constraint firstItem="FaD-BS-rVf" firstAttribute="top" secondItem="hi0-K2-BF9" secondAttribute="bottom" constant="5" id="mVa-Cq-uvS"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RegisterScheduleTVC" rowHeight="177" id="yhC-pb-GKg" customClass="RegisterScheduleTVC" customModule="EggMeet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="748.5" width="375" height="177"/>

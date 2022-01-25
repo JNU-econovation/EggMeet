@@ -31,12 +31,11 @@ class ChatroomVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
         setupTextViewUI()
-        postChatRoom()
+        // postChatRoom()
         registerSocket()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +68,8 @@ class ChatroomVC: UIViewController{
                 "content-type" : "application/json;charset=UTF-8"
             ]
             NSLog("publish topic : \(topic)")
+            let JSONData = "{\"content\":\"\(messageString)\"}"
+            
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.contentsDictionary, toDestination: topic)
             // socketClient.sendMessage(message: messageString, toDestination: topic, withHeaders: header, withReceipt: nil)// if success, callback stompClient method
@@ -105,9 +106,10 @@ class ChatroomVC: UIViewController{
         NSLog("accessToken : \(accessToken)")
         let connectHeader = [
             "Authorization" : "bearer \(accessToken)",
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json;charset=UTF-8"
         ]
         NSLog("connect Header : \(connectHeader)")
+        // socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: connectHeader)
     }
         
@@ -270,7 +272,12 @@ extension ChatroomVC: StompClientLibDelegate {
         NSLog("socket is connected : \(topic)")
         let ud = UserDefaults.standard
         let accessToken = ud.string(forKey: "accessToken")!
-        let header = ["Authorization" : "bearer \(accessToken)"]
+        let header = [
+            "Authorization" : "bearer \(accessToken)",
+            "Content-Type" : "application/json;charset=UTF-8",
+            "id" : "1"
+            
+        ]
         socketClient.subscribeWithHeader(destination: topic, withHeader: header)
     }
     
@@ -279,6 +286,7 @@ extension ChatroomVC: StompClientLibDelegate {
     }
 
     func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
+        NSLog("serverDidSendError")
         print("Error : \(String(describing: message))")
     }
     
