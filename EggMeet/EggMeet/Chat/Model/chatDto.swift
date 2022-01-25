@@ -28,6 +28,10 @@ struct chatDto {
         return dictionary as NSDictionary
     }
     
+    var contentsDictionary: NSDictionary{
+        return ["content" : content] as NSDictionary
+    }
+    
     func debugPrint(){
         NSLog("roomID : \(roomId)")
         NSLog("writer : \(writer)")
