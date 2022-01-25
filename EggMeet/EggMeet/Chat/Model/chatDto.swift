@@ -10,13 +10,17 @@ import Foundation
 struct chatDto {
     var roomId : Int
     var writer : String
-    var message :String
+    var content: String
+    var dateTime : Double
+    var type : String
     
     var dictionary: [String: Any] {
         return [
             "roomId" : roomId,
             "writer" : writer,
-            "message" : message
+            "content" : content,
+            "dateTime" : dateTime,
+            "type" : type
         ]
     }
     
@@ -27,6 +31,8 @@ struct chatDto {
     func debugPrint(){
         NSLog("roomID : \(roomId)")
         NSLog("writer : \(writer)")
-        NSLog("message : \(message)")
+        NSLog("content : \(content)")
+        NSLog("dateTime : \(dateTime)")
+        NSLog("type : \(type)")
     }
 }

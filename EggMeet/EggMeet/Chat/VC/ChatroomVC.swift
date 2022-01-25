@@ -20,7 +20,7 @@ class ChatroomVC: UIViewController{
     var chatroomID: Int = TEST_CHAT_ROOM_ID
     var chatContentList: [chatDto] = [chatDto]()
     let subscribeTopic = "/sub/chat/room/"
-    let publishTopic = "/pub/chat/room/message"
+    let publishTopic = "/pub/chat/room/"
     var keyHeight: CGFloat?
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
@@ -42,6 +42,7 @@ class ChatroomVC: UIViewController{
     }
     override func viewWillAppear(_ animated: Bool) {
         print("call viewWillAppear")
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -59,9 +60,11 @@ class ChatroomVC: UIViewController{
         if messageString == ""{
             return
         } else {
-            let topic = self.publishTopic
+            let topic = self.publishTopic + "\(self.chatroomID)/message"
             let writer = setMyChatroomName()
-            let params = chatDto(roomId: self.chatroomID, writer:writer, message: messageString)
+            let type = "SYSTEM"
+            let params = chatDto(roomId: self.chatroomID, writer:writer, content: messageString, dateTime: getCurrentTimeDouble(), type: type)
+            NSLog("publish topic : \(topic)")
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
             self.messageTextView.text = ""
@@ -92,7 +95,12 @@ class ChatroomVC: UIViewController{
         let baseURL = Bundle.main.infoDictionary!["WS_URL"] as? String ?? ""
         let completeURL = "ws://" + baseURL + "/stomp-chat"
         let wsurl = NSURL(string: completeURL)!
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
+        let ud = UserDefaults.standard
+        let accessToken = ud.string(forKey: "accessToken")!
+        NSLog("accessToken : \(accessToken)")
+        let connectHeader = ["Authorization" : "bearer \(accessToken)"]
+        NSLog("connect Header : \(connectHeader)")
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Authorization" : "bearer \(accessToken)"])
     }
         
     func createChatRoom(){
@@ -106,7 +114,7 @@ class ChatroomVC: UIViewController{
             if response.response?.statusCode == STATUS_OK {
                 self.chatroomID = id
             } else {
-                print("")
+                print("request fail")
             }
         }
     }
@@ -121,6 +129,18 @@ class ChatroomVC: UIViewController{
     
     func setupTextViewUI(){
         self.messageTextView.layer.cornerRadius = 5
+    }
+    
+    func getCurrentTimeDouble() -> Double{
+        return Date.now.timeIntervalSince1970
+    }
+    
+    func getTimeClockFormat(time: Double) -> String{
+        let date = Date(timeIntervalSince1970: time)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        let clockTime = formatter.string(from: date)
+        return clockTime
     }
     
 }
@@ -138,35 +158,18 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let ud = UserDefaults.standard
         let writer = ud.string(forKey: "nickname")
-        let dateformat = DateFormatter()
-        dateformat.dateFormat = "HH:mm"
-        let currentTime = dateformat.string(from: Date())
         
+        // 메세지 전송
         if self.chatContentList[indexPath.row].writer == writer {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
-            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, currentTime: currentTime)
+            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
+        // 시스템 메세지 출력
         } else if self.chatContentList[indexPath.row].writer == "system"{
-            switch self.chatContentList[indexPath.row].message{
-            case "/mentor-request":
-                let cell = tableView.dequeueReusableCell(withIdentifier: "SendMentorRequestTVC", for: indexPath) as! SendMentorRequestTVC
-                return cell
-            case "/welcome-chatroom":
-                let cell = tableView.dequeueReusableCell(withIdentifier: "WelcomeChatroomTVC", for: indexPath) as! WellcomeChatroomTVC
-                return cell
-            case "/register-schedule":
-                let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleTVC", for: indexPath) as!
-                    RegisterScheduleTVC
-                return cell
-            case "/confirm-mentoring":
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ConfirmMentoringTVC", for: indexPath) as! ConfirmMentoringTVC
-                return cell
-            default:
-                NSLog("chat bot not send message")
-            }
 
         }
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
-            return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, currentTime: currentTime)
+        // 메세지 수신
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
+        return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
 
     }
     
@@ -174,7 +177,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         NSLog("cell.nickname.label : \(cell.nicknameLabel.text!)")
         NSLog("cell.content.label : \(cell.contentLabel.text!)")
         NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writer)")
-        NSLog("success cell in text content : \(self.chatContentList[indexPath.row].message)")
+        NSLog("success cell in text content : \(self.chatContentList[indexPath.row].content)")
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -193,21 +196,23 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         }
     }
     
-    func makeSendMessageTableViewCell(cell: ChatTVC, indexPath: IndexPath, currentTime: String) -> UITableViewCell {
+    func makeSendMessageTableViewCell(cell: ChatTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell {
+        let dateTimeNowString = self.getTimeClockFormat(time: getCurrentTimeDouble())
         cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
-        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+        cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
         cell.contentLabel?.layer.cornerRadius = 5
-        cell.timeLabel?.text = currentTime
+        cell.timeLabel?.text = dateTimeNowString
         return cell
     }
     
-    func makeReceiveMessageTableViewCell(cell: ChatOpponentTVC, indexPath: IndexPath, currentTime: String) -> UITableViewCell{
+    func makeReceiveMessageTableViewCell(cell: ChatOpponentTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell{
+        let dateTimeString = self.getTimeClockFormat(time: self.chatContentList[indexPath.row].dateTime)
         cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
-        cell.contentLabel?.text = self.chatContentList[indexPath.row].message
+        cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
         cell.contentLabel?.layer.cornerRadius = 5
-        cell.timeLabel?.text = currentTime
+        cell.timeLabel?.text = dateTimeString
         return cell
     }
 }
@@ -221,7 +226,7 @@ extension ChatroomVC: StompClientLibDelegate {
         
         if let data = stringBody?.data(using: .utf8){
             let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            let chatContent :chatDto = chatDto(roomId: chatJSON["roomId"] as! Int, writer: chatJSON["writer"] as! String, message: chatJSON["message"] as! String)
+            let chatContent :chatDto = chatDto(roomId: chatJSON["roomId"] as! Int, writer: chatJSON["writer"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double, type: chatJSON["type"] as! String)
             self.chatContentList.append(chatContent)
             NSLog("success append chat Content : \(chatContent)")
             NSLog("chatContentList : \(self.chatContentList)")
@@ -238,8 +243,8 @@ extension ChatroomVC: StompClientLibDelegate {
     // subscribe function
     func stompClientDidConnect(client: StompClientLib!) {
         let topic = self.subscribeTopic + "\(chatroomID)"
-        NSLog("\(topic)")
-        print("socket is connected : \(topic)")
+        NSLog("subscribe topic : \(topic)")
+        NSLog("socket is connected : \(topic)")
         socketClient.subscribe(destination: topic)
     }
     
@@ -263,38 +268,7 @@ extension ChatroomVC: StompClientLibDelegate {
 
 
 extension ChatroomVC : ChatBot {
-    func sendMentorRequest(){
-        let topic = self.publishTopic
-        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/mentor-request")
-        params.debugPrint()
-        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
-    }
-    
-    func sendWelcomeChatroom() {
-        let topic = self.publishTopic
-        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/welcome-chatroom")
-        params.debugPrint()
-        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
-    }
-    
-    func sendRegisterSchedule() {
-        let topic = self.publishTopic
-        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/register-schedule")
-        params.debugPrint()
-        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
-    }
-    
-    func sendConfirmMentoring(){
-        let topic = self.publishTopic
-        let params = chatDto(roomId: self.chatroomID, writer: "system", message: "/confirm-mentoring")
-        params.debugPrint()
-        socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic)
-    }
     
     func sendChatBotTest(){
-        sendMentorRequest()
-        sendWelcomeChatroom()
-        sendRegisterSchedule()
-        sendConfirmMentoring()
     }
 }
