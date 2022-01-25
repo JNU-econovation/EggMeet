@@ -96,6 +96,8 @@
 		CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */; };
 		CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */; };
 		CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */; };
+		CD414D1027A060F700393086 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D0F27A060F700393086 /* MypageModel.swift */; };
+		CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D1127A0649C00393086 /* MypageNetwork.swift */; };
 		CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -195,6 +197,8 @@
 		CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrowthPointVC.swift; sourceTree = "<group>"; };
 		CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeeMyProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		CD414D0F27A060F700393086 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
+		CD414D1127A0649C00393086 /* MypageNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageNetwork.swift; sourceTree = "<group>"; };
 		CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMyProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -527,26 +531,12 @@
 		CD1B969C279AF061009A0DF6 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				CD414D1327A0652000393086 /* Network */,
+				CD414D0E27A060DB00393086 /* Model */,
 				CD1B96A1279AF0C3009A0DF6 /* VC */,
 				CD1B96A0279AF0B6009A0DF6 /* View */,
-				CD1B969F279AF0AA009A0DF6 /* Model */,
-				CD1B969D279AF098009A0DF6 /* Network */,
 			);
 			path = Mypage;
-			sourceTree = "<group>";
-		};
-		CD1B969D279AF098009A0DF6 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		CD1B969F279AF0AA009A0DF6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CD1B96A0279AF0B6009A0DF6 /* View */ = {
@@ -567,6 +557,22 @@
 				CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		CD414D0E27A060DB00393086 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD414D0F27A060F700393086 /* MypageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD414D1327A0652000393086 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD414D1127A0649C00393086 /* MypageNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -737,6 +743,7 @@
 				9CC0D5C9279DAC8C00E4885B /* ScheduleCancelVC.swift in Sources */,
 				9CC0D5CB279E91D600E4885B /* HomeProfileVC.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
+				CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */,
 				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
@@ -768,6 +775,7 @@
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
 				9CC0D5B6279D128C00E4885B /* NewMentoringRegisterVC.swift in Sources */,
+				CD414D1027A060F700393086 /* MypageModel.swift in Sources */,
 				9CC0D5C2279D4B4B00E4885B /* NewMentoringSelectPopUpVC.swift in Sources */,
 				19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */,
 				9CE4B6872781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift in Sources */,
