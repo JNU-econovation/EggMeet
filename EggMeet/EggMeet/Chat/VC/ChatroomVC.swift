@@ -61,13 +61,17 @@ class ChatroomVC: UIViewController{
         } else {
             let ud = UserDefaults.standard
             let topic = self.publishTopic + "\(self.chatroomID)/message"
-            let params = chatDto(roomId: self.chatroomID, writer: "yunseong", content: messageString, dateTime: getCurrentTimeDouble(), type: "")
+            let params = chatDto(roomId: self.chatroomID, writer: "yunseong", content: messageString, dateTime: getCurrentTimeDouble(), type: MessageType.MESSAGE.rawValue)
             let accessToken = ud.string(forKey: "accessToken")!
-            let header = ["Authorization" : "bearer \(accessToken)"]
+            let header =
+            [
+                "Authorization" : "bearer \(accessToken)",
+                "content-type" : "application/json;charset=UTF-8"
+            ]
             NSLog("publish topic : \(topic)")
             params.debugPrint()
-            // socketClient.sendJSONForDict(dict: params.contentsDictionary, toDestination: topic)
-            socketClient.sendMessage(message: messageString, toDestination: topic, withHeaders: header, withReceipt: nil)// if success, callback stompClient method
+            socketClient.sendJSONForDict(dict: params.contentsDictionary, toDestination: topic)
+            // socketClient.sendMessage(message: messageString, toDestination: topic, withHeaders: header, withReceipt: nil)// if success, callback stompClient method
             self.messageTextView.text = ""
         }
     }
@@ -99,9 +103,12 @@ class ChatroomVC: UIViewController{
         let ud = UserDefaults.standard
         let accessToken = ud.string(forKey: "accessToken")!
         NSLog("accessToken : \(accessToken)")
-        let connectHeader = ["Authorization" : "bearer \(accessToken)"]
+        let connectHeader = [
+            "Authorization" : "bearer \(accessToken)",
+            "Content-Type" : "application/json"
+        ]
         NSLog("connect Header : \(connectHeader)")
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Authorization" : "bearer \(accessToken)"])
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: connectHeader)
     }
         
     func createChatRoom(){
