@@ -85,6 +85,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="SBe-WL-dtX"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                         <constraints>
                             <constraint firstItem="5Fy-zU-suz" firstAttribute="centerY" secondItem="esf-CS-YEM" secondAttribute="centerY" id="FfX-hr-ebT"/>
