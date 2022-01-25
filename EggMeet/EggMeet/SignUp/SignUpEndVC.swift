@@ -16,5 +16,9 @@ class SignUpEndVC: UIViewController {
     }
     
     
+    @IBAction func goToMypageButton(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "ToMyPage", sender: self)
+        
+    }
     
 }
