@@ -198,7 +198,7 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
     func isBanUser() -> Bool{
         var isBannedUser : Bool = false
         let ud = UserDefaults.standard
-        let apiURL = getAPI_URL(target: "/auth/user/ban") + "?email=\(ud.string(forKey: "email")!)"
+        let apiURL = getAPI_URL(target: "/auth/user/ban")+"?email=\(ud.string(forKey: "email")!)&loginType=APPLE"
         NSLog("apiURL 확인 : \(apiURL)")
         var request = URLRequest(url: URL(string: apiURL)!)
         request.httpMethod = "GET"
