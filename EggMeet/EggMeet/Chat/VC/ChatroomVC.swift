@@ -14,11 +14,12 @@ let CHAT_SECTION_NUM = 1
 let STATUS_OK = 200
 let TEST_CHAT_ROOM_ID = 1
 let TEST_OPPONENT_ID = 22
+let TEST_MY_ID = 21
 class ChatroomVC: UIViewController{
     var opponentNickname: String?
     var socketClient = StompClientLib()
     var chatroomID: Int = TEST_CHAT_ROOM_ID
-    var chatContentList: [chatDto] = [chatDto]()
+    var chatContentList: [chatReceiveDto] = [chatReceiveDto]()
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/"
     var keyHeight: CGFloat?
@@ -31,12 +32,11 @@ class ChatroomVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
         setupTextViewUI()
-        postChatRoom()
+        // postChatRoom()
         registerSocket()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +69,8 @@ class ChatroomVC: UIViewController{
                 "content-type" : "application/json;charset=UTF-8"
             ]
             NSLog("publish topic : \(topic)")
+            let JSONData = "{\"content\":\"\(messageString)\"}"
+            
             params.debugPrint()
             socketClient.sendJSONForDict(dict: params.contentsDictionary, toDestination: topic)
             // socketClient.sendMessage(message: messageString, toDestination: topic, withHeaders: header, withReceipt: nil)// if success, callback stompClient method
@@ -105,9 +107,10 @@ class ChatroomVC: UIViewController{
         NSLog("accessToken : \(accessToken)")
         let connectHeader = [
             "Authorization" : "bearer \(accessToken)",
-            "Content-Type" : "application/json"
+            "Content-Type" : "application/json;charset=UTF-8"
         ]
         NSLog("connect Header : \(connectHeader)")
+        // socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate)
         socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: connectHeader)
     }
         
@@ -179,15 +182,13 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let ud = UserDefaults.standard
-        let writer = ud.string(forKey: "nickname")
-        
         // 메세지 전송
-        if self.chatContentList[indexPath.row].writer == writer {
+        if self.chatContentList[indexPath.row].writerId == TEST_MY_ID {
+            NSLog("call cellForRowAt")
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
         // 시스템 메세지 출력
-        } else if self.chatContentList[indexPath.row].writer == "system"{
+        } else if self.chatContentList[indexPath.row].writerNickname == "system"{
 
         }
         // 메세지 수신
@@ -199,7 +200,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     func printCellDataLog(cell: ChatTVC, indexPath: IndexPath){
         NSLog("cell.nickname.label : \(cell.nicknameLabel.text!)")
         NSLog("cell.content.label : \(cell.contentLabel.text!)")
-        NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writer)")
+        NSLog("success cell in text writer : \(self.chatContentList[indexPath.row].writerNickname)")
         NSLog("success cell in text content : \(self.chatContentList[indexPath.row].content)")
     }
     
@@ -221,7 +222,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     
     func makeSendMessageTableViewCell(cell: ChatTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell {
         let dateTimeNowString = self.getTimeClockFormat(time: getCurrentTimeDouble())
-        cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writer
+        cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writerNickname
         cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
         cell.contentLabel?.layer.cornerRadius = 5
@@ -231,7 +232,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     
     func makeReceiveMessageTableViewCell(cell: ChatOpponentTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell{
         let dateTimeString = self.getTimeClockFormat(time: self.chatContentList[indexPath.row].dateTime)
-        cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writer
+        cell.opponentNicknameLabel?.text = self.chatContentList[indexPath.row].writerNickname
         cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
         cell.contentLabel?.layer.cornerRadius = 5
@@ -249,9 +250,9 @@ extension ChatroomVC: StompClientLibDelegate {
         
         if let data = stringBody?.data(using: .utf8){
             let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            let chatContent :chatDto = chatDto(roomId: chatJSON["roomId"] as! Int, writer: chatJSON["writer"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double, type: chatJSON["type"] as! String)
+            let chatContent :chatReceiveDto = chatReceiveDto(id: chatJSON["id"] as! Int, chatroomId: chatJSON["chatroomId"] as! Int, writerId: chatJSON["writerId"] as! Int, writerPictrureIndex: chatJSON["writerPictureIndex"] as! Int, writerNickname: chatJSON["writerNickname"] as! String, type: chatJSON["type"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double)
             self.chatContentList.append(chatContent)
-            NSLog("success append chat Content : \(chatContent)")
+            NSLog("success append chat Content : \(chatContent.debugPrint())")
             NSLog("chatContentList : \(self.chatContentList)")
         }
         self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
@@ -270,7 +271,12 @@ extension ChatroomVC: StompClientLibDelegate {
         NSLog("socket is connected : \(topic)")
         let ud = UserDefaults.standard
         let accessToken = ud.string(forKey: "accessToken")!
-        let header = ["Authorization" : "bearer \(accessToken)"]
+        let header = [
+            "Authorization" : "bearer \(accessToken)",
+            "Content-Type" : "application/json;charset=UTF-8",
+            "id" : "1"
+            
+        ]
         socketClient.subscribeWithHeader(destination: topic, withHeader: header)
     }
     
@@ -279,6 +285,7 @@ extension ChatroomVC: StompClientLibDelegate {
     }
 
     func serverDidSendError(client: StompClientLib!, withErrorMessage description: String, detailedErrorMessage message: String?) {
+        NSLog("serverDidSendError")
         print("Error : \(String(describing: message))")
     }
     

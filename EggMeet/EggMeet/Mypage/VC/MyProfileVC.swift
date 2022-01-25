@@ -25,9 +25,19 @@ class MyProfileVC: UIViewController {
         MyProfileImage.clipsToBounds = true
         MyProfileImage.layer.borderColor = UIColor.clear.cgColor
         //원형 이미지의 테두리 제거
-
-        // Do any additional setup after loading the view.
+        setProfileData()
     }
+    
+    func setProfileData(){
+        MypageNetwork.shared.getMypageData() { data in
+            
+            self.MyProfileNickname.text = data.nickname
+            
+            }
+            
+           
+    }
+    
     
    
     
