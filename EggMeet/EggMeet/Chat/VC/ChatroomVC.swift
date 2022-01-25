@@ -13,7 +13,7 @@ import Alamofire
 let CHAT_SECTION_NUM = 1
 let STATUS_OK = 200
 let TEST_CHAT_ROOM_ID = 1
-
+let TEST_OPPONENT_ID = 22
 class ChatroomVC: UIViewController{
     var opponentNickname: String?
     var socketClient = StompClientLib()
@@ -22,6 +22,7 @@ class ChatroomVC: UIViewController{
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/"
     var keyHeight: CGFloat?
+    let opponentId = TEST_OPPONENT_ID
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -35,9 +36,7 @@ class ChatroomVC: UIViewController{
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
         setupTextViewUI()
-        if !isExistChatRoom(){
-            createChatRoom()
-        }
+        postChatRoom()
         registerSocket()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -60,13 +59,15 @@ class ChatroomVC: UIViewController{
         if messageString == ""{
             return
         } else {
+            let ud = UserDefaults.standard
             let topic = self.publishTopic + "\(self.chatroomID)/message"
-            let writer = setMyChatroomName()
-            let type = "SYSTEM"
-            let params = chatDto(roomId: self.chatroomID, writer:writer, content: messageString, dateTime: getCurrentTimeDouble(), type: type)
+            let params = chatDto(roomId: self.chatroomID, writer: "yunseong", content: messageString, dateTime: getCurrentTimeDouble(), type: "")
+            let accessToken = ud.string(forKey: "accessToken")!
+            let header = ["Authorization" : "bearer \(accessToken)"]
             NSLog("publish topic : \(topic)")
             params.debugPrint()
-            socketClient.sendJSONForDict(dict: params.nsDictionary, toDestination: topic) // if success, callback stompClient method
+            // socketClient.sendJSONForDict(dict: params.contentsDictionary, toDestination: topic)
+            socketClient.sendMessage(message: messageString, toDestination: topic, withHeaders: header, withReceipt: nil)// if success, callback stompClient method
             self.messageTextView.text = ""
         }
     }
@@ -143,6 +144,21 @@ class ChatroomVC: UIViewController{
         return clockTime
     }
     
+    func postChatRoom(){
+        let baseURL = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+        let apiURL = "http://" + baseURL + "/chat/room?participantId=\(self.opponentId)"
+        let ud = UserDefaults.standard
+        let accessToken = ud.string(forKey: "accessToken")!
+        var request = URLRequest(url: URL(string: apiURL)!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        request.timeoutInterval = 10
+    
+        AF.request(request).responseString{ (response) in
+            NSLog("\(response.response?.statusCode)")
+        }
+    }
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -245,7 +261,10 @@ extension ChatroomVC: StompClientLibDelegate {
         let topic = self.subscribeTopic + "\(chatroomID)"
         NSLog("subscribe topic : \(topic)")
         NSLog("socket is connected : \(topic)")
-        socketClient.subscribe(destination: topic)
+        let ud = UserDefaults.standard
+        let accessToken = ud.string(forKey: "accessToken")!
+        let header = ["Authorization" : "bearer \(accessToken)"]
+        socketClient.subscribeWithHeader(destination: topic, withHeader: header)
     }
     
     func serverDidSendReceipt(client: StompClientLib!, withReceiptId receiptId: String) {
@@ -264,6 +283,7 @@ extension ChatroomVC: StompClientLibDelegate {
          print("DESTINATION : \(destination)")
          print("String JSON BODY : \(String(describing: jsonBody))")
      }
+    
 }
 
 
