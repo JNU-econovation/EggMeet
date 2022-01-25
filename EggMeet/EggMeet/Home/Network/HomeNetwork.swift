@@ -12,14 +12,9 @@ struct HomeNetwork {
     static let shared = HomeNetwork()
     let ud = UserDefaults.standard
     
-    func getUserMentorData(location: String, category: String, growthPointSort: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        var url: String = ""
-        if age == 0 {
-            url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&sex=\(sex)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)&growthPointSort=\(growthPointSort)"
-        }else{
-            url = getAPI_URL(target: "/user/mentor")+"?location=\(location)&sex=\(sex)&age=\(age)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)&growthPointSort=\(growthPointSort)"
-        }
-       
+    func getUserMentorData(location: String, category: String, growthPointSort: String, sex: String, isOnlineAvailable: Bool?, isOfflineAvailable: Bool?, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        var url: String = getAPI_URL(target: "/user/mentor")
+        url += setParams(location: location, category: category, growthPointSort: growthPointSort, sex: sex, isOnlineAvailable: isOnlineAvailable, isOfflineAvailable: isOfflineAvailable, age: age)
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
@@ -66,16 +61,52 @@ struct HomeNetwork {
         let apiURL: String = "http://"+mainAddress + target
         return apiURL
     }
+    
+    
+    func setParams(location: String, category: String, growthPointSort: String, sex: String, isOnlineAvailable: Bool?, isOfflineAvailable: Bool?, age: Int) -> String {
+        var paramsArr: [String] = []
+        if location.count != 0 {
+            paramsArr.append("location=\(location)")
+        }
+        if category.count != 0 {
+            paramsArr.append("category=\(category)")
+        }
+        if growthPointSort.count != 0{
+            paramsArr.append("growthPointSort=\(growthPointSort)")
+        }
+        if sex.count != 0{
+            paramsArr.append("sex=\(sex)")
+        }
+        if isOnlineAvailable == true {
+            paramsArr.append("isOnlineAvailable=\(isOnlineAvailable!)")
+        }
+        if isOfflineAvailable == true {
+            paramsArr.append("isOfflineAvailable=\(isOfflineAvailable!)")
+        }
+        if age != 0 {
+            paramsArr.append("age=\(age)")
+        }
+        
+        var parameterString: String = ""
+        if paramsArr.count != 0{
+            parameterString += "?"
+        }
+        
+        for str in paramsArr {
+            parameterString += str + "&"
+        }
+        if paramsArr.count != 0 {
+            parameterString.removeLast()
+        }
+        print("parameterStr : \(parameterString)")
+        return parameterString
+    }
 }
 
 extension HomeNetwork {
-    func getUserMenteeData(location: String, category: String, sex: String, isOnlineAvailable: Bool, isOfflineAvailable: Bool, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
-        var url: String = ""
-        if age == 0 {
-            url = getAPI_URL(target: "/user/mentee")+"?location=\(location)&sex=\(sex)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)"
-        }else{
-            url = getAPI_URL(target: "/user/mentee")+"?location=\(location)&sex=\(sex)&age=\(age)&isOnlineAvailable=\(isOnlineAvailable)&isOfflineAvailble=\(isOfflineAvailable)&category=\(category)"
-        }
+    func getUserMenteeData(location: String, category: String, sex: String, isOnlineAvailable: Bool?, isOfflineAvailable: Bool?, age: Int, completion: @escaping ([UserMentorResponseModel]) -> Void)  {
+        var url: String =  getAPI_URL(target: "/user/mentee")
+        url += setParams(location: location, category: category, growthPointSort: "", sex: sex, isOnlineAvailable: isOnlineAvailable, isOfflineAvailable: isOfflineAvailable, age: age)
         NSLog("api URL : \(url)")
         
         let accessToken: String = ud.string(forKey: "accessToken")!
