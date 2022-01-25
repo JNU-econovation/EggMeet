@@ -16,4 +16,15 @@ struct chatReceiveDto{
     var type : String
     var content : String
     var dateTime : Double
+    
+    func debugPrint(){
+        NSLog("id \(id)")
+        NSLog("chatroomId : \(chatroomId)")
+        NSLog("writerId : \(writerId)")
+        NSLog("writerPictureIndex : \(writerPictrureIndex)")
+        NSLog("writerNickname : \(writerNickname)")
+        NSLog("type : \(type)")
+        NSLog("content : \(content)")
+        NSLog("dateTime : \(dateTime)")
+    }
 }
