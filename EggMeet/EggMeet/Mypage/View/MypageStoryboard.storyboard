@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hi5-Id-L9H">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -11,12 +11,14 @@
         <!--SeeMyProfile-->
         <scene sceneID="QfT-sk-bX0">
             <objects>
-                <viewControllerPlaceholder storyboardName="SeeMyProfileStoryboard" referencedIdentifier="SeeMyProfile" id="LC4-J4-IRw" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SeeMyProfileStoryboard" referencedIdentifier="SeeMyProfile" id="LC4-J4-IRw" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="v6W-vL-2nB"/>
+                </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZE-27-Caw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1043" y="516"/>
+            <point key="canvasLocation" x="2643" y="-748"/>
         </scene>
-        <!--마이페이지-->
+        <!--MypageVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MypageVC" id="Y6W-OH-hqX" customClass="MypageVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
@@ -48,9 +50,28 @@
                                 <rect key="frame" x="0.0" y="95" width="414" height="144"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <segue destination="y2G-gF-5bZ" kind="embed" id="e05-ym-1I1"/>
+                                    <segue destination="y2G-gF-5bZ" kind="embed" id="4q6-T0-YUq"/>
                                 </connections>
                             </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44g-zA-RaX">
+                                <rect key="frame" x="287" y="160" width="107" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="나의 프로필">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="AppleSDGothicNeo-Light"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToSeeMyProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tZu-qT-XrK"/>
+                                    <segue destination="LC4-J4-IRw" kind="push" identifier="ToSeeMyProfile" id="hOJ-Gm-nOy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -59,7 +80,7 @@
                             <constraint firstItem="vof-5t-brX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="25" id="gq3-cf-5np"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.fill" catalog="system" id="cjG-Tq-ANT"/>
+                    <navigationItem key="navigationItem" id="b9E-qD-4Yz"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="GrowthPointContainerView" destination="IQg-36-d49" id="wGC-Us-4XE"/>
@@ -70,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1042.0289855072465" y="94.419642857142847"/>
+            <point key="canvasLocation" x="1963.7681159420292" y="106.47321428571428"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="uDg-y2-jxK">
@@ -197,7 +218,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jo2-6g-8KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="431"/>
+            <point key="canvasLocation" x="3344.9275362318845" y="428.57142857142856"/>
         </scene>
         <!--MyGrowthPointView-->
         <scene sceneID="et8-FL-lVY">
@@ -274,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xmf-PT-eX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="-60"/>
+            <point key="canvasLocation" x="3344.9275362318845" y="-68.303571428571431"/>
         </scene>
         <!--MyProfileView-->
         <scene sceneID="AeD-pe-KOz">
@@ -291,25 +312,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44g-zA-RaX">
-                                <rect key="frame" x="287" y="63.5" width="107" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="나의 프로필">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="AppleSDGothicNeo-Light"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="goToSeeMyProfile:" destination="y2G-gF-5bZ" eventType="touchUpInside" id="5Pf-V0-lny"/>
-                                    <action selector="toMyProfileButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="5dj-0j-H2U"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-dE-lpB">
                                 <rect key="frame" x="169.5" y="69.5" width="39.5" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -325,6 +327,7 @@
                         <viewLayoutGuide key="safeArea" id="cI5-J9-r6N"/>
                         <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="4Fy-Z7-v3e"/>
                     <connections>
                         <outlet property="MyProfileImage" destination="XX4-eV-Ibq" id="qNd-EN-jwg"/>
                         <outlet property="MyProfileNickname" destination="Tas-dE-lpB" id="jBT-D9-Oig"/>
@@ -332,7 +335,26 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k6u-La-lrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2081" y="-454"/>
+            <point key="canvasLocation" x="3345" y="-327"/>
+        </scene>
+        <!--마이페이지-->
+        <scene sceneID="aA3-sS-NIj">
+            <objects>
+                <navigationController storyboardIdentifier="MypageStart" automaticallyAdjustsScrollViewInsets="NO" id="Hi5-Id-L9H" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.fill" catalog="system" id="cjG-Tq-ANT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="75T-1k-SW0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="emV-gN-NGg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pBg-lL-vek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="106"/>
         </scene>
     </scenes>
     <resources>
