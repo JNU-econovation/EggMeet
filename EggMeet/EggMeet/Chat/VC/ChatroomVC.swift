@@ -97,7 +97,9 @@ class ChatroomVC: UIViewController{
         let ud = UserDefaults.standard
         let accessToken = ud.string(forKey: "accessToken")!
         NSLog("accessToken : \(accessToken)")
-        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Authorization" : "Bearer \(accessToken)"])
+        let connectHeader = ["Authorization" : "bearer \(accessToken)"]
+        NSLog("connect Header : \(connectHeader)")
+        socketClient.openSocketWithURLRequest(request: NSURLRequest(url: wsurl as URL), delegate: self as StompClientLibDelegate, connectionHeaders: ["Authorization" : "bearer \(accessToken)"])
     }
         
     func createChatRoom(){
@@ -111,7 +113,7 @@ class ChatroomVC: UIViewController{
             if response.response?.statusCode == STATUS_OK {
                 self.chatroomID = id
             } else {
-                print("")
+                print("request fail")
             }
         }
     }
