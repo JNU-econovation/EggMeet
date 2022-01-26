@@ -23,9 +23,9 @@ class HomeProfileRequestPopUpVC: UIViewController {
     
     @IBAction func showMentorRequestAlert(){
         let alert = UIAlertController(title: "\(requestMentorNickname)님께 멘토 신청을 하시겠습니까?",message: " ",preferredStyle: UIAlertController.Style.alert)
-        let cancel = UIAlertAction(title: "취소", style: .default, handler: nil)
+        let cancel = UIAlertAction(title: "취소", style: .destructive, handler: nil)
         //확인 버튼 만들기
-        let ok = UIAlertAction(title: "확인", style: .destructive, handler: {
+        let ok = UIAlertAction(title: "확인", style: .default, handler: {
             action in
             //특정기능 수행
             self.dismissView()

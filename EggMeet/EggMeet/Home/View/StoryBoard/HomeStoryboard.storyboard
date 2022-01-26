@@ -222,7 +222,9 @@
                             <constraint firstItem="b15-Dm-vBk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="yLj-mb-FNA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="tabbar_home" id="4DD-Yy-hhd"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabbar_home" id="4DD-Yy-hhd">
+                        <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="j8X-1c-hod"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
