@@ -9,31 +9,31 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MentoringRequestMenteeSystemTableViewCell" rowHeight="199" id="KGk-i7-Jjw" customClass="MentoringRequestMenteeSystemTableViewCell" customModule="EggMeet" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="437" height="199"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="MentoringAcceptMenteeSystemTableViewCell" rowHeight="198" id="KGk-i7-Jjw" customClass="MentoringAcceptMenteeSystemTableViewCell" customModule="EggMeet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="418" height="198"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="437" height="199"/>
+                <rect key="frame" x="0.0" y="0.0" width="418" height="198"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentoring_request_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="0fE-qU-wYw">
-                        <rect key="frame" x="280" y="17" width="147" height="172"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentoring_accept_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="pPT-7i-Dqw">
+                        <rect key="frame" x="261" y="16" width="147" height="172"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="147" id="Lc5-zc-G8F"/>
-                            <constraint firstAttribute="height" constant="172" id="m6o-2Q-WdX"/>
+                            <constraint firstAttribute="width" constant="147" id="GIl-J1-Lll"/>
+                            <constraint firstAttribute="height" constant="172" id="eTA-sg-3QY"/>
                         </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="0fE-qU-wYw" secondAttribute="bottom" constant="10" id="LwW-KP-igQ"/>
-                    <constraint firstAttribute="trailing" secondItem="0fE-qU-wYw" secondAttribute="trailing" constant="10" id="yLr-lA-gO2"/>
+                    <constraint firstAttribute="bottom" secondItem="pPT-7i-Dqw" secondAttribute="bottom" constant="10" id="Ixq-3W-FUQ"/>
+                    <constraint firstAttribute="trailing" secondItem="pPT-7i-Dqw" secondAttribute="trailing" constant="10" id="oRW-8r-Lj7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="222.46376811594206" y="120.87053571428571"/>
+            <point key="canvasLocation" x="208.69565217391306" y="95.089285714285708"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="mentoring_request_mentee_system" width="326" height="376"/>
+        <image name="mentoring_accept_mentee_system" width="326" height="376"/>
     </resources>
 </document>
