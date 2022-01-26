@@ -12,7 +12,7 @@ import Alamofire
 
 let CHAT_SECTION_NUM = 1
 let STATUS_OK = 200
-let TEST_CHAT_ROOM_ID = 1
+let TEST_CHAT_ROOM_ID = 19
 let TEST_OPPONENT_ID = 22
 let TEST_MY_ID = 21
 
@@ -27,6 +27,8 @@ class ChatroomVC: UIViewController{
     var keyHeight: CGFloat?
     var opponentId: Int = TEST_OPPONENT_ID
     var myId : Int = TEST_MY_ID
+    var mentorId : Int = 0
+    var menteeId : Int = 0
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -35,11 +37,13 @@ class ChatroomVC: UIViewController{
     
     override func viewDidLoad() {
         let ud = UserDefaults.standard
-        // ud.integer(forKey: "myId")
+        self.myId = ud.integer(forKey: "myId")
+        NSLog("my Id : \(self.myId)")
         super.viewDidLoad()
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
+        getMentorMenteeId()
         setupTextViewUI()
         registerSocket()
     }
@@ -138,6 +142,29 @@ class ChatroomVC: UIViewController{
         formatter.dateFormat = "hh:mm"
         let clockTime = formatter.string(from: date)
         return clockTime
+    }
+    
+    func getMentorMenteeId(){
+        let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+        let apiURL: String = "http://" + mainAddress + "/chat/room/\(self.chatroomID)"
+        
+        var request = URLRequest(url: URL(string: apiURL)!)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.timeoutInterval = 10
+    
+        AF.request(request).responseString{ (response) in
+            switch response.result {
+            case .success:
+                let JSON = try! JSONSerialization.jsonObject(with: response.data!, options: []) as! [String: Any]
+                self.mentorId = JSON["mentorId"] as! Int
+                self.menteeId = JSON["menteeId"] as! Int
+                NSLog("mentorId : \(self.mentorId)")
+                NSLog("menteeId : \(self.menteeId)")
+            case .failure:
+                    NSLog("Error occured")
+            }
+        }
     }
 }
 
