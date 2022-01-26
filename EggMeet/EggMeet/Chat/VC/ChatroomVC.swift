@@ -189,12 +189,42 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
             // 내가 멘토일 때
             if self.myId == mentorId{
                 if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
-                    // 로직 작성
+                    switch self.chatContentList[indexPath.row].content{
+                    case "MENTORING_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMentorSystemTableViewCell", for: indexPath) as! MentoringRequestMentorSystemTableViewCell
+                        return cell
+                    case "MENTORING_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMentorSystemTableViewCell" , for: indexPath) as! MentoringAcceptMentorSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMentorSystemTableViewCell", for: indexPath) as! ScheduleRequestMentorSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMentorSystemTableViewCell", for: indexPath) as! ScheduleAcceptMentorSystemTableViewCell
+                        return cell
+                    default:
+                        break
+                    }
                 }
             }
             if self.myId == menteeId{
                 if self.chatContentList[indexPath.row].type == "MENTEE_SYSTEM"{
-                    // 로직 작성
+                    switch self.chatContentList[indexPath.row].content{
+                    case "MENTORING_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMenteeSystemTableViewCell", for: indexPath) as! MentoringRequestMenteeSystemTableViewCell
+                        return cell
+                    case "MENTORING_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMenteeSystemTableViewCell", for: indexPath) as! MentoringAcceptMenteeSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        return cell
+                    default:
+                        break
+                    }
                 }
             }
         }
