@@ -139,6 +139,7 @@
                                     <constraint firstAttribute="height" constant="33" id="dsE-K4-5kz"/>
                                     <constraint firstAttribute="width" constant="269" id="qP7-0d-biq"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UV0-lh-yga">
@@ -346,27 +347,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="SendMentorRequestTVC" rowHeight="228" id="MNU-LF-gcj" customClass="SendMentorRequestTVC" customModule="EggMeet" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MentoringRequestMenteeSystemTVC" rowHeight="228" id="MNU-LF-gcj" customClass="MentoringRequestMenteeSystemTVC" customModule="EggMeet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="520.5" width="375" height="228"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MNU-LF-gcj" id="Wdz-ZV-IRD">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그봇" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgf-7d-BGq">
-                                                    <rect key="frame" x="287" y="21" width="42" height="20"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="Rev-1c-mgG"/>
-                                                        <constraint firstAttribute="width" constant="42" id="qas-bb-Qdi"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-6N-oLC">
                                                     <rect key="frame" x="182" y="46" width="147" height="172"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentor_request" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-wf-vGx">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentoring_request_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-wf-vGx">
                                                             <rect key="frame" x="0.0" y="0.0" width="147" height="172"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
@@ -374,51 +365,20 @@
                                                                 <constraint firstAttribute="width" constant="147" id="WGb-IS-MSB"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnw-LC-3DI">
-                                                            <rect key="frame" x="10.5" y="129.5" width="126" height="15"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="15" id="FM2-2t-w3y"/>
-                                                                <constraint firstAttribute="width" constant="126" id="kkL-ta-83I"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="7"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="네! 보낼게요" backgroundImage="white_button">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                        </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbe-3T-6s0">
-                                                            <rect key="frame" x="10.5" y="150.5" width="126" height="15"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="126" id="jjs-ck-6Hb"/>
-                                                                <constraint firstAttribute="height" constant="15" id="q0q-R7-mQ1"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="7"/>
-                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                            <state key="normal" title="멘토 신청을 취소할래요" backgroundImage="white_button">
-                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            </state>
-                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstItem="BaW-wf-vGx" firstAttribute="leading" secondItem="WAG-6N-oLC" secondAttribute="leading" id="4Xq-Hu-NV6"/>
                                                         <constraint firstAttribute="trailing" secondItem="BaW-wf-vGx" secondAttribute="trailing" id="6v5-s6-MmF"/>
-                                                        <constraint firstItem="Pbe-3T-6s0" firstAttribute="centerX" secondItem="WAG-6N-oLC" secondAttribute="centerX" id="KBr-xV-dah"/>
                                                         <constraint firstAttribute="bottom" secondItem="BaW-wf-vGx" secondAttribute="bottom" id="MOx-3b-tsS"/>
-                                                        <constraint firstItem="fnw-LC-3DI" firstAttribute="centerY" secondItem="WAG-6N-oLC" secondAttribute="centerY" constant="51" id="dL2-GT-Ogs"/>
-                                                        <constraint firstItem="Pbe-3T-6s0" firstAttribute="centerY" secondItem="WAG-6N-oLC" secondAttribute="centerY" constant="72" id="dO5-r0-vVE"/>
                                                         <constraint firstAttribute="height" constant="172" id="dfH-Z7-wKl"/>
                                                         <constraint firstItem="BaW-wf-vGx" firstAttribute="top" secondItem="WAG-6N-oLC" secondAttribute="top" id="l5Y-M3-waF"/>
                                                         <constraint firstAttribute="width" constant="147" id="lv5-be-r7p"/>
-                                                        <constraint firstItem="fnw-LC-3DI" firstAttribute="centerX" secondItem="WAG-6N-oLC" secondAttribute="centerX" id="vkC-cM-0Sd"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="WAG-6N-oLC" secondAttribute="bottom" constant="10" id="BZa-dY-fFs"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Qgf-7d-BGq" secondAttribute="trailing" constant="30" id="RBb-Ol-uqD"/>
-                                                <constraint firstItem="Qgf-7d-BGq" firstAttribute="top" secondItem="Wdz-ZV-IRD" secondAttribute="topMargin" constant="10" id="aAy-4N-S5C"/>
-                                                <constraint firstItem="WAG-6N-oLC" firstAttribute="top" secondItem="Qgf-7d-BGq" secondAttribute="bottom" constant="5" id="lkw-S2-vju"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="WAG-6N-oLC" secondAttribute="trailing" constant="30" id="zeY-2m-A0y"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -571,12 +531,11 @@
         <image name="chat_send" width="54" height="54"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="confirm_mentoring" width="294" height="276"/>
-        <image name="mentor_request" width="294" height="344"/>
+        <image name="mentoring_request_mentee_system" width="326" height="376"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="register_schedule" width="588" height="456"/>
         <image name="seperate_line" width="1" height="30"/>
         <image name="welcome_chatroom" width="294" height="234"/>
-        <image name="white_button" width="252" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
