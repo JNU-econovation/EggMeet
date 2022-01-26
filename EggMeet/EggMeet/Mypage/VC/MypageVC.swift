@@ -10,14 +10,27 @@ import UIKit
 class MypageVC: UIViewController {
 
     @IBOutlet weak var MyPageTitle: UILabel!
-    @IBOutlet weak var MyProfileContainerView: UIView!
-    @IBOutlet weak var GrowthPointContainerView: UIView!
     @IBOutlet weak var MenuContainerView: UIView!
+    @IBOutlet weak var MyProfileImage: UIImageView!
+    @IBOutlet weak var MyProfileNickname: UILabel!
+    @IBOutlet weak var MyGrowthPointImage: UIImageView!
+    @IBOutlet weak var MyGrowthStageLabel: UILabel!
+    @IBOutlet weak var MyPossessGrowthPoint: UILabel!
     
     
     override func viewDidLoad() {
-        MyPageTitle.adjustsFontSizeToFitWidth = true
         super.viewDidLoad()
+       // MyPageTitle.adjustsFontSizeToFitWidth = true
+        MyProfileNickname.adjustsFontSizeToFitWidth = true
+        // userimage를 원형으로 crop
+        MyProfileImage.layer.cornerRadius = MyProfileImage.frame.height/2
+        MyProfileImage.layer.borderWidth = 1
+        MyProfileImage.clipsToBounds = true
+        MyProfileImage.layer.borderColor = UIColor.clear.cgColor
+        //원형 이미지의 테두리 제거
+        setProfileData()
+        MyPossessGrowthPoint.adjustsFontSizeToFitWidth = true
+        setGrowthpointData()
 
         // Do any additional setup after loading the view.
     }
@@ -26,17 +39,37 @@ class MypageVC: UIViewController {
         
         self.performSegue(withIdentifier: "SeeMyProfile", sender: self)
         
+    }
         
+    @IBAction func GoToSeeGrowthStages(_ sender: UIButton) {
+        
+       
+    }
+    
+    func setProfileData(){
+            MypageNetwork.shared.getMypageData() { data in
+                
+                self.MyProfileNickname.text = data.nickname
+                
+                }
+        
+        
+        }
+    
+ 
+    
+    func setGrowthpointData(){
+        MypageNetwork.shared.getMypageData() { data in
+            
+            self.MyPossessGrowthPoint.text = "\(data.growthPoint)"
+            
+            }
+            
+           
+    }
+        
+       
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
-}
