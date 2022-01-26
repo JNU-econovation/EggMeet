@@ -18,8 +18,16 @@ class HomeProfileRequestPopUpVC: UIViewController {
         super.viewDidLoad()
     }
     
-    @objc func dismissView(){
-        dismiss(animated:true, completion: nil)
+    @objc func dismissView(roomId: String){
+        let rootView = presentingViewController
+        let chatStoryboard = UIStoryboard(name: "Chat", bundle: nil)
+        let nextVC = chatStoryboard.instantiateViewController(withIdentifier: "ChatroomVC") as! ChatroomVC
+        
+        dismiss(animated:true) {
+            nextVC.chatroomID = Int(roomId)!
+            nextVC.modalPresentationStyle = .fullScreen
+            rootView?.present(nextVC, animated: true, completion: nil)
+        }
     }
     
     @IBAction func showMentorRequestAlert(){
@@ -28,10 +36,7 @@ class HomeProfileRequestPopUpVC: UIViewController {
         //확인 버튼 만들기
         let ok = UIAlertAction(title: "확인", style: .default, handler: {
             action in
-            //특정기능 수행
-            
-            
-            self.dismissView()
+            self.postRequest()
         })
         alert.addAction(cancel)
         //확인 버튼 경고창에 추가하기
@@ -40,10 +45,13 @@ class HomeProfileRequestPopUpVC: UIViewController {
     }
     
     @IBAction func touchCloseButton(){
-        self.dismissView()
+        dismiss(animated: true, completion: nil)
     }
     
     func postRequest(){
-        HomeNetwork.shared.postRequest(mentorId: mentorId)
+        HomeNetwork.shared.postRequest(mentorId: mentorId) { roomId in
+            print("completion : roomID \(roomId)")
+            self.dismissView(roomId: roomId)
+        }
     }
 }
