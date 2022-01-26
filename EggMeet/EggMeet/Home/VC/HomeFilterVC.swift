@@ -29,8 +29,8 @@ class HomeFilterVC: UIViewController {
     var category: String = ""
     var sex: String = ""
     var age: Int = 0
-    var isOnlineAvailable: Bool = true
-    var isOfflineAvailable: Bool = true
+    var isOnlineAvailable: Bool? = nil
+    var isOfflineAvailable: Bool? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

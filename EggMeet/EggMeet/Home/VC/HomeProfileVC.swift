@@ -24,6 +24,7 @@ class HomeProfileVC: UIViewController {
     @IBOutlet weak var sexLabel: UILabel!
     
     var id: Int = 0
+    var requestNickname: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +34,7 @@ class HomeProfileVC: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationItem.title = ""
+        self.navigationItem.title = "상세 프로필"
         self.navigationController?.navigationBar.isHidden =  false
         setNavigationBarRightItem()
         setProfileData()
@@ -66,9 +67,10 @@ class HomeProfileVC: UIViewController {
         alert.addAction(UIAlertAction(title: "취소", style: .cancel, handler: nil))
         present(alert, animated: true, completion: nil)
     }
-    
+
     func setProfileData(){
         HomeNetwork.shared.getUserProfileData(id: id) { data in
+            self.nicknameLabel.text = data.nickname
             self.ageLabel.text = "\(data.age)대"
             self.descriptionLabel.text = data.description
             self.locationLabel.text = "광주광역시 북구"
@@ -77,9 +79,8 @@ class HomeProfileVC: UIViewController {
             self.mentorCareerLabel.text = data.mentorCareer
             self.mentorCategoryLabel.text = data.mentorCategory
             self.mentorDescriptionLabel.text = data.mentorDescription
-            self.mentorGrowthCostLabel.text = "\(data.mentorGrowthCost) 성장 포인트"
-            self.mentorLinkLabel.text = data.mentorLink
-            self.nicknameLabel.text = data.nickname
+            self.mentorGrowthCostLabel.text = "\(data.mentorGrowthCost)포인트"
+            
             self.sexLabel.text = data.sex
             switch data.sex {
             case "MALE": self.sexLabel.text = "남자"
@@ -98,6 +99,16 @@ class HomeProfileVC: UIViewController {
             default: channelStr = channelStr + ""
             }
             self.channelLabel.text = channelStr
+            
+            self.requestNickname = data.nickname
         }
+    }
+    
+    @IBAction func touchRequestButton(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeProfileRequestPopUpVC") as! HomeProfileRequestPopUpVC
+        vc.requestMentorNickname = requestNickname
+        vc.mentorId = id
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
 }

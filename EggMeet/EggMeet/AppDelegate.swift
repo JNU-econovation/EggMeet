@@ -11,6 +11,7 @@ import AuthenticationServices
 import KakaoSDKCommon
 import KakaoSDKAuth
 import IQKeyboardManagerSwift
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
-        
+        FirebaseApp.configure()
         return true
     }
 

@@ -18,9 +18,6 @@ class HomeTVC: UITableViewCell {
     @IBOutlet weak var firstCategoryLabel: UILabel!
     @IBOutlet weak var secondCategoryLabel: UILabel!
     @IBOutlet weak var firstHashtagLabel: UILabel!
-    @IBOutlet weak var secondHashtagLabel: UILabel!
-    @IBOutlet weak var thirdHashtagLabel: UILabel!
-    @IBOutlet weak var fourthHashtagLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -40,30 +37,32 @@ extension HomeTVC {
         starImageView.image = UIImage(named: "rating")
         
         nicknameLabel.text = nickname
-        mentorGrowthPointLabel.text = "\(mentorGrowthPoint) 포인트"
+        mentorGrowthPointLabel.text = "\(mentorGrowthPoint) point"
         firstCategoryLabel.text = "\(firstCategory)"
         
+        var hashtagStr: String = ""
         switch location {
-            case .ALL : firstHashtagLabel.text = "#전체"
-            default :firstHashtagLabel.text = "#\(location)"
+            case .ALL : hashtagStr = "#전체  "
+            default : hashtagStr = "#\(location)"
         }
         var onlineText = ""
         
         switch isOnline{
-            case 1 : onlineText = "#온라인"
+            case 1 : onlineText = "#온라인  "
             default : onlineText = "" }
         
         switch isOffline{
-            case 1 : onlineText += "#오프라인"
-            default : secondHashtagLabel.text = "" }
-        secondHashtagLabel.text = onlineText
-        thirdHashtagLabel.text = "#\(age)대"
+            case 1 : onlineText += "#오프라인  "
+            default : hashtagStr += "" }
+        hashtagStr += onlineText
+        hashtagStr += "#\(age)대  "
         
         switch sex {
-        case .UNDEFINED : fourthHashtagLabel.text = ""
-        case .FEMALE : fourthHashtagLabel.text = "#여성"
-        case .MALE : fourthHashtagLabel.text = "#남성"
+        case .UNDEFINED : hashtagStr += ""
+        case .FEMALE : hashtagStr += "#여성  "
+        case .MALE : hashtagStr += "#남성  "
         }
+        firstHashtagLabel.text = hashtagStr
         
         switch isMentor {
         case false : growthCostLabel.text = ""; mentorGrowthPointLabel.text = ""
