@@ -28,9 +28,7 @@ class HomeProfileRequestPopUpVC: UIViewController {
         //확인 버튼 만들기
         let ok = UIAlertAction(title: "확인", style: .default, handler: {
             action in
-            //특정기능 수행
-            
-            
+            self.postRequest()
             self.dismissView()
         })
         alert.addAction(cancel)

@@ -302,5 +302,18 @@ extension HomeNetwork {
         NSLog("\(response.response?.statusCode)")
             // responseID == chatroomID 보내면 된다
         }
+        
+        AF.request(request).responseString{ (response) in
+            switch response.result {
+            case .success(let res):
+                NSLog("response: \(response.debugDescription)")
+                print("request String : \(res)")
+                print(res)
+            case .failure(let error):
+                NSLog("error \(error)")
+            }
+        }
+        
+        
     }
 }
