@@ -25,7 +25,7 @@ class ChatroomVC: UIViewController{
     let subscribeTopic = "/sub/chat/room/"
     let publishTopic = "/pub/chat/room/"
     var keyHeight: CGFloat?
-    let opponentId = TEST_OPPONENT_ID
+    var opponentId: Int = TEST_OPPONENT_ID
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -154,22 +154,6 @@ class ChatroomVC: UIViewController{
         formatter.dateFormat = "hh:mm"
         let clockTime = formatter.string(from: date)
         return clockTime
-    }
-    
-    func postChatRoom(){
-        let baseURL = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
-        let apiURL = "http://" + baseURL + "/chat/room?participantId=\(self.opponentId)"
-        let ud = UserDefaults.standard
-        let accessToken = ud.string(forKey: "accessToken")!
-        var request = URLRequest(url: URL(string: apiURL)!)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.setValue("bearer \(accessToken)", forHTTPHeaderField: "Authorization")
-        request.timeoutInterval = 10
-    
-        AF.request(request).responseString{ (response) in
-            NSLog("\(response.response?.statusCode)")
-        }
     }
 }
 
