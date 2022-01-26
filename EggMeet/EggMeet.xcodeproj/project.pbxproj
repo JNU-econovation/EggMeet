@@ -65,6 +65,7 @@
 		9C25EE6C27904DFF00CBBB11 /* SignUpSexVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6B27904DFF00CBBB11 /* SignUpSexVC.swift */; };
 		9C25EE6E279166D900CBBB11 /* UserMentorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6D279166D900CBBB11 /* UserMentorResponseModel.swift */; };
 		9C25EE722791781200CBBB11 /* LoginTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE712791781200CBBB11 /* LoginTokenModel.swift */; };
+		9C987CD927A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987CD827A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift */; };
 		9CC0D5A127957FFC00E4885B /* HomeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A027957FFC00E4885B /* HomeSearchVC.swift */; };
 		9CC0D5A327959CA800E4885B /* HomeNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A227959CA800E4885B /* HomeNoticeVC.swift */; };
 		9CC0D5A52796AC3E00E4885B /* HomeNoticeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A42796AC3E00E4885B /* HomeNoticeTableVC.swift */; };
@@ -169,6 +170,7 @@
 		9C25EE6B27904DFF00CBBB11 /* SignUpSexVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSexVC.swift; sourceTree = "<group>"; };
 		9C25EE6D279166D900CBBB11 /* UserMentorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMentorResponseModel.swift; sourceTree = "<group>"; };
 		9C25EE712791781200CBBB11 /* LoginTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTokenModel.swift; sourceTree = "<group>"; };
+		9C987CD827A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileRequestPopUpVC.swift; sourceTree = "<group>"; };
 		9CC0D5A027957FFC00E4885B /* HomeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchVC.swift; sourceTree = "<group>"; };
 		9CC0D5A227959CA800E4885B /* HomeNoticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeVC.swift; sourceTree = "<group>"; };
 		9CC0D5A42796AC3E00E4885B /* HomeNoticeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeTableVC.swift; sourceTree = "<group>"; };
@@ -494,6 +496,7 @@
 				9CC0D5A227959CA800E4885B /* HomeNoticeVC.swift */,
 				9CC0D5A42796AC3E00E4885B /* HomeNoticeTableVC.swift */,
 				9CC0D5CA279E91D600E4885B /* HomeProfileVC.swift */,
+				9C987CD827A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -768,6 +771,7 @@
 				CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */,
 				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
+				9C987CD927A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				9C25EE6A2790423F00CBBB11 /* SignUpAgeVC.swift in Sources */,
 				19A9AE6927A03D5F00E38912 /* MessageType.swift in Sources */,

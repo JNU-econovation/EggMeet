@@ -283,5 +283,24 @@ extension HomeNetwork {
             }
         }
     }
-    
+}
+
+extension HomeNetwork {
+    func postRequest(mentorId: Int){
+        
+        let url = getAPI_URL(target: "/mentoring/request")+"?mentorId=\(mentorId)"
+        NSLog("api URL : \(url)")
+        
+        let accessToken: String = ud.string(forKey: "accessToken")!
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+        request.timeoutInterval = 10
+
+    AF.request(request).responseString{ (response) in
+        NSLog("\(response.response?.statusCode)")
+            // responseID == chatroomID 보내면 된다
+        }
+    }
 }
