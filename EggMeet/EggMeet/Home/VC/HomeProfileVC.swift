@@ -24,6 +24,7 @@ class HomeProfileVC: UIViewController {
     @IBOutlet weak var sexLabel: UILabel!
     
     var id: Int = 0
+    var requestNickname: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -98,6 +99,15 @@ class HomeProfileVC: UIViewController {
             default: channelStr = channelStr + ""
             }
             self.channelLabel.text = channelStr
+            
+            self.requestNickname = data.nickname
         }
+    }
+    
+    @IBAction func touchRequestButton(_ sender: Any) {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeProfileRequestPopUpVC") as! HomeProfileRequestPopUpVC
+        vc.requestMentorNickname = requestNickname
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
     }
 }
