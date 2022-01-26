@@ -23,8 +23,20 @@
                             <constraint firstAttribute="height" constant="172" id="m6o-2Q-WdX"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTf-ia-2Ew">
+                        <rect key="frame" x="301" y="132" width="107" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="35" id="CX0-1c-CzL"/>
+                            <constraint firstAttribute="width" constant="107" id="IIF-x4-ppn"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title=""/>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
+                    <constraint firstAttribute="trailing" secondItem="hTf-ia-2Ew" secondAttribute="trailing" constant="29" id="F21-sJ-AhF"/>
+                    <constraint firstAttribute="bottom" secondItem="hTf-ia-2Ew" secondAttribute="bottom" constant="32" id="G7H-XS-Hy0"/>
                     <constraint firstAttribute="bottom" secondItem="0fE-qU-wYw" secondAttribute="bottom" constant="10" id="LwW-KP-igQ"/>
                     <constraint firstAttribute="trailing" secondItem="0fE-qU-wYw" secondAttribute="trailing" constant="10" id="yLr-lA-gO2"/>
                 </constraints>

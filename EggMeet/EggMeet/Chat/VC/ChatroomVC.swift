@@ -179,16 +179,56 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 메세지 전송
+        // 내가 보낸 메세지 보여주기
         if self.chatContentList[indexPath.row].writerId == self.myId {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
         }
         // 시스템 메세지 출력
         if self.chatContentList[indexPath.row].type != "MESSAGE"{
-
+            // 내가 멘토일 때
+            if self.myId == mentorId{
+                if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
+                    switch self.chatContentList[indexPath.row].content{
+                    case "MENTORING_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMentorSystemTableViewCell", for: indexPath) as! MentoringRequestMentorSystemTableViewCell
+                        return cell
+                    case "MENTORING_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMentorSystemTableViewCell" , for: indexPath) as! MentoringAcceptMentorSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMentorSystemTableViewCell", for: indexPath) as! ScheduleRequestMentorSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMentorSystemTableViewCell", for: indexPath) as! ScheduleAcceptMentorSystemTableViewCell
+                        return cell
+                    default:
+                        break
+                    }
+                }
+            }
+            if self.myId == menteeId{
+                if self.chatContentList[indexPath.row].type == "MENTEE_SYSTEM"{
+                    switch self.chatContentList[indexPath.row].content{
+                    case "MENTORING_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMenteeSystemTableViewCell", for: indexPath) as! MentoringRequestMenteeSystemTableViewCell
+                        return cell
+                    case "MENTORING_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMenteeSystemTableViewCell", for: indexPath) as! MentoringAcceptMenteeSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_REQUEST":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        return cell
+                    case "SCHEDULE_ACCEPT":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        return cell
+                    default:
+                        break
+                    }
+                }
+            }
         }
-        // 메세지 수신
+        // 상대방 메세지 보여주기
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
         return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
 
@@ -218,7 +258,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
     
     func makeSendMessageTableViewCell(cell: ChatTVC, indexPath: IndexPath, dateTime: Double) -> UITableViewCell {
-        let dateTimeNowString = self.getTimeClockFormat(time: getCurrentTimeDouble())
+        let dateTimeNowString = self.getTimeClockFormat(time: self.chatContentList[indexPath.row].dateTime)
         cell.nicknameLabel?.text = self.chatContentList[indexPath.row].writerNickname
         cell.contentLabel?.text = self.chatContentList[indexPath.row].content
         cell.contentLabel?.layer.masksToBounds = true
