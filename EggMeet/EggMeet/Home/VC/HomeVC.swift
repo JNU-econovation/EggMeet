@@ -21,8 +21,8 @@ class HomeVC: UIViewController {
     private var category: String = ""
     private var sex: String = ""
     private var age: Int = 0
-    private var isOnlineAvailable: Bool = true
-    private var isOfflineAvailable: Bool = true
+    private var isOnlineAvailable: Bool? = nil
+    private var isOfflineAvailable: Bool? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()

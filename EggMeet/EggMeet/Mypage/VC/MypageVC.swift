@@ -24,7 +24,7 @@ class MypageVC: UIViewController {
     
     @IBAction func goToSeeMyProfile(_ sender: UIButton) {
         
-        self.performSegue(withIdentifier: "ToSeeMyProfile", sender: self)
+        self.performSegue(withIdentifier: "SeeMyProfile", sender: self)
         
         
     }

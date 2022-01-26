@@ -31,6 +31,10 @@
 		1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991D0C8278C68540081EDF5 /* ChatListVC.swift */; };
 		1991D0CC278C69280081EDF5 /* ChatProfileVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1991D0CB278C69280081EDF5 /* ChatProfileVO.swift */; };
 		199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199DD176278D98E800E35723 /* ChatroomVC.swift */; };
+		19A9AE6527A00A4200E38912 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 19A9AE6427A00A4200E38912 /* FirebaseAnalytics */; };
+		19A9AE6727A00AE800E38912 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19A9AE6627A00AE800E38912 /* GoogleService-Info.plist */; };
+		19A9AE6927A03D5F00E38912 /* MessageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A9AE6827A03D5E00E38912 /* MessageType.swift */; };
+		19A9AE6B27A0898F00E38912 /* chatReceiveDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19A9AE6A27A0898F00E38912 /* chatReceiveDto.swift */; };
 		19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */; };
 		19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */; };
 		19D9DF8E279D7A9E0050E7C3 /* ChatBot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */; };
@@ -92,6 +96,8 @@
 		CD1B96EB279C35E8009A0DF6 /* MyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */; };
 		CD1B96ED279C39DE009A0DF6 /* MyGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */; };
 		CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */; };
+		CD414D1027A060F700393086 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D0F27A060F700393086 /* MypageModel.swift */; };
+		CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D1127A0649C00393086 /* MypageNetwork.swift */; };
 		CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -123,6 +129,9 @@
 		1991D0C8278C68540081EDF5 /* ChatListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
 		1991D0CB278C69280081EDF5 /* ChatProfileVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatProfileVO.swift; sourceTree = "<group>"; };
 		199DD176278D98E800E35723 /* ChatroomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomVC.swift; sourceTree = "<group>"; };
+		19A9AE6627A00AE800E38912 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		19A9AE6827A03D5E00E38912 /* MessageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageType.swift; sourceTree = "<group>"; };
+		19A9AE6A27A0898F00E38912 /* chatReceiveDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chatReceiveDto.swift; sourceTree = "<group>"; };
 		19C6A085278A158F00074125 /* SignUpShowTermsOfServiceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowTermsOfServiceVC.swift; sourceTree = "<group>"; };
 		19C6A08B278A16D100074125 /* SignUpShowPersonalInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpShowPersonalInfoVC.swift; sourceTree = "<group>"; };
 		19D9DF8D279D7A9E0050E7C3 /* ChatBot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatBot.swift; sourceTree = "<group>"; };
@@ -188,6 +197,8 @@
 		CD1B96EA279C35E8009A0DF6 /* MyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileVC.swift; sourceTree = "<group>"; };
 		CD1B96EC279C39DE009A0DF6 /* MyGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGrowthPointVC.swift; sourceTree = "<group>"; };
 		CD1B96F2279C5E8C009A0DF6 /* SeeMyProfileStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SeeMyProfileStoryboard.storyboard; sourceTree = "<group>"; };
+		CD414D0F27A060F700393086 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
+		CD414D1127A0649C00393086 /* MypageNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageNetwork.swift; sourceTree = "<group>"; };
 		CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMyProfileVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +207,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19A9AE6527A00A4200E38912 /* FirebaseAnalytics in Frameworks */,
 				1FDF114D24F96E2867CD8DE8 /* Pods_EggMeet.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -224,6 +236,7 @@
 		192C407127785BF4003055DD /* EggMeet */ = {
 			isa = PBXGroup;
 			children = (
+				19A9AE6627A00AE800E38912 /* GoogleService-Info.plist */,
 				9CC0D5AE279C0FB100E4885B /* Calendar */,
 				CD1B969C279AF061009A0DF6 /* Mypage */,
 				CD1B95E52799D885009A0DF6 /* Config */,
@@ -298,6 +311,8 @@
 				1984331A278EC1CA00245BB7 /* chatType.swift */,
 				193C624D279302BD0036C09C /* ChatroomID.swift */,
 				19797FE02793100800680B21 /* chatDto.swift */,
+				19A9AE6827A03D5E00E38912 /* MessageType.swift */,
+				19A9AE6A27A0898F00E38912 /* chatReceiveDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -516,26 +531,12 @@
 		CD1B969C279AF061009A0DF6 /* Mypage */ = {
 			isa = PBXGroup;
 			children = (
+				CD414D1327A0652000393086 /* Network */,
+				CD414D0E27A060DB00393086 /* Model */,
 				CD1B96A1279AF0C3009A0DF6 /* VC */,
 				CD1B96A0279AF0B6009A0DF6 /* View */,
-				CD1B969F279AF0AA009A0DF6 /* Model */,
-				CD1B969D279AF098009A0DF6 /* Network */,
 			);
 			path = Mypage;
-			sourceTree = "<group>";
-		};
-		CD1B969D279AF098009A0DF6 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		CD1B969F279AF0AA009A0DF6 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		CD1B96A0279AF0B6009A0DF6 /* View */ = {
@@ -558,6 +559,22 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
+		CD414D0E27A060DB00393086 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD414D0F27A060F700393086 /* MypageModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD414D1327A0652000393086 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CD414D1127A0649C00393086 /* MypageNetwork.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -576,6 +593,9 @@
 			dependencies = (
 			);
 			name = EggMeet;
+			packageProductDependencies = (
+				19A9AE6427A00A4200E38912 /* FirebaseAnalytics */,
+			);
 			productName = EggMeet;
 			productReference = 192C406F27785BF4003055DD /* EggMeet.app */;
 			productType = "com.apple.product-type.application";
@@ -604,6 +624,9 @@
 				Base,
 			);
 			mainGroup = 192C406627785BF4003055DD;
+			packageReferences = (
+				19A9AE6327A00A4200E38912 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 192C407027785BF4003055DD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -626,6 +649,7 @@
 				CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
 				1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */,
+				19A9AE6727A00AE800E38912 /* GoogleService-Info.plist in Resources */,
 				CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */,
 				192C407A27785BF4003055DD /* Main.storyboard in Resources */,
 			);
@@ -719,10 +743,12 @@
 				9CC0D5C9279DAC8C00E4885B /* ScheduleCancelVC.swift in Sources */,
 				9CC0D5CB279E91D600E4885B /* HomeProfileVC.swift in Sources */,
 				9CE4B6A2278C231F003AEB90 /* HomeUpperHeaderView.swift in Sources */,
+				CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */,
 				9CE4B6AB278EBD0A003AEB90 /* HomeFilterVC.swift in Sources */,
 				9CE4B6A8278D8072003AEB90 /* HomeTVC.swift in Sources */,
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				9C25EE6A2790423F00CBBB11 /* SignUpAgeVC.swift in Sources */,
+				19A9AE6927A03D5F00E38912 /* MessageType.swift in Sources */,
 				19D9DF92279D860E0050E7C3 /* RegisterScheduleTVC.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
@@ -737,6 +763,7 @@
 				19256CE827913BEB0038336E /* BanUserVC.swift in Sources */,
 				9CE4B67F2780801B003AEB90 /* SignUpLocationVC.swift in Sources */,
 				9CC0D5A52796AC3E00E4885B /* HomeNoticeTableVC.swift in Sources */,
+				19A9AE6B27A0898F00E38912 /* chatReceiveDto.swift in Sources */,
 				9CE4B6A4278C2330003AEB90 /* HomeLowerHeaderView.swift in Sources */,
 				1991D0C9278C68540081EDF5 /* ChatListVC.swift in Sources */,
 				CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */,
@@ -748,6 +775,7 @@
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
 				9CC0D5B6279D128C00E4885B /* NewMentoringRegisterVC.swift in Sources */,
+				CD414D1027A060F700393086 /* MypageModel.swift in Sources */,
 				9CC0D5C2279D4B4B00E4885B /* NewMentoringSelectPopUpVC.swift in Sources */,
 				19FEC4A12782E9BD00F18D8F /* SignUpEndVC.swift in Sources */,
 				9CE4B6872781F3C3003AEB90 /* SignUpIntroducePopUpVC.swift in Sources */,
@@ -980,6 +1008,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		19A9AE6327A00A4200E38912 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		19A9AE6427A00A4200E38912 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 19A9AE6327A00A4200E38912 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		192C407B27785BF4003055DD /* EggMeet.xcdatamodeld */ = {

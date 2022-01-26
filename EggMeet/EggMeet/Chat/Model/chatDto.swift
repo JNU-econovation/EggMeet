@@ -24,8 +24,15 @@ struct chatDto {
         ]
     }
     
+    var stringDictionary : [String: Any]{
+        return ["content" : content]
+    }
     var nsDictionary: NSDictionary{
         return dictionary as NSDictionary
+    }
+    
+    var contentsDictionary: NSDictionary{
+        return stringDictionary as NSDictionary
     }
     
     func debugPrint(){
