@@ -12,6 +12,7 @@ class HomeProfileRequestPopUpVC: UIViewController {
     @IBOutlet weak var closeButton: UIButton!
     
     var requestMentorNickname: String = ""
+    var mentorId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +29,8 @@ class HomeProfileRequestPopUpVC: UIViewController {
         let ok = UIAlertAction(title: "확인", style: .default, handler: {
             action in
             //특정기능 수행
+            
+            
             self.dismissView()
         })
         alert.addAction(cancel)
@@ -38,5 +41,9 @@ class HomeProfileRequestPopUpVC: UIViewController {
     
     @IBAction func touchCloseButton(){
         self.dismissView()
+    }
+    
+    func postRequest(){
+        HomeNetwork.shared.postRequest(mentorId: mentorId)
     }
 }

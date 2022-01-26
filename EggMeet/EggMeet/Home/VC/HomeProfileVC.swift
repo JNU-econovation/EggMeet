@@ -107,6 +107,7 @@ class HomeProfileVC: UIViewController {
     @IBAction func touchRequestButton(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeProfileRequestPopUpVC") as! HomeProfileRequestPopUpVC
         vc.requestMentorNickname = requestNickname
+        vc.mentorId = id
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
     }
