@@ -286,7 +286,7 @@ extension HomeNetwork {
 }
 
 extension HomeNetwork {
-    func postRequest(mentorId: Int){
+    func postRequest(mentorId: Int, completion: @escaping (String) -> Void){
         
         let url = getAPI_URL(target: "/mentoring/request")+"?mentorId=\(mentorId)"
         NSLog("api URL : \(url)")
@@ -297,23 +297,16 @@ extension HomeNetwork {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.setValue("bearer \(accessToken)", forHTTPHeaderField: "Authorization")
         request.timeoutInterval = 10
-
-    AF.request(request).responseString{ (response) in
-        NSLog("\(response.response?.statusCode)")
-            // responseID == chatroomID 보내면 된다
-        }
         
         AF.request(request).responseString{ (response) in
             switch response.result {
             case .success(let res):
                 NSLog("response: \(response.debugDescription)")
                 print("request String : \(res)")
-                print(res)
+                completion(res)
             case .failure(let error):
                 NSLog("error \(error)")
             }
         }
-        
-        
     }
 }
