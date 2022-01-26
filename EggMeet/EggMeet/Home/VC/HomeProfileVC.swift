@@ -33,10 +33,10 @@ class HomeProfileVC: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
-        self.navigationItem.title = ""
+        self.navigationItem.title = "상세 프로필"
         self.navigationController?.navigationBar.isHidden =  false
         setNavigationBarRightItem()
-        setProfileData()
+        //setProfileData()
     }
     
     func setNavigationBarRightItem(){
