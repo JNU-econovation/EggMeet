@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "register_schedule.png",
+      "filename" : "register_schedule_mentee_system.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "register_schedule_mentee_system-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "register_schedule_mentee_system-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
