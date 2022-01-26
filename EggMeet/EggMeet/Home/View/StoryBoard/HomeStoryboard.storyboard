@@ -35,7 +35,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xLK-lu-zfR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="RXv-ck-iXP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3590" y="-658"/>
+            <point key="canvasLocation" x="2941" y="-790"/>
         </scene>
         <!--Home-->
         <scene sceneID="s0d-6b-0kx">
@@ -149,23 +149,23 @@
                                     <action selector="touchSortChangedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mlb-J3-f9K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-c0-kMa">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-c0-kMa">
                                 <rect key="frame" x="301" y="163" width="40" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="j4q-fc-rJo"/>
                                     <constraint firstAttribute="width" constant="40" id="orj-Ub-b1g"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="home_star_rank_button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-LE-3VM">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-LE-3VM">
                                 <rect key="frame" x="347" y="163" width="52" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="KO6-0o-xNB"/>
+                                    <constraint firstAttribute="height" constant="17" id="ygo-Ub-GiT"/>
                                     <constraint firstAttribute="width" constant="52" id="ynR-nl-NeH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="home_growthcost_button"/>
                                 <connections>
                                     <action selector="touchGrowthPointSortButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MNR-x1-aUd"/>
                                 </connections>
@@ -222,7 +222,9 @@
                             <constraint firstItem="b15-Dm-vBk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="yLj-mb-FNA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="4DD-Yy-hhd"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabbar_home" id="4DD-Yy-hhd">
+                        <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="j8X-1c-hod"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -265,6 +267,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tOz-jY-ccY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1751" y="504"/>
+        </scene>
+        <!--Home Profile Request Pop UpVC-->
+        <scene sceneID="ZzI-4Q-BBV">
+            <objects>
+                <viewController storyboardIdentifier="HomeProfileRequestPopUpVC" id="UhL-d1-UXa" customClass="HomeProfileRequestPopUpVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hfu-US-FTo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f57-Ae-RZg">
+                                <rect key="frame" x="93" y="259" width="180" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="A1y-Aw-PPb"/>
+                                    <constraint firstAttribute="height" constant="51" id="ziv-eU-nhg"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="home_profile_mentor_request"/>
+                                <connections>
+                                    <action selector="showMentorRequestAlert" destination="UhL-d1-UXa" eventType="touchUpInside" id="4wf-Hc-p8b"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vm-VC-OWI">
+                                <rect key="frame" x="93" y="329" width="180" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="5Qf-OQ-Rsf"/>
+                                    <constraint firstAttribute="height" constant="51" id="c7W-aa-k8q"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="home_profile_send_message"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-Pz-P7j">
+                                <rect key="frame" x="161" y="413" width="43" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="43" id="bpu-WB-fTt"/>
+                                    <constraint firstAttribute="height" constant="43" id="szx-xe-fem"/>
+                                </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="home_profile_popup_close"/>
+                                <connections>
+                                    <action selector="touchCloseButton" destination="UhL-d1-UXa" eventType="touchUpInside" id="Ggt-5T-tud"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gMy-jT-L4f"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.60000830890000001" green="0.59998512270000004" blue="0.60000085830000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3w5-Pz-P7j" firstAttribute="leading" secondItem="gMy-jT-L4f" secondAttribute="leading" constant="161" id="1ve-8A-0Tc"/>
+                            <constraint firstItem="f57-Ae-RZg" firstAttribute="leading" secondItem="gMy-jT-L4f" secondAttribute="leading" constant="93" id="4GL-jP-9pT"/>
+                            <constraint firstItem="1vm-VC-OWI" firstAttribute="top" secondItem="gMy-jT-L4f" secondAttribute="top" constant="285" id="5H9-kj-7cK"/>
+                            <constraint firstItem="3w5-Pz-P7j" firstAttribute="top" secondItem="hfu-US-FTo" secondAttribute="topMargin" constant="369" id="HFr-DD-aTK"/>
+                            <constraint firstItem="f57-Ae-RZg" firstAttribute="top" secondItem="gMy-jT-L4f" secondAttribute="top" constant="215" id="YAF-Sj-kMx"/>
+                            <constraint firstItem="1vm-VC-OWI" firstAttribute="leading" secondItem="gMy-jT-L4f" secondAttribute="leading" constant="93" id="b45-4n-VN8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MR1-s0-lNo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3391" y="811"/>
         </scene>
         <!--Home ProfileVC-->
         <scene sceneID="WI8-g0-aqZ">
@@ -310,32 +371,56 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-Jw-w7l">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-Jw-w7l">
                                                         <rect key="frame" x="159" y="194" width="58" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="1IY-WH-3F3"/>
                                                             <constraint firstAttribute="width" constant="58" id="IIH-Qq-BTr"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="8" image="home_profile_follow"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-x5-V6D">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-x5-V6D">
                                                         <rect key="frame" x="159" y="224" width="58" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="5Zt-dh-teN"/>
                                                             <constraint firstAttribute="width" constant="58" id="GR5-Pu-27c"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button" image="home_profile_message"/>
+                                                        <connections>
+                                                            <action selector="touchRequestButton:" destination="4W2-Mw-FTo" eventType="touchUpInside" id="6UL-tG-nPo"/>
+                                                        </connections>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_stars" translatesAutoresizingMaskIntoConstraints="NO" id="IWa-CD-ImN">
+                                                        <rect key="frame" x="136" y="166" width="75" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="Rgm-M9-6QH"/>
+                                                            <constraint firstAttribute="width" constant="75" id="X4K-4x-dbs"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y66-Lt-zsq">
+                                                        <rect key="frame" x="219" y="154" width="20" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="XyC-RV-XJA"/>
+                                                            <constraint firstAttribute="width" constant="20" id="nmO-W8-5bD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="y66-Lt-zsq" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="154" id="Hkg-g8-fJ4"/>
                                                     <constraint firstItem="hdq-x5-V6D" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="224" id="IEQ-QK-AMX"/>
                                                     <constraint firstItem="hdq-x5-V6D" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="159" id="OIj-jV-Qcg"/>
                                                     <constraint firstItem="gkJ-qA-hpK" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="34" id="RFQ-eO-6Yk"/>
+                                                    <constraint firstItem="y66-Lt-zsq" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="219" id="Zhh-uy-TVy"/>
+                                                    <constraint firstItem="IWa-CD-ImN" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="166" id="a6p-cX-ldF"/>
                                                     <constraint firstItem="JQy-dt-jTE" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="158" id="ald-FF-FZZ"/>
                                                     <constraint firstItem="8o3-4T-o3c" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="101" id="gVx-tc-hJu"/>
+                                                    <constraint firstItem="IWa-CD-ImN" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="136" id="hi1-6C-TMr"/>
                                                     <constraint firstItem="3S6-Jw-w7l" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="159" id="nNG-g9-idR"/>
                                                     <constraint firstItem="8o3-4T-o3c" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="165" id="ncM-SP-6Hf"/>
                                                     <constraint firstItem="JQy-dt-jTE" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="126" id="tBH-gd-a84"/>
@@ -1021,7 +1106,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gw-ax-ZEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="w5Y-zz-yFH" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3589.8550724637685" y="89.732142857142847"/>
+            <point key="canvasLocation" x="3783" y="-790"/>
         </scene>
         <!--Home NoticeVC-->
         <scene sceneID="xQZ-C4-Ata">
@@ -1037,7 +1122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lYa-ci-SQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3590" y="796"/>
+            <point key="canvasLocation" x="3707" y="90"/>
         </scene>
         <!--Home Notice TableVC-->
         <scene sceneID="exI-AN-lJ3">
@@ -1062,7 +1147,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l2c-Vx-7bH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4357.971014492754" y="813.61607142857144"/>
+            <point key="canvasLocation" x="4404" y="90"/>
         </scene>
         <!--홈-->
         <scene sceneID="3IV-Y3-TKC">
@@ -1091,13 +1176,22 @@
         <image name="home_bell" width="84" height="92"/>
         <image name="home_filter" width="116" height="116"/>
         <image name="home_filter_upsidedown" width="46" height="46"/>
+        <image name="home_growthcost_button" width="208" height="172"/>
         <image name="home_mentee_find" width="184" height="44"/>
         <image name="home_mentor_find" width="184" height="44"/>
         <image name="home_profile_description_box" width="1332" height="404"/>
+        <image name="home_profile_follow" width="232" height="84"/>
         <image name="home_profile_line" width="2" height="140"/>
+        <image name="home_profile_mentor_request" width="888" height="276"/>
+        <image name="home_profile_message" width="232" height="84"/>
+        <image name="home_profile_popup_close" width="172" height="172"/>
+        <image name="home_profile_send_message" width="888" height="276"/>
         <image name="home_search" width="77" height="81"/>
+        <image name="home_star_rank_button" width="160" height="172"/>
+        <image name="home_stars" width="320" height="64"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="tabbar_home" width="23" height="23"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

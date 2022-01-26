@@ -179,6 +179,7 @@ extension ViewController: ASAuthorizationControllerDelegate, Encodable {
                             let accessToken = token.accessToken
                             let ud = UserDefaults.standard
                             ud.set(accessToken, forKey: "accessToken")
+                            self.setMyId()
                         }
                     } catch {}
                     self.performSegue(withIdentifier: "windLoginHome", sender: self)
@@ -247,5 +248,30 @@ extension ViewController: ASAuthorizationControllerPresentationContextProviding 
     }
 }
 
-
+extension ViewController {
+    func setMyId()  {
+        let url: String =  getAPI_URL(target: "/user/profile/id/me")
+        NSLog("api URL : \(url)")
+        
+        let ud = UserDefaults.standard
+        let accessToken: String = ud.string(forKey: "accessToken")!
+        var request = URLRequest(url: URL(string: url)!)
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.timeoutInterval = 10
+        
+        AF.request(request).responseString{ (response) in
+            switch response.result {
+            case .success(let res):
+                NSLog("response: \(response.debugDescription)")
+                print("res String : \(res)")
+                print(res)
+                ud.set(res, forKey: "myId")
+            case .failure(let error):
+                NSLog("error \(error)")
+            }
+        }
+    }
+}
 
