@@ -149,23 +149,23 @@
                                     <action selector="touchSortChangedButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Mlb-J3-f9K"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-c0-kMa">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Md-c0-kMa">
                                 <rect key="frame" x="301" y="163" width="40" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="17" id="j4q-fc-rJo"/>
                                     <constraint firstAttribute="width" constant="40" id="orj-Ub-b1g"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="home_star_rank_button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-LE-3VM">
+                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-LE-3VM">
                                 <rect key="frame" x="347" y="163" width="52" height="17"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="17" id="KO6-0o-xNB"/>
+                                    <constraint firstAttribute="height" constant="17" id="ygo-Ub-GiT"/>
                                     <constraint firstAttribute="width" constant="52" id="ynR-nl-NeH"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="home_growthcost_button"/>
                                 <connections>
                                     <action selector="touchGrowthPointSortButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MNR-x1-aUd"/>
                                 </connections>
@@ -270,11 +270,11 @@
         <scene sceneID="WI8-g0-aqZ">
             <objects>
                 <viewController storyboardIdentifier="HomeProfileVC" id="4W2-Mw-FTo" customClass="HomeProfileVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GK8-F0-EVE">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="GK8-F0-EVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m50-TI-Wsm">
@@ -310,32 +310,53 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-Jw-w7l">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3S6-Jw-w7l">
                                                         <rect key="frame" x="159" y="194" width="58" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="1IY-WH-3F3"/>
                                                             <constraint firstAttribute="width" constant="58" id="IIH-Qq-BTr"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="8"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="8" image="home_profile_follow"/>
                                                     </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-x5-V6D">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdq-x5-V6D">
                                                         <rect key="frame" x="159" y="224" width="58" height="21"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="21" id="5Zt-dh-teN"/>
                                                             <constraint firstAttribute="width" constant="58" id="GR5-Pu-27c"/>
                                                         </constraints>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="gray"/>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="Button" image="home_profile_message"/>
                                                     </button>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_stars" translatesAutoresizingMaskIntoConstraints="NO" id="IWa-CD-ImN">
+                                                        <rect key="frame" x="136" y="166" width="75" height="15"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="15" id="Rgm-M9-6QH"/>
+                                                            <constraint firstAttribute="width" constant="75" id="X4K-4x-dbs"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(0)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y66-Lt-zsq">
+                                                        <rect key="frame" x="219" y="154" width="20" height="43"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="43" id="XyC-RV-XJA"/>
+                                                            <constraint firstAttribute="width" constant="20" id="nmO-W8-5bD"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstItem="y66-Lt-zsq" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="154" id="Hkg-g8-fJ4"/>
                                                     <constraint firstItem="hdq-x5-V6D" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="224" id="IEQ-QK-AMX"/>
                                                     <constraint firstItem="hdq-x5-V6D" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="159" id="OIj-jV-Qcg"/>
                                                     <constraint firstItem="gkJ-qA-hpK" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="34" id="RFQ-eO-6Yk"/>
+                                                    <constraint firstItem="y66-Lt-zsq" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="219" id="Zhh-uy-TVy"/>
+                                                    <constraint firstItem="IWa-CD-ImN" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="166" id="a6p-cX-ldF"/>
                                                     <constraint firstItem="JQy-dt-jTE" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="158" id="ald-FF-FZZ"/>
                                                     <constraint firstItem="8o3-4T-o3c" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="101" id="gVx-tc-hJu"/>
+                                                    <constraint firstItem="IWa-CD-ImN" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="136" id="hi1-6C-TMr"/>
                                                     <constraint firstItem="3S6-Jw-w7l" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="159" id="nNG-g9-idR"/>
                                                     <constraint firstItem="8o3-4T-o3c" firstAttribute="leading" secondItem="WmQ-3n-qlM" secondAttribute="leading" constant="165" id="ncM-SP-6Hf"/>
                                                     <constraint firstItem="JQy-dt-jTE" firstAttribute="top" secondItem="WmQ-3n-qlM" secondAttribute="top" constant="126" id="tBH-gd-a84"/>
@@ -1091,11 +1112,16 @@
         <image name="home_bell" width="84" height="92"/>
         <image name="home_filter" width="116" height="116"/>
         <image name="home_filter_upsidedown" width="46" height="46"/>
+        <image name="home_growthcost_button" width="208" height="172"/>
         <image name="home_mentee_find" width="184" height="44"/>
         <image name="home_mentor_find" width="184" height="44"/>
         <image name="home_profile_description_box" width="1332" height="404"/>
+        <image name="home_profile_follow" width="232" height="84"/>
         <image name="home_profile_line" width="2" height="140"/>
+        <image name="home_profile_message" width="232" height="84"/>
         <image name="home_search" width="77" height="81"/>
+        <image name="home_star_rank_button" width="160" height="172"/>
+        <image name="home_stars" width="320" height="64"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <namedColor name="AccentColor">
