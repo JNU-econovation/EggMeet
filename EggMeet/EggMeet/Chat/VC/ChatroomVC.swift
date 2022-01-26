@@ -15,6 +15,8 @@ let STATUS_OK = 200
 let TEST_CHAT_ROOM_ID = 1
 let TEST_OPPONENT_ID = 22
 let TEST_MY_ID = 21
+
+
 class ChatroomVC: UIViewController{
     var opponentNickname: String?
     var socketClient = StompClientLib()
@@ -302,6 +304,10 @@ extension ChatroomVC: StompClientLibDelegate {
 
 
 extension ChatroomVC : ChatBot {
+    
+    func mentoringRequestMenteeSystem() {
+            
+    }
     
     func sendChatBotTest(){
     }
