@@ -9,5 +9,6 @@ import Foundation
 
 protocol ChatBot{
 
+    func mentoringRequestMenteeSystem()
     func sendChatBotTest()
 }
