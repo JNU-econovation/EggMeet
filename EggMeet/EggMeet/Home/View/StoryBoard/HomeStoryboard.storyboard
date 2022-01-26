@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -250,11 +250,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="1419"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="1438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m50-TI-Wsm">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1438"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WmQ-3n-qlM">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="272"/>
@@ -510,13 +510,13 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZr-o8-U5H">
-                                                <rect key="frame" x="0.0" y="1067" width="414" height="430"/>
+                                                <rect key="frame" x="0.0" y="1067" width="414" height="371"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             </view>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1497" id="2gd-9x-daa"/>
+                                            <constraint firstAttribute="height" constant="1438" id="2gd-9x-daa"/>
                                             <constraint firstItem="WmQ-3n-qlM" firstAttribute="leading" secondItem="m50-TI-Wsm" secondAttribute="leading" id="52B-ZD-CjC"/>
                                             <constraint firstItem="WmQ-3n-qlM" firstAttribute="top" secondItem="m50-TI-Wsm" secondAttribute="top" id="9aj-LE-G6a"/>
                                             <constraint firstAttribute="trailing" secondItem="HCE-cU-lpu" secondAttribute="trailing" id="Atv-72-m2U"/>
@@ -557,6 +557,9 @@
                         </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="1497"/>
+                    <connections>
+                        <outlet property="nicknameLabel" destination="JQy-dt-jTE" id="L5J-tI-lFU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KCS-Z6-TY0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -773,7 +776,7 @@
         <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.split.2x1.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

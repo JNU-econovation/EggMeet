@@ -36,7 +36,7 @@ class HomeProfileVC: UIViewController {
         self.navigationItem.title = "상세 프로필"
         self.navigationController?.navigationBar.isHidden =  false
         setNavigationBarRightItem()
-        //setProfileData()
+        setProfileData()
     }
     
     func setNavigationBarRightItem(){
@@ -69,6 +69,8 @@ class HomeProfileVC: UIViewController {
     
     func setProfileData(){
         HomeNetwork.shared.getUserProfileData(id: id) { data in
+            self.nicknameLabel.text = data.nickname
+            /*
             self.ageLabel.text = "\(data.age)대"
             self.descriptionLabel.text = data.description
             self.locationLabel.text = "광주광역시 북구"
@@ -79,7 +81,7 @@ class HomeProfileVC: UIViewController {
             self.mentorDescriptionLabel.text = data.mentorDescription
             self.mentorGrowthCostLabel.text = "\(data.mentorGrowthCost) 성장 포인트"
             self.mentorLinkLabel.text = data.mentorLink
-            self.nicknameLabel.text = data.nickname
+            
             self.sexLabel.text = data.sex
             switch data.sex {
             case "MALE": self.sexLabel.text = "남자"
@@ -98,6 +100,7 @@ class HomeProfileVC: UIViewController {
             default: channelStr = channelStr + ""
             }
             self.channelLabel.text = channelStr
+             */
         }
     }
 }
