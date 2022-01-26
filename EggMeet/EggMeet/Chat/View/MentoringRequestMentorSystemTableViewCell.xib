@@ -24,13 +24,14 @@
                         </constraints>
                     </imageView>
                 </subviews>
+                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="CxG-Jk-NAG" secondAttribute="trailing" constant="10" id="00r-Ic-yNS"/>
                     <constraint firstItem="CxG-Jk-NAG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6gw-ZE-zME"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="230.43478260869566" y="148.99553571428569"/>
+            <point key="canvasLocation" x="230.43478260869566" y="148.32589285714286"/>
         </tableViewCell>
     </objects>
     <resources>
