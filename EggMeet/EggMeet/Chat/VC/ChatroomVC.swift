@@ -26,6 +26,7 @@ class ChatroomVC: UIViewController{
     let publishTopic = "/pub/chat/room/"
     var keyHeight: CGFloat?
     var opponentId: Int = TEST_OPPONENT_ID
+    var myId : Int = TEST_MY_ID
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -33,12 +34,13 @@ class ChatroomVC: UIViewController{
 
     
     override func viewDidLoad() {
+        let ud = UserDefaults.standard
+        // ud.integer(forKey: "myId")
         super.viewDidLoad()
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
         setupTextViewUI()
-        // postChatRoom()
         registerSocket()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -61,21 +63,10 @@ class ChatroomVC: UIViewController{
         if messageString == ""{
             return
         } else {
-            let ud = UserDefaults.standard
             let topic = self.publishTopic + "\(self.chatroomID)/message"
             let params = chatDto(roomId: self.chatroomID, writer: "yunseong", content: messageString, dateTime: getCurrentTimeDouble(), type: MessageType.MESSAGE.rawValue)
-            let accessToken = ud.string(forKey: "accessToken")!
-            let header =
-            [
-                "Authorization" : "bearer \(accessToken)",
-                "content-type" : "application/json;charset=UTF-8"
-            ]
             NSLog("publish topic : \(topic)")
-            let JSONData = "{\"content\":\"\(messageString)\"}"
-            
-            params.debugPrint()
             socketClient.sendJSONForDict(dict: params.contentsDictionary, toDestination: topic)
-            // socketClient.sendMessage(message: messageString, toDestination: topic, withHeaders: header, withReceipt: nil)// if success, callback stompClient method
             self.messageTextView.text = ""
         }
     }
@@ -83,6 +74,7 @@ class ChatroomVC: UIViewController{
     @IBAction func popView(_ sender: UIButton){
         self.navigationController?.popViewController(animated: true)
     }
+    
     func setMyChatroomName() -> String{
         let ud = UserDefaults.standard
         let myName = ud.string(forKey: "nickname")!
@@ -132,14 +124,6 @@ class ChatroomVC: UIViewController{
         }
     }
     
-    func isExistChatRoom() -> Bool{
-        if self.chatroomID == 0{
-            return false
-        } else{
-            return true
-        }
-    }
-    
     func setupTextViewUI(){
         self.messageTextView.layer.cornerRadius = 5
     }
@@ -169,12 +153,12 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 메세지 전송
-        if self.chatContentList[indexPath.row].writerId == TEST_MY_ID {
-            NSLog("call cellForRowAt")
+        if self.chatContentList[indexPath.row].writerId == self.myId {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
+        }
         // 시스템 메세지 출력
-        } else if self.chatContentList[indexPath.row].writerNickname == "system"{
+        if self.chatContentList[indexPath.row].type != "MESSAGE"{
 
         }
         // 메세지 수신
