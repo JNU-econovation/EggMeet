@@ -313,129 +313,6 @@
                                             <outlet property="timeLabel" destination="Llp-dF-BIQ" id="WTK-3A-5kC"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MentoringAcceptMenteeSystemTVC" rowHeight="205" id="gZ0-3u-TG2" customClass="MentoringAcceptMenteeSystemTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="315.5" width="375" height="205"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gZ0-3u-TG2" id="683-fs-Fjt">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentoring_accept_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="FaD-BS-rVf">
-                                                    <rect key="frame" x="182" y="12" width="147" height="172"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="147" id="K0q-Dc-cRo"/>
-                                                        <constraint firstAttribute="height" constant="172" id="XLx-WU-1cL"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="FaD-BS-rVf" secondAttribute="trailing" constant="30" id="arg-iZ-6ih"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="FaD-BS-rVf" secondAttribute="bottom" constant="10" id="kUY-I1-N7p"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MentoringRequestMenteeSystemTVC" rowHeight="228" id="MNU-LF-gcj" customClass="MentoringRequestMenteeSystemTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="520.5" width="375" height="228"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MNU-LF-gcj" id="Wdz-ZV-IRD">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="228"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WAG-6N-oLC">
-                                                    <rect key="frame" x="182" y="46" width="147" height="172"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mentoring_request_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-wf-vGx">
-                                                            <rect key="frame" x="0.0" y="0.0" width="147" height="172"/>
-                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="172" id="1h7-de-QMq"/>
-                                                                <constraint firstAttribute="width" constant="147" id="WGb-IS-MSB"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                    <constraints>
-                                                        <constraint firstItem="BaW-wf-vGx" firstAttribute="leading" secondItem="WAG-6N-oLC" secondAttribute="leading" id="4Xq-Hu-NV6"/>
-                                                        <constraint firstAttribute="trailing" secondItem="BaW-wf-vGx" secondAttribute="trailing" id="6v5-s6-MmF"/>
-                                                        <constraint firstAttribute="bottom" secondItem="BaW-wf-vGx" secondAttribute="bottom" id="MOx-3b-tsS"/>
-                                                        <constraint firstAttribute="height" constant="172" id="dfH-Z7-wKl"/>
-                                                        <constraint firstItem="BaW-wf-vGx" firstAttribute="top" secondItem="WAG-6N-oLC" secondAttribute="top" id="l5Y-M3-waF"/>
-                                                        <constraint firstAttribute="width" constant="147" id="lv5-be-r7p"/>
-                                                    </constraints>
-                                                </view>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="WAG-6N-oLC" secondAttribute="bottom" constant="10" id="BZa-dY-fFs"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="WAG-6N-oLC" secondAttribute="trailing" constant="30" id="zeY-2m-A0y"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="chatBotView" destination="WAG-6N-oLC" id="3zI-a6-jtO"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="RegisterScheduleMenteeSystemTVC" rowHeight="234" id="yhC-pb-GKg" customClass="RegisterScheduleMenteeSystemTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="666.5" width="375" height="234"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yhC-pb-GKg" id="bkF-uS-uWu">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="234"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="register_schedule_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="cCy-UW-yxK">
-                                                    <rect key="frame" x="182" y="41" width="147" height="172"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="172" id="0FF-Re-d7g"/>
-                                                        <constraint firstAttribute="width" constant="147" id="via-Tj-fxm"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cCy-UW-yxK" secondAttribute="bottom" constant="10" id="IEr-65-Cm5"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="cCy-UW-yxK" secondAttribute="trailing" constant="30" id="ZFd-fl-xOJ"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ScheduleRequestMenteeSystemTVC" rowHeight="199" id="pk5-jM-bP3" customClass="ScheduleRequestMenteeSystemTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="900.5" width="375" height="199"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pk5-jM-bP3" id="Lkr-Hv-1k9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="schedule_request_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="htV-AD-iPR">
-                                                    <rect key="frame" x="182" y="6" width="147" height="172"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="147" id="6JZ-pq-AMB"/>
-                                                        <constraint firstAttribute="height" constant="172" id="txQ-Ur-Zia"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottomMargin" secondItem="htV-AD-iPR" secondAttribute="bottom" constant="10" id="Jyh-Rl-ClW"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="htV-AD-iPR" secondAttribute="trailing" constant="30" id="V9I-Va-atg"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ScheduleAcceptMenteeSystemTVC" rowHeight="313" id="bFy-Bs-fph" customClass="ScheduleAcceptMenteeSystemTVC" customModule="EggMeet" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1099.5" width="375" height="313"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bFy-Bs-fph" id="uCr-Yn-RNo">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="313"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="schedule_accept_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="ziN-YM-gLt">
-                                                    <rect key="frame" x="182" y="120" width="147" height="172"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="172" id="m0g-dC-1u4"/>
-                                                        <constraint firstAttribute="width" constant="147" id="mZA-Nx-QdA"/>
-                                                    </constraints>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ziN-YM-gLt" secondAttribute="trailing" constant="30" id="LW8-ul-k8L"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="ziN-YM-gLt" secondAttribute="bottom" constant="10" id="jWV-HT-tHx"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -512,12 +389,7 @@
         <image name="add_button" width="52" height="52"/>
         <image name="chat_send" width="54" height="54"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <image name="mentoring_accept_mentee_system" width="326" height="376"/>
-        <image name="mentoring_request_mentee_system" width="326" height="376"/>
         <image name="message" catalog="system" width="128" height="113"/>
-        <image name="register_schedule_mentee_system" width="326" height="376"/>
-        <image name="schedule_accept_mentee_system" width="326" height="376"/>
-        <image name="schedule_request_mentee_system" width="326" height="376"/>
         <image name="seperate_line" width="1" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
