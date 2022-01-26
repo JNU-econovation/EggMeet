@@ -31,6 +31,14 @@
 		195EE58327A1758D000826A9 /* RegisterScheduleMenteeSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195EE58127A1758D000826A9 /* RegisterScheduleMenteeSystemTableViewCell.xib */; };
 		195EE58627A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195EE58427A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.swift */; };
 		195EE58727A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195EE58527A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.xib */; };
+		195EE58C27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195EE58A27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.swift */; };
+		195EE58D27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195EE58B27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.xib */; };
+		195EE59027A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195EE58E27A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.swift */; };
+		195EE59127A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195EE58F27A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.xib */; };
+		195EE59427A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195EE59227A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift */; };
+		195EE59527A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195EE59327A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.xib */; };
+		195EE59827A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195EE59627A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift */; };
+		195EE59927A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 195EE59727A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.xib */; };
 		196D73AB2786C59000B0B50A /* ExplainGrowthPointVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */; };
 		196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */; };
 		1971B6A4279BF13400FF64BA /* SendMentorRequestTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1971B6A3279BF13400FF64BA /* SendMentorRequestTVC.swift */; };
@@ -135,6 +143,14 @@
 		195EE58127A1758D000826A9 /* RegisterScheduleMenteeSystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterScheduleMenteeSystemTableViewCell.xib; sourceTree = "<group>"; };
 		195EE58427A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAcceptMenteeSystemTableViewCell.swift; sourceTree = "<group>"; };
 		195EE58527A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleAcceptMenteeSystemTableViewCell.xib; sourceTree = "<group>"; };
+		195EE58A27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringRequestMentorSystemTableViewCell.swift; sourceTree = "<group>"; };
+		195EE58B27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MentoringRequestMentorSystemTableViewCell.xib; sourceTree = "<group>"; };
+		195EE58E27A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentoringAcceptMentorSystemTableViewCell.swift; sourceTree = "<group>"; };
+		195EE58F27A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MentoringAcceptMentorSystemTableViewCell.xib; sourceTree = "<group>"; };
+		195EE59227A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleRequestMentorSystemTableViewCell.swift; sourceTree = "<group>"; };
+		195EE59327A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleRequestMentorSystemTableViewCell.xib; sourceTree = "<group>"; };
+		195EE59627A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAcceptMentorSystemTableViewCell.swift; sourceTree = "<group>"; };
+		195EE59727A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScheduleAcceptMentorSystemTableViewCell.xib; sourceTree = "<group>"; };
 		196D73AA2786C59000B0B50A /* ExplainGrowthPointVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplainGrowthPointVC.swift; sourceTree = "<group>"; };
 		196F0FA42782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMentorAreaCareerVC.swift; sourceTree = "<group>"; };
 		1971B6A3279BF13400FF64BA /* SendMentorRequestTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMentorRequestTVC.swift; sourceTree = "<group>"; };
@@ -311,6 +327,14 @@
 				195EE58127A1758D000826A9 /* RegisterScheduleMenteeSystemTableViewCell.xib */,
 				195EE58427A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.swift */,
 				195EE58527A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.xib */,
+				195EE58A27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.swift */,
+				195EE58B27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.xib */,
+				195EE58E27A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.swift */,
+				195EE58F27A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.xib */,
+				195EE59227A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift */,
+				195EE59327A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.xib */,
+				195EE59627A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift */,
+				195EE59727A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -663,18 +687,22 @@
 				9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */,
 				195EE57B27A17490000826A9 /* MentoringAcceptMenteeSystemTableViewCell.xib in Resources */,
 				9CC0D5B2279C0FF200E4885B /* CalendarStoryboard.storyboard in Resources */,
+				195EE59527A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.xib in Resources */,
 				192C408227785BF5003055DD /* LaunchScreen.storyboard in Resources */,
 				195EE57F27A17508000826A9 /* ScheduleRequestMenteeSystemTableViewCell.xib in Resources */,
 				195EE57727A170DE000826A9 /* MentoringRequestMenteeSystemTableViewCell.xib in Resources */,
 				192C407F27785BF5003055DD /* Assets.xcassets in Resources */,
 				CD1B96F3279C5E8D009A0DF6 /* SeeMyProfileStoryboard.storyboard in Resources */,
+				195EE59927A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.xib in Resources */,
 				195EE58327A1758D000826A9 /* RegisterScheduleMenteeSystemTableViewCell.xib in Resources */,
 				9CE4B696278BFB1A003AEB90 /* HomeStoryboard.storyboard in Resources */,
+				195EE59127A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.xib in Resources */,
 				1991D0C7278C676A0081EDF5 /* Chat.storyboard in Resources */,
 				19A9AE6727A00AE800E38912 /* GoogleService-Info.plist in Resources */,
 				CD1B96A3279AF104009A0DF6 /* MypageStoryboard.storyboard in Resources */,
 				192C407A27785BF4003055DD /* Main.storyboard in Resources */,
 				195EE58727A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.xib in Resources */,
+				195EE58D27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,10 +802,14 @@
 				19FEC49F2782E5E100F18D8F /* SignUpCheckTermsOfMaliciousContentVC.swift in Sources */,
 				9C25EE6A2790423F00CBBB11 /* SignUpAgeVC.swift in Sources */,
 				19A9AE6927A03D5F00E38912 /* MessageType.swift in Sources */,
+				195EE59027A1874F000826A9 /* MentoringAcceptMentorSystemTableViewCell.swift in Sources */,
 				19FEC4952782DB6D00F18D8F /* SignUpSetGrowthPointVC.swift in Sources */,
+				195EE58C27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.swift in Sources */,
+				195EE59827A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
 				CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */,
 				9CC0D5BA279D12F900E4885B /* PartnerScheduleVC.swift in Sources */,
+				195EE59427A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
 				19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */,
 				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
