@@ -265,7 +265,7 @@ extension HomeNetwork {
                         return
                     }
                     
-                    var userData: HomeProfileModel = HomeProfileModel(age: age, description: description, location: location, menteeCategory: mentorCategory, menteeDescription: menteeDescription, menteeRating: menteeRating, mentorCareer: mentorCareer, mentorCategory: mentorCategory, mentorDescription: mentorDescription, mentorGrowthCost: mentorGrowthCost, mentorLink: mentorLink, mentorRating: mentorRating , nickname: nickname, isOfflineAvailable: offlineAvailable, isOnlineAvailable: onlineAvailable, pictureIndex: 0, sex: sex)
+                    let userData: HomeProfileModel = HomeProfileModel(age: age, description: description, location: location, menteeCategory: menteeCategory, menteeDescription: menteeDescription, menteeRating: menteeRating, mentorCareer: mentorCareer, mentorCategory: mentorCategory, mentorDescription: mentorDescription, mentorGrowthCost: mentorGrowthCost, mentorLink: mentorLink, mentorRating: mentorRating , nickname: nickname, isOfflineAvailable: offlineAvailable, isOnlineAvailable: onlineAvailable, pictureIndex: 0, sex: sex)
                     
                     completion(userData)
                 } catch {print(error.localizedDescription)}
