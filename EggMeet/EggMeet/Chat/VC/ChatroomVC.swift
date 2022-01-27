@@ -206,17 +206,16 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 내가 보낸 메세지 보여주기
-        /*
         if self.chatContentList[indexPath.row].writerId == self.myId {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
         }
-        */
+        
         // 시스템 메세지 출력
         if self.chatContentList[indexPath.row].type == "MESSAGE"{
             // 내가 멘토일 때
             if self.myId == mentorId{
-                // if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
+                if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
                     switch self.chatContentList[indexPath.row].content{
                     case "MENTORING_REQUEST":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMentorSystemTableViewCell", for: indexPath) as! MentoringRequestMentorSystemTableViewCell
@@ -233,10 +232,10 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                     default:
                         break
                     }
-               // }
+               }
             }
             if self.myId == menteeId{
-                // if self.chatContentList[indexPath.row].type == "MENTEE_SYSTEM"{
+                if self.chatContentList[indexPath.row].type == "MENTEE_SYSTEM"{
                     switch self.chatContentList[indexPath.row].content{
                     case "MENTORING_REQUEST":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMenteeSystemTableViewCell", for: indexPath) as! MentoringRequestMenteeSystemTableViewCell
@@ -256,7 +255,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                     default:
                         break
                     }
-              //  }
+                }
             }
         }
         // 상대방 메세지 보여주기
