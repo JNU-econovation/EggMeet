@@ -327,7 +327,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="마이프로필이미지" translatesAutoresizingMaskIntoConstraints="NO" id="bP5-uI-kvZ">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="origin_egg" translatesAutoresizingMaskIntoConstraints="NO" id="bP5-uI-kvZ">
                                 <rect key="frame" x="182" y="82.5" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6Aq-La-Dw8"/>
@@ -562,7 +562,7 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="마이프로필이미지" width="44" height="44"/>
+        <image name="origin_egg" width="352" height="352"/>
         <image name="상단 바" width="1500" height="272"/>
         <image name="이날짜로선택_작게 2" width="138" height="46"/>
         <image name="이시간으로선택_작게" width="138" height="46"/>
