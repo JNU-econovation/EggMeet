@@ -13,6 +13,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterLocationLabel: UILabel!
     @IBOutlet weak var filterCategoryLabel: UILabel!
+    @IBOutlet weak var findMentorButton: UIButton!
+    @IBOutlet weak var findMenteeButton: UIButton!
     
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
@@ -32,7 +34,6 @@ class HomeVC: UIViewController {
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         attribute()
         getHomeMentorData()
-        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +41,7 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.isHidden =  true
         
         self.tableView.separatorColor = UIColor.clear
+        tabBarController?.tabBar.tintColor = UIColor(red: 255/255, green: 180/255, blue: 0/255, alpha: 1)
     }
     
     private func attribute() {
@@ -55,7 +57,7 @@ class HomeVC: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         let filterVC = segue.source as! HomeFilterVC
         location = filterVC.location
-        category = "\(Category(rawValue: filterVC.category)!)"
+         category = "\(Category(rawValue: filterVC.category)!)"
         sex = filterVC.sex
         age = filterVC.age
         isOnlineAvailable = filterVC.isOnlineAvailable
@@ -88,12 +90,16 @@ class HomeVC: UIViewController {
     
     @IBAction func touchFindMentorButton(_ sender: Any) {
         isMentor = true
+        findMentorButton.setImage(UIImage(named: "home_find_mentor_selected"), for: .normal)
+        findMenteeButton.setImage(UIImage(named: "home_find_mentee_deselected"), for: .normal)
         self.homeList.removeAll()
         getHomeMentorData()
     }
     
     @IBAction func touchFindMenteeButton(_ sender: Any) {
         isMentor = false
+        findMentorButton.setImage(UIImage(named: "home_find_mentor_deselected"), for: .normal)
+        findMenteeButton.setImage(UIImage(named: "home_find_mentee_selected"), for: .normal)
         self.homeList.removeAll()
         getHomeMenteeData()
     }

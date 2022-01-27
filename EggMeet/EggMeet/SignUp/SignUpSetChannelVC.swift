@@ -12,6 +12,7 @@ class SignUpSetChannelVC : UIViewController{
     
     @IBOutlet weak var onlineSelectButton: UIButton!
     @IBOutlet weak var offlineSelectButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var isOnlineChecked : Bool = false
     var isOfflineChecked : Bool = false
@@ -25,6 +26,11 @@ class SignUpSetChannelVC : UIViewController{
         ud.set(isOnlineChecked, forKey: isOnlineAvailableKey)
         ud.set(isOfflineChecked, forKey: isOfflineAvailableKey)
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @IBAction func windSignUpCheckTermsOfServiceView (_ sender: Any){
