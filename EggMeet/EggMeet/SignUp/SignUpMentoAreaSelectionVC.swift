@@ -88,6 +88,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
             selectCategory += item
             print(selectCategory)
             ud.set(selectCategory, forKey: mentorAreaKey)
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         }
         isCategorySelected = true
     }
