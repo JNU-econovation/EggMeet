@@ -44,11 +44,12 @@ class CalendarVC: TabmanViewController {
     func settingTabBar (ctBar : TMBar.ButtonBar) {
         ctBar.layout.transitionStyle = .none
         
+        
         // 왼쪽 여백주기
-        ctBar.layout.contentInset = UIEdgeInsets(top: 76.0, left: 13.0, bottom: 0.0, right: 20.0)
+        ctBar.layout.contentInset = UIEdgeInsets(top: 80, left: 12.0, bottom: 0.0, right: 12.0)
         
         // 간격
-        ctBar.layout.interButtonSpacing = 22
+        ctBar.layout.interButtonSpacing = 15
         ctBar.backgroundColor = .clear
         ctBar.backgroundView.style = .clear
         
@@ -56,12 +57,12 @@ class CalendarVC: TabmanViewController {
         ctBar.buttons.customize { (button) in
             button.tintColor = .black
             button.selectedTintColor = UIColor(red: 1, green: 0.706, blue: 0, alpha: 1)
-            button.font = UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .bold)
-            button.selectedFont = UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .bold)
+            button.font = UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 15) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
+            button.selectedFont = UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 15) ?? UIFont.systemFont(ofSize: 12, weight: .regular)
         }
         
         // 인디케이터 (영상에서 주황색 아래 바 부분)
-        ctBar.indicator.weight = .custom(value: 8)
+        ctBar.indicator.weight = .custom(value: 5)
         ctBar.indicator.tintColor = UIColor(red: 1, green: 0.706, blue: 0, alpha: 1)
     }
 }
