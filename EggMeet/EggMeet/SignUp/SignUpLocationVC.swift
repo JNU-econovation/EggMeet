@@ -35,6 +35,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         self.collcectionView.delegate = self
         self.collcectionView.dataSource = self
         setCollectionView()
+        ud.set("광주 서구", forKey: locationKey)
     }
     
     override func viewWillAppear(_ animated: Bool) {

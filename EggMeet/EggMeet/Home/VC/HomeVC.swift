@@ -34,7 +34,6 @@ class HomeVC: UIViewController {
         tableView.register(nibName, forCellReuseIdentifier: "HomeCell")
         attribute()
         getHomeMentorData()
-        self.tabBarController?.tabBar.isHidden = false
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +41,7 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.isHidden =  true
         
         self.tableView.separatorColor = UIColor.clear
+        tabBarController?.tabBar.tintColor = UIColor(red: 255/255, green: 180/255, blue: 0/255, alpha: 1)
     }
     
     private func attribute() {

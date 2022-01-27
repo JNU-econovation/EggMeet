@@ -208,7 +208,7 @@
                             <constraint firstItem="b15-Dm-vBk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="yLj-mb-FNA"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="tabbar_home" id="4DD-Yy-hhd">
+                    <tabBarItem key="tabBarItem" title="Home" image="tabbar_home" selectedImage="tabbar_home_yellow" id="4DD-Yy-hhd">
                         <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="j8X-1c-hod"/>
@@ -228,12 +228,11 @@
         <!--Tab Bar Controller-->
         <scene sceneID="MJg-b0-KzI">
             <objects>
-                <tabBarController storyboardIdentifier="HomeTabBar" automaticallyAdjustsScrollViewInsets="NO" id="Qat-BD-NR5" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeTabBar" automaticallyAdjustsScrollViewInsets="NO" id="Qat-BD-NR5" customClass="TabBarController" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4y2-7K-xLw">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="viewControllers" id="vjG-X2-kke"/>
@@ -319,11 +318,11 @@
         <scene sceneID="WI8-g0-aqZ">
             <objects>
                 <viewController storyboardIdentifier="HomeProfileVC" id="4W2-Mw-FTo" customClass="HomeProfileVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GK8-F0-EVE">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="GK8-F0-EVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m50-TI-Wsm">
@@ -1324,6 +1323,7 @@
         <image name="location_detail_category_deselcted" width="640" height="168"/>
         <image name="origin_egg" width="352" height="352"/>
         <image name="tabbar_home" width="23" height="23"/>
+        <image name="tabbar_home_yellow" width="24" height="23"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

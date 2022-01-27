@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     @IBAction func windHome(_ sender: Any){
