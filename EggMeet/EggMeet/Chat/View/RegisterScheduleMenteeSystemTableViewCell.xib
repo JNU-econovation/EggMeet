@@ -9,39 +9,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RegisterScheduleMenteeSystemTableViewCell" rowHeight="194" id="KGk-i7-Jjw" customClass="RegisterScheduleMenteeSystemTableViewCell" customModule="EggMeet" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="430" height="194"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="RegisterScheduleMenteeSystemTableViewCell" rowHeight="249" id="KGk-i7-Jjw" customClass="RegisterScheduleMenteeSystemTableViewCell" customModule="EggMeet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="443" height="249"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="430" height="194"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="443" height="249"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="register_schedule_mentee_system" translatesAutoresizingMaskIntoConstraints="NO" id="SAW-H7-nEb">
-                        <rect key="frame" x="273" y="12" width="147" height="172"/>
+                        <rect key="frame" x="232" y="10" width="201" height="231"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="147" id="Cm9-HB-dRh"/>
-                            <constraint firstAttribute="height" constant="172" id="KWN-wo-mZI"/>
+                            <constraint firstAttribute="width" constant="201" id="Cm9-HB-dRh"/>
+                            <constraint firstAttribute="height" constant="231" id="KWN-wo-mZI"/>
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7p-v4-3Zc">
-                        <rect key="frame" x="298" y="129" width="98" height="31"/>
+                        <rect key="frame" x="266.5" y="165" width="130" height="40"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="31" id="VR8-a7-Yr3"/>
-                            <constraint firstAttribute="width" constant="98" id="VWh-6p-bBY"/>
+                            <constraint firstAttribute="height" constant="40" id="VR8-a7-Yr3"/>
+                            <constraint firstAttribute="width" constant="130" id="VWh-6p-bBY"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <connections>
+                            <action selector="registerScheduleButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="hg7-oc-h2C"/>
+                            <action selector="registerScheduleButtonWithSender:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="v1z-Hd-PpP"/>
+                        </connections>
                     </button>
                 </subviews>
                 <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="SAW-H7-nEb" secondAttribute="bottom" constant="10" id="HVW-ld-HO6"/>
-                    <constraint firstAttribute="bottom" secondItem="A7p-v4-3Zc" secondAttribute="bottom" constant="34" id="YTe-qU-r3g"/>
+                    <constraint firstItem="A7p-v4-3Zc" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="110" id="EP4-MG-uPX"/>
+                    <constraint firstItem="SAW-H7-nEb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="G1Y-Lk-Qsh"/>
+                    <constraint firstAttribute="bottom" secondItem="SAW-H7-nEb" secondAttribute="bottom" id="HVW-ld-HO6"/>
+                    <constraint firstItem="A7p-v4-3Zc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="154" id="VEH-YN-iSG"/>
                     <constraint firstAttribute="trailing" secondItem="SAW-H7-nEb" secondAttribute="trailing" constant="10" id="ce2-5A-Fd0"/>
-                    <constraint firstAttribute="trailing" secondItem="A7p-v4-3Zc" secondAttribute="trailing" constant="34" id="cn6-bs-fLF"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="217.39130434782609" y="119.19642857142857"/>
+            <connections>
+                <outlet property="registerButton" destination="A7p-v4-3Zc" id="vjl-pc-8Ox"/>
+            </connections>
+            <point key="canvasLocation" x="254.34782608695653" y="136.27232142857142"/>
         </tableViewCell>
     </objects>
     <resources>

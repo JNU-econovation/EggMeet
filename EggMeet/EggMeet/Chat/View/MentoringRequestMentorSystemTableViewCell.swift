@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class MentoringRequestMentorSystemTableViewCell: UITableViewCell {
 
+    @IBOutlet var mentoringAcceptButton : UIButton!
+
+    var mentoringAcceptAction: (() -> Void)? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +23,10 @@ class MentoringRequestMentorSystemTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func touchUpMentoringAcceptButton(_ sender: Any?){
+        mentoringAcceptAction?()
     }
     
 }

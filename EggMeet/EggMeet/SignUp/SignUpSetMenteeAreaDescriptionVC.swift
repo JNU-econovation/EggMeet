@@ -24,6 +24,11 @@ class SignUpSetMenteeAreaDescriptionVC : UIViewController{
         menteeAreaDescriptionTextView.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
+    }
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.menteeAreaDescriptionTextView.endEditing(true)
         }

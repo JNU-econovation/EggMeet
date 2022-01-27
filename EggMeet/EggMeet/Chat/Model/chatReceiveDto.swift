@@ -11,17 +11,18 @@ struct chatReceiveDto{
     var id: Int
     var chatroomId: Int
     var writerId: Int
-    var writerPictrureIndex: Int
+    var writerPictureIndex: Int
     var writerNickname: String
     var type : String
     var content : String
     var dateTime : Double
+    var requestId : Int?
     
     func debugPrint(){
         NSLog("id \(id)")
         NSLog("chatroomId : \(chatroomId)")
         NSLog("writerId : \(writerId)")
-        NSLog("writerPictureIndex : \(writerPictrureIndex)")
+        NSLog("writerPictureIndex : \(writerPictureIndex)")
         NSLog("writerNickname : \(writerNickname)")
         NSLog("type : \(type)")
         NSLog("content : \(content)")

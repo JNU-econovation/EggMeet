@@ -66,7 +66,7 @@ class SignUpSexVC: UIViewController {
     
     @objc func touchGenderRadioButton(_ sender:DLRadioButton) {
         print(sender.currentTitle!)
-        selectedSex = sender.currentTitle! ?? "밝히지않음"
+        selectedSex = sender.currentTitle! ?? "밝히지 않음"
         self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         isButtonSelected = true
     }

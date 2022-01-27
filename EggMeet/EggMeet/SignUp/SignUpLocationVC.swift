@@ -35,6 +35,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         self.collcectionView.delegate = self
         self.collcectionView.dataSource = self
         setCollectionView()
+        ud.set("광주 서구", forKey: locationKey)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -75,6 +76,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         }
     }
     @IBAction func skipAndWindSignUpSelfIntroduceView(_ sender: Any){
+        ud.set("GWANGJU_BUKGU", forKey: locationKey)
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
     }

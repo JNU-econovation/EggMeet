@@ -6,9 +6,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class ScheduleRequestMentorSystemTableViewCell: UITableViewCell {
 
+    @IBOutlet var scheduleAcceptButton: UIButton!
+    
+    var scheduleAcceptAction: (() -> Void)? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +23,10 @@ class ScheduleRequestMentorSystemTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func touchUpScheduleAcceptButton(_ sender: Any?){
+        scheduleAcceptAction?()
     }
     
 }

@@ -25,8 +25,8 @@ struct RegisterUser {
     let mentorGrowthPoint: Int?
     let mentorLink: String?
     let nickname: String?
-    let isOfflineAvailable: Bool
-    let isOnlineAvailable: Bool
+    let offlineAvailable: Bool
+    let onlineAvailable: Bool
     let phoneNumber: String?
     let pictureIndex: Int?
     let role: String?
@@ -49,8 +49,8 @@ struct RegisterUser {
         self.mentorGrowthPoint = ud.integer(forKey: "growthPoint")
         self.mentorLink = ud.string(forKey: "mentorLink")
         self.nickname = ud.string(forKey: "nickname")
-        self.isOfflineAvailable = ud.bool(forKey:"isOfflineAvailable")
-        self.isOnlineAvailable = ud.bool(forKey: "isOnlineAvailable")
+        self.offlineAvailable = ud.bool(forKey:"isOfflineAvailable")
+        self.onlineAvailable = ud.bool(forKey: "isOnlineAvailable")
         self.phoneNumber = ud.string(forKey: "phoneNumber")
         self.pictureIndex = ud.integer(forKey: "pictureIndex")
         self.role = ud.string(forKey: "role")
@@ -60,27 +60,27 @@ struct RegisterUser {
     
     func setRegisterParameters() -> [String: Any]{
         let JSONDictionary: [String: Any] = [
-            "nickname": self.nickname ?? "Yunseong",
-            "age": self.age ?? 24,
-            "sex": self.sex ?? "MALE",
-            "email": self.email ?? "default@naver.com",
-            "location": self.location ?? "GWANGJU_BUKGU",
-            "description": self.description ?? "",
-            "pictureIndex": self.pictureIndex ?? 1,
-            "isOnlineAvailable": self.isOnlineAvailable,
-            "isOfflineAvailable": self.isOfflineAvailable,
-            "mentorCategory": self.mentorCategory ?? "IT_WEB",
-            "mentorDescription": self.mentorDescription ?? "test",
-            "mentorCareer": self.mentorCareer ?? "test",
-            "mentorLink": self.mentorLink ?? "test",
-            "mentorGrowthPoint": self.mentorGrowthPoint ?? 1,
-            "menteeCategory": self.menteeCategory ?? "IT_WEB",
-            "menteeDescription": self.menteeDescription ?? "test",
-            "loginType": self.loginType ?? "APPLE",
-            "socialToken": self.socialToken ?? "",
-            "role": self.role ?? "ROLE_USER"
+            "nickname": ud.string(forKey: "nickname") ?? "Yunseong",
+            "age": ud.integer(forKey: "age") ?? 24,
+            "sex": "\(Sex(rawValue: ud.string(forKey: "sex")!)!)" ?? "UNDEFINED",
+            "email": ud.string(forKey: "email") ?? "default@naver.com",
+            "location": "\(Location(rawValue: ud.string(forKey: "location")!)!)" ?? "GWANGJU_BUKGU",
+            "description": ud.string(forKey: "description") ?? "",
+            "pictureIndex": 0 ?? 1,
+            "onlineAvailable": ud.bool(forKey: "isOnlineAvailable"),
+            "offlineAvailable": ud.bool(forKey:"isOfflineAvailable"),
+            "mentorCategory": "\(Category(rawValue: ud.string(forKey: "mentorCategory")!)!)" ,
+            "mentorDescription": ud.string(forKey: "mentorDescription") ?? "test",
+            "mentorCareer": ud.string(forKey: "mentorCareer") ?? "test",
+            "mentorLink": ud.string(forKey: "mentorLink") ?? "test",
+            "mentorGrowthPoint": ud.integer(forKey: "growthPoint") ?? 1,
+            "menteeCategory": "\(Category(rawValue: ud.string(forKey: "menteeCategory")!)!)"  ?? "IT_WEB",
+            "menteeDescription": ud.string(forKey: "menteeDescription") ?? "test",
+            "loginType": ud.string(forKey: "loginType") ?? "APPLE",
+            "socialToken": ud.string(forKey: "socialToken") ?? "",
+            "role": ud.string(forKey: "role") ?? "ROLE_USER"
         ]
-        
+        NSLog("dummyData : \(JSONDictionary)")
         return JSONDictionary
     }
     
@@ -113,7 +113,7 @@ struct RegisterUser {
     func requestRegisterInformation(){
         var mainAddress :String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
         let apiURL: String = "http://" + mainAddress + "/auth/register"
-        let loginParam = setDummyDataRegisterParameters() as Dictionary
+        let loginParam = setRegisterParameters() as Dictionary
         
         var request = URLRequest(url: URL(string: apiURL)!)
         request.httpMethod = "POST"

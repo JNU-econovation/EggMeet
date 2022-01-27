@@ -12,12 +12,18 @@ class SignUpCheckTermsOfServiceVC: UIViewController {
     
     @IBOutlet weak var termsOfServiceCheckButton: UIButton!
     @IBOutlet weak var personalInfocheckButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var isAgreeTermsOfService = false
     var isAgreePersonalInfo = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
     
     @IBAction func touchUpAgreeTermsOfServiceButton(_ sender: UIButton){
@@ -28,6 +34,7 @@ class SignUpCheckTermsOfServiceVC: UIViewController {
     @IBAction func touchUpAgreePersonalInfoButton(_ sender: UIButton){
         isAgreePersonalInfo = !isAgreePersonalInfo
         sender.isSelected.toggle()
+        self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
     }
     
     @IBAction func windSignUpCheckTermsOfMaliciousContentView (_ sender: Any){

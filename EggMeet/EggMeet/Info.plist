@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>WS_URL</key>
-	<string>$(WS_URL)</string>
-	<key>TEST_APPLE_SOCIAL_TOKEN</key>
-	<string>$(TEST_APPLE_SOCIAL_TOKEN)</string>
 	<key>API_URL</key>
 	<string>$(API_URL)</string>
 	<key>CFBundleURLTypes</key>
@@ -23,6 +19,8 @@
 	</array>
 	<key>KAKAO_SECRET_KEY</key>
 	<string>$(KAKAO_SECRET_KEY)</string>
+	<key>TEST_APPLE_SOCIAL_TOKEN</key>
+	<string>$(TEST_APPLE_SOCIAL_TOKEN)</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -42,5 +40,11 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
+	<key>WS_URL</key>
+	<string>$(WS_URL)</string>
 </dict>
 </plist>
