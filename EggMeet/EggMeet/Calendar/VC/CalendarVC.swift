@@ -11,7 +11,7 @@ import Tabman
 import Pageboy
 
 class CalendarVC: TabmanViewController {
-    @IBOutlet weak var titleLabel: UILabel!
+   // @IBOutlet weak var titleLabel: UILabel!
     
     var viewControllers: Array<UIViewController> = []
     
@@ -33,7 +33,7 @@ class CalendarVC: TabmanViewController {
         settingTabBar(ctBar: bar)
         addBar(bar, dataSource: self, at: .top)
         
-        self.view.bringSubviewToFront(titleLabel)
+        //self.view.bringSubviewToFront(titleLabel)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,14 +55,14 @@ class CalendarVC: TabmanViewController {
         // 선택 / 안선택 색 + font size
         ctBar.buttons.customize { (button) in
             button.tintColor = .black
-            button.selectedTintColor = .black
-            button.font = UIFont.systemFont(ofSize: 12)
-            button.selectedFont = UIFont.systemFont(ofSize: 12, weight: .bold)
+            button.selectedTintColor = UIColor(red: 1, green: 0.706, blue: 0, alpha: 1)
+            button.font = UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .bold)
+            button.selectedFont = UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 15) ?? UIFont.systemFont(ofSize: 15, weight: .bold)
         }
         
         // 인디케이터 (영상에서 주황색 아래 바 부분)
         ctBar.indicator.weight = .custom(value: 8)
-        ctBar.indicator.tintColor = .systemYellow
+        ctBar.indicator.tintColor = UIColor(red: 1, green: 0.706, blue: 0, alpha: 1)
     }
 }
 extension CalendarVC: PageboyViewControllerDataSource, TMBarDataSource {
