@@ -16,11 +16,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="403" height="125"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_tabelcell" translatesAutoresizingMaskIntoConstraints="NO" id="oPB-Kt-3X9">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_cell_box" translatesAutoresizingMaskIntoConstraints="NO" id="oPB-Kt-3X9">
                         <rect key="frame" x="0.0" y="0.0" width="403" height="125"/>
                     </imageView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X96-Sr-E6c">
-                        <rect key="frame" x="49" y="21.5" width="59" height="56"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="origin_egg" translatesAutoresizingMaskIntoConstraints="NO" id="X96-Sr-E6c">
+                        <rect key="frame" x="49" y="20" width="59" height="59"/>
                         <color key="tintColor" red="0.53413444759999995" green="0.53422975539999995" blue="0.5341284275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="59" id="PrH-G4-Msl"/>
@@ -120,7 +120,7 @@
                     <constraint firstItem="kO1-w8-5WZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b55-78-DWo"/>
                     <constraint firstItem="flU-cN-WZq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="cwa-in-GXf"/>
                     <constraint firstItem="X96-Sr-E6c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="49" id="hwi-Yd-UdY"/>
-                    <constraint firstItem="oPB-Kt-3X9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mbF-tC-1ZM"/>
+                    <constraint firstItem="oPB-Kt-3X9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jYM-ee-ZoI"/>
                     <constraint firstItem="TH7-oP-h3B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="oHz-hz-fZF"/>
                     <constraint firstAttribute="trailing" secondItem="oPB-Kt-3X9" secondAttribute="trailing" id="oiq-r2-YQn"/>
                     <constraint firstItem="m9r-Vv-Krb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="170" id="tt9-Ad-E06"/>
@@ -143,8 +143,8 @@
     </objects>
     <resources>
         <image name="home_area_mentor" width="196" height="68"/>
+        <image name="home_cell_box" width="1408" height="448"/>
         <image name="home_stars" width="320" height="64"/>
-        <image name="home_tabelcell" width="1408" height="448"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="origin_egg" width="352" height="352"/>
     </resources>
 </document>

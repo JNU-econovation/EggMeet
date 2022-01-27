@@ -41,6 +41,9 @@ class HomeFilterVC: UIViewController {
         setAgeRadioButtons()
         setGenderRadioButtons()
         setChannelRadioButtons()
+       // let statusBar = UIView(frame: (UIApplication.shared.keyWindow?.windowScene?.statusBarManager?.statusBarFrame)!)
+       // statusBar.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
+        //UIApplication.shared.keyWindow?.addSubview(statusBar)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,9 +52,21 @@ class HomeFilterVC: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "필터"
         self.navigationController?.navigationBar.isHidden =  false
-        //self.navigationController?.navigationBar.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
+        //addShadowToBar()
+       
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigation_bar")?.resizableImage(withCapInsets: UIEdgeInsets.zero, resizingMode: .stretch), for: .default)
         firstCategoryLabel.adjustsFontSizeToFitWidth = true
         secondCategoryLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    func addShadowToBar() {
+        let shadowView = UIView(frame: self.navigationController!.navigationBar.frame)
+        shadowView.backgroundColor = UIColor.white
+        shadowView.layer.masksToBounds = false
+        shadowView.layer.shadowOpacity = 0.4 // your opacity
+        shadowView.layer.shadowOffset = CGSize(width: 0, height: 2) // your offset
+        shadowView.layer.shadowRadius =  4 //your radius
+        self.view.addSubview(shadowView)
     }
     
     func setAgeRadioButtons(){
