@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class MentoringRequestMentorSystemTableViewCell: UITableViewCell {
 
@@ -29,7 +30,13 @@ class MentoringRequestMentorSystemTableViewCell: UITableViewCell {
         let apiURL = "http://" + mainAddress + "/mentoring/request?requestId=\(requestId)"
         
         var request = URLRequest(url: URL(string: apiURL)!)
-        request.httpMethod = "GET"
+        request.httpMethod = "PUT"
+        request.timeoutInterval = 10
+        
+        AF.request(request).responseString{(response) in
+            NSLog("status code : \(response.response?.statusCode)")
+            NSLog("description : \(response.debugDescription)")
+        }
     }
     
 }
