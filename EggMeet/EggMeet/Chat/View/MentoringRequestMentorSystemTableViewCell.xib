@@ -31,7 +31,7 @@
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                         <connections>
-                            <action selector="touchUpMentoringAcceptButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="DX8-q1-C1G"/>
+                            <action selector="touchUpMentoringAcceptButton:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="iYl-yt-TLh"/>
                         </connections>
                     </button>
                 </subviews>
@@ -45,10 +45,6 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <connections>
-                <outlet property="mentoringAcceptButton" destination="KaP-PS-GN7" id="Nk6-e2-t62"/>
-                <outlet property="touchUpMentoringAcceptButton" destination="KaP-PS-GN7" id="3dn-GD-RNI"/>
-            </connections>
             <point key="canvasLocation" x="240.57971014492756" y="162.38839285714286"/>
         </tableViewCell>
     </objects>
