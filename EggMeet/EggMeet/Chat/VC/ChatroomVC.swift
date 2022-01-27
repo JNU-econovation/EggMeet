@@ -264,12 +264,42 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                     switch self.chatContentList[indexPath.row].content{
                     case "MENTORING_REQUEST":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMentorSystemTableViewCell", for: indexPath) as! MentoringRequestMentorSystemTableViewCell
+                        cell.mentoringAcceptAction = {
+                            let ud = UserDefaults.standard
+                            let requestId :Int = ud.integer(forKey: "mentoringRequestId")
+                            let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+                            let apiURL = "http://" + mainAddress + "/mentoring/request?requestId=\(requestId)"
+                            
+                            var request = URLRequest(url: URL(string: apiURL)!)
+                            request.httpMethod = "PUT"
+                            request.timeoutInterval = 10
+                            
+                            AF.request(request).responseString{(response) in
+                                NSLog("status code : \(response.response?.statusCode)")
+                                NSLog("description : \(response.debugDescription)")
+                            }
+                        }
                         return cell
                     case "MENTORING_ACCEPT":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMentorSystemTableViewCell" , for: indexPath) as! MentoringAcceptMentorSystemTableViewCell
                         return cell
                     case "SCHEDULE_REQUEST":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMentorSystemTableViewCell", for: indexPath) as! ScheduleRequestMentorSystemTableViewCell
+                        cell.scheduleAcceptAction = {
+                            let ud = UserDefaults.standard
+                            let requestId :Int = ud.integer(forKey: "mentoringRequestId")
+                            let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+                            let apiURL = "http://" + mainAddress + "/mentoring/meeting/request?requestId=\(requestId)"
+                            
+                            var request = URLRequest(url: URL(string: apiURL)!)
+                            request.httpMethod = "PUT"
+                            request.timeoutInterval = 10
+                            
+                            AF.request(request).responseString{(response) in
+                                NSLog("status code : \(response.response?.statusCode)")
+                                NSLog("description : \(response.debugDescription)")
+                            }
+                        }
                         return cell
                     case "SCHEDULE_ACCEPT":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMentorSystemTableViewCell", for: indexPath) as! ScheduleAcceptMentorSystemTableViewCell
