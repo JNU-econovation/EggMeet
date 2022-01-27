@@ -17,16 +17,12 @@ class MypageVC: UIViewController {
     @IBOutlet weak var MyGrowthStageLabel: UILabel!
     @IBOutlet weak var MyPossessGrowthPoint: UILabel!
     
-    @IBOutlet weak var MypageHeader: UIView!
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MypageHeader.layer.shadowColor = UIColor.black.cgColor // 색깔
-        MypageHeader.layer.masksToBounds = false  // 내부에 속한 요소들이 UIView 밖을 벗어날 때, 잘라낼 것인지. 그림자는 밖에 그려지는 것이므로 false 로 설정
-        MypageHeader.layer.shadowOffset = CGSize(width: 0, height: 4) // 위치조정
-        MypageHeader.layer.shadowRadius = 5 // 반경
-        MypageHeader.layer.shadowOpacity = 0.3 // alpha값
+       
   
         MyProfileNickname.adjustsFontSizeToFitWidth = true
         // userimage를 원형으로 crop
