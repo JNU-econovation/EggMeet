@@ -17,6 +17,6 @@ pod 'Tabman', '~> 2.9'
 pod 'IQKeyboardManagerSwift'
 pod 'FSCalendar'
 
-  # Pods for EggMeet
 
+# Pods for EggMeet
 end

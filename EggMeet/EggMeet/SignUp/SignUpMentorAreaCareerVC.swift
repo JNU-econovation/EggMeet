@@ -33,6 +33,7 @@ class SignUpMentorAreaCareerVC : UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         textViewCountLabel.text = "\(mentorAreaCareerTextView.text.count)/500"
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
 
     @IBAction func windSignUpSetGrowthPointView(_ sender: Any){

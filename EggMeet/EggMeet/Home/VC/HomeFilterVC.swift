@@ -41,15 +41,18 @@ class HomeFilterVC: UIViewController {
         setAgeRadioButtons()
         setGenderRadioButtons()
         setChannelRadioButtons()
+    
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "필터"
+       
         self.navigationController?.navigationBar.isHidden =  false
-        //self.navigationController?.navigationBar.backgroundColor = UIColor(red: 242, green: 242, blue: 242, alpha: 1)
+        
         firstCategoryLabel.adjustsFontSizeToFitWidth = true
         secondCategoryLabel.adjustsFontSizeToFitWidth = true
     }
