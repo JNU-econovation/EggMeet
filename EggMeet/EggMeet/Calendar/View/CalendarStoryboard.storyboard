@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -255,7 +255,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신규 멘토링 일정을 등록할 파트너를 선택해주세요." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZfJ-RC-LpK">
-                                <rect key="frame" x="50" y="144" width="314" height="43"/>
+                                <rect key="frame" x="50" y="144" width="276.5" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="xkj-vg-NkP"/>
                                 </constraints>
@@ -276,13 +276,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzl-b2-oN3">
-                                <rect key="frame" x="52" y="566" width="59" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mzl-b2-oN3">
+                                <rect key="frame" x="120" y="414" width="130" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Jom-Fd-Y8q"/>
+                                    <constraint firstAttribute="width" constant="130" id="bw3-Ir-QMk"/>
+                                </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="멘토"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="멘토" image="calendar_new_schedule"/>
                                 <connections>
                                     <action selector="windNewMentoringCalendarVC:" destination="Uwe-b4-6gA" eventType="touchUpInside" id="VJX-uv-pOM"/>
                                 </connections>
@@ -296,10 +298,11 @@
                             <constraint firstItem="ZfJ-RC-LpK" firstAttribute="leading" secondItem="I8O-uW-SNM" secondAttribute="leading" constant="50" id="PYd-Mr-OYs"/>
                             <constraint firstItem="UFJ-8X-XlR" firstAttribute="top" secondItem="I8O-uW-SNM" secondAttribute="top" constant="30" id="RuR-uH-wYU"/>
                             <constraint firstItem="ZfJ-RC-LpK" firstAttribute="top" secondItem="I8O-uW-SNM" secondAttribute="top" constant="100" id="S1Z-6i-SVf"/>
-                            <constraint firstItem="I8O-uW-SNM" firstAttribute="trailing" secondItem="ZfJ-RC-LpK" secondAttribute="trailing" constant="50" id="Sed-68-iCC"/>
+                            <constraint firstItem="Mzl-b2-oN3" firstAttribute="top" secondItem="I8O-uW-SNM" secondAttribute="top" constant="370" id="SCD-5S-hYN"/>
                             <constraint firstItem="I8O-uW-SNM" firstAttribute="trailing" secondItem="vZA-Oo-Mzb" secondAttribute="trailing" constant="52" id="awn-7M-l44"/>
                             <constraint firstItem="vZA-Oo-Mzb" firstAttribute="leading" secondItem="I8O-uW-SNM" secondAttribute="leading" constant="52" id="uep-Ad-e1E"/>
                             <constraint firstItem="I8O-uW-SNM" firstAttribute="trailing" secondItem="UFJ-8X-XlR" secondAttribute="trailing" constant="128" id="xWl-wA-ERP"/>
+                            <constraint firstItem="Mzl-b2-oN3" firstAttribute="leading" secondItem="I8O-uW-SNM" secondAttribute="leading" constant="120" id="zmB-Pk-wmS"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -353,10 +356,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-1F-hwx">
-                                <rect key="frame" x="138" y="786" width="138" height="46"/>
+                                <rect key="frame" x="142" y="742" width="130" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="130" id="EG7-pb-dfw"/>
+                                    <constraint firstAttribute="height" constant="50" id="nJn-7G-Cgg"/>
+                                </constraints>
                                 <color key="tintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="이날짜로선택_작게 2"/>
+                                <state key="normal" image="calendar_select_data"/>
                                 <connections>
                                     <action selector="touchDateSelectButton:" destination="nst-6u-z1R" eventType="touchUpInside" id="n4Y-sJ-oCo"/>
                                 </connections>
@@ -406,7 +413,7 @@
                             <constraint firstItem="0Ao-w1-Dbs" firstAttribute="centerY" secondItem="Eas-JX-RJ9" secondAttribute="centerY" id="mQ2-1h-vXg"/>
                             <constraint firstItem="bP5-uI-kvZ" firstAttribute="centerX" secondItem="Eas-JX-RJ9" secondAttribute="centerX" id="mw2-Dk-skv"/>
                             <constraint firstItem="Hxe-dO-ZT0" firstAttribute="leading" secondItem="HSg-5c-eBy" secondAttribute="trailing" constant="20" id="qii-Xk-NVC"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="qh1-1F-hwx" secondAttribute="bottom" constant="30" id="tYV-5c-Zox"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qh1-1F-hwx" secondAttribute="bottom" constant="70" id="tYV-5c-Zox"/>
                             <constraint firstItem="qh1-1F-hwx" firstAttribute="centerX" secondItem="Q22-gp-xJm" secondAttribute="centerX" id="wZ4-at-V7w"/>
                         </constraints>
                     </view>
@@ -447,12 +454,15 @@
                                             <action selector="changeDatePicker:" destination="AhM-nJ-LH6" eventType="valueChanged" id="9Ec-5h-xQR"/>
                                         </connections>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-QQ-vJu">
-                                        <rect key="frame" x="120" y="292" width="150" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-QQ-vJu">
+                                        <rect key="frame" x="120" y="280" width="150" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="XfE-hM-G4I"/>
+                                            <constraint firstAttribute="height" constant="50" id="pVF-Y6-Naf"/>
+                                        </constraints>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Button" image="이시간으로선택_작게"/>
+                                        <state key="normal" title="Button" image="calendar_select_time"/>
                                         <connections>
                                             <action selector="TimeSelect:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="K4u-7k-YV9"/>
                                             <action selector="showAlert:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="eHj-g3-1e1"/>
@@ -466,8 +476,10 @@
                                     <constraint firstItem="Oa4-QI-alB" firstAttribute="top" secondItem="v8j-2Y-1Ee" secondAttribute="bottom" constant="18" id="GuV-kN-ZV9"/>
                                     <constraint firstItem="v8j-2Y-1Ee" firstAttribute="leading" secondItem="VOp-dd-eSe" secondAttribute="leading" constant="104" id="Iyl-Bd-bDK"/>
                                     <constraint firstAttribute="trailing" secondItem="Oa4-QI-alB" secondAttribute="trailing" id="LO5-Nx-BEw"/>
+                                    <constraint firstItem="JE9-QQ-vJu" firstAttribute="leading" secondItem="VOp-dd-eSe" secondAttribute="leading" constant="120" id="QOs-Kw-Ltz"/>
                                     <constraint firstItem="Oa4-QI-alB" firstAttribute="leading" secondItem="VOp-dd-eSe" secondAttribute="leading" id="p3S-rW-hkZ"/>
                                     <constraint firstItem="v8j-2Y-1Ee" firstAttribute="top" secondItem="VOp-dd-eSe" secondAttribute="top" constant="26" id="t8l-BV-SDl"/>
+                                    <constraint firstAttribute="bottom" secondItem="JE9-QQ-vJu" secondAttribute="bottom" constant="20" id="wfP-iP-7Q0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -562,10 +574,11 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="calendar_new_schedule" width="552" height="184"/>
+        <image name="calendar_select_data" width="552" height="184"/>
+        <image name="calendar_select_time" width="552" height="184"/>
         <image name="origin_egg" width="352" height="352"/>
         <image name="상단 바" width="1500" height="272"/>
-        <image name="이날짜로선택_작게 2" width="138" height="46"/>
-        <image name="이시간으로선택_작게" width="138" height="46"/>
         <namedColor name="AccentColor">
             <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
