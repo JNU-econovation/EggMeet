@@ -230,6 +230,13 @@ class ChatroomVC: UIViewController{
                             let dateTime: Double = data["dateTime"] as! Double
                             let requestId: Int? = data["requestId"] as? Int
                             
+                            if requestId != nil{
+                                let ud = UserDefaults.standard
+                                ud.set(requestId, forKey: "mentoringRequestId")
+                                self.mentoringId = requestId!
+                                NSLog("requestId : \(requestId!)")
+                            }
+                            
                             let chatContent: chatReceiveDto = chatReceiveDto(id: id, chatroomId: chatroomId, writerId: writerId ?? 0, writerPictureIndex: writerPictureIndex ?? 0, writerNickname: writerNickname ?? "unKnowned", type: type, content: content ?? "", dateTime: dateTime, requestId: requestId)
                             
                             
@@ -278,10 +285,12 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                             request.setValue("application/json", forHTTPHeaderField: "Content-Type")
                             request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
                             
+                            
                             AF.request(request).responseString{(response) in
                                 NSLog("status code : \(response.response?.statusCode)")
                                 NSLog("description : \(response.debugDescription)")
                             }
+                            
                         }
                         return cell
                     case "MENTORING_ACCEPT":
@@ -423,6 +432,7 @@ extension ChatroomVC: StompClientLibDelegate {
                 self.mentoringId = chatContent.requestId!
                 NSLog("requestId : \(chatContent.requestId!)")
             }
+            
             self.chatContentList.append(chatContent)
             NSLog("success append chat Content : \(chatContent.debugPrint())")
             NSLog("chatContentList : \(self.chatContentList)")
