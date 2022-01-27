@@ -16,13 +16,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="상단 바" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-fr-mQh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="상단 바" translatesAutoresizingMaskIntoConstraints="NO" id="E1T-fr-mQh">
+                                <rect key="frame" x="0.0" y="44" width="375" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="2n9-6Y-f9C"/>
+                                    <constraint firstAttribute="width" constant="375" id="8aY-lV-XUR"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-XF-OwN">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="캘린더" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-XF-OwN">
                                 <rect key="frame" x="166" y="20" width="42" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -30,6 +32,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RUh-XF-OwN" firstAttribute="centerY" secondItem="E1T-fr-mQh" secondAttribute="centerY" id="1a3-6P-cvd"/>
+                            <constraint firstItem="E1T-fr-mQh" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="HO4-Kj-fO0"/>
+                            <constraint firstItem="RUh-XF-OwN" firstAttribute="centerX" secondItem="E1T-fr-mQh" secondAttribute="centerX" id="jDu-jq-1E2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="캘린더" image="calendar" catalog="system" id="wi5-uL-rzd"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -46,17 +53,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나의 전체 멘토링 일정" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5f1-Ix-1ZX">
-                                <rect key="frame" x="111" y="62" width="193" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="PtO-iS-l6H"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="17"/>
-                                <color key="textColor" red="0.41839095949999999" green="0.2607493401" blue="0.097989253700000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A68-AM-fuM" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="141" width="414" height="349"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A68-AM-fuM" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="95" width="375" height="349"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="349" id="Ely-ol-U9e"/>
@@ -66,11 +64,8 @@
                         <viewLayoutGuide key="safeArea" id="tgH-4D-TtS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="A68-AM-fuM" firstAttribute="top" secondItem="tgH-4D-TtS" secondAttribute="top" constant="97" id="0Aj-Sa-HOU"/>
-                            <constraint firstItem="tgH-4D-TtS" firstAttribute="trailing" secondItem="5f1-Ix-1ZX" secondAttribute="trailing" constant="110" id="7Ke-Zm-SdO"/>
+                            <constraint firstItem="A68-AM-fuM" firstAttribute="top" secondItem="tgH-4D-TtS" secondAttribute="top" constant="30" id="0Aj-Sa-HOU"/>
                             <constraint firstItem="tgH-4D-TtS" firstAttribute="trailing" secondItem="A68-AM-fuM" secondAttribute="trailing" id="PNh-Ec-omS"/>
-                            <constraint firstItem="5f1-Ix-1ZX" firstAttribute="leading" secondItem="tgH-4D-TtS" secondAttribute="leading" constant="111" id="SM6-bN-cUU"/>
-                            <constraint firstItem="5f1-Ix-1ZX" firstAttribute="top" secondItem="tgH-4D-TtS" secondAttribute="top" constant="18" id="YWo-vi-Pz7"/>
                             <constraint firstItem="A68-AM-fuM" firstAttribute="leading" secondItem="tgH-4D-TtS" secondAttribute="leading" id="gNl-oZ-jwN"/>
                         </constraints>
                     </view>
@@ -349,8 +344,9 @@
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-1F-hwx">
                                 <rect key="frame" x="97" y="575" width="181" height="48"/>
                                 <color key="tintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="두배크기날짜선택버튼"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button" image="두배크기날짜선택버튼"/>
+                                <buttonConfiguration key="configuration" style="plain" image="두배크기날짜선택버튼" title="Button"/>
                                 <connections>
                                     <action selector="touchDateSelectButton:" destination="nst-6u-z1R" eventType="touchUpInside" id="n4Y-sJ-oCo"/>
                                 </connections>
@@ -361,19 +357,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="상단 바" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-JX-RJ9">
+                                <rect key="frame" x="0.0" y="44" width="375" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="BoA-N8-t8w"/>
+                                    <constraint firstAttribute="height" constant="68" id="bx7-YT-kC0"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="신규 멘토링 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-w1-Dbs">
                                 <rect key="frame" x="134" y="20" width="106" height="20"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="상단 바" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-JX-RJ9">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="BoA-N8-t8w"/>
-                                    <constraint firstAttribute="height" constant="68" id="bx7-YT-kC0"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q22-gp-xJm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -431,6 +427,9 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="188" id="fii-HD-pL9"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="changeDatePicker:" destination="AhM-nJ-LH6" eventType="valueChanged" id="9Ec-5h-xQR"/>
+                                        </connections>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-QQ-vJu">
                                         <rect key="frame" x="112" y="292" width="150" height="31"/>
@@ -439,6 +438,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="시간선택버튼"/>
                                         <connections>
+                                            <action selector="TimeSelect:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="K4u-7k-YV9"/>
                                             <action selector="showAlert:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="eHj-g3-1e1"/>
                                         </connections>
                                     </button>
@@ -470,7 +470,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ey8-7j-JoM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239.1304347826087" y="1534.8214285714284"/>
+            <point key="canvasLocation" x="1237.5999999999999" y="1534.1829085457273"/>
         </scene>
         <!--My Meet ReviewVC-->
         <scene sceneID="6MV-k8-7jw">
