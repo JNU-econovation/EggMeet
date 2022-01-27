@@ -23,10 +23,21 @@
                             <constraint firstAttribute="height" constant="172" id="KWN-wo-mZI"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A7p-v4-3Zc">
+                        <rect key="frame" x="298" y="129" width="98" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="VR8-a7-Yr3"/>
+                            <constraint firstAttribute="width" constant="98" id="VWh-6p-bBY"/>
+                        </constraints>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    </button>
                 </subviews>
+                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="SAW-H7-nEb" secondAttribute="bottom" constant="10" id="HVW-ld-HO6"/>
+                    <constraint firstAttribute="bottom" secondItem="A7p-v4-3Zc" secondAttribute="bottom" constant="34" id="YTe-qU-r3g"/>
                     <constraint firstAttribute="trailing" secondItem="SAW-H7-nEb" secondAttribute="trailing" constant="10" id="ce2-5A-Fd0"/>
+                    <constraint firstAttribute="trailing" secondItem="A7p-v4-3Zc" secondAttribute="trailing" constant="34" id="cn6-bs-fLF"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
