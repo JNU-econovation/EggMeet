@@ -269,10 +269,12 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                             let requestId :Int = ud.integer(forKey: "mentoringRequestId")
                             let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
                             let apiURL = "http://" + mainAddress + "/mentoring/request?requestId=\(requestId)"
-                            
+                            let accessToken = ud.string(forKey: "accessToken")!
                             var request = URLRequest(url: URL(string: apiURL)!)
                             request.httpMethod = "PUT"
                             request.timeoutInterval = 10
+                            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                            request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
                             
                             AF.request(request).responseString{(response) in
                                 NSLog("status code : \(response.response?.statusCode)")
@@ -290,10 +292,13 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                             let requestId :Int = ud.integer(forKey: "mentoringRequestId")
                             let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
                             let apiURL = "http://" + mainAddress + "/mentoring/meeting/request?requestId=\(requestId)"
-                            
+                            let accessToken = ud.string(forKey: "accessToken")!
                             var request = URLRequest(url: URL(string: apiURL)!)
+                            
                             request.httpMethod = "PUT"
                             request.timeoutInterval = 10
+                            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+                            request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
                             
                             AF.request(request).responseString{(response) in
                                 NSLog("status code : \(response.response?.statusCode)")
