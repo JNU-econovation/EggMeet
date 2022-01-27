@@ -52,7 +52,7 @@ class HomeVC: UIViewController {
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
         let filterVC = segue.source as! HomeFilterVC
         location = filterVC.location
-        category = filterVC.category
+        category = "\(Category(rawValue: filterVC.category)!)"
         sex = filterVC.sex
         age = filterVC.age
         isOnlineAvailable = filterVC.isOnlineAvailable
@@ -66,7 +66,7 @@ class HomeVC: UIViewController {
         if category == "" {
             filterCategoryLabel.text = "전체"
         }else{
-            filterCategoryLabel.text = category
+            filterCategoryLabel.text = filterVC.category
         }
         
         if location == "" {
