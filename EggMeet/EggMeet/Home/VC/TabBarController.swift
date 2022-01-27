@@ -17,6 +17,6 @@ class TabBarController: UITabBarController {
         
         bgView.frame = CGRect(x: 0, y: tabBar.center.y - 76, width: 375, height:76)
         bgView.tintColor = .clear
-        self.view.addSubview(bgView)
+       // self.view.addSubview(bgView)
     }
 }
