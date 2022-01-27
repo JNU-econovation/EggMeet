@@ -24,6 +24,7 @@ class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "닉네임";
@@ -79,7 +80,8 @@ extension SignUpNickNameVC {
                     print(isExistNickname)
                     if isExistNickname == false {
                         self.nicknameWarningLabel.text = "이 닉네임은 사용할 수 있어요! :)"
-                        self.nicknameWarningLabel.textColor = .green
+                        self.nicknameWarningLabel.textColor = UIColor(red:8.0/255.0, green:184.0/255.0, blue:26.0/255.0, alpha:1.0)
+
                         self.isNicknameSet = true
                     }else{
                         self.nicknameWarningLabel.text = "이 닉네임은 다른 사람이 사용하고 있어요! :("

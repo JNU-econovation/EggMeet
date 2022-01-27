@@ -77,6 +77,7 @@
 		9C25EE6E279166D900CBBB11 /* UserMentorResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE6D279166D900CBBB11 /* UserMentorResponseModel.swift */; };
 		9C25EE722791781200CBBB11 /* LoginTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C25EE712791781200CBBB11 /* LoginTokenModel.swift */; };
 		9C987CD927A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987CD827A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift */; };
+		9C987CDF27A2B6C6002F36C1 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C987CDE27A2B6C6002F36C1 /* TabBarController.swift */; };
 		9CC0D5A127957FFC00E4885B /* HomeSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A027957FFC00E4885B /* HomeSearchVC.swift */; };
 		9CC0D5A327959CA800E4885B /* HomeNoticeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A227959CA800E4885B /* HomeNoticeVC.swift */; };
 		9CC0D5A52796AC3E00E4885B /* HomeNoticeTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CC0D5A42796AC3E00E4885B /* HomeNoticeTableVC.swift */; };
@@ -192,6 +193,7 @@
 		9C25EE6D279166D900CBBB11 /* UserMentorResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMentorResponseModel.swift; sourceTree = "<group>"; };
 		9C25EE712791781200CBBB11 /* LoginTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTokenModel.swift; sourceTree = "<group>"; };
 		9C987CD827A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeProfileRequestPopUpVC.swift; sourceTree = "<group>"; };
+		9C987CDE27A2B6C6002F36C1 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9CC0D5A027957FFC00E4885B /* HomeSearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeSearchVC.swift; sourceTree = "<group>"; };
 		9CC0D5A227959CA800E4885B /* HomeNoticeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeVC.swift; sourceTree = "<group>"; };
 		9CC0D5A42796AC3E00E4885B /* HomeNoticeTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNoticeTableVC.swift; sourceTree = "<group>"; };
@@ -529,6 +531,7 @@
 				9CC0D5A42796AC3E00E4885B /* HomeNoticeTableVC.swift */,
 				9CC0D5CA279E91D600E4885B /* HomeProfileVC.swift */,
 				9C987CD827A12F31002F36C1 /* HomeProfileRequestPopUpVC.swift */,
+				9C987CDE27A2B6C6002F36C1 /* TabBarController.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -787,6 +790,7 @@
 				9CC0D5A82796BCCC00E4885B /* HomeNoticeTVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
 				9CC0D5C7279D9D2900E4885B /* TotalMentoringTVC.swift in Sources */,
+				9C987CDF27A2B6C6002F36C1 /* TabBarController.swift in Sources */,
 				192C407327785BF4003055DD /* AppDelegate.swift in Sources */,
 				199DD177278D98E800E35723 /* ChatroomVC.swift in Sources */,
 				9C25EE6E279166D900CBBB11 /* UserMentorResponseModel.swift in Sources */,
