@@ -12,10 +12,11 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        var bgView: UIImageView = UIImageView(image: UIImage(named: "tabbar_image"))
+        //let bgView: UIImageView = UIImageView(image: UIImage(named: "tabbar_transparent"))
+        let bgView: UIImageView = UIImageView(image: UIImage(named: "tabbar_image"))
         
         bgView.frame = CGRect(x: 0, y: tabBar.center.y - 76, width: 375, height:76)
         bgView.tintColor = .clear
-        //self.view.addSubview(bgView)
+        self.view.addSubview(bgView)
     }
 }
