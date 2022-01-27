@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -53,7 +53,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="멘토 찾기" image="home_mentor_find"/>
+                                <state key="normal" title="멘토 찾기" image="home_mentor"/>
                                 <connections>
                                     <action selector="touchFindMentorButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FAN-O6-f8A"/>
                                 </connections>
@@ -66,7 +66,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="멘티찾기" image="home_mentee_find"/>
+                                <state key="normal" title="멘티찾기" image="home_mentee"/>
                                 <connections>
                                     <action selector="touchFindMenteeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="klf-6E-VZf"/>
                                 </connections>
@@ -108,31 +108,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="전체" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fp3-dn-ZnU">
-                                <rect key="frame" x="98" y="150" width="48" height="43"/>
+                                <rect key="frame" x="98" y="150" width="150" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="eA4-qf-FjC"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="48" id="xXS-Qx-b0d"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="xXS-Qx-b0d"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKB-vR-ZGY">
-                                <rect key="frame" x="155.5" y="166.5" width="5" height="13.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="5" id="SCi-Y8-gex"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjS-wd-AZy">
-                                <rect key="frame" x="170" y="150" width="60" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="2E1-yt-ar4"/>
-                                    <constraint firstAttribute="width" constant="60" id="bpE-dV-GvA"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -156,7 +137,7 @@
                                     <constraint firstAttribute="width" constant="40" id="orj-Ub-b1g"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="home_star_rank_button"/>
+                                <state key="normal" title="Button" image="home_sort_star"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-LE-3VM">
                                 <rect key="frame" x="347" y="163" width="52" height="17"/>
@@ -165,7 +146,7 @@
                                     <constraint firstAttribute="width" constant="52" id="ynR-nl-NeH"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="home_growthcost_button"/>
+                                <state key="normal" image="home_sort_growthCost"/>
                                 <connections>
                                     <action selector="touchGrowthPointSortButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MNR-x1-aUd"/>
                                 </connections>
@@ -191,7 +172,6 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="RKB-vR-ZGY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="78.299999999999997" id="3Oh-wz-fIJ"/>
                             <constraint firstItem="K2i-lW-NA8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="7eJ-iq-YkE"/>
                             <constraint firstItem="b15-Dm-vBk" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="23" id="7pL-AG-YXd"/>
                             <constraint firstItem="UQa-XM-XOJ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="A7V-PF-M3O"/>
@@ -200,7 +180,6 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="qiS-hS-MQg" secondAttribute="trailing" constant="123.59999999999999" id="NO9-aN-AbS"/>
                             <constraint firstItem="Fp3-dn-ZnU" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="topMargin" constant="62" id="T4a-7e-gwg"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="0jF-ns-0ba" secondAttribute="trailing" constant="65" id="V9k-gg-NVy"/>
-                            <constraint firstItem="bjS-wd-AZy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="62" id="W4o-Oj-qbx"/>
                             <constraint firstItem="qiS-hS-MQg" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="77" id="YMD-Db-GHr"/>
                             <constraint firstItem="vfZ-5W-IcQ" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="YPv-ep-re1"/>
                             <constraint firstItem="K2i-lW-NA8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="131" id="Yf7-LZ-9wA"/>
@@ -209,13 +188,10 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ofr-En-G1s" secondAttribute="trailing" constant="25" id="br8-0S-V7N"/>
                             <constraint firstItem="Fp3-dn-ZnU" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="98" id="c7a-A3-Df1"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="8Md-c0-kMa" secondAttribute="trailing" constant="73" id="cmj-DH-fdU"/>
-                            <constraint firstItem="bjS-wd-AZy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="62" id="dla-xW-1DT"/>
                             <constraint firstItem="UQa-XM-XOJ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="62" id="eA0-dC-E8z"/>
                             <constraint firstItem="vfZ-5W-IcQ" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="hP4-y0-98P"/>
                             <constraint firstItem="0pr-aG-7Q8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="197" id="hz6-Qu-qs5"/>
-                            <constraint firstItem="bjS-wd-AZy" firstAttribute="leading" secondItem="RKB-vR-ZGY" secondAttribute="trailing" constant="9.5" id="lQw-4Z-2W2"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="DG8-LE-3VM" secondAttribute="trailing" constant="15" id="mXE-bD-WWs"/>
-                            <constraint firstItem="RKB-vR-ZGY" firstAttribute="leading" secondItem="Fp3-dn-ZnU" secondAttribute="trailing" constant="9.5999999999999996" id="mxg-HE-Meu"/>
                             <constraint firstItem="ofr-En-G1s" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="19" id="pkQ-tF-kpW"/>
                             <constraint firstItem="DG8-LE-3VM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="qqk-yI-Hoj"/>
                             <constraint firstItem="0jF-ns-0ba" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="sOZ-Ar-SY1"/>
@@ -283,7 +259,7 @@
                                     <constraint firstAttribute="height" constant="51" id="ziv-eU-nhg"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="home_profile_mentor_request"/>
+                                <state key="normal" title="Button" image="home_profile_popup_mentor_request"/>
                                 <connections>
                                     <action selector="showMentorRequestAlert" destination="UhL-d1-UXa" eventType="touchUpInside" id="4wf-Hc-p8b"/>
                                 </connections>
@@ -295,7 +271,7 @@
                                     <constraint firstAttribute="height" constant="51" id="c7W-aa-k8q"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="home_profile_send_message"/>
+                                <state key="normal" title="Button" image="home_profile_popup_message"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-Pz-P7j">
                                 <rect key="frame" x="161" y="413" width="43" height="43"/>
@@ -1054,6 +1030,9 @@
                                 <state key="normal" image="categorybar_without_text">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="touchSecondCategoryButton" destination="GTg-vp-j4t" eventType="touchUpInside" id="O6m-n6-i3r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-ev-EJQ">
                                 <rect key="frame" x="173" y="811" width="68" height="31"/>
@@ -1160,6 +1139,18 @@
                                     <constraint firstAttribute="height" constant="12" id="dyy-CC-zdC"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UVZ-g2-iMu">
+                                <rect key="frame" x="50" y="536" width="60" height="13.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <color key="textColor" red="0.55294889209999998" green="0.55292731520000005" blue="0.55294191839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="세부항목 선택" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaG-8Q-xND">
+                                <rect key="frame" x="50" y="578" width="60" height="13.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="11"/>
+                                <color key="textColor" red="0.55294889209999998" green="0.55292731520000005" blue="0.55294191839999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OCu-VQ-5wZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1168,6 +1159,7 @@
                             <constraint firstItem="8eR-ho-49I" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="34" id="2In-N9-MjE"/>
                             <constraint firstItem="Xoh-CI-2Pt" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="44" id="3QU-2R-HIR"/>
                             <constraint firstItem="UAz-w5-Nug" firstAttribute="top" secondItem="COR-hb-BZK" secondAttribute="top" constant="122" id="3RO-eh-eyj"/>
+                            <constraint firstItem="UVZ-g2-iMu" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="448" id="3Rw-vs-lAh"/>
                             <constraint firstItem="7w8-F2-WFQ" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="320" id="4Oi-IF-rMG"/>
                             <constraint firstItem="Mcl-01-NaU" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="481" id="8dO-iL-Hi0"/>
                             <constraint firstItem="g1A-mB-q76" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="47" id="9zN-UN-h7S"/>
@@ -1179,10 +1171,13 @@
                             <constraint firstItem="g1A-mB-q76" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="191" id="J0x-49-vwQ"/>
                             <constraint firstItem="93L-b4-NL0" firstAttribute="top" secondItem="COR-hb-BZK" secondAttribute="topMargin" constant="413" id="Kqa-9Z-28k"/>
                             <constraint firstItem="Xoh-CI-2Pt" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="360" id="PPt-59-UcJ"/>
+                            <constraint firstItem="XaG-8Q-xND" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="490" id="Q7K-m6-HsD"/>
                             <constraint firstItem="9gE-MK-GoB" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="44" id="Qr0-NC-QhA"/>
+                            <constraint firstItem="UVZ-g2-iMu" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="50" id="Sov-AP-9ug"/>
                             <constraint firstItem="Ojb-NB-akF" firstAttribute="top" secondItem="COR-hb-BZK" secondAttribute="topMargin" constant="128" id="XLL-8A-oge"/>
                             <constraint firstItem="9gE-MK-GoB" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="225" id="Ymz-eE-Uab"/>
                             <constraint firstItem="eOe-ZK-MuW" firstAttribute="top" secondItem="COR-hb-BZK" secondAttribute="topMargin" constant="335" id="Zp4-BU-B8z"/>
+                            <constraint firstItem="XaG-8Q-xND" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="50" id="ahL-qy-iDX"/>
                             <constraint firstItem="7w8-F2-WFQ" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="44" id="gYF-sG-tih"/>
                             <constraint firstItem="FuD-V0-kN6" firstAttribute="top" secondItem="OCu-VQ-5wZ" secondAttribute="top" constant="57" id="hq1-j9-AW1"/>
                             <constraint firstItem="eOe-ZK-MuW" firstAttribute="leading" secondItem="OCu-VQ-5wZ" secondAttribute="leading" constant="41" id="i3E-ge-PvM"/>
@@ -1205,8 +1200,11 @@
                         <outlet property="ageView" destination="9gE-MK-GoB" id="q3B-5H-c8W"/>
                         <outlet property="channelView" destination="Xoh-CI-2Pt" id="aUh-cg-7tT"/>
                         <outlet property="firstCategoryButton" destination="EOU-7G-qxy" id="Ngx-0L-GrE"/>
+                        <outlet property="firstCategoryLabel" destination="UVZ-g2-iMu" id="DgF-TC-H2a"/>
                         <outlet property="firstLocationButton" destination="FuD-V0-kN6" id="VMd-FE-HMg"/>
                         <outlet property="genderView" destination="dt6-Gc-lJN" id="0yM-QX-2RI"/>
+                        <outlet property="secondCategoryLabel" destination="XaG-8Q-xND" id="HIU-g1-aPC"/>
+                        <outlet property="secondLocationButton" destination="xXu-7z-yzL" id="Ocf-zu-nTA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Gw-ax-ZEw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1284,18 +1282,18 @@
         <image name="home_filter" width="116" height="116"/>
         <image name="home_filter_line" width="8" height="48"/>
         <image name="home_filter_upsidedown" width="46" height="46"/>
-        <image name="home_growthcost_button" width="208" height="172"/>
-        <image name="home_mentee_find" width="184" height="44"/>
-        <image name="home_mentor_find" width="184" height="44"/>
+        <image name="home_mentee" width="184" height="44"/>
+        <image name="home_mentor" width="185" height="44"/>
         <image name="home_profile_description_box" width="1332" height="404"/>
         <image name="home_profile_follow" width="232" height="84"/>
         <image name="home_profile_line" width="2" height="140"/>
-        <image name="home_profile_mentor_request" width="888" height="276"/>
         <image name="home_profile_message" width="232" height="84"/>
         <image name="home_profile_popup_close" width="172" height="172"/>
-        <image name="home_profile_send_message" width="888" height="276"/>
+        <image name="home_profile_popup_mentor_request" width="920" height="308"/>
+        <image name="home_profile_popup_message" width="920" height="308"/>
         <image name="home_search" width="77" height="81"/>
-        <image name="home_star_rank_button" width="160" height="172"/>
+        <image name="home_sort_growthCost" width="208" height="68"/>
+        <image name="home_sort_star" width="160" height="68"/>
         <image name="home_stars" width="320" height="64"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="location_category_deselcted" width="624" height="176"/>
