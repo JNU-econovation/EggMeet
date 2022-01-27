@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -59,6 +60,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="349" id="Ely-ol-U9e"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
+                                        <color key="value" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
+                                        <color key="value" red="1" green="0.70588235294117641" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tgH-4D-TtS"/>
@@ -300,98 +315,99 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="만남을 가질 날짜를 선택해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVq-l4-Jmy">
-                                <rect key="frame" x="58" y="134" width="259" height="43"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="상단 바" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-JX-RJ9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Eas-JX-RJ9" secondAttribute="height" multiplier="375:68" id="AbB-ab-9VZ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="신규 멘토링 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-w1-Dbs">
+                                <rect key="frame" x="153" y="28" width="106" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="마이프로필이미지" translatesAutoresizingMaskIntoConstraints="NO" id="bP5-uI-kvZ">
+                                <rect key="frame" x="182" y="82.5" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="6Aq-La-Dw8"/>
+                                    <constraint firstAttribute="width" constant="60" id="kyB-Hg-Vaf"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asong" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-5c-eBy">
+                                <rect key="frame" x="140" y="150" width="47.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멘토님" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-dO-ZT0">
+                                <rect key="frame" x="207.5" y="156" width="36.5" height="17"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="만남을 가질 날짜를 선택해주세요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVq-l4-Jmy">
+                                <rect key="frame" x="78" y="199.5" width="259" height="17"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                 <color key="textColor" red="0.65098039215686276" green="0.65098039215686276" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-dn-y05" customClass="FSCalendar">
-                                <rect key="frame" x="0.0" y="220" width="414" height="349"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-1F-hwx">
+                                <rect key="frame" x="138" y="786" width="138" height="46"/>
+                                <color key="tintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="이날짜로선택_작게 2"/>
+                                <connections>
+                                    <action selector="touchDateSelectButton:" destination="nst-6u-z1R" eventType="touchUpInside" id="n4Y-sJ-oCo"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fvf-dn-y05" customClass="FSCalendar">
+                                <rect key="frame" x="0.0" y="234" width="375" height="349"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="349" id="2ys-sF-v7J"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="allowsSelection" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="headerTitleTextSize">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="headerTitleColor">
-                                        <color key="value" systemColor="systemBrownColor"/>
+                                        <color key="value" red="1" green="0.70588235294117641" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="titleDefaultColor">
-                                        <color key="value" systemColor="systemPurpleColor"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="weekdayTextColor">
-                                        <color key="value" systemColor="systemGreenColor"/>
+                                        <color key="value" red="0.49019607843137253" green="0.49019607843137253" blue="0.49019607843137253" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectionColor">
+                                        <color key="value" name="AccentColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todaySelectionColor">
+                                        <color key="value" red="0.97254901959999995" green="0.96862745100000003" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="todayColor">
+                                        <color key="value" systemColor="systemOrangeColor"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="멘토님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxe-dO-ZT0">
-                                <rect key="frame" x="230.5" y="154" width="52" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="hlf-8c-QwI"/>
-                                    <constraint firstAttribute="height" constant="43" id="z6R-Oa-Hkh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="마이프로필이미지" translatesAutoresizingMaskIntoConstraints="NO" id="jWy-g6-BlU">
-                                <rect key="frame" x="163" y="76" width="48" height="48"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh1-1F-hwx">
-                                <rect key="frame" x="97" y="575" width="181" height="48"/>
-                                <color key="tintColor" red="1" green="0.99997597930000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="두배크기날짜선택버튼"/>
-                                <buttonConfiguration key="configuration" style="plain" image="두배크기날짜선택버튼" title="Button"/>
-                                <connections>
-                                    <action selector="touchDateSelectButton:" destination="nst-6u-z1R" eventType="touchUpInside" id="n4Y-sJ-oCo"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Asong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSg-5c-eBy">
-                                <rect key="frame" x="138" y="163" width="111.5" height="19.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="상단 바" translatesAutoresizingMaskIntoConstraints="NO" id="Eas-JX-RJ9">
-                                <rect key="frame" x="0.0" y="44" width="375" height="68"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="BoA-N8-t8w"/>
-                                    <constraint firstAttribute="height" constant="68" id="bx7-YT-kC0"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="신규 멘토링 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ao-w1-Dbs">
-                                <rect key="frame" x="134" y="20" width="106" height="20"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Q22-gp-xJm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Eas-JX-RJ9" firstAttribute="centerY" secondItem="0Ao-w1-Dbs" secondAttribute="centerY" id="2hQ-LE-bST"/>
-                            <constraint firstItem="fvf-dn-y05" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" constant="176" id="AIl-Sy-4mf"/>
-                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="centerX" secondItem="Q22-gp-xJm" secondAttribute="centerX" id="B8U-n5-FzA"/>
-                            <constraint firstItem="0Ao-w1-Dbs" firstAttribute="centerX" secondItem="Q22-gp-xJm" secondAttribute="centerX" id="CH4-Kc-L7v"/>
-                            <constraint firstItem="Q22-gp-xJm" firstAttribute="bottom" secondItem="qh1-1F-hwx" secondAttribute="bottom" constant="20" id="Dap-43-efI"/>
-                            <constraint firstItem="Hxe-dO-ZT0" firstAttribute="leading" secondItem="HSg-5c-eBy" secondAttribute="trailing" constant="-19" id="F6R-X9-I0f"/>
-                            <constraint firstItem="qh1-1F-hwx" firstAttribute="centerX" secondItem="jWy-g6-BlU" secondAttribute="centerX" id="FTq-aN-m9o"/>
-                            <constraint firstItem="jWy-g6-BlU" firstAttribute="centerX" secondItem="Q22-gp-xJm" secondAttribute="centerX" id="I3R-S0-XVT"/>
-                            <constraint firstItem="fvf-dn-y05" firstAttribute="top" secondItem="HSg-5c-eBy" secondAttribute="bottom" constant="37.5" id="JbE-sj-f92"/>
-                            <constraint firstItem="jWy-g6-BlU" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" constant="76" id="MSa-fk-OeW"/>
-                            <constraint firstItem="jWy-g6-BlU" firstAttribute="top" secondItem="Eas-JX-RJ9" secondAttribute="bottom" constant="8" symbolic="YES" id="MlM-AT-szl"/>
-                            <constraint firstItem="fvf-dn-y05" firstAttribute="top" secondItem="Hxe-dO-ZT0" secondAttribute="bottom" constant="23" id="Qc1-Ge-uZk"/>
-                            <constraint firstItem="Q22-gp-xJm" firstAttribute="top" secondItem="Eas-JX-RJ9" secondAttribute="top" id="Qk6-bU-oW8"/>
-                            <constraint firstItem="HSg-5c-eBy" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" constant="138" id="ToV-vc-r82"/>
-                            <constraint firstItem="fvf-dn-y05" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" id="Xdr-gs-MPB"/>
-                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="fvf-dn-y05" secondAttribute="trailing" id="XuL-yL-Dx9"/>
-                            <constraint firstItem="fvf-dn-y05" firstAttribute="top" secondItem="LVq-l4-Jmy" secondAttribute="bottom" id="mQB-QI-bt2"/>
-                            <constraint firstItem="Q22-gp-xJm" firstAttribute="trailing" secondItem="Hxe-dO-ZT0" secondAttribute="trailing" constant="131.5" id="pf3-7v-wYl"/>
+                            <constraint firstItem="bP5-uI-kvZ" firstAttribute="top" secondItem="0Ao-w1-Dbs" secondAttribute="bottom" constant="35" id="09p-Zw-AKV"/>
+                            <constraint firstItem="Hxe-dO-ZT0" firstAttribute="top" secondItem="Eas-JX-RJ9" secondAttribute="bottom" constant="81" id="4EE-ub-Ojm"/>
+                            <constraint firstItem="Eas-JX-RJ9" firstAttribute="width" secondItem="9xc-q4-jGU" secondAttribute="width" id="F9i-im-HRE"/>
+                            <constraint firstItem="0Ao-w1-Dbs" firstAttribute="centerX" secondItem="Eas-JX-RJ9" secondAttribute="centerX" id="J0z-8k-bTw"/>
+                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="top" secondItem="HSg-5c-eBy" secondAttribute="bottom" constant="30" id="O6N-ZC-GFz"/>
+                            <constraint firstItem="Eas-JX-RJ9" firstAttribute="top" secondItem="Q22-gp-xJm" secondAttribute="top" constant="-44" id="Sdq-V5-a4u"/>
+                            <constraint firstItem="LVq-l4-Jmy" firstAttribute="centerX" secondItem="Eas-JX-RJ9" secondAttribute="centerX" id="WCd-fU-VIG"/>
+                            <constraint firstItem="HSg-5c-eBy" firstAttribute="leading" secondItem="Q22-gp-xJm" secondAttribute="leading" constant="140" id="f5h-2v-WPz"/>
+                            <constraint firstItem="HSg-5c-eBy" firstAttribute="top" secondItem="Eas-JX-RJ9" secondAttribute="bottom" constant="75" id="hE3-0r-7SJ"/>
+                            <constraint firstItem="0Ao-w1-Dbs" firstAttribute="centerY" secondItem="Eas-JX-RJ9" secondAttribute="centerY" id="mQ2-1h-vXg"/>
+                            <constraint firstItem="bP5-uI-kvZ" firstAttribute="centerX" secondItem="Eas-JX-RJ9" secondAttribute="centerX" id="mw2-Dk-skv"/>
+                            <constraint firstItem="Hxe-dO-ZT0" firstAttribute="leading" secondItem="HSg-5c-eBy" secondAttribute="trailing" constant="20" id="qii-Xk-NVC"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="qh1-1F-hwx" secondAttribute="bottom" constant="30" id="tYV-5c-Zox"/>
+                            <constraint firstItem="qh1-1F-hwx" firstAttribute="centerX" secondItem="Q22-gp-xJm" secondAttribute="centerX" id="wZ4-at-V7w"/>
                         </constraints>
                     </view>
                     <connections>
@@ -400,7 +416,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3vZ-sH-GD0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="501.60000000000002" y="1530.5847076461771"/>
+            <point key="canvasLocation" x="501.44927536231887" y="1530.1339285714284"/>
         </scene>
         <!--New Mentor Select Pop UpVC-->
         <scene sceneID="9Te-oQ-ffo">
@@ -431,12 +447,12 @@
                                             <action selector="changeDatePicker:" destination="AhM-nJ-LH6" eventType="valueChanged" id="9Ec-5h-xQR"/>
                                         </connections>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-QQ-vJu">
-                                        <rect key="frame" x="112" y="292" width="150" height="31"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JE9-QQ-vJu">
+                                        <rect key="frame" x="120" y="292" width="150" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="tintColor" systemColor="labelColor"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" image="시간선택버튼"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button" image="이시간으로선택_작게"/>
                                         <connections>
                                             <action selector="TimeSelect:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="K4u-7k-YV9"/>
                                             <action selector="showAlert:" destination="AhM-nJ-LH6" eventType="touchUpInside" id="eHj-g3-1e1"/>
@@ -546,30 +562,24 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
-        <image name="두배크기날짜선택버튼" width="152" height="56"/>
         <image name="마이프로필이미지" width="44" height="44"/>
         <image name="상단 바" width="1500" height="272"/>
-        <image name="시간선택버튼" width="152" height="56"/>
+        <image name="이날짜로선택_작게 2" width="138" height="46"/>
+        <image name="이시간으로선택_작게" width="138" height="46"/>
+        <namedColor name="AccentColor">
+            <color red="1" green="0.79199999570846558" blue="0.15700000524520874" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
