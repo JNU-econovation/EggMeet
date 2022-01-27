@@ -28,6 +28,7 @@ class SignUpNickNameVC: UIViewController, UITextFieldDelegate{
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "닉네임";
+        nicknameWarningLabel.adjustsFontSizeToFitWidth = true
     }
     
     @IBAction func windSignUpLocationView(_ sender: Any){
