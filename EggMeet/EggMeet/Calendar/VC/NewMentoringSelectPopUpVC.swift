@@ -14,6 +14,12 @@ class NewMentorSelectPopUpVC: UIViewController {
     var selectedTimeStr = ""
     var selectedDateStr = ""
     var navigationTitle: String = ""
+    var selectDate = Date()
+    var newSchedule : Double = 0.0
+    var mentoringId : Int = 0
+   // var newSchedule : Double = 0.0
+    //let newSchedule  = Int
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,6 +58,14 @@ class NewMentorSelectPopUpVC: UIViewController {
         
         showScheduleConfirmationAlert()
         print (selectedTimeStr)
+        print (selectDate)
+        
+        newSchedule = selectDate.timeIntervalSince1970
+        NewMentoringScheduleSetNetwork.shared.postRequest(mentoringId: 22, newSchedule: newSchedule){ res in
+            print("completion : mentoringId \(res)")
+            self.dismissView()
+        }
+        print(newSchedule)
     }
     
     
@@ -90,3 +104,5 @@ class NewMentorSelectPopUpVC: UIViewController {
         present(alert,animated: true,completion: nil)
     }
 }
+
+
