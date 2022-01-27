@@ -63,12 +63,12 @@ class HomeFilterVC: UIViewController {
         radioButton50.setTitle("50대", for: .normal)
         radioButton60.setTitle("60대", for: .normal)
         
-        radioButton10.frame = CGRect(x: 0, y: 0, width: 70, height: 30)
-        radioButton20.frame = CGRect(x: 80, y: 0, width: 70, height: 30)
-        radioButton30.frame = CGRect(x: 0, y: 40, width: 70, height: 30)
-        radioButton40.frame = CGRect(x: 80, y: 40, width: 70, height: 30)
-        radioButton50.frame = CGRect(x: 0, y: 80, width: 70, height: 30)
-        radioButton60.frame = CGRect(x: 80, y: 80, width: 70, height: 30)
+        radioButton10.frame = CGRect(x: 0, y: 0, width: 70, height: 15)
+        radioButton20.frame = CGRect(x: 60, y: 0, width: 70, height: 15)
+        radioButton30.frame = CGRect(x: 0, y: 30, width: 70, height: 15)
+        radioButton40.frame = CGRect(x: 60, y: 30, width: 70, height: 15)
+        radioButton50.frame = CGRect(x: 0, y: 60, width: 70, height: 15)
+        radioButton60.frame = CGRect(x: 60, y: 60, width: 70, height: 15)
         
         radioButton10.setTitleColor( .black , for: .normal)
         radioButton20.setTitleColor( .black , for: .normal)
@@ -76,6 +76,13 @@ class HomeFilterVC: UIViewController {
         radioButton40.setTitleColor( .black , for: .normal)
         radioButton50.setTitleColor( .black , for: .normal)
         radioButton60.setTitleColor( .black , for: .normal)
+        
+        radioButton10.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        radioButton20.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        radioButton30.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        radioButton40.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        radioButton50.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        radioButton60.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         
         radioButton10.otherButtons.append(radioButton20)
         radioButton10.otherButtons.append(radioButton30)
@@ -126,11 +133,14 @@ class HomeFilterVC: UIViewController {
         womanRadioButton.setTitle("여성", for: .normal)
         manradioButton.setTitle("남성", for: .normal)
         
-        womanRadioButton.frame = CGRect(x: 0, y: 0, width: 70, height: 30)
-        manradioButton.frame = CGRect(x: 80, y: 0, width: 70, height: 30)
+        womanRadioButton.frame = CGRect(x: 0, y: 0, width: 70, height: 15)
+        manradioButton.frame = CGRect(x: 60, y: 0, width: 70, height: 15)
         
         womanRadioButton.setTitleColor( .black , for: .normal)
         manradioButton.setTitleColor( .black , for: .normal)
+        
+        manradioButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        womanRadioButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         
         womanRadioButton.otherButtons.append(manradioButton)
         
@@ -164,11 +174,14 @@ class HomeFilterVC: UIViewController {
         onlineRadioButton.setTitle("온라인", for: .normal)
         offlineRadioButton.setTitle("오프라인", for: .normal)
         
-        onlineRadioButton.frame = CGRect(x: 0, y: 0, width: 70, height: 30)
-        offlineRadioButton.frame = CGRect(x: 80, y: 0, width: 90, height: 30)
+        onlineRadioButton.frame = CGRect(x: 0, y: 0, width: 70, height: 15)
+        offlineRadioButton.frame = CGRect(x: 60, y: 0, width: 90, height: 15)
         
         onlineRadioButton.setTitleColor( .black , for: .normal)
         offlineRadioButton.setTitleColor( .black , for: .normal)
+        
+        onlineRadioButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
+        offlineRadioButton.titleLabel?.font = UIFont.systemFont(ofSize: 12)
         
         onlineRadioButton.otherButtons.append(offlineRadioButton)
         

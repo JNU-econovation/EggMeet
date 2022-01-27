@@ -283,7 +283,7 @@
                                     <constraint firstAttribute="height" constant="51" id="ziv-eU-nhg"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="home_profile_mentor_request"/>
+                                <state key="normal" title="Button" image="home_profile_popup_mentor_request"/>
                                 <connections>
                                     <action selector="showMentorRequestAlert" destination="UhL-d1-UXa" eventType="touchUpInside" id="4wf-Hc-p8b"/>
                                 </connections>
@@ -295,7 +295,7 @@
                                     <constraint firstAttribute="height" constant="51" id="c7W-aa-k8q"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="home_profile_send_message"/>
+                                <state key="normal" title="Button" image="home_profile_popup_message"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-Pz-P7j">
                                 <rect key="frame" x="161" y="413" width="43" height="43"/>
@@ -331,14 +331,12 @@
         <scene sceneID="WI8-g0-aqZ">
             <objects>
                 <viewController storyboardIdentifier="HomeProfileVC" id="4W2-Mw-FTo" customClass="HomeProfileVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-
                     <view key="view" contentMode="scaleToFill" id="GK8-F0-EVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1438"/>
-
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m50-TI-Wsm">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1438"/>
@@ -1292,10 +1290,10 @@
         <image name="home_profile_description_box" width="1332" height="404"/>
         <image name="home_profile_follow" width="232" height="84"/>
         <image name="home_profile_line" width="2" height="140"/>
-        <image name="home_profile_mentor_request" width="888" height="276"/>
         <image name="home_profile_message" width="232" height="84"/>
         <image name="home_profile_popup_close" width="172" height="172"/>
-        <image name="home_profile_send_message" width="888" height="276"/>
+        <image name="home_profile_popup_mentor_request" width="920" height="308"/>
+        <image name="home_profile_popup_message" width="920" height="308"/>
         <image name="home_search" width="77" height="81"/>
         <image name="home_star_rank_button" width="160" height="172"/>
         <image name="home_stars" width="320" height="64"/>
