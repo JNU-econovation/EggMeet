@@ -237,7 +237,7 @@ class ChatroomVC: UIViewController{
                         }
                     } catch {print(error.localizedDescription)}
                 case .failure(let error):
-                        NSLog("load error")
+                        NSLog("load error : \(error)")
                 }
             }
         }
