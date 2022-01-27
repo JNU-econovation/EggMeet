@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Hi5-Id-L9H">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
-
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,30 +11,28 @@
         <!--SeeMyProfile-->
         <scene sceneID="QfT-sk-bX0">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="SeeMyProfile" storyboardName="SeeMyProfileStoryboard" referencedIdentifier="SeeMyProfile" id="LC4-J4-IRw" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="v6W-vL-2nB"/>
-                </viewControllerPlaceholder>
+                <viewControllerPlaceholder storyboardIdentifier="SeeMyProfile" storyboardName="SeeMyProfileStoryboard" referencedIdentifier="SeeMyProfile" id="LC4-J4-IRw" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jZE-27-Caw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2470" y="-954"/>
+            <point key="canvasLocation" x="2690" y="-804"/>
         </scene>
         <!--마이페이지-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="MypageVC" id="Y6W-OH-hqX" customClass="MypageVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LXb-QZ-IUR">
-                                <rect key="frame" x="0.0" y="265" width="375" height="241"/>
+                                <rect key="frame" x="0.0" y="222" width="375" height="257"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="p0i-km-cTA" kind="embed" id="23F-1l-KlG"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44g-zA-RaX">
-                                <rect key="frame" x="96" y="103" width="6" height="10"/>
+                                <rect key="frame" x="89" y="93" width="37" height="10"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -47,63 +43,67 @@
                                     <action selector="goToSeeMyProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="tZu-qT-XrK"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-dE-lpB">
-                                <rect key="frame" x="37" y="95" width="46" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LV.1 Origin Egg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UhS-IJ-PvK">
-                                <rect key="frame" x="37" y="121" width="73" height="48"/>
+                                <rect key="frame" x="29" y="107" width="73" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jade" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tas-dE-lpB">
+                                <rect key="frame" x="29" y="85" width="46" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="보유 성장포인트" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nK-gQ-iVM">
-                                <rect key="frame" x="37" y="159" width="83" height="48"/>
+                                <rect key="frame" x="29" y="137" width="83" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKX-34-h6i">
-                                <rect key="frame" x="128" y="159" width="20.5" height="48"/>
+                                <rect key="frame" x="117" y="137" width="20.5" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qH-zt-gcW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="마이프로필이미지" translatesAutoresizingMaskIntoConstraints="NO" id="XX4-eV-Ibq">
-                                <rect key="frame" x="273" y="95" width="72" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="point" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQp-xd-VuT">
-                                <rect key="frame" x="160" y="159" width="35" height="48"/>
+                                <rect key="frame" x="142.5" y="137" width="33" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pMR-Hd-hkW">
-                                <rect key="frame" x="0.0" y="257" width="375" height="10"/>
+                                <rect key="frame" x="0.0" y="217" width="375" height="8"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="마이프로필이미지" translatesAutoresizingMaskIntoConstraints="NO" id="XX4-eV-Ibq">
+                                <rect key="frame" x="264" y="88" width="89" height="89"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zZq-Mi-bKr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="마이페이지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eyn-HK-TdW">
+                                <rect key="frame" x="153" y="21" width="70" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.fill" catalog="system" id="L4a-1q-yBZ"/>
-                    <navigationItem key="navigationItem" leftItemsSupplementBackButton="YES" id="b9E-qD-4Yz">
-                        <barButtonItem key="backBarButtonItem" title="마이페이지" id="U72-qv-HaR"/>
-                    </navigationItem>
+                    <tabBarItem key="tabBarItem" title="마이페이지" selectedImage="tabbar_mypage" id="L4a-1q-yBZ"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="MenuContainerView" destination="LXb-QZ-IUR" id="5vz-f6-Hck"/>
@@ -111,7 +111,7 @@
                         <outlet property="MyPossessGrowthPoint" destination="OKX-34-h6i" id="C8d-cM-PBv"/>
                         <outlet property="MyProfileImage" destination="XX4-eV-Ibq" id="jwb-Nh-VvN"/>
                         <outlet property="MyProfileNickname" destination="Tas-dE-lpB" id="nPY-y4-faa"/>
-                        <segue destination="LC4-J4-IRw" kind="show" identifier="SeeMyProfile" id="Gmg-C0-iZf"/>
+                        <outlet property="MypageHeader" destination="zZq-Mi-bKr" id="7NG-JU-fHK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,10 +123,10 @@
             <objects>
                 <tableViewController id="p0i-km-cTA" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" bouncesZoom="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="Xsb-4t-hTv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="257"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                        <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="oRg-LI-Sjg">
                                 <cells>
@@ -243,70 +243,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jo2-6g-8KH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344.9275362318845" y="428.57142857142856"/>
-        </scene>
-        <!--MyGrowthPointView-->
-        <scene sceneID="et8-FL-lVY">
-            <objects>
-                <viewController title="MyGrowthPointView" id="xhp-jT-qqJ" customClass="MyGrowthPointVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="V8e-Dn-DZY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="d8n-J2-LqB"/>
-                        <color key="backgroundColor" red="0.97254901960784312" green="0.96862745098039216" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <connections>
-                        <outlet property="MyGrowthStageLabel" destination="UhS-IJ-PvK" id="JUD-HJ-sQ0"/>
-                        <outlet property="MyPossessGrowthPoint" destination="OKX-34-h6i" id="zp7-w4-LNZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xmf-PT-eX2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3346" y="-103"/>
-        </scene>
-        <!--MyProfileView-->
-        <scene sceneID="AeD-pe-KOz">
-            <objects>
-                <viewController title="MyProfileView" id="y2G-gF-5bZ" customClass="MyProfileVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="4pM-4y-LV9">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="cI5-J9-r6N"/>
-                        <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.89803921568627454" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4Fy-Z7-v3e"/>
-                    <connections>
-                        <outlet property="MyProfileImage" destination="XX4-eV-Ibq" id="qNd-EN-jwg"/>
-                        <outlet property="MyProfileNickname" destination="Tas-dE-lpB" id="jBT-D9-Oig"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="k6u-La-lrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3349" y="-803"/>
-        </scene>
-        <!--마이페이지-->
-        <scene sceneID="aA3-sS-NIj">
-            <objects>
-                <navigationController storyboardIdentifier="MypageStart" automaticallyAdjustsScrollViewInsets="NO" id="Hi5-Id-L9H" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="마이페이지" image="person.fill" catalog="system" id="cjG-Tq-ANT"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="75T-1k-SW0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="emV-gN-NGg"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pBg-lL-vek" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="897" y="-150"/>
+            <point key="canvasLocation" x="1990" y="469"/>
         </scene>
     </scenes>
     <resources>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="tabbar_mypage" width="21" height="22"/>
         <image name="마이프로필이미지" width="44" height="44"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

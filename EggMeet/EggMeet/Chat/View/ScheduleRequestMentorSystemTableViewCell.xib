@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="ScheduleRequestMentorSystemTableViewCell" rowHeight="189" id="KGk-i7-Jjw" customClass="ScheduleRequestMentorSystemTableViewCell" customModule="EggMeet" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="447" height="189"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="447" height="189"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="schedule_request_mentor_system" translatesAutoresizingMaskIntoConstraints="NO" id="21F-gL-ULI">
+                        <rect key="frame" x="290" y="10" width="147" height="172"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="147" id="OmO-AX-SoA"/>
+                            <constraint firstAttribute="height" constant="172" id="Vc2-CB-VqJ"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="21F-gL-ULI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NRf-PG-f4S"/>
+                    <constraint firstAttribute="trailing" secondItem="21F-gL-ULI" secondAttribute="trailing" constant="10" id="z5v-Q1-YLh"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <point key="canvasLocation" x="229.71014492753625" y="146.31696428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="schedule_request_mentor_system" width="326" height="376"/>
+    </resources>
+</document>
