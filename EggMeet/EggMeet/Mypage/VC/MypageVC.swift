@@ -24,7 +24,7 @@ class MypageVC: UIViewController {
         
        
   
-        MyProfileNickname.adjustsFontSizeToFitWidth = true
+        
         // userimage를 원형으로 crop
         MyProfileImage.layer.cornerRadius = MyProfileImage.frame.height/2
         MyProfileImage.layer.borderWidth = 1
@@ -53,6 +53,8 @@ class MypageVC: UIViewController {
             MypageNetwork.shared.getMypageData() { data in
                 
                 self.MyProfileNickname.text = data.nickname
+                self.MyProfileNickname.font =  UIFont(name: "Apple SD 산돌고딕 Neo 볼드체", size: 22)
+                self.MyProfileNickname.adjustsFontSizeToFitWidth = true
                 
                 }
         
@@ -65,7 +67,7 @@ class MypageVC: UIViewController {
         MypageNetwork.shared.getMypageData() { data in
             
             self.MyPossessGrowthPoint.text = "\(data.growthPoint)"
-            
+            self.MyPossessGrowthPoint.font =  UIFont(name: "Apple SD 산돌고딕 Neo 일반체", size: 7)
             }
             
            
