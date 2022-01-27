@@ -10,7 +10,7 @@ import UIKit
 
 struct UserMentorResponseModel: Codable {
     let age: Int
-    let category: Category
+    let category: String
     let growthCost: Int
     let id: Int
     let location: Location

@@ -222,6 +222,9 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                     case "SCHEDULE_ACCEPT":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
                         return cell
+                    case "REGISTER_SCHEDULE":
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleMenteeSystemTableViewCell" , for: indexPath) as! RegisterScheduleMenteeSystemTableViewCell
+                        return cell
                     default:
                         break
                     }
