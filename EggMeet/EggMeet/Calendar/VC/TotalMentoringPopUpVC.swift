@@ -29,7 +29,7 @@ class TotalMentoringPopUpVC: UIViewController {
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "NewMentoringScheduleSetVC") as! NewMentoringScheduleSetVC
         
         dismiss(animated:true) {
-            nextVC.navigationTitle = "멘토링 일정 변경"
+            //nextVC.navigationTitle = "멘토링 일정 변경"
             rootView?.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
