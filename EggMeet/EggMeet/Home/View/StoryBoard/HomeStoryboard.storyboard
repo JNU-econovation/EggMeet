@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,9 +46,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_big_header" translatesAutoresizingMaskIntoConstraints="NO" id="pG3-RR-1MY">
-                                <rect key="frame" x="0.0" y="45" width="414" height="126"/>
+                                <rect key="frame" x="0.0" y="30" width="414" height="110"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="126" id="XZW-It-eyd"/>
+                                    <constraint firstAttribute="height" constant="110" id="XZW-It-eyd"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K2i-lW-NA8">
@@ -172,9 +172,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-5W-IcQ">
-
-                                <rect key="frame" x="0.0" y="171" width="414" height="642"/>
-
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" red="0.94549125430000003" green="0.94565314050000004" blue="0.94548100229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
@@ -205,7 +203,7 @@
                             <constraint firstItem="ofr-En-G1s" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="19" id="pkQ-tF-kpW"/>
                             <constraint firstItem="DG8-LE-3VM" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="qqk-yI-Hoj"/>
                             <constraint firstItem="0jF-ns-0ba" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="25" id="sOZ-Ar-SY1"/>
-                            <constraint firstItem="pG3-RR-1MY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="45" id="wWE-O9-HfX"/>
+                            <constraint firstItem="pG3-RR-1MY" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="30" id="wWE-O9-HfX"/>
                             <constraint firstItem="vfZ-5W-IcQ" firstAttribute="top" secondItem="pG3-RR-1MY" secondAttribute="bottom" id="wxz-cX-wOl"/>
                             <constraint firstItem="b15-Dm-vBk" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="25" id="yLj-mb-FNA"/>
                         </constraints>
@@ -320,11 +318,11 @@
         <scene sceneID="WI8-g0-aqZ">
             <objects>
                 <viewController storyboardIdentifier="HomeProfileVC" id="4W2-Mw-FTo" customClass="HomeProfileVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="GK8-F0-EVE">
+                    <view key="view" contentMode="scaleToFill" id="GK8-F0-EVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m50-TI-Wsm">
@@ -947,6 +945,7 @@
                         <outlet property="ageLabel" destination="23m-x4-V1K" id="KRn-JH-vme"/>
                         <outlet property="channelLabel" destination="Wss-ae-HDi" id="CBl-WS-24T"/>
                         <outlet property="descriptionLabel" destination="Vx7-vL-S22" id="1Rf-dp-xIg"/>
+                        <outlet property="imageView" destination="gkJ-qA-hpK" id="lhJ-Bq-Xy4"/>
                         <outlet property="locationLabel" destination="McF-N4-EAL" id="RLr-yS-Td9"/>
                         <outlet property="menteeCategoryLabel" destination="UDO-S2-DSX" id="Wka-hT-YFM"/>
                         <outlet property="menteeDescriptionLabel" destination="uAb-h3-Txq" id="xlh-U8-OIe"/>

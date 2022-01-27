@@ -35,12 +35,12 @@ struct HomeNetwork {
                     print(dataList)
                     
                     for data in dataList {
-                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthCost = data["growthCost"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
+                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthCost = data["growthCost"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String, let pictureIndex = data["pictureIndex"] as? Int else {
                             print("error happened")
                             return
                         }
                         
-                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED, pictureIndex: pictureIndex))
                     }
                     
                     completion(mentorList)
@@ -132,12 +132,12 @@ extension HomeNetwork {
                     print(dataList)
                     
                     for data in dataList {
-                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
+                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String, let pictureIndex = data["pictureIndex"] as? Int else {
                             print("error happened")
                             return
                         }
                         
-                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED, pictureIndex: pictureIndex))
                     }
                     completion(menteeList)
                 } catch {print(error)}
@@ -178,12 +178,12 @@ extension HomeNetwork {
                     print(dataList)
                     
                     for data in dataList {
-                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
+                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let id = data["id"] as? Int, let mentorRating = data["menteeRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String, let pictureIndex = data["pictureIndex"] as? Int else {
                             print("error happened")
                             return
                         }
                         
-                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED, pictureIndex: pictureIndex))
                     }
                     completion(menteeList)
                 } catch {print(error)}
@@ -221,12 +221,12 @@ extension HomeNetwork {
                     print(dataList)
                     
                     for data in dataList {
-                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthCost = data["growthCost"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String else {
+                        guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let growthCost = data["growthCost"] as? Int, let id = data["id"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let category = data["category"] as? String, let sex = data["sex"] as? String, let pictureIndex = data["pictureIndex"] as? Int else {
                             print("error happened")
                             return
                         }
                         
-                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED, pictureIndex: pictureIndex))
                     }
                     
                     completion(mentorList)
@@ -264,12 +264,12 @@ extension HomeNetwork {
                     
                     print(data)
                     
-                    guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let mentorGrowthCost = data["mentorGrowthCost"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let mentorCategory = data["mentorCategory"] as? String, let sex = data["sex"] as? String, let mentorLink = data["mentorLink"] as? String, let description = data["description"] as? String, let menteeCategory = data["menteeCategory"] as? String, let menteeDescription = data["menteeDescription"] as? String, let menteeRating = data["menteeRating"] as? Float, let mentorCareer = data["mentorCareer"] as? String, let mentorDescription = data["mentorDescription"] as? String else {
+                    guard let nickname = data["nickname"] as? String,  let age = data["age"] as? Int, let mentorGrowthCost = data["mentorGrowthCost"] as? Int, let mentorRating = data["mentorRating"] as? Float, let offlineAvailable = data["offlineAvailable"] as? Int, let onlineAvailable = data["onlineAvailable"] as? Int, let location = data["location"] as? String, let mentorCategory = data["mentorCategory"] as? String, let sex = data["sex"] as? String, let mentorLink = data["mentorLink"] as? String, let description = data["description"] as? String, let menteeCategory = data["menteeCategory"] as? String, let menteeDescription = data["menteeDescription"] as? String, let menteeRating = data["menteeRating"] as? Float, let mentorCareer = data["mentorCareer"] as? String, let mentorDescription = data["mentorDescription"] as? String, let pictureIndex = data["pictureIndex"] as? Int else {
                         print("error happened")
                         return
                     }
                     
-                    let userData: HomeProfileModel = HomeProfileModel(age: setProperAge(age: age), description: description, location: location, menteeCategory: Category.from(string: menteeCategory)!.rawValue, menteeDescription: menteeDescription, menteeRating: menteeRating, mentorCareer: mentorCareer, mentorCategory: Category.from(string: mentorCategory)!.rawValue, mentorDescription: mentorDescription, mentorGrowthCost: mentorGrowthCost, mentorLink: mentorLink, mentorRating: mentorRating , nickname: nickname, isOfflineAvailable: offlineAvailable, isOnlineAvailable: onlineAvailable, pictureIndex: 0, sex: sex)
+                    let userData: HomeProfileModel = HomeProfileModel(age: setProperAge(age: age), description: description, location: location, menteeCategory: Category.from(string: menteeCategory)!.rawValue, menteeDescription: menteeDescription, menteeRating: menteeRating, mentorCareer: mentorCareer, mentorCategory: Category.from(string: mentorCategory)!.rawValue, mentorDescription: mentorDescription, mentorGrowthCost: mentorGrowthCost, mentorLink: mentorLink, mentorRating: mentorRating , nickname: nickname, isOfflineAvailable: offlineAvailable, isOnlineAvailable: onlineAvailable, pictureIndex: pictureIndex, sex: sex)
                     
                     completion(userData)
                 } catch {print(error.localizedDescription)}

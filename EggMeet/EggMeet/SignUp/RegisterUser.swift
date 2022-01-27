@@ -25,8 +25,8 @@ struct RegisterUser {
     let mentorGrowthPoint: Int?
     let mentorLink: String?
     let nickname: String?
-    let isOfflineAvailable: Bool
-    let isOnlineAvailable: Bool
+    let offlineAvailable: Bool
+    let onlineAvailable: Bool
     let phoneNumber: String?
     let pictureIndex: Int?
     let role: String?
@@ -49,8 +49,8 @@ struct RegisterUser {
         self.mentorGrowthPoint = ud.integer(forKey: "growthPoint")
         self.mentorLink = ud.string(forKey: "mentorLink")
         self.nickname = ud.string(forKey: "nickname")
-        self.isOfflineAvailable = ud.bool(forKey:"isOfflineAvailable")
-        self.isOnlineAvailable = ud.bool(forKey: "isOnlineAvailable")
+        self.offlineAvailable = ud.bool(forKey:"isOfflineAvailable")
+        self.onlineAvailable = ud.bool(forKey: "isOnlineAvailable")
         self.phoneNumber = ud.string(forKey: "phoneNumber")
         self.pictureIndex = ud.integer(forKey: "pictureIndex")
         self.role = ud.string(forKey: "role")
@@ -67,8 +67,8 @@ struct RegisterUser {
             "location": "\(Location(rawValue: ud.string(forKey: "location")!)!)" ?? "GWANGJU_BUKGU",
             "description": ud.string(forKey: "description") ?? "",
             "pictureIndex": 0 ?? 1,
-            "isOnlineAvailable": ud.bool(forKey: "isOnlineAvailable"),
-            "isOfflineAvailable": ud.bool(forKey:"isOfflineAvailable"),
+            "onlineAvailable": ud.bool(forKey: "isOnlineAvailable"),
+            "offlineAvailable": ud.bool(forKey:"isOfflineAvailable"),
             "mentorCategory": "\(Category(rawValue: ud.string(forKey: "mentorCategory")!)!)" ,
             "mentorDescription": ud.string(forKey: "mentorDescription") ?? "test",
             "mentorCareer": ud.string(forKey: "mentorCareer") ?? "test",
