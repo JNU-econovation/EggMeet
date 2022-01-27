@@ -118,6 +118,8 @@
 		CD414D1027A060F700393086 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D0F27A060F700393086 /* MypageModel.swift */; };
 		CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D1127A0649C00393086 /* MypageNetwork.swift */; };
 		CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */; };
+		CD4CE1CE27A304F600C20653 /* NewMentoringScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CE1CD27A304F600C20653 /* NewMentoringScheduleModel.swift */; };
+		CD4CE1D327A30A9C00C20653 /* NewMentoringScheduleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CE1D227A30A9C00C20653 /* NewMentoringScheduleNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -239,6 +241,8 @@
 		CD414D0F27A060F700393086 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
 		CD414D1127A0649C00393086 /* MypageNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageNetwork.swift; sourceTree = "<group>"; };
 		CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMyProfileVC.swift; sourceTree = "<group>"; };
+		CD4CE1CD27A304F600C20653 /* NewMentoringScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringScheduleModel.swift; sourceTree = "<group>"; };
+		CD4CE1D227A30A9C00C20653 /* NewMentoringScheduleNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringScheduleNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +453,8 @@
 		9CC0D5AE279C0FB100E4885B /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				CD4CE1CF27A30A3A00C20653 /* Networking */,
+				CD4CE1CC27A304C900C20653 /* Model */,
 				9CC0D5B0279C0FCE00E4885B /* VC */,
 				9CC0D5AF279C0FC200E4885B /* View */,
 			);
@@ -635,6 +641,22 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CD4CE1CC27A304C900C20653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CE1CD27A304F600C20653 /* NewMentoringScheduleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD4CE1CF27A30A3A00C20653 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CE1D227A30A9C00C20653 /* NewMentoringScheduleNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -793,6 +815,7 @@
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
 				9C25EE6627900F2000CBBB11 /* Sex.swift in Sources */,
 				9C25EE6C27904DFF00CBBB11 /* SignUpSexVC.swift in Sources */,
+				CD4CE1CE27A304F600C20653 /* NewMentoringScheduleModel.swift in Sources */,
 				195EE58627A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.swift in Sources */,
 				9CC0D5A82796BCCC00E4885B /* HomeNoticeTVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
@@ -851,6 +874,7 @@
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				195EE57627A170DE000826A9 /* MentoringRequestMenteeSystemTableViewCell.swift in Sources */,
 				195EE57A27A17490000826A9 /* MentoringAcceptMenteeSystemTableViewCell.swift in Sources */,
+				CD4CE1D327A30A9C00C20653 /* NewMentoringScheduleNetworking.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
 				9CC0D5B6279D128C00E4885B /* NewMentoringRegisterVC.swift in Sources */,
