@@ -19,4 +19,5 @@ struct UserMentorResponseModel: Codable {
     let offlineAvailable: Int
     let onlineAvailable: Int
     let sex: Sex
+    let pictureIndex: Int
 }

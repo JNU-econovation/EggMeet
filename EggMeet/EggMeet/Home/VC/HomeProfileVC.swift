@@ -22,6 +22,7 @@ class HomeProfileVC: UIViewController {
     @IBOutlet weak var nicknameLabel: UILabel!
     @IBOutlet weak var channelLabel: UILabel!
     @IBOutlet weak var sexLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     
     var id: Int = 0
     var requestNickname: String = ""
@@ -36,6 +37,7 @@ class HomeProfileVC: UIViewController {
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "상세 프로필"
         self.navigationController?.navigationBar.isHidden =  false
+        nicknameLabel.adjustsFontSizeToFitWidth = true
         setNavigationBarRightItem()
         setProfileData()
     }
@@ -80,6 +82,8 @@ class HomeProfileVC: UIViewController {
             self.mentorCategoryLabel.text = data.mentorCategory
             self.mentorDescriptionLabel.text = data.mentorDescription
             self.mentorGrowthCostLabel.text = "\(data.mentorGrowthCost)포인트"
+            let imageList = ["origin_egg", "gold_egg","brown_egg"]
+            self.imageView.image = UIImage(named: imageList[data.pictureIndex])
             
             self.sexLabel.text = data.sex
             switch data.sex {

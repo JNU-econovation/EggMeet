@@ -19,6 +19,8 @@ class HomeTVC: UITableViewCell {
     @IBOutlet weak var firstHashtagLabel: UILabel!
     @IBOutlet weak var areaImageView: UIImageView!
 
+    let imageList = ["origin_egg", "gold_egg","brown_egg"]
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -32,11 +34,12 @@ class HomeTVC: UITableViewCell {
 }
 
 extension HomeTVC {
-    func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: String , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
+    func initCell(image: Int, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: String , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
         nicknameLabel.text = nickname
         nicknameLabel.adjustsFontSizeToFitWidth = true
         mentorGrowthPointLabel.text = "\(mentorGrowthPoint) point"
         firstCategoryLabel.text = firstCategory
+        profileImageView.image = UIImage(named: imageList[image])
         
         var hashtagStr: String = ""
         switch location {
