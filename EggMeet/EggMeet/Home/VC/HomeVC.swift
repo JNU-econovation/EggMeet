@@ -39,7 +39,6 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden =  true
-        
         self.tableView.separatorColor = UIColor.clear
         tabBarController?.tabBar.tintColor = UIColor(red: 255/255, green: 180/255, blue: 0/255, alpha: 1)
     }
@@ -142,7 +141,7 @@ extension HomeVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HomeCell", for: indexPath) as! HomeTVC
         let data = homeList[indexPath.row]
-        cell.initCell(image: "data.pictureIndex", nickname: data.nickname, rating: data.mentorRating, mentorGrowthPoint: data.growthCost, firstCategory: data.category, location: data.location, isOnline: data.onlineAvailable, isOffline : data.offlineAvailable, age: data.age, sex: data.sex, isMentor: isMentor)
+        cell.initCell(image: data.pictureIndex, nickname: data.nickname, rating: data.mentorRating, mentorGrowthPoint: data.growthCost, firstCategory: data.category, location: data.location, isOnline: data.onlineAvailable, isOffline : data.offlineAvailable, age: data.age, sex: data.sex, isMentor: isMentor)
         
         return cell
     }

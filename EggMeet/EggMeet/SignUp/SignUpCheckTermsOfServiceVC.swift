@@ -34,12 +34,12 @@ class SignUpCheckTermsOfServiceVC: UIViewController {
     @IBAction func touchUpAgreePersonalInfoButton(_ sender: UIButton){
         isAgreePersonalInfo = !isAgreePersonalInfo
         sender.isSelected.toggle()
+        self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
     }
     
     @IBAction func windSignUpCheckTermsOfMaliciousContentView (_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpCheckTermsOfMaliciousContentVC") as? SignUpCheckTermsOfMaliciousContentVC else {return}
         if (isAgreePersonalInfo && isAgreeTermsOfService) == true {
-            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
             self.navigationController?.pushViewController(nextVC, animated: true)
 
         } else {
