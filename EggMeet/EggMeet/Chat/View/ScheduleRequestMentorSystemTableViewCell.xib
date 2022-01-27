@@ -24,9 +24,9 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yA-1e-ZWb">
-                        <rect key="frame" x="328" y="103" width="82" height="24"/>
+                        <rect key="frame" x="280" y="138" width="130" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="82" id="1yB-tv-ISX"/>
+                            <constraint firstAttribute="width" constant="130" id="1yB-tv-ISX"/>
                             <constraint firstAttribute="height" constant="24" id="6ue-hD-Kyo"/>
                         </constraints>
                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -39,7 +39,7 @@
                 <constraints>
                     <constraint firstItem="21F-gL-ULI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="NRf-PG-f4S"/>
                     <constraint firstAttribute="trailingMargin" secondItem="4yA-1e-ZWb" secondAttribute="trailing" constant="19" id="gAr-Vd-HHY"/>
-                    <constraint firstItem="4yA-1e-ZWb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="92" id="ptU-oM-ahc"/>
+                    <constraint firstItem="4yA-1e-ZWb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="127" id="ptU-oM-ahc"/>
                     <constraint firstAttribute="bottom" secondItem="21F-gL-ULI" secondAttribute="bottom" id="qix-f4-D8b"/>
                     <constraint firstAttribute="trailing" secondItem="21F-gL-ULI" secondAttribute="trailing" constant="10" id="z5v-Q1-YLh"/>
                 </constraints>

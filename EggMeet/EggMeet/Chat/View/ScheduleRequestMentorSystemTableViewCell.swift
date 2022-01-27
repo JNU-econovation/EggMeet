@@ -12,6 +12,8 @@ class ScheduleRequestMentorSystemTableViewCell: UITableViewCell {
 
     @IBOutlet var scheduleAcceptButton: UIButton!
     
+    var scheduleAcceptAction: (() -> Void)? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,19 +26,7 @@ class ScheduleRequestMentorSystemTableViewCell: UITableViewCell {
     }
     
     @IBAction func touchUpScheduleAcceptButton(_ sender: Any?){
-        let ud = UserDefaults.standard
-        let requestId :Int = ud.integer(forKey: "mentoringRequestId")
-        let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
-        let apiURL = "http://" + mainAddress + "/mentoring/meeting/request?requestId=\(requestId)"
-        
-        var request = URLRequest(url: URL(string: apiURL)!)
-        request.httpMethod = "PUT"
-        request.timeoutInterval = 10
-        
-        AF.request(request).responseString{(response) in
-            NSLog("status code : \(response.response?.statusCode)")
-            NSLog("description : \(response.debugDescription)")
-        }
+        scheduleAcceptAction?()
     }
     
 }
