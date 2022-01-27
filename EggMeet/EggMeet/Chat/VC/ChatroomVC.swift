@@ -212,21 +212,32 @@ class ChatroomVC: UIViewController{
                 case .success(let value):
                     do {
                         let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
-                    
+                        
                         for data in dataList {
-                            /*
-                            guard let id = data["id"] as? Int, let chatroomId = data["chatroomId"] as? Int, let writerId = data["writerId"] as? Int, let writerPictureIndex = data["writerPictureIndex"] as? Int, let writerNickname = data["writerNickname"] as? String, let type = data["type"] as? String, let content = data["content"] as? String, let dateTime = data["dateTime"] as? Int, let requestId = data["requestId"] as? Int else{
-                                print("error happened")
-                                return}
-                            */
-                            let chatContent :chatReceiveDto = chatReceiveDto(id: data["id"] as! Int, chatroomId: data["chatroomId"] as! Int, writerId: data["writerId"] as! Int, writerPictrureIndex: data["writerPictureIndex"] as! Int, writerNickname: data["writerNickname"] as! String, type: data["type"] as! String, content: data["content"] as! String, dateTime: data["dateTime"] as! Double, requestId: data["requestId"] as? Int)
-                            // self.chatContentList.append(chatContent)
-                            NSLog("success append chat Content : \(chatContent.debugPrint())")
+                            NSLog("data : \(data)")
+                            
+                            let id: Int = data["id"] as! Int
+                            let chatroomId: Int = data["chatroomId"] as! Int
+                            let writerId: Int? = data["writerId"] as? Int
+                            let writerPictureIndex: Int? = data["writerPictureIndex"] as? Int
+                            let writerNickname :String? = data["writerNickname"] as? String
+                            let type: String = data["type"] as! String
+                            let content: String? = data["content"] as? String
+                            let dateTime: Double = data["dateTime"] as! Double
+                            let requestId: Int? = data["requestId"] as? Int
+                            
+                            let chatContent: chatReceiveDto = chatReceiveDto(id: id, chatroomId: chatroomId, writerId: writerId ?? 0, writerPictureIndex: writerPictureIndex ?? 0, writerNickname: writerNickname ?? "unKnowned", type: type, content: content ?? "", dateTime: dateTime, requestId: requestId ?? 0)
+                            
+                            
+                            self.chatContentList.append(chatContent)
                             NSLog("chatContentList : \(self.chatContentList)")
+                            
+                            self.chatTableView.reloadSections(IndexSet(0...0), with: UITableView.RowAnimation.automatic)
+                            self.scrollToBottom()
                         }
                     } catch {print(error.localizedDescription)}
                 case .failure(let error):
-                        NSLog("load error")
+                        NSLog("load error : \(error)")
                 }
             }
         }
@@ -355,7 +366,7 @@ extension ChatroomVC: StompClientLibDelegate {
         
         if let data = stringBody?.data(using: .utf8){
             let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            let chatContent :chatReceiveDto = chatReceiveDto(id: chatJSON["id"] as! Int, chatroomId: chatJSON["chatroomId"] as! Int, writerId: chatJSON["writerId"] as! Int, writerPictrureIndex: chatJSON["writerPictureIndex"] as! Int, writerNickname: chatJSON["writerNickname"] as! String, type: chatJSON["type"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double, requestId: chatJSON["requestId"] as? Int)
+            let chatContent :chatReceiveDto = chatReceiveDto(id: chatJSON["id"] as! Int, chatroomId: chatJSON["chatroomId"] as! Int, writerId: chatJSON["writerId"] as! Int, writerPictureIndex: chatJSON["writerPictureIndex"] as! Int, writerNickname: chatJSON["writerNickname"] as! String, type: chatJSON["type"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double, requestId: chatJSON["requestId"] as? Int)
             
             if chatContent.requestId != nil{
                 let ud = UserDefaults.standard
