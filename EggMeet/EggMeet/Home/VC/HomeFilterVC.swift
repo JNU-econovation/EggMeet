@@ -54,11 +54,6 @@ class HomeFilterVC: UIViewController {
        
         self.navigationController?.navigationBar.isHidden =  false
         
-        let navigationAppearnce = UINavigationBarAppearance()
-        navigationAppearnce.backgroundColor = .brown
-        //navigationAppearnce.configureWithTransparentBackground()
-        self.navigationController?.navigationBar.standardAppearance = navigationAppearnce
-        
         firstCategoryLabel.adjustsFontSizeToFitWidth = true
         secondCategoryLabel.adjustsFontSizeToFitWidth = true
     }
