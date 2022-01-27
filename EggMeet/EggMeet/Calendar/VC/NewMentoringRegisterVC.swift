@@ -17,5 +17,6 @@ class NewMentoringRegisterVC: UIViewController {
     @IBAction func windNewMentoringCalendarVC(_ sender: Any) {
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "NewMentoringScheduleSetVC") as! NewMentoringScheduleSetVC
         self.navigationController?.pushViewController(nextVC, animated: true)
+        
     }
 }

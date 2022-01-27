@@ -15,6 +15,7 @@ let DESCRIPTION_CELL_TAG = 102
 
 class ChatListVC: UITableViewController {
     
+    @IBOutlet var chatNavigationItem: UINavigationItem!
     var chatListDictionary: [ChatListDto] = [ChatListDto]()
     
     func getMyChatList(){
@@ -36,10 +37,10 @@ class ChatListVC: UITableViewController {
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
                     for data in dataList{
                         let id: Int = data["id"] as! Int
-                        let participantNickname: String = data["participantNickname"] as! String
+                        let participantNickname: String? = data["participantNickname"] as? String
                         let recentMessageContent: String? = data["recentMessageContent"] as? String
-                        
-                        let dataContent: ChatListDto = ChatListDto(id: id, participantNickname: participantNickname, recentMessageContent: recentMessageContent ?? "")
+                        let recentMessageDateTime: Double? = data["recentMessageDateTime"] as? Double
+                        let dataContent: ChatListDto = ChatListDto(id: id, participantNickname: participantNickname ?? "unknowned", recentMessageContent: recentMessageContent ?? "", recentMessageDateTime: recentMessageDateTime ?? 0.0)
                         
                         NSLog("data content: \(dataContent)")
                         self.chatListDictionary.append(dataContent)
@@ -56,7 +57,20 @@ class ChatListVC: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         getMyChatList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpUI()
+    }
+    
+    func getClockTimeFormat(_ time: Double) -> String {
+        let date = Date(timeIntervalSince1970: time)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        let clockTime = formatter.string(from: date)
+        return clockTime
     }
     
     // 행 갯수 반환하는 메소드
@@ -71,10 +85,10 @@ class ChatListVC: UITableViewController {
         
         let nickname = cell.viewWithTag(NICKNAME_CELL_TAG) as? UILabel
         let description = cell.viewWithTag(DESCRIPTION_CELL_TAG) as? UILabel
-        
+        let lastestDate = cell.viewWithTag(LASTEST_DATE_CELL_TAG) as? UILabel
         nickname?.text = row.participantNickname
         description?.text = row.recentMessageContent
-    
+        lastestDate?.text = getClockTimeFormat(row.recentMessageDateTime)
         return cell
     }
 
@@ -88,6 +102,13 @@ class ChatListVC: UITableViewController {
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChatroomSegue" {
             let vc = segue.destination as? ChatroomVC
@@ -99,5 +120,12 @@ class ChatListVC: UITableViewController {
                 NSLog("receive chatroom Id : \(chatroomId)")
             }
         }
+    }
+    
+    func setUpUI(){
+        let img = UIImage(named: "chatting_list_bar")
+        self.navigationController?.navigationBar.setBackgroundImage(img, for: .default)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.topItem?.title = "메세지"
     }
 }

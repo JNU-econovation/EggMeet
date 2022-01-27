@@ -36,9 +36,9 @@ class ChatroomVC: UIViewController{
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet var chatTableView: UITableView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         let ud = UserDefaults.standard
         self.myId = ud.integer(forKey: "myId")
         NSLog("my Id : \(self.myId)")
@@ -254,12 +254,6 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 내가 보낸 메세지 보여주기
-        if self.chatContentList[indexPath.row].writerId == self.myId {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
-            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
-        }
-        
         // 시스템 메세지 출력
         if self.chatContentList[indexPath.row].type != "MESSAGE"{
             // 내가 멘토일 때
@@ -293,13 +287,18 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMenteeSystemTableViewCell", for: indexPath) as! MentoringAcceptMenteeSystemTableViewCell
                         return cell
                     case "SCHEDULE_REQUEST":
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMenteeSystemTableViewCell", for: indexPath) as! ScheduleRequestMenteeSystemTableViewCell
                         return cell
                     case "SCHEDULE_ACCEPT":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
                         return cell
                     case "REGISTER_SCHEDULE":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleMenteeSystemTableViewCell" , for: indexPath) as! RegisterScheduleMenteeSystemTableViewCell
+                        cell.touchUpRegisterScheduleButton = {
+                            let storyboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
+                            let nextVC = storyboard.instantiateViewController(withIdentifier: "NewMentoringRegisterVC") as! NewMentoringRegisterVC
+                            self.present(nextVC, animated: true, completion: nil)
+                        }
                         return cell
                     default:
                         break
@@ -307,6 +306,12 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                 }
             }
         }
+        // 내가 보낸 메세지 보여주기
+        if self.chatContentList[indexPath.row].writerId == self.myId {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
+            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
+        }
+        
         // 상대방 메세지 보여주기
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
         return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
