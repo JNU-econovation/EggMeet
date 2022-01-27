@@ -19,6 +19,6 @@ pod 'FSCalendar'
 pod 'Firebase/Core'
 pod 'Firebase/Messaging'
 
-  # Pods for EggMeet
+# Pods for EggMeet
 
 end
