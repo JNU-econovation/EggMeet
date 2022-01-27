@@ -12,4 +12,5 @@ struct ChatListDto{
     var id: Int
     var participantNickname: String
     var recentMessageContent: String
+    var recentMessageDateTime: Double
 }
