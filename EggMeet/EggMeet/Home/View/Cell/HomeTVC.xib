@@ -46,11 +46,11 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_stars" translatesAutoresizingMaskIntoConstraints="NO" id="m9r-Vv-Krb">
-                        <rect key="frame" x="170" y="38" width="45" height="8"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star_five" translatesAutoresizingMaskIntoConstraints="NO" id="m9r-Vv-Krb">
+                        <rect key="frame" x="167" y="38" width="45" height="9"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="8" id="Qx1-BH-APG"/>
+                            <constraint firstAttribute="height" constant="9" id="Qx1-BH-APG"/>
                             <constraint firstAttribute="width" constant="45" id="y2F-UA-U2r"/>
                         </constraints>
                     </imageView>
@@ -124,7 +124,7 @@
                     <constraint firstItem="oPB-Kt-3X9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jYM-ee-ZoI"/>
                     <constraint firstItem="TH7-oP-h3B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="38" id="oHz-hz-fZF"/>
                     <constraint firstAttribute="trailing" secondItem="oPB-Kt-3X9" secondAttribute="trailing" id="oiq-r2-YQn"/>
-                    <constraint firstItem="m9r-Vv-Krb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="170" id="tt9-Ad-E06"/>
+                    <constraint firstItem="m9r-Vv-Krb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="167" id="tt9-Ad-E06"/>
                     <constraint firstItem="SGY-Hp-AiH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="61" id="xUW-yW-8jZ"/>
                 </constraints>
             </tableViewCellContentView>
@@ -145,7 +145,7 @@
     <resources>
         <image name="home_area_mentor" width="196" height="68"/>
         <image name="home_cell_box" width="1408" height="448"/>
-        <image name="home_stars" width="320" height="64"/>
         <image name="origin_egg" width="352" height="352"/>
+        <image name="star_five" width="320" height="64"/>
     </resources>
 </document>
