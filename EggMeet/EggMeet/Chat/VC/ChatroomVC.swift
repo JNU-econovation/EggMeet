@@ -49,6 +49,7 @@ class ChatroomVC: UIViewController{
         getMentorMenteeId()
         setupTextViewUI()
         registerSocket()
+        getChattingHistory()
     }
     override func viewWillAppear(_ animated: Bool) {
         print("call viewWillAppear")
@@ -193,6 +194,42 @@ class ChatroomVC: UIViewController{
         self.chatTableView.register(ScheduleAcceptMentorSystemTableViewCellNib, forCellReuseIdentifier: "ScheduleAcceptMentorSystemTableViewCell")
         
     }
+    
+    func getChattingHistory(){
+        print("call history")
+        let ud = UserDefaults.standard
+        let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+        let apiURL: String = "http://" + mainAddress + "/chat/room/\(self.chatroomID)/message/history"
+        var request = URLRequest(url: URL(string: apiURL)!)
+        let accessToken = ud.string(forKey: "accessToken")!
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.timeoutInterval = 10
+        
+            AF.request(request).responseData{ (dataResponse) in
+                switch dataResponse.result {
+                case .success(let value):
+                    do {
+                        let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
+                    
+                        for data in dataList {
+                            /*
+                            guard let id = data["id"] as? Int, let chatroomId = data["chatroomId"] as? Int, let writerId = data["writerId"] as? Int, let writerPictureIndex = data["writerPictureIndex"] as? Int, let writerNickname = data["writerNickname"] as? String, let type = data["type"] as? String, let content = data["content"] as? String, let dateTime = data["dateTime"] as? Int, let requestId = data["requestId"] as? Int else{
+                                print("error happened")
+                                return}
+                            */
+                            let chatContent :chatReceiveDto = chatReceiveDto(id: data["id"] as! Int, chatroomId: data["chatroomId"] as! Int, writerId: data["writerId"] as! Int, writerPictrureIndex: data["writerPictureIndex"] as! Int, writerNickname: data["writerNickname"] as! String, type: data["type"] as! String, content: data["content"] as! String, dateTime: data["dateTime"] as! Double, requestId: data["requestId"] as? Int)
+                            // self.chatContentList.append(chatContent)
+                            NSLog("success append chat Content : \(chatContent.debugPrint())")
+                            NSLog("chatContentList : \(self.chatContentList)")
+                        }
+                    } catch {print(error.localizedDescription)}
+                case .failure(let error):
+                        NSLog("load error")
+                }
+            }
+        }
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -213,7 +250,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
         }
         
         // 시스템 메세지 출력
-        if self.chatContentList[indexPath.row].type == "MESSAGE"{
+        if self.chatContentList[indexPath.row].type != "MESSAGE"{
             // 내가 멘토일 때
             if self.myId == mentorId{
                 if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
