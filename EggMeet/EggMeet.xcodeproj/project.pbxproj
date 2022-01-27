@@ -19,6 +19,8 @@
 		192C408D27786A32003055DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408C27786A32003055DD /* MainViewController.swift */; };
 		192CC2AE27A2850100C6DE8A /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192CC2AD27A2850100C6DE8A /* PushKit.framework */; };
 		1930545927A2C679003B5308 /* ChatListDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930545827A2C679003B5308 /* ChatListDto.swift */; };
+		1930545E27A2FC4B003B5308 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930545C27A2FC4B003B5308 /* EmptyTableViewCell.swift */; };
+		1930545F27A2FC4B003B5308 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1930545D27A2FC4B003B5308 /* EmptyTableViewCell.xib */; };
 		1934F20A2799BD6800C05B09 /* ChatOpponentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */; };
 		193C624E279302BD0036C09C /* ChatroomID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C624D279302BD0036C09C /* ChatroomID.swift */; };
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
@@ -116,6 +118,8 @@
 		CD414D1027A060F700393086 /* MypageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D0F27A060F700393086 /* MypageModel.swift */; };
 		CD414D1227A0649C00393086 /* MypageNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD414D1127A0649C00393086 /* MypageNetwork.swift */; };
 		CD47FF52279ECC83004A1E0A /* SeeMyProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */; };
+		CD4CE1CE27A304F600C20653 /* NewMentoringScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CE1CD27A304F600C20653 /* NewMentoringScheduleModel.swift */; };
+		CD4CE1D327A30A9C00C20653 /* NewMentoringScheduleNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4CE1D227A30A9C00C20653 /* NewMentoringScheduleNetworking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -135,6 +139,8 @@
 		192CC2AC27A284D500C6DE8A /* EggMeetRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeetRelease.entitlements; sourceTree = "<group>"; };
 		192CC2AD27A2850100C6DE8A /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
 		1930545827A2C679003B5308 /* ChatListDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDto.swift; sourceTree = "<group>"; };
+		1930545C27A2FC4B003B5308 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		1930545D27A2FC4B003B5308 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
 		1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOpponentTVC.swift; sourceTree = "<group>"; };
 		193C624D279302BD0036C09C /* ChatroomID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomID.swift; sourceTree = "<group>"; };
 		193DABFC278856FE009F71AA /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
@@ -235,6 +241,8 @@
 		CD414D0F27A060F700393086 /* MypageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageModel.swift; sourceTree = "<group>"; };
 		CD414D1127A0649C00393086 /* MypageNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypageNetwork.swift; sourceTree = "<group>"; };
 		CD47FF51279ECC83004A1E0A /* SeeMyProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeMyProfileVC.swift; sourceTree = "<group>"; };
+		CD4CE1CD27A304F600C20653 /* NewMentoringScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringScheduleModel.swift; sourceTree = "<group>"; };
+		CD4CE1D227A30A9C00C20653 /* NewMentoringScheduleNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMentoringScheduleNetworking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +352,8 @@
 				195EE59327A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.xib */,
 				195EE59627A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift */,
 				195EE59727A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.xib */,
+				1930545C27A2FC4B003B5308 /* EmptyTableViewCell.swift */,
+				1930545D27A2FC4B003B5308 /* EmptyTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -443,6 +453,8 @@
 		9CC0D5AE279C0FB100E4885B /* Calendar */ = {
 			isa = PBXGroup;
 			children = (
+				CD4CE1CF27A30A3A00C20653 /* Networking */,
+				CD4CE1CC27A304C900C20653 /* Model */,
 				9CC0D5B0279C0FCE00E4885B /* VC */,
 				9CC0D5AF279C0FC200E4885B /* View */,
 			);
@@ -629,6 +641,22 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		CD4CE1CC27A304C900C20653 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CE1CD27A304F600C20653 /* NewMentoringScheduleModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD4CE1CF27A30A3A00C20653 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CD4CE1D227A30A9C00C20653 /* NewMentoringScheduleNetworking.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -695,6 +723,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1930545F27A2FC4B003B5308 /* EmptyTableViewCell.xib in Resources */,
 				9CC0D5A92796BCCC00E4885B /* HomeNoticeTVC.xib in Resources */,
 				9CE4B6A9278D8072003AEB90 /* HomeTVC.xib in Resources */,
 				195EE57B27A17490000826A9 /* MentoringAcceptMenteeSystemTableViewCell.xib in Resources */,
@@ -786,6 +815,7 @@
 				9CE4B68527808444003AEB90 /* SignUpMentoDetailIntroduceVC.swift in Sources */,
 				9C25EE6627900F2000CBBB11 /* Sex.swift in Sources */,
 				9C25EE6C27904DFF00CBBB11 /* SignUpSexVC.swift in Sources */,
+				CD4CE1CE27A304F600C20653 /* NewMentoringScheduleModel.swift in Sources */,
 				195EE58627A17617000826A9 /* ScheduleAcceptMenteeSystemTableViewCell.swift in Sources */,
 				9CC0D5A82796BCCC00E4885B /* HomeNoticeTVC.swift in Sources */,
 				192C407727785BF4003055DD /* ViewController.swift in Sources */,
@@ -820,6 +850,7 @@
 				195EE58C27A186DC000826A9 /* MentoringRequestMentorSystemTableViewCell.swift in Sources */,
 				195EE59827A18836000826A9 /* ScheduleAcceptMentorSystemTableViewCell.swift in Sources */,
 				192C408B277869AD003055DD /* User.swift in Sources */,
+				1930545E27A2FC4B003B5308 /* EmptyTableViewCell.swift in Sources */,
 				CD1B96E9279BF33D009A0DF6 /* MypageVC.swift in Sources */,
 				9CC0D5BA279D12F900E4885B /* PartnerScheduleVC.swift in Sources */,
 				195EE59427A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift in Sources */,
@@ -843,6 +874,7 @@
 				19C6A086278A158F00074125 /* SignUpShowTermsOfServiceVC.swift in Sources */,
 				195EE57627A170DE000826A9 /* MentoringRequestMenteeSystemTableViewCell.swift in Sources */,
 				195EE57A27A17490000826A9 /* MentoringAcceptMenteeSystemTableViewCell.swift in Sources */,
+				CD4CE1D327A30A9C00C20653 /* NewMentoringScheduleNetworking.swift in Sources */,
 				9CE4B698278BFFAE003AEB90 /* HomeVC.swift in Sources */,
 				196F0FA52782D9E20007C3AA /* SignUpMentorAreaCareerVC.swift in Sources */,
 				9CC0D5B6279D128C00E4885B /* NewMentoringRegisterVC.swift in Sources */,

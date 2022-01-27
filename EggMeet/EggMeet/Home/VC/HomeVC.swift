@@ -38,9 +38,8 @@ class HomeVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden =  true
+        self.navigationController?.navigationBar.isHidden = true
         self.tableView.separatorColor = UIColor.clear
-        tabBarController?.tabBar.tintColor = UIColor(red: 255/255, green: 180/255, blue: 0/255, alpha: 1)
     }
     
     private func attribute() {

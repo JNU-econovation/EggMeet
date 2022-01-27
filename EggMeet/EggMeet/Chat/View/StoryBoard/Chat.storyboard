@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -209,13 +210,13 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contents" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gDG-b0-VG9">
                                                     <rect key="frame" x="285.5" y="21" width="53.5" height="50"/>
-                                                    <color key="backgroundColor" red="1" green="0.70588235294117641" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="3zz-6c-iOB"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="14"/>
-                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <color key="highlightedColor" systemColor="systemYellowColor"/>
+                                                    <nil key="textColor"/>
+                                                    <color key="highlightedColor" name="mygrowthpoint"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROe-g4-dAx">
                                                     <rect key="frame" x="256.5" y="35" width="25" height="10"/>
@@ -251,7 +252,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OpponentName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2a-9A-zhq">
-                                                    <rect key="frame" x="60" y="22" width="95.5" height="20"/>
+                                                    <rect key="frame" x="60" y="15" width="95.5" height="20"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20" id="oVs-uv-5kr"/>
                                                     </constraints>
@@ -260,7 +261,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eel-hb-aSY">
-                                                    <rect key="frame" x="20" y="65" width="52" height="39"/>
+                                                    <rect key="frame" x="20" y="53" width="52" height="56"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="9jS-hk-LqJ"/>
@@ -276,7 +277,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile_photo" translatesAutoresizingMaskIntoConstraints="NO" id="olZ-Qh-Uky">
-                                                    <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                                    <rect key="frame" x="15" y="8" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="40" id="sox-5i-Zck"/>
                                                         <constraint firstAttribute="width" constant="40" id="wF4-56-7og"/>
@@ -295,16 +296,16 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="I2a-9A-zhq" secondAttribute="trailing" constant="150" id="1QU-gv-as5"/>
-                                                <constraint firstItem="olZ-Qh-Uky" firstAttribute="top" secondItem="bgb-LD-6zZ" secondAttribute="top" constant="15" id="4eO-XO-Ha4"/>
+                                                <constraint firstItem="olZ-Qh-Uky" firstAttribute="top" secondItem="bgb-LD-6zZ" secondAttribute="top" constant="8" id="4eO-XO-Ha4"/>
                                                 <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="eel-hb-aSY" secondAttribute="trailing" constant="100" id="827-hy-FzV"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Llp-dF-BIQ" secondAttribute="bottom" constant="11" id="AiE-9j-Umy"/>
                                                 <constraint firstItem="olZ-Qh-Uky" firstAttribute="leading" secondItem="bgb-LD-6zZ" secondAttribute="leading" constant="15" id="OX9-H7-sVS"/>
                                                 <constraint firstItem="I2a-9A-zhq" firstAttribute="leading" secondItem="olZ-Qh-Uky" secondAttribute="trailing" constant="5" id="PSG-2T-LII"/>
                                                 <constraint firstItem="eel-hb-aSY" firstAttribute="leading" secondItem="bgb-LD-6zZ" secondAttribute="leading" constant="20" id="V2x-5d-0dE"/>
                                                 <constraint firstItem="Llp-dF-BIQ" firstAttribute="leading" secondItem="eel-hb-aSY" secondAttribute="trailing" constant="6" id="cCb-Wj-twH"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="eel-hb-aSY" secondAttribute="bottom" constant="10" id="eAa-6j-YzT"/>
-                                                <constraint firstItem="I2a-9A-zhq" firstAttribute="top" secondItem="bgb-LD-6zZ" secondAttribute="top" constant="22" id="gDw-5s-sRR"/>
-                                                <constraint firstItem="eel-hb-aSY" firstAttribute="top" secondItem="olZ-Qh-Uky" secondAttribute="bottom" constant="10" id="ipq-tn-izK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eel-hb-aSY" secondAttribute="bottom" constant="5" id="eAa-6j-YzT"/>
+                                                <constraint firstItem="I2a-9A-zhq" firstAttribute="top" secondItem="bgb-LD-6zZ" secondAttribute="top" constant="15" id="gDw-5s-sRR"/>
+                                                <constraint firstItem="eel-hb-aSY" firstAttribute="top" secondItem="olZ-Qh-Uky" secondAttribute="bottom" constant="5" id="ipq-tn-izK"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -394,14 +395,14 @@
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="profile_photo" width="176" height="176"/>
         <image name="seperate_line" width="1" height="30"/>
+        <namedColor name="mygrowthpoint">
+            <color red="0.97299998998641968" green="0.96899998188018799" blue="0.95300000905990601" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -50,14 +50,7 @@ class HomeFilterVC: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationItem.title = "필터"
-        self.navigationController?.navigationBar.barStyle = .black
-       
         self.navigationController?.navigationBar.isHidden =  false
-        
-        let navigationAppearnce = UINavigationBarAppearance()
-        navigationAppearnce.backgroundColor = .brown
-        //navigationAppearnce.configureWithTransparentBackground()
-        self.navigationController?.navigationBar.standardAppearance = navigationAppearnce
         
         firstCategoryLabel.adjustsFontSizeToFitWidth = true
         secondCategoryLabel.adjustsFontSizeToFitWidth = true
