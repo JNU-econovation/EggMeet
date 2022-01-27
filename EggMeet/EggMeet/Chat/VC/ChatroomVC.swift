@@ -254,12 +254,6 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 내가 보낸 메세지 보여주기
-        if self.chatContentList[indexPath.row].writerId == self.myId {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
-            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
-        }
-        
         // 시스템 메세지 출력
         if self.chatContentList[indexPath.row].type != "MESSAGE"{
             // 내가 멘토일 때
@@ -307,6 +301,12 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                 }
             }
         }
+        // 내가 보낸 메세지 보여주기
+        if self.chatContentList[indexPath.row].writerId == self.myId {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
+            return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
+        }
+        
         // 상대방 메세지 보여주기
         let cell = tableView.dequeueReusableCell(withIdentifier: "ChatOpponentTVC", for: indexPath) as! ChatOpponentTVC
         return makeReceiveMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)

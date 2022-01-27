@@ -38,8 +38,8 @@ class ChatListVC: UITableViewController {
                         let id: Int = data["id"] as! Int
                         let participantNickname: String = data["participantNickname"] as! String
                         let recentMessageContent: String? = data["recentMessageContent"] as? String
-                        
-                        let dataContent: ChatListDto = ChatListDto(id: id, participantNickname: participantNickname, recentMessageContent: recentMessageContent ?? "")
+                        let recentMessageDateTime: Double = data["recentMessageDateTime"] as! Double
+                        let dataContent: ChatListDto = ChatListDto(id: id, participantNickname: participantNickname, recentMessageContent: recentMessageContent ?? "", recentMessageDateTime: recentMessageDateTime)
                         
                         NSLog("data content: \(dataContent)")
                         self.chatListDictionary.append(dataContent)
@@ -59,6 +59,14 @@ class ChatListVC: UITableViewController {
         getMyChatList()
     }
     
+    func getClockTimeFormat(_ time: Double) -> String {
+        let date = Date(timeIntervalSince1970: time)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm"
+        let clockTime = formatter.string(from: date)
+        return clockTime
+    }
+    
     // 행 갯수 반환하는 메소드
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.chatListDictionary.count
@@ -71,10 +79,10 @@ class ChatListVC: UITableViewController {
         
         let nickname = cell.viewWithTag(NICKNAME_CELL_TAG) as? UILabel
         let description = cell.viewWithTag(DESCRIPTION_CELL_TAG) as? UILabel
-        
+        let lastestDate = cell.viewWithTag(LASTEST_DATE_CELL_TAG) as? UILabel
         nickname?.text = row.participantNickname
         description?.text = row.recentMessageContent
-    
+        lastestDate?.text = getClockTimeFormat(row.recentMessageDateTime)
         return cell
     }
 
