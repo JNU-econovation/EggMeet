@@ -37,10 +37,10 @@ class ChatListVC: UITableViewController {
                     let dataList = try JSONSerialization.jsonObject(with: value, options: []) as! [[String: Any]]
                     for data in dataList{
                         let id: Int = data["id"] as! Int
-                        let participantNickname: String = data["participantNickname"] as! String
+                        let participantNickname: String? = data["participantNickname"] as? String
                         let recentMessageContent: String? = data["recentMessageContent"] as? String
-                        let recentMessageDateTime: Double = data["recentMessageDateTime"] as! Double
-                        let dataContent: ChatListDto = ChatListDto(id: id, participantNickname: participantNickname, recentMessageContent: recentMessageContent ?? "", recentMessageDateTime: recentMessageDateTime)
+                        let recentMessageDateTime: Double? = data["recentMessageDateTime"] as? Double
+                        let dataContent: ChatListDto = ChatListDto(id: id, participantNickname: participantNickname ?? "unknowned", recentMessageContent: recentMessageContent ?? "", recentMessageDateTime: recentMessageDateTime ?? 0.0)
                         
                         NSLog("data content: \(dataContent)")
                         self.chatListDictionary.append(dataContent)
@@ -57,8 +57,12 @@ class ChatListVC: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpUI()
+        
         getMyChatList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpUI()
     }
     
     func getClockTimeFormat(_ time: Double) -> String {
@@ -119,8 +123,9 @@ class ChatListVC: UITableViewController {
     }
     
     func setUpUI(){
-        let chattingListBar = UIImage(named: "chatting_list_bar.png")
-        let imageView = UIImageView(image:chattingListBar)
-        self.chatNavigationItem.titleView = imageView
+        let img = UIImage(named: "chatting_list_bar")
+        self.navigationController?.navigationBar.setBackgroundImage(img, for: .default)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.topItem?.title = "메세지"
     }
 }

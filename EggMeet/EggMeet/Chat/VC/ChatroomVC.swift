@@ -38,6 +38,7 @@ class ChatroomVC: UIViewController{
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         let ud = UserDefaults.standard
         self.myId = ud.integer(forKey: "myId")
         NSLog("my Id : \(self.myId)")
