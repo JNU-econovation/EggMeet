@@ -151,12 +151,14 @@ class ChatroomVC: UIViewController{
     func getMentorMenteeId(){
         let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
         let apiURL: String = "http://" + mainAddress + "/chat/room/\(self.chatroomID)"
-        
         var request = URLRequest(url: URL(string: apiURL)!)
+        
         request.httpMethod = "GET"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        // request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
         request.timeoutInterval = 10
-    
+        
+        
         AF.request(request).responseString{ (response) in
             switch response.result {
             case .success:
@@ -334,6 +336,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                         cell.touchUpRegisterScheduleButton = {
                             let storyboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
                             let nextVC = storyboard.instantiateViewController(withIdentifier: "NewMentoringRegisterVC") as! NewMentoringRegisterVC
+                            nextVC.mentoringId = self.mentoringId
                             self.present(nextVC, animated: true, completion: nil)
                         }
                         return cell
