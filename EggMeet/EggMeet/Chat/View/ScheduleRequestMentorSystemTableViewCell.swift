@@ -9,6 +9,8 @@ import UIKit
 
 class ScheduleRequestMentorSystemTableViewCell: UITableViewCell {
 
+    @IBOutlet var scheduleAcceptButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,10 @@ class ScheduleRequestMentorSystemTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    @IBAction func touchUpScheduleAcceptButton(_ sender: Any?){
+        
     }
     
 }

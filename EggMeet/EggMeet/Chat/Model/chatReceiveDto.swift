@@ -16,6 +16,7 @@ struct chatReceiveDto{
     var type : String
     var content : String
     var dateTime : Double
+    var requestId : Int?
     
     func debugPrint(){
         NSLog("id \(id)")

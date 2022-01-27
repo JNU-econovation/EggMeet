@@ -29,6 +29,7 @@ class ChatroomVC: UIViewController{
     var myId : Int = TEST_MY_ID
     var mentorId : Int = 0
     var menteeId : Int = 0
+    var mentoringId : Int = 0
     
     @IBOutlet weak var chatOpponentNameLabel : UILabel!
     @IBOutlet weak var messageTextView: UITextView!
@@ -36,10 +37,11 @@ class ChatroomVC: UIViewController{
 
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         let ud = UserDefaults.standard
         self.myId = ud.integer(forKey: "myId")
         NSLog("my Id : \(self.myId)")
-        super.viewDidLoad()
+        registerXib()
         self.chatOpponentNameLabel.text = self.opponentNickname
         self.chatTableView.delegate = self
         self.chatTableView.dataSource = self
@@ -166,6 +168,30 @@ class ChatroomVC: UIViewController{
             }
         }
     }
+    
+    func registerXib(){
+        let MentoringRequestMenteeSystemTableViewCellNib = UINib(nibName: "MentoringRequestMenteeSystemTableViewCell", bundle: nil)
+        let MentoringAcceptMenteeSystemTableViewCellNib = UINib(nibName: "MentoringAcceptMenteeSystemTableViewCell", bundle: nil)
+        let ScheduleRequestMenteeSystemTableViewCellNib = UINib(nibName: "ScheduleRequestMenteeSystemTableViewCell", bundle: nil)
+        let RegisterScheduleMenteeSystemTableViewCellNib = UINib(nibName: "RegisterScheduleMenteeSystemTableViewCell", bundle: nil)
+        let ScheduleAcceptMenteeSystemTableViewCellNib = UINib(nibName: "ScheduleAcceptMenteeSystemTableViewCell", bundle: nil)
+        let MentoringRequestMentorSystemTableViewCellNib = UINib(nibName: "MentoringRequestMentorSystemTableViewCell", bundle: nil)
+        let MentoringAcceptMentorSystemTableViewCellNib = UINib(nibName: "MentoringAcceptMentorSystemTableViewCell", bundle: nil)
+        let ScheduleRequestMentorSystemTableViewCellNib = UINib(nibName: "ScheduleRequestMentorSystemTableViewCell", bundle: nil)
+        let ScheduleAcceptMentorSystemTableViewCellNib = UINib(nibName: "ScheduleAcceptMentorSystemTableViewCell", bundle: nil)
+        
+        self.chatTableView.register(MentoringRequestMenteeSystemTableViewCellNib, forCellReuseIdentifier: "MentoringRequestMenteeSystemTableViewCell")
+        self.chatTableView.register(MentoringAcceptMenteeSystemTableViewCellNib, forCellReuseIdentifier:"MentoringAcceptMenteeSystemTableViewCell")
+        self.chatTableView.register(ScheduleRequestMenteeSystemTableViewCellNib, forCellReuseIdentifier: "ScheduleRequestMenteeSystemTableViewCell")
+        self.chatTableView.register(RegisterScheduleMenteeSystemTableViewCellNib, forCellReuseIdentifier: "RegisterScheduleMenteeSystemTableViewCell")
+        self.chatTableView.register(ScheduleAcceptMenteeSystemTableViewCellNib, forCellReuseIdentifier: "ScheduleAcceptMenteeSystemTableViewCell")
+        self.chatTableView.register(MentoringRequestMentorSystemTableViewCellNib, forCellReuseIdentifier: "MentoringRequestMentorSystemTableViewCell")
+        self.chatTableView.register(MentoringAcceptMentorSystemTableViewCellNib, forCellReuseIdentifier: "MentoringAcceptMentorSystemTableViewCell")
+        self.chatTableView.register(ScheduleRequestMentorSystemTableViewCellNib, forCellReuseIdentifier: "ScheduleRequestMentorSystemTableViewCell"
+        )
+        self.chatTableView.register(ScheduleAcceptMentorSystemTableViewCellNib, forCellReuseIdentifier: "ScheduleAcceptMentorSystemTableViewCell")
+        
+    }
 }
 
 extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
@@ -180,15 +206,17 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // 내가 보낸 메세지 보여주기
+        /*
         if self.chatContentList[indexPath.row].writerId == self.myId {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ChatTVC", for: indexPath) as! ChatTVC
             return makeSendMessageTableViewCell(cell: cell, indexPath: indexPath, dateTime: self.chatContentList[indexPath.row].dateTime)
         }
+        */
         // 시스템 메세지 출력
-        if self.chatContentList[indexPath.row].type != "MESSAGE"{
+        if self.chatContentList[indexPath.row].type == "MESSAGE"{
             // 내가 멘토일 때
             if self.myId == mentorId{
-                if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
+                // if self.chatContentList[indexPath.row].type == "MENTOR_SYSTEM"{
                     switch self.chatContentList[indexPath.row].content{
                     case "MENTORING_REQUEST":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMentorSystemTableViewCell", for: indexPath) as! MentoringRequestMentorSystemTableViewCell
@@ -205,10 +233,10 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                     default:
                         break
                     }
-                }
+               // }
             }
             if self.myId == menteeId{
-                if self.chatContentList[indexPath.row].type == "MENTEE_SYSTEM"{
+                // if self.chatContentList[indexPath.row].type == "MENTEE_SYSTEM"{
                     switch self.chatContentList[indexPath.row].content{
                     case "MENTORING_REQUEST":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringRequestMenteeSystemTableViewCell", for: indexPath) as! MentoringRequestMenteeSystemTableViewCell
@@ -217,7 +245,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMenteeSystemTableViewCell", for: indexPath) as! MentoringAcceptMenteeSystemTableViewCell
                         return cell
                     case "SCHEDULE_REQUEST":
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
                         return cell
                     case "SCHEDULE_ACCEPT":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
@@ -228,7 +256,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                     default:
                         break
                     }
-                }
+              //  }
             }
         }
         // 상대방 메세지 보여주기
@@ -290,7 +318,13 @@ extension ChatroomVC: StompClientLibDelegate {
         
         if let data = stringBody?.data(using: .utf8){
             let chatJSON = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            let chatContent :chatReceiveDto = chatReceiveDto(id: chatJSON["id"] as! Int, chatroomId: chatJSON["chatroomId"] as! Int, writerId: chatJSON["writerId"] as! Int, writerPictrureIndex: chatJSON["writerPictureIndex"] as! Int, writerNickname: chatJSON["writerNickname"] as! String, type: chatJSON["type"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double)
+            let chatContent :chatReceiveDto = chatReceiveDto(id: chatJSON["id"] as! Int, chatroomId: chatJSON["chatroomId"] as! Int, writerId: chatJSON["writerId"] as! Int, writerPictrureIndex: chatJSON["writerPictureIndex"] as! Int, writerNickname: chatJSON["writerNickname"] as! String, type: chatJSON["type"] as! String, content: chatJSON["content"] as! String, dateTime: chatJSON["dateTime"] as! Double, requestId: chatJSON["requestId"] as? Int)
+            
+            if chatContent.requestId != nil{
+                let ud = UserDefaults.standard
+                ud.set(chatContent.requestId, forKey: "mentoringRequestId")
+                NSLog("requestId : \(chatContent.requestId!)")
+            }
             self.chatContentList.append(chatContent)
             NSLog("success append chat Content : \(chatContent.debugPrint())")
             NSLog("chatContentList : \(self.chatContentList)")
