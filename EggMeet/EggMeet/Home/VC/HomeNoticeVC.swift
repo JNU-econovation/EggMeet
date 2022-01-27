@@ -57,13 +57,13 @@ class HomeNoticeVC: TabmanViewController {
         ctBar.buttons.customize { (button) in
             button.tintColor = .black
             button.selectedTintColor = .black
-            button.font = UIFont.systemFont(ofSize: 16)
-            button.selectedFont = UIFont.systemFont(ofSize: 16, weight: .bold)
+            button.font = UIFont.systemFont(ofSize: 11)
+            button.selectedFont = UIFont.systemFont(ofSize: 11, weight: .bold)
         }
         
         // 인디케이터 (영상에서 주황색 아래 바 부분)
-        ctBar.indicator.weight = .custom(value: 8)
-        ctBar.indicator.tintColor = .systemYellow
+        ctBar.indicator.weight = .custom(value: 3)
+        ctBar.indicator.tintColor = UIColor.systemGray5
     }
 }
 extension HomeNoticeVC: PageboyViewControllerDataSource, TMBarDataSource {
