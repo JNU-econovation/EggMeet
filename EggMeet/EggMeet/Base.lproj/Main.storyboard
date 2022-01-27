@@ -109,24 +109,6 @@
                                     </attributedString>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkJ-Du-Ot6">
-                                <rect key="frame" x="138" y="166" width="98" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Home"/>
-                                <connections>
-                                    <segue destination="GaW-2T-Guu" kind="show" identifier="windLoginHome" id="63K-RW-huz"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLb-yq-CWo">
-                                <rect key="frame" x="134" y="85" width="110" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="회원가입테스트"/>
-                                <connections>
-                                    <segue destination="VFS-lx-X5e" kind="show" id="1ub-uo-iOH"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -452,7 +434,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에그밋에서 사용할 닉네임을 입력해 주세요 :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uaJ-UA-t5S">
-                                <rect key="frame" x="45" y="141" width="285" height="43"/>
+                                <rect key="frame" x="45" y="97" width="285" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="QvD-EZ-J3z"/>
                                 </constraints>
@@ -461,7 +443,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나중에 얼마든지 변경할 수 있어요!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rRs-Mf-csu">
-                                <rect key="frame" x="105" y="184" width="165" height="43"/>
+                                <rect key="frame" x="105" y="140" width="165" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="8YD-Dc-YeG"/>
                                     <constraint firstAttribute="height" constant="43" id="m3A-Ij-coa"/>
@@ -471,7 +453,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9J-ue-0oW">
-                                <rect key="frame" x="122" y="481" width="138" height="44"/>
+                                <rect key="frame" x="122" y="437" width="138" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="8iK-5J-tLv"/>
                                     <constraint firstAttribute="height" constant="44" id="zzH-1E-TJD"/>
@@ -483,7 +465,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6DK-j5-ZCh">
-                                <rect key="frame" x="122" y="424" width="138" height="44"/>
+                                <rect key="frame" x="122" y="380" width="138" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="7W9-26-SOC"/>
                                     <constraint firstAttribute="width" constant="138" id="Owz-nz-adb"/>
@@ -497,25 +479,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Vd-QD-Olk">
-                                <rect key="frame" x="75" y="338" width="225" height="0.0"/>
+                                <rect key="frame" x="75" y="294" width="225" height="0.0"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="textfield_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="w0K-XW-Mnk">
-                                <rect key="frame" x="27" y="259" width="321" height="34"/>
+                                <rect key="frame" x="27" y="215" width="321" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progressbar_nickname" translatesAutoresizingMaskIntoConstraints="NO" id="OFt-MZ-aSW">
-                                <rect key="frame" x="0.0" y="44" width="36.5" height="8"/>
+                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="IyE-ZT-AiQ"/>
                                     <constraint firstAttribute="width" constant="36.5" id="mv9-wT-oO8"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM5-pl-J1T">
-                                <rect key="frame" x="322" y="295" width="26" height="23"/>
+                                <rect key="frame" x="322" y="251" width="26" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="23" id="Ht7-Qj-ufT"/>
                                     <constraint firstAttribute="width" constant="26" id="OGk-ui-bUr"/>
@@ -2235,9 +2217,6 @@
             <point key="canvasLocation" x="-850.39999999999998" y="976.46176911544239"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="63K-RW-huz"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="agree_button" width="302" height="88"/>
         <image name="categorybar_without_text" width="1284" height="140"/>
