@@ -258,7 +258,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eel-hb-aSY">
-                                                    <rect key="frame" x="20" y="59" width="44.5" height="45"/>
+                                                    <rect key="frame" x="20" y="59" width="52" height="45"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="lessThanOrEqual" constant="150" id="9jS-hk-LqJ"/>
@@ -266,7 +266,7 @@
                                                     <attributedString key="attributedText">
                                                         <fragment content="Content">
                                                             <attributes>
-                                                                <font key="NSFont" size="14" name=".SFNS-Regular"/>
+                                                                <font key="NSFont" metaFont="system" size="14"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                             </attributes>
                                                         </fragment>
@@ -281,7 +281,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llp-dF-BIQ">
-                                                    <rect key="frame" x="70.5" y="93" width="25" height="10"/>
+                                                    <rect key="frame" x="78" y="93" width="25" height="10"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="25" id="2A1-yP-5Mt"/>
                                                         <constraint firstAttribute="height" constant="10" id="hc2-WT-daY"/>
