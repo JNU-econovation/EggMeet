@@ -217,7 +217,7 @@ class ChatroomVC: UIViewController{
                         
                         for data in dataList {
                             NSLog("data : \(data)")
-                            
+                        
                             let id: Int = data["id"] as! Int
                             let chatroomId: Int = data["chatroomId"] as! Int
                             let writerId: Int? = data["writerId"] as? Int
@@ -228,7 +228,7 @@ class ChatroomVC: UIViewController{
                             let dateTime: Double = data["dateTime"] as! Double
                             let requestId: Int? = data["requestId"] as? Int
                             
-                            let chatContent: chatReceiveDto = chatReceiveDto(id: id, chatroomId: chatroomId, writerId: writerId ?? 0, writerPictureIndex: writerPictureIndex ?? 0, writerNickname: writerNickname ?? "unKnowned", type: type, content: content ?? "", dateTime: dateTime, requestId: requestId ?? 0)
+                            let chatContent: chatReceiveDto = chatReceiveDto(id: id, chatroomId: chatroomId, writerId: writerId ?? 0, writerPictureIndex: writerPictureIndex ?? 0, writerNickname: writerNickname ?? "unKnowned", type: type, content: content ?? "", dateTime: dateTime, requestId: requestId)
                             
                             
                             self.chatContentList.append(chatContent)
@@ -417,6 +417,7 @@ extension ChatroomVC: StompClientLibDelegate {
             if chatContent.requestId != nil{
                 let ud = UserDefaults.standard
                 ud.set(chatContent.requestId, forKey: "mentoringRequestId")
+                self.mentoringId = chatContent.requestId!
                 NSLog("requestId : \(chatContent.requestId!)")
             }
             self.chatContentList.append(chatContent)
