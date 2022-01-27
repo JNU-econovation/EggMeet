@@ -655,7 +655,7 @@
 		5BBC8F5832C6D7350324613A71D59B4B /* Api.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Api.swift; path = sources/KakaoSDKCommon/network/Api.swift; sourceTree = "<group>"; };
 		5BC7C455DCD097B5A03F938208E28F9A /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		5BCDA8760263DF8BFAF5A086433C75C8 /* TMBarLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TMBarLayout.swift; path = Sources/Tabman/Bar/BarLayout/TMBarLayout.swift; sourceTree = "<group>"; };
-		5BCF10FEAC86062DD9C68C7581020622 /* Pods-EggMeet */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-EggMeet"; path = Pods_EggMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BCF10FEAC86062DD9C68C7581020622 /* Pods_EggMeet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EggMeet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C09B97BDFC2C9E21A8881802E2139F7 /* Tabman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Tabman.release.xcconfig; sourceTree = "<group>"; };
 		5D46D1C73E99E55EF7F7B1A1B880448C /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		5D64DC2131F79918D09A60B3A49223BC /* Tabman.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Tabman.h; path = Sources/Tabman/Tabman.h; sourceTree = "<group>"; };
@@ -764,7 +764,7 @@
 		9B2833D8A50E162931831A0B7EDC0C17 /* UIView+DefaultTintColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+DefaultTintColor.swift"; path = "Sources/Tabman/Bar/Extensions/UIView+DefaultTintColor.swift"; sourceTree = "<group>"; };
 		9B6725B782188F18CB76A740433F14E4 /* DropDown */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C191AD33F48AE0B847EA876F3810108 /* NSURLRequest+SRWebSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+SRWebSocket.h"; path = "SocketRocket/NSURLRequest+SRWebSocket.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9ED5EBFA672AE739B7343755B1B785BD /* Pods-EggMeet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EggMeet.debug.xcconfig"; sourceTree = "<group>"; };
 		9F126FD02EFB9E63BCB64E0AE208A0DF /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		9F18A6D9D3691FB483BAB2E1353A8990 /* SRHTTPConnectMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SRHTTPConnectMessage.h; path = SocketRocket/Internal/Utilities/SRHTTPConnectMessage.h; sourceTree = "<group>"; };
@@ -1081,7 +1081,6 @@
 				BD4AE868C1E213DFECE0411A2D91AB67 /* Resources */,
 				DBA7662223CD906DD128D5364E1B6BC9 /* Support Files */,
 			);
-			name = DropDown;
 			path = DropDown;
 			sourceTree = "<group>";
 		};
@@ -1113,7 +1112,6 @@
 				F9B26D6DD2CFB9207BA79DE0C53DB420 /* IQUIViewController+Additions.swift */,
 				19263721F7613EE5D2D1D951F64A0D29 /* Support Files */,
 			);
-			name = IQKeyboardManagerSwift;
 			path = IQKeyboardManagerSwift;
 			sourceTree = "<group>";
 		};
@@ -1124,7 +1122,6 @@
 				82AB0CA841C7D9DAEA24BF1221A73E1B /* DLRadioButton.m */,
 				695986CDF4B7BEFFEEE916BCE6131DA1 /* Support Files */,
 			);
-			name = DLRadioButton;
 			path = DLRadioButton;
 			sourceTree = "<group>";
 		};
@@ -1149,7 +1146,6 @@
 				94E0486800DD7CDFA4AFE9CF449DFDE7 /* StompClientLib.swift */,
 				77F88889D456EA5558AAE177C274DFBB /* Support Files */,
 			);
-			name = StompClientLib;
 			path = StompClientLib;
 			sourceTree = "<group>";
 		};
@@ -1240,7 +1236,6 @@
 				B2DD2E0C828FDFA92C60C66640CD867E /* UserShippingAddresses.swift */,
 				3676F6EA3272081A59E5C69CC458EFD9 /* Support Files */,
 			);
-			name = KakaoSDKUser;
 			path = KakaoSDKUser;
 			sourceTree = "<group>";
 		};
@@ -1271,7 +1266,7 @@
 				25BDA6E824AD6CBD857358A023C694AD /* KakaoSDKCommon */,
 				1353D6A467F43A6A3EA21D310BD35A31 /* KakaoSDKUser */,
 				23D5CD291D18F2187712FE6F84B6F1C6 /* Pageboy */,
-				5BCF10FEAC86062DD9C68C7581020622 /* Pods-EggMeet */,
+				5BCF10FEAC86062DD9C68C7581020622 /* Pods_EggMeet.framework */,
 				50C0B0879B7086918A819F704BF40B4B /* Socket.IO-Client-Swift */,
 				85A01882ED06DFEA2E0CE78BCDB204A7 /* SocketRocket */,
 				891B2270823847ED23F2ECFC28F935EC /* Starscream */,
@@ -1288,7 +1283,6 @@
 				5EFA855270931A79059E9235BB3F4938 /* Network */,
 				1B375FA7FD10D20445BB294DEDBF4EE1 /* Support Files */,
 			);
-			name = KakaoSDKCommon;
 			path = KakaoSDKCommon;
 			sourceTree = "<group>";
 		};
@@ -1365,7 +1359,6 @@
 				77C2E9ED45DF44D4FEFCC6865BD42ECB /* WeakContainer.swift */,
 				3819514794DBD8A4FCCD2C81A8B0B9CD /* Support Files */,
 			);
-			name = Tabman;
 			path = Tabman;
 			sourceTree = "<group>";
 		};
@@ -1402,7 +1395,6 @@
 				25D537C13D28F7AEF787A437BB8AABC4 /* WebSocket.swift */,
 				3B028425CEF3D6A556340FF574D6AFA7 /* Support Files */,
 			);
-			name = Starscream;
 			path = Starscream;
 			sourceTree = "<group>";
 		};
@@ -1437,7 +1429,6 @@
 				01D4DEF81E9B7FA43CA2E4735499708A /* WeakContainer.swift */,
 				4E9A19A77EE052614F185CFCE80E9C53 /* Support Files */,
 			);
-			name = Pageboy;
 			path = Pageboy;
 			sourceTree = "<group>";
 		};
@@ -1501,7 +1492,6 @@
 				25C5107A8E3D29884C523E264313B293 /* SSLSecurity.swift */,
 				B66079E17EB01D3C077B9D0B19784997 /* Support Files */,
 			);
-			name = "Socket.IO-Client-Swift";
 			path = "Socket.IO-Client-Swift";
 			sourceTree = "<group>";
 		};
@@ -1551,7 +1541,6 @@
 				AEEE05EC0644B2B004B13AEBC548A19F /* SRWebSocket.m */,
 				C5F2DFCA2008BA17962F57C31680A962 /* Support Files */,
 			);
-			name = SocketRocket;
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
@@ -1707,7 +1696,6 @@
 				955903708AFD7D505E80EC589FF508D9 /* FSCalendarWeekdayView.m */,
 				153F80C7A2650EFCA7B6253CCA01E441 /* Support Files */,
 			);
-			name = FSCalendar;
 			path = FSCalendar;
 			sourceTree = "<group>";
 		};
@@ -1726,7 +1714,6 @@
 				2D5208B12667A1598785C37A5FCFC74A /* TokenManager.swift */,
 				E8EC01B02218CB89357CB1A58685CFD2 /* Support Files */,
 			);
-			name = KakaoSDKAuth;
 			path = KakaoSDKAuth;
 			sourceTree = "<group>";
 		};
@@ -1795,7 +1782,6 @@
 				E9D539AFF6E0207F8A25D5609FFA4ACE /* Validation.swift */,
 				0B07C07CFB9CC845774F855C362ED3F9 /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -2175,7 +2161,7 @@
 			);
 			name = "Pods-EggMeet";
 			productName = Pods_EggMeet;
-			productReference = 5BCF10FEAC86062DD9C68C7581020622 /* Pods-EggMeet */;
+			productReference = 5BCF10FEAC86062DD9C68C7581020622 /* Pods_EggMeet.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		A44D85440C5D58BC5C4D70A539C5EEF0 /* Socket.IO-Client-Swift */ = {
