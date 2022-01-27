@@ -18,6 +18,7 @@
 		192C408B277869AD003055DD /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408A277869AD003055DD /* User.swift */; };
 		192C408D27786A32003055DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192C408C27786A32003055DD /* MainViewController.swift */; };
 		192CC2AE27A2850100C6DE8A /* PushKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 192CC2AD27A2850100C6DE8A /* PushKit.framework */; };
+		1930545927A2C679003B5308 /* ChatListDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1930545827A2C679003B5308 /* ChatListDto.swift */; };
 		1934F20A2799BD6800C05B09 /* ChatOpponentTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */; };
 		193C624E279302BD0036C09C /* ChatroomID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193C624D279302BD0036C09C /* ChatroomID.swift */; };
 		193DABFD278856FE009F71AA /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193DABFC278856FE009F71AA /* RegisterUser.swift */; };
@@ -132,6 +133,7 @@
 		192C408C27786A32003055DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		192CC2AC27A284D500C6DE8A /* EggMeetRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EggMeetRelease.entitlements; sourceTree = "<group>"; };
 		192CC2AD27A2850100C6DE8A /* PushKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PushKit.framework; path = System/Library/Frameworks/PushKit.framework; sourceTree = SDKROOT; };
+		1930545827A2C679003B5308 /* ChatListDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListDto.swift; sourceTree = "<group>"; };
 		1934F2092799BD6800C05B09 /* ChatOpponentTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatOpponentTVC.swift; sourceTree = "<group>"; };
 		193C624D279302BD0036C09C /* ChatroomID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatroomID.swift; sourceTree = "<group>"; };
 		193DABFC278856FE009F71AA /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
@@ -361,6 +363,7 @@
 				19797FE02793100800680B21 /* chatDto.swift */,
 				19A9AE6827A03D5E00E38912 /* MessageType.swift */,
 				19A9AE6A27A0898F00E38912 /* chatReceiveDto.swift */,
+				1930545827A2C679003B5308 /* ChatListDto.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -817,6 +820,7 @@
 				9CC0D5BA279D12F900E4885B /* PartnerScheduleVC.swift in Sources */,
 				195EE59427A187BA000826A9 /* ScheduleRequestMentorSystemTableViewCell.swift in Sources */,
 				9CE4B67D27807A50003AEB90 /* SignUpNickNameVC.swift in Sources */,
+				1930545927A2C679003B5308 /* ChatListDto.swift in Sources */,
 				19F5A9F62794454E00954AFA /* ChatTVC.swift in Sources */,
 				19FEC4972782E06100F18D8F /* SignUpSetMenteeAreaCategoryVC.swift in Sources */,
 				19C6A08C278A16D100074125 /* SignUpShowPersonalInfoVC.swift in Sources */,
