@@ -20,11 +20,11 @@
             landmarkType = "3">
             <Locations>
                <Location
-                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - 706f61e24c218ce8"
+                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - a2f4a67acaf8180d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EggMeet.NewMentoringScheduleSetVC.navigationTitle.getter : Swift.String"
+                  symbolName = "EggMeet.NewMentoringScheduleSetVC.selectDate.getter : Foundation.Date"
                   moduleName = "EggMeet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Macintosh%20HD%20-%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%201/Users/asong/DEVELOP/EggMeet/EggMeet/EggMeet/Calendar/VC/NewMentoringScheduleSetVC.swift"
@@ -32,14 +32,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "100">
+                  offsetFromSymbolStart = "104">
                </Location>
                <Location
-                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - 93e95d8063c086fc"
+                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - eb2ff9e9be78b381"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EggMeet.NewMentoringScheduleSetVC.navigationTitle.setter : Swift.String"
+                  symbolName = "EggMeet.NewMentoringScheduleSetVC.selectDate.setter : Foundation.Date"
                   moduleName = "EggMeet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Macintosh%20HD%20-%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%201/Users/asong/DEVELOP/EggMeet/EggMeet/EggMeet/Calendar/VC/NewMentoringScheduleSetVC.swift"
@@ -47,14 +47,14 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "136">
+                  offsetFromSymbolStart = "208">
                </Location>
                <Location
-                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - 2affaa184eaedb38"
+                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - 39a1fc7170faccc3"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EggMeet.NewMentoringScheduleSetVC.navigationTitle.modify : Swift.String"
+                  symbolName = "EggMeet.NewMentoringScheduleSetVC.selectDate.modify : Foundation.Date"
                   moduleName = "EggMeet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Macintosh%20HD%20-%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%201/Users/asong/DEVELOP/EggMeet/EggMeet/EggMeet/Calendar/VC/NewMentoringScheduleSetVC.swift"
@@ -65,11 +65,11 @@
                   offsetFromSymbolStart = "20">
                </Location>
                <Location
-                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - b8a537787a669351"
+                  uuid = "61494121-F31D-4F93-A46E-997FB8307EED - e62bc49e34012ef5"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "EggMeet.NewMentoringScheduleSetVC.navigationTitle.modify : Swift.String with unmangled suffix &quot;.resume.0&quot;"
+                  symbolName = "EggMeet.NewMentoringScheduleSetVC.selectDate.modify : Foundation.Date with unmangled suffix &quot;.resume.0&quot;"
                   moduleName = "EggMeet"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Volumes/Macintosh%20HD%20-%20%E1%84%83%E1%85%A6%E1%84%8B%E1%85%B5%E1%84%90%E1%85%A5%201/Users/asong/DEVELOP/EggMeet/EggMeet/EggMeet/Calendar/VC/NewMentoringScheduleSetVC.swift"
@@ -92,7 +92,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "256">
+                  offsetFromSymbolStart = "272">
                </Location>
                <Location
                   uuid = "61494121-F31D-4F93-A46E-997FB8307EED - 7a04aa71c8bb8815"
@@ -107,7 +107,7 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "17"
                   endingLineNumber = "17"
-                  offsetFromSymbolStart = "232">
+                  offsetFromSymbolStart = "248">
                </Location>
             </Locations>
          </BreakpointContent>

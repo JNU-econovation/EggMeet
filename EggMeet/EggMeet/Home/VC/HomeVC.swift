@@ -40,8 +40,6 @@ class HomeVC: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden =  true
         self.tableView.separatorColor = UIColor.clear
-        
-        self.view.bringSubviewToFront((self.tabBarController?.view!)!)
     }
     
     private func attribute() {
