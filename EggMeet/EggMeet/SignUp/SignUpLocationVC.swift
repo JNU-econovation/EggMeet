@@ -17,6 +17,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     @IBOutlet weak var locationDetailCategoryButton: UIButton!
     
     var list = ["전체", "서울", "부산", "대구" ,"광주", "대전", "울산", "인천", "경기", "강원", "충남", "충북", "세종", "전남", "전북", "경북", "경남", "제주"]
+    var detailList = ["전체", "북구", "서구", "남구", "동구", "광산구"]
     var selectCellIndex: Int = 0
     var isTouchedLocationButton: Bool = true
     var isTouchedDetailLocationButton: Bool = false
@@ -53,6 +54,18 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         self.collcectionView.collectionViewLayout = flowLayout
     }
     
+    func setDetailCollectionView(){
+        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        flowLayout.minimumLineSpacing = 8
+        flowLayout.minimumInteritemSpacing = 14
+        flowLayout.sectionInset.top = 22
+        flowLayout.sectionInset.left = 16
+        flowLayout.sectionInset.bottom = 21
+        flowLayout.sectionInset.right = 16
+        flowLayout.itemSize = CGSize(width: 125, height: 18)
+        self.collcectionView.collectionViewLayout = flowLayout
+    }
+    
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){
         if windNextVCAble {
             guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
@@ -76,7 +89,10 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
             locationCategoryButton.setImage(UIImage(named: "location_category_selected"), for: .normal)
             locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_deselcted"), for: .normal)
             isTouchedLocationButton = true
+            isTouchedDetailLocationButton = false
             collcectionView.isHidden = false
+            setCollectionView()
+            collcectionView.reloadData()
         }
     }
     
@@ -84,38 +100,46 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         switch isTouchedDetailLocationButton {
         case true :
             locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_deselcted"), for: .normal)
-            //locationCategoryButton.setImage(UIImage(named: "location_category_selected"), for: .normal)
+            collcectionView.isHidden = true
             isTouchedDetailLocationButton = false
         case false :
             locationDetailCategoryButton.setImage(UIImage(named: "location_detail_category_selected"), for: .normal)
-            //locationCategoryButton.setImage(UIImage(named: "location_category_deselcted"), for: .normal)
             isTouchedDetailLocationButton = true
+            collcectionView.isHidden = false
+            setDetailCollectionView()
+            collcectionView.reloadData()
         }
     }
 }
 
 extension SignUpLocationVC {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return list.count
+        switch isTouchedDetailLocationButton {
+        case false : return list.count
+        case true : return detailList.count
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationCollectionViewCell
+        switch isTouchedDetailLocationButton {
+        case false : cell.locationLabel.text = list[indexPath.row]
+        case true : cell.locationLabel.text = detailList[indexPath.row]
         }
         
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! LocationCollectionViewCell
-            
-            cell.locationLabel.text = list[indexPath.row]
-            cell.locationLabel.textColor = .gray
-            cell.layer.cornerRadius = 2
-            cell.layer.borderColor = UIColor.gray.cgColor
-            cell.layer.borderWidth = 1
-            
-            if(indexPath.row == selectCellIndex){
-                cell.layer.borderColor = UIColor.black.cgColor
-                collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
-            }
-            cell.isSelected = indexPath.row == selectCellIndex
-            
-            return cell
+        cell.locationLabel.textColor = .gray
+        cell.layer.cornerRadius = 2
+        cell.layer.borderColor = UIColor.gray.cgColor
+        cell.layer.borderWidth = 1
+        
+        if(indexPath.row == selectCellIndex){
+            cell.layer.borderColor = UIColor.black.cgColor
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: .init())
         }
+        cell.isSelected = indexPath.row == selectCellIndex
+        
+        return cell
+    }
 }
 
 // cell layout
@@ -137,17 +161,4 @@ extension SignUpLocationVC: UICollectionViewDelegateFlowLayout {
         ud.set(list[indexPath.row], forKey: locationKey)
         selectCellIndex = indexPath.row
     }
-
-    /*
-    // cell 사이즈( 옆 라인을 고려하여 설정 )
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-        let width = collectionView.frame.width / 5 - 1 ///  3등분하여 배치, 옆 간격이 1이므로 1을 빼줌
-        print("collectionView width=\(collectionView.frame.width)")
-        print("cell하나당 width=\(width)")
-        print("root view width = \(self.view.frame.width)")
-
-        let size = CGSize(width: width, height: 18)
-        return size
-    }*/
 }
