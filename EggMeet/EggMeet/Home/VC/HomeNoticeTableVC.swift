@@ -11,7 +11,7 @@ import UIKit
 class HomeNoticeTableVC: UIViewController{
     @IBOutlet weak var tableView: UITableView!
     
-    var noticeArr: [String] = ["asong님으로부터 새로운 메시지가 도착했습니다.", "지우님으로부터 새로운 메세지가 도착했습니다.", "실세윤성님이 멘토신청을 보냈습니다."]
+    var noticeArr: [String] = ["yunseong님으로부터 새로운 메시지가 도착했습니다."]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,7 @@ extension HomeNoticeTableVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 99
     }
     // 테이블뷰 셀 옆으로 스와이프해서 삭제
     func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
@@ -49,5 +49,14 @@ extension HomeNoticeTableVC: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, titleForDeleteConfirmationButtonForRowAt indexPath: IndexPath) -> String? {
         return "삭제"
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ChatroomVC") as? ChatroomVC else {return}
+        nextVC.chatroomID = 26
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

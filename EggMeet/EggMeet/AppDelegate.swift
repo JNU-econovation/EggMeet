@@ -11,7 +11,12 @@ import AuthenticationServices
 import KakaoSDKCommon
 import KakaoSDKAuth
 import IQKeyboardManagerSwift
-import Firebase
+import UserNotifications
+/*
+ import Firebase
+import FirebaseMessaging
+import FirebaseCore
+*/
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +28,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        /*
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(options: authOptions,completionHandler: {_, _ in })
+            application.registerForRemoteNotifications()
+         */
         return true
     }
 
@@ -49,6 +61,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return false
         }
 
+    /*
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+       Messaging.messaging().apnsToken = deviceToken
+    }
+  }
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+  func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    print("\(#function)")
+  }
+}
+
+extension AppDelegate: MessagingDelegate {
+  func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+    print("Firebase registration token: \(fcmToken)")
+    let dataDict:[String: String] = ["token": fcmToken]
+    NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+  }
+}
+     */
     // MARK: - Core Data stack
 
     lazy var persistentContainer: NSPersistentContainer = {

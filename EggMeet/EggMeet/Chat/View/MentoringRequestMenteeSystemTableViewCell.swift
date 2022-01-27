@@ -9,6 +9,8 @@ import UIKit
 
 class MentoringRequestMenteeSystemTableViewCell: UITableViewCell {
 
+    @IBOutlet var cancelButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -16,8 +18,11 @@ class MentoringRequestMenteeSystemTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
+    }
+    
+    @IBAction func touchUpCancelButton(_ sender: Any?){
+        
     }
     
 }
