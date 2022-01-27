@@ -15,6 +15,7 @@ let DESCRIPTION_CELL_TAG = 102
 
 class ChatListVC: UITableViewController {
     
+    @IBOutlet var chatNavigationItem: UINavigationItem!
     var chatListDictionary: [ChatListDto] = [ChatListDto]()
     
     func getMyChatList(){
@@ -56,6 +57,7 @@ class ChatListVC: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpUI()
         getMyChatList()
     }
     
@@ -96,6 +98,13 @@ class ChatListVC: UITableViewController {
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
     
+    override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ChatroomSegue" {
             let vc = segue.destination as? ChatroomVC
@@ -107,5 +116,11 @@ class ChatListVC: UITableViewController {
                 NSLog("receive chatroom Id : \(chatroomId)")
             }
         }
+    }
+    
+    func setUpUI(){
+        let chattingListBar = UIImage(named: "chatting_list_bar.png")
+        let imageView = UIImageView(image:chattingListBar)
+        self.chatNavigationItem.titleView = imageView
     }
 }

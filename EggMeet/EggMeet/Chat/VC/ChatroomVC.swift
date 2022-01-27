@@ -36,7 +36,6 @@ class ChatroomVC: UIViewController{
     @IBOutlet weak var messageTextView: UITextView!
     @IBOutlet var chatTableView: UITableView!
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         let ud = UserDefaults.standard
@@ -287,13 +286,18 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                         let cell = tableView.dequeueReusableCell(withIdentifier: "MentoringAcceptMenteeSystemTableViewCell", for: indexPath) as! MentoringAcceptMenteeSystemTableViewCell
                         return cell
                     case "SCHEDULE_REQUEST":
-                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
+                        let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleRequestMenteeSystemTableViewCell", for: indexPath) as! ScheduleRequestMenteeSystemTableViewCell
                         return cell
                     case "SCHEDULE_ACCEPT":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "ScheduleAcceptMenteeSystemTableViewCell", for: indexPath) as! ScheduleAcceptMenteeSystemTableViewCell
                         return cell
                     case "REGISTER_SCHEDULE":
                         let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleMenteeSystemTableViewCell" , for: indexPath) as! RegisterScheduleMenteeSystemTableViewCell
+                        cell.touchUpRegisterScheduleButton = {
+                            let storyboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
+                            let nextVC = storyboard.instantiateViewController(withIdentifier: "NewMentoringRegisterVC") as! NewMentoringRegisterVC
+                            self.present(nextVC, animated: true, completion: nil)
+                        }
                         return cell
                     default:
                         break
