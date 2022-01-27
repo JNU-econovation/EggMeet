@@ -59,7 +59,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="멘토 찾기" image="home_mentor"/>
+                                <state key="normal" image="home_find_mentor_selected"/>
                                 <connections>
                                     <action selector="touchFindMentorButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FAN-O6-f8A"/>
                                 </connections>
@@ -72,7 +72,8 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="멘티찾기" image="home_mentee"/>
+                                <state key="normal" title="멘티찾기" image="home_find_mentee_deselected"/>
+                                <state key="selected" backgroundImage="home_find_mentee_selected"/>
                                 <connections>
                                     <action selector="touchFindMenteeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="klf-6E-VZf"/>
                                 </connections>
@@ -215,6 +216,8 @@
                     <connections>
                         <outlet property="filterCategoryLabel" destination="Fp3-dn-ZnU" id="O0Y-tf-K4v"/>
                         <outlet property="filterLocationLabel" destination="UQa-XM-XOJ" id="h2x-Mp-aUy"/>
+                        <outlet property="findMenteeButton" destination="0pr-aG-7Q8" id="jze-4j-bYv"/>
+                        <outlet property="findMentorButton" destination="K2i-lW-NA8" id="IaP-BO-GTx"/>
                         <outlet property="tableView" destination="vfZ-5W-IcQ" id="atK-sp-MVs"/>
                     </connections>
                 </viewController>
@@ -316,11 +319,11 @@
         <scene sceneID="WI8-g0-aqZ">
             <objects>
                 <viewController storyboardIdentifier="HomeProfileVC" id="4W2-Mw-FTo" customClass="HomeProfileVC" customModule="EggMeet" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="GK8-F0-EVE">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="GK8-F0-EVE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1497"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uph-uM-1SE">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1438"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="m50-TI-Wsm">
@@ -1299,8 +1302,9 @@
         <image name="home_filter_bar" width="12" height="104"/>
         <image name="home_filter_submit" width="408" height="160"/>
         <image name="home_filter_upsidedown" width="46" height="46"/>
-        <image name="home_mentee" width="184" height="44"/>
-        <image name="home_mentor" width="185" height="44"/>
+        <image name="home_find_mentee_deselected" width="192" height="48"/>
+        <image name="home_find_mentee_selected" width="192" height="48"/>
+        <image name="home_find_mentor_selected" width="192" height="48"/>
         <image name="home_profile_description_box" width="1332" height="404"/>
         <image name="home_profile_follow" width="232" height="84"/>
         <image name="home_profile_line" width="2" height="140"/>

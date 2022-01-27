@@ -13,6 +13,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterLocationLabel: UILabel!
     @IBOutlet weak var filterCategoryLabel: UILabel!
+    @IBOutlet weak var findMentorButton: UIButton!
+    @IBOutlet weak var findMenteeButton: UIButton!
     
     private var homeList: [UserMentorResponseModel] = [UserMentorResponseModel]()
     private var isMentor: Bool = true
@@ -88,12 +90,16 @@ class HomeVC: UIViewController {
     
     @IBAction func touchFindMentorButton(_ sender: Any) {
         isMentor = true
+        findMentorButton.setImage(UIImage(named: "home_find_mentor_selected"), for: .normal)
+        findMenteeButton.setImage(UIImage(named: "home_find_mentee_deselected"), for: .normal)
         self.homeList.removeAll()
         getHomeMentorData()
     }
     
     @IBAction func touchFindMenteeButton(_ sender: Any) {
         isMentor = false
+        findMentorButton.setImage(UIImage(named: "home_find_mentor_deselected"), for: .normal)
+        findMenteeButton.setImage(UIImage(named: "home_find_mentee_selected"), for: .normal)
         self.homeList.removeAll()
         getHomeMenteeData()
     }
