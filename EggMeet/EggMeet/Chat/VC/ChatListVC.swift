@@ -35,6 +35,19 @@ class ChatListVC: UITableViewController {
         return testDataList
     }()
     
+    func getMyChatList(){
+        let ud = UserDefaults.standard
+        let mainAddress: String = Bundle.main.infoDictionary!["API_URL"] as? String ?? ""
+        let apiURL: String = "http://" + mainAddress + "/chat/room"
+        var request = URLRequest(url: URL(string: apiURL)!)
+        let accessToken = ud.string(forKey: "accessToken")!
+        request.httpMethod = "GET"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("Bearer " + accessToken, forHTTPHeaderField: "Authorization")
+        request.timeoutInterval = 10
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
     }
