@@ -18,6 +18,7 @@ class HomeTVC: UITableViewCell {
     @IBOutlet weak var firstCategoryLabel: UILabel!
     @IBOutlet weak var secondCategoryLabel: UILabel!
     @IBOutlet weak var firstHashtagLabel: UILabel!
+    @IBOutlet weak var areaImageView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,10 +34,8 @@ class HomeTVC: UITableViewCell {
 
 extension HomeTVC {
     func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
-        profileImageView.image = UIImage(named: image)
-        starImageView.image = UIImage(named: "rating")
-        
         nicknameLabel.text = nickname
+        nicknameLabel.adjustsFontSizeToFitWidth = true
         mentorGrowthPointLabel.text = "\(mentorGrowthPoint) point"
         firstCategoryLabel.text = "\(firstCategory)"
         
@@ -66,7 +65,9 @@ extension HomeTVC {
         
         switch isMentor {
         case false : growthCostLabel.text = ""; mentorGrowthPointLabel.text = ""
+            areaImageView.image = UIImage(named: "home_area_mentee")
         default : growthCostLabel.text = "성장비용"
+            areaImageView.image = UIImage(named: "home_area_mentor")
         }
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qat-BD-NR5">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -53,7 +53,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="멘토 찾기" image="home_mentor_find"/>
+                                <state key="normal" title="멘토 찾기" image="home_mentor"/>
                                 <connections>
                                     <action selector="touchFindMentorButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="FAN-O6-f8A"/>
                                 </connections>
@@ -66,7 +66,7 @@
                                 </constraints>
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="멘티찾기" image="home_mentee_find"/>
+                                <state key="normal" title="멘티찾기" image="home_mentee"/>
                                 <connections>
                                     <action selector="touchFindMenteeButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="klf-6E-VZf"/>
                                 </connections>
@@ -156,7 +156,7 @@
                                     <constraint firstAttribute="width" constant="40" id="orj-Ub-b1g"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="Button" image="home_star_rank_button"/>
+                                <state key="normal" title="Button" image="home_sort_star"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="753" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DG8-LE-3VM">
                                 <rect key="frame" x="347" y="163" width="52" height="17"/>
@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="width" constant="52" id="ynR-nl-NeH"/>
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" image="home_growthcost_button"/>
+                                <state key="normal" image="home_sort_growthCost"/>
                                 <connections>
                                     <action selector="touchGrowthPointSortButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="MNR-x1-aUd"/>
                                 </connections>
@@ -1284,9 +1284,8 @@
         <image name="home_filter" width="116" height="116"/>
         <image name="home_filter_line" width="8" height="48"/>
         <image name="home_filter_upsidedown" width="46" height="46"/>
-        <image name="home_growthcost_button" width="208" height="172"/>
-        <image name="home_mentee_find" width="184" height="44"/>
-        <image name="home_mentor_find" width="184" height="44"/>
+        <image name="home_mentee" width="184" height="44"/>
+        <image name="home_mentor" width="185" height="44"/>
         <image name="home_profile_description_box" width="1332" height="404"/>
         <image name="home_profile_follow" width="232" height="84"/>
         <image name="home_profile_line" width="2" height="140"/>
@@ -1295,7 +1294,8 @@
         <image name="home_profile_popup_mentor_request" width="920" height="308"/>
         <image name="home_profile_popup_message" width="920" height="308"/>
         <image name="home_search" width="77" height="81"/>
-        <image name="home_star_rank_button" width="160" height="172"/>
+        <image name="home_sort_growthCost" width="208" height="68"/>
+        <image name="home_sort_star" width="160" height="68"/>
         <image name="home_stars" width="320" height="64"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="location_category_deselcted" width="624" height="176"/>

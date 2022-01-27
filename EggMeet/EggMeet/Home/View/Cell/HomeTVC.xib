@@ -19,16 +19,6 @@
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_tabelcell" translatesAutoresizingMaskIntoConstraints="NO" id="oPB-Kt-3X9">
                         <rect key="frame" x="0.0" y="0.0" width="403" height="125"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO1-w8-5WZ">
-                        <rect key="frame" x="142" y="0.0" width="100" height="38"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="38" id="FAj-qj-oZz"/>
-                            <constraint firstAttribute="width" constant="100" id="pgv-fK-HBC"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="X96-Sr-E6c">
                         <rect key="frame" x="49" y="21.5" width="59" height="56"/>
                         <color key="tintColor" red="0.53413444759999995" green="0.53422975539999995" blue="0.5341284275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -37,6 +27,15 @@
                             <constraint firstAttribute="height" constant="59" id="XUQ-gj-01g"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="닉네임" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kO1-w8-5WZ">
+                        <rect key="frame" x="142" y="0.0" width="31.5" height="38"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="38" id="FAj-qj-oZz"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="별점" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TH7-oP-h3B">
                         <rect key="frame" x="142" y="17" width="18" height="43"/>
                         <constraints>
@@ -47,12 +46,12 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="m9r-Vv-Krb">
-                        <rect key="frame" x="170" y="30.5" width="13" height="13"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_stars" translatesAutoresizingMaskIntoConstraints="NO" id="m9r-Vv-Krb">
+                        <rect key="frame" x="170" y="31" width="45" height="13"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="13" id="Qx1-BH-APG"/>
-                            <constraint firstAttribute="width" constant="13" id="pFV-JO-P4q"/>
+                            <constraint firstAttribute="width" constant="45" id="y2F-UA-U2r"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성장비용" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltZ-ue-FYe">
@@ -103,12 +102,20 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_area_mentor" translatesAutoresizingMaskIntoConstraints="NO" id="flU-cN-WZq">
+                        <rect key="frame" x="176.5" y="11" width="49" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="49" id="0D6-Dg-hy8"/>
+                            <constraint firstAttribute="height" constant="17" id="oqM-72-o10"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.94549125430000003" green="0.94565314050000004" blue="0.94548100229999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="oPB-Kt-3X9" secondAttribute="bottom" id="02C-H9-9WE"/>
                     <constraint firstItem="Szu-jg-x31" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="77" id="2AQ-o4-nrp"/>
                     <constraint firstItem="Szu-jg-x31" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="142" id="6s8-77-z9c"/>
+                    <constraint firstItem="flU-cN-WZq" firstAttribute="leading" secondItem="kO1-w8-5WZ" secondAttribute="trailing" constant="3" id="9qU-qK-dTn"/>
                     <constraint firstItem="X96-Sr-E6c" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="AwZ-TJ-tZ0"/>
                     <constraint firstItem="ltZ-ue-FYe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="221" id="BhY-GB-a6Q"/>
                     <constraint firstItem="TH7-oP-h3B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="142" id="E6o-xz-san"/>
@@ -121,6 +128,7 @@
                     <constraint firstItem="qI2-Yl-jQ5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="265" id="W70-aT-Xx8"/>
                     <constraint firstItem="SGY-Hp-AiH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="142" id="Yiu-8O-BOt"/>
                     <constraint firstItem="kO1-w8-5WZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b55-78-DWo"/>
+                    <constraint firstItem="flU-cN-WZq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="cwa-in-GXf"/>
                     <constraint firstItem="TY5-D8-t1S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="42" id="fZg-lA-XjH"/>
                     <constraint firstItem="X96-Sr-E6c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="49" id="hwi-Yd-UdY"/>
                     <constraint firstItem="oPB-Kt-3X9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mbF-tC-1ZM"/>
@@ -132,6 +140,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="areaImageView" destination="flU-cN-WZq" id="TNR-fV-Bgv"/>
                 <outlet property="firstCategoryLabel" destination="SGY-Hp-AiH" id="xjL-D3-c1i"/>
                 <outlet property="firstHashtagLabel" destination="Szu-jg-x31" id="pG1-hn-xK2"/>
                 <outlet property="growthCostLabel" destination="ltZ-ue-FYe" id="jAa-K1-nlN"/>
@@ -145,8 +154,9 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="home_area_mentor" width="196" height="68"/>
+        <image name="home_stars" width="320" height="64"/>
         <image name="home_tabelcell" width="1408" height="448"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="star" catalog="system" width="128" height="116"/>
     </resources>
 </document>
