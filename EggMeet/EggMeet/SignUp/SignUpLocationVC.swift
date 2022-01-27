@@ -22,6 +22,8 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     var isTouchedLocationButton: Bool = true
     var isTouchedDetailLocationButton: Bool = false
     var windNextVCAble: Bool = false
+    var selectLocationStr = ""
+    var selectDetailLocationStr = ""
     
     let locationAreaDD: DropDown = DropDown()
     let locationKey = "location"
@@ -68,7 +70,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
     
     @IBAction func windSignUpSelfIntroduceView(_ sender: Any){
         if windNextVCAble {
-            guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
+          guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
             self.navigationController?.pushViewController(nextVC, animated: true)
         }
     }
@@ -156,9 +158,15 @@ extension SignUpLocationVC: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("click cell = \(list[indexPath.row])")
+        switch isTouchedDetailLocationButton {
+        case false : selectLocationStr = list[indexPath.row]+" "
+        case true : selectDetailLocationStr = detailList[indexPath.row]
+            windNextVCAble = true
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
+            print("select location : \(selectLocationStr+selectDetailLocationStr)")
+            ud.set(selectLocationStr + selectDetailLocationStr, forKey: locationKey)
+        }
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
-        ud.set(list[indexPath.row], forKey: locationKey)
         selectCellIndex = indexPath.row
     }
 }
