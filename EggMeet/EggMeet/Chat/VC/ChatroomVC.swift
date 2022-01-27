@@ -335,7 +335,7 @@ extension ChatroomVC: UITableViewDelegate, UITableViewDataSource{
                         let cell = tableView.dequeueReusableCell(withIdentifier: "RegisterScheduleMenteeSystemTableViewCell" , for: indexPath) as! RegisterScheduleMenteeSystemTableViewCell
                         cell.touchUpRegisterScheduleButton = {
                             let storyboard = UIStoryboard(name: "CalendarStoryboard", bundle: nil)
-                            let nextVC = storyboard.instantiateViewController(withIdentifier: "NewMentoringRegisterVC") as! NewMentoringRegisterVC
+                            let nextVC = storyboard.instantiateViewController(withIdentifier: "NewMentoringScheduleSetVC") as! NewMentoringScheduleSetVC
                             nextVC.mentoringId = self.mentoringId
                             self.present(nextVC, animated: true, completion: nil)
                         }
