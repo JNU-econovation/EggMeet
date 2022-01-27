@@ -14,6 +14,8 @@ class NewMentoringScheduleSetVC: UIViewController{
     
     let dateFormatter = DateFormatter()
     var selectDateStr: String = ""
+    var selectDate : Date = Date()
+    var mentoringId : Int = 0
     //var navigationTitle: String = "신규 멘토링 등록"
 
 
@@ -39,6 +41,8 @@ class NewMentoringScheduleSetVC: UIViewController{
     @IBAction func touchDateSelectButton(_ sender: Any){
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "NewMentorSelectPopUpVC") as! NewMentorSelectPopUpVC
         vc.selectedDateStr = selectDateStr
+        vc.selectDate = selectDate
+        vc.mentoringId = mentoringId
         //vc.navigationTitle = navigationTitle
         vc.modalPresentationStyle = .overCurrentContext
         self.present(vc, animated: true, completion: nil)
@@ -50,6 +54,8 @@ extension NewMentoringScheduleSetVC : FSCalendarDelegate, FSCalendarDataSource, 
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         print(dateFormatter.string(from: date) + " 선택됨")
         selectDateStr = dateFormatter.string(from: date)
+        selectDate = date
+        print ("데이트 형식:\(selectDate)")
     }
     
     // 날짜 선택 해제 시 콜백 메소드
