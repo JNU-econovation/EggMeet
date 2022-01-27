@@ -41,7 +41,7 @@ class HomeVC: UIViewController {
         self.navigationController?.navigationBar.isHidden =  true
         self.tableView.separatorColor = UIColor.clear
         
-        self.view.bringSubviewToFront((self.tabBarController?.tabBar.plainView)!)
+        self.view.bringSubviewToFront((self.tabBarController?.view!)!)
     }
     
     private func attribute() {
