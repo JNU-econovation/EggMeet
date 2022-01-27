@@ -1414,7 +1414,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="mentee_categorybar_general"/>
+                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="categorybar_without_text"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="touchUpCategoryButton:" destination="BkO-TB-3sr" eventType="touchUpInside" id="7aZ-Gy-dd8"/>
@@ -1428,8 +1428,11 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="mentee_categorybar_detail"/>
+                                    <backgroundConfiguration key="background" cornerRadius="0.0" image="categorybar_without_text"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchMenteeDetailAreaButton" destination="BkO-TB-3sr" eventType="touchUpInside" id="nj3-3N-D4z"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="progress_bar_full" translatesAutoresizingMaskIntoConstraints="NO" id="y7K-eo-Q1S">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="8"/>
@@ -1445,6 +1448,20 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="9"/>
                                 <color key="textColor" red="0.48627450979999998" green="0.48627450979999998" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fgw-pE-ks1">
+                                <rect key="frame" x="44" y="330" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqs-hC-bxP">
+                                <rect key="frame" x="44" y="280" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1470,6 +1487,13 @@
                             <constraint firstItem="udY-kw-0aD" firstAttribute="centerY" secondItem="AfD-TL-Q8n" secondAttribute="centerY" constant="169" id="vom-XI-Jxv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="menteeAreaButton" destination="9AN-nm-Sna" id="6Ry-d2-bQ3"/>
+                        <outlet property="menteeCategoryLabel" destination="Sqs-hC-bxP" id="Dsp-RO-vm7"/>
+                        <outlet property="menteeDetailAreaButton" destination="ukq-h6-5uv" id="icl-sy-QJ2"/>
+                        <outlet property="menteeDetailCategoryLabel" destination="fgw-pE-ks1" id="i7I-Wu-bxb"/>
+                        <outlet property="nextButton" destination="yT1-qb-P7V" id="ubz-Ho-uSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hm7-Ch-LDV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2046,6 +2070,9 @@
                                 </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" image="find_friend_button"/>
+                                <connections>
+                                    <segue destination="bH6-7b-fF4" kind="show" id="UjV-vt-Vpk"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome_comment" translatesAutoresizingMaskIntoConstraints="NO" id="FnE-dh-WAm">
                                 <rect key="frame" x="45.5" y="232.5" width="284" height="50"/>
@@ -2099,6 +2126,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVF-HV-HUv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9860" y="977"/>
+        </scene>
+        <!--HomeTabBar-->
+        <scene sceneID="nqw-6r-Awf">
+            <objects>
+                <viewControllerPlaceholder storyboardName="HomeStoryboard" referencedIdentifier="HomeTabBar" id="bH6-7b-fF4" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="DqO-Zt-ThJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7va-KV-qQU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="9505" y="1129"/>
         </scene>
         <!--Sign Up AgeVC-->
         <scene sceneID="HyK-se-nEN">
@@ -2205,8 +2242,6 @@
         <image name="location_detail_category_selected" width="624" height="176"/>
         <image name="login_background" width="750" height="1334"/>
         <image name="login_welcome_ment" width="371.5" height="116"/>
-        <image name="mentee_categorybar_detail" width="642" height="70"/>
-        <image name="mentee_categorybar_general" width="642" height="70"/>
         <image name="my_profile_button" width="294" height="88"/>
         <image name="next_able_button" width="556" height="176"/>
         <image name="next_button_disable" width="278" height="88"/>
