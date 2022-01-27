@@ -16,6 +16,8 @@ pod 'StompClientLib'
 pod 'Tabman', '~> 2.9'
 pod 'IQKeyboardManagerSwift'
 pod 'FSCalendar'
+pod 'Firebase/Core'
+pod 'Firebase/Messaging'
 
   # Pods for EggMeet
 

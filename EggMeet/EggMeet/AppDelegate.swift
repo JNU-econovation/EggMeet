@@ -12,6 +12,8 @@ import KakaoSDKCommon
 import KakaoSDKAuth
 import IQKeyboardManagerSwift
 import Firebase
+import UserNotifications
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -24,6 +26,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enableAutoToolbar = false
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         FirebaseApp.configure()
+        
+        Installations.installations().installationID{(id, error) in
+            if let error = error {
+                NSLog("error occur : \(error)")
+                return
+            }
+            guard let id = id else{return}
+            NSLog("firebase id : \(id)")
+        }
         return true
     }
 
