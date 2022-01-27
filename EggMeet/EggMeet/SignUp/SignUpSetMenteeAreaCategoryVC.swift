@@ -31,6 +31,11 @@ class SignUpSetMenteeAreaCategoryVC : UIViewController {
         menteeDetailCategoryLabel.adjustsFontSizeToFitWidth = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
+    }
+    
     @IBAction func touchUpCategoryButton(_ sender: Any) {
         let categoryDD = DropDown()
         categoryDD.dataSource = [ "프로그래밍","외국어", "취업준비","자격증", "사진/영상촬영 및 편집", "디자인", "마케팅", "투자/재테크","작사/작곡", "경험/조언/노하우"]
@@ -82,6 +87,7 @@ class SignUpSetMenteeAreaCategoryVC : UIViewController {
             selectCategory += item
             print(selectCategory)
             ud.set(selectCategory, forKey: "menteeCategory")
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         }
         isCategorySelected = true
     }

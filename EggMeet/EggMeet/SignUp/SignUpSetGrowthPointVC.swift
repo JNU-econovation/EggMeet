@@ -12,11 +12,17 @@ import DropDown
 class SignUpSetGrowthPointVC : UIViewController{
     
     @IBOutlet weak var setGrowthPointButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     let growthPointKey = "growthPoint"
     let ud = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
     }
 
     @IBAction func windSignUpSetMenteeAreaCategoryView (_ sender: Any){
@@ -44,6 +50,7 @@ class SignUpSetGrowthPointVC : UIViewController{
             NSLog("인덱스 : \(index)")
             ud.set(index, forKey: growthPointKey)
             NSLog("set growthPoint : \(index)")
+            self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
         }
     }
 }

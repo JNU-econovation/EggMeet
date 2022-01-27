@@ -75,6 +75,7 @@ class SignUpLocationVC: UIViewController, UICollectionViewDelegate, UICollection
         }
     }
     @IBAction func skipAndWindSignUpSelfIntroduceView(_ sender: Any){
+        ud.set("GWANGJU_BUKGU", forKey: locationKey)
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpSelfIntroduceVC") as? SignUpSelfIntroduceVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -165,7 +166,6 @@ extension SignUpLocationVC: UICollectionViewDelegateFlowLayout {
             self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
             print("select location : \(selectLocationStr+selectDetailLocationStr)")
             ud.set(selectLocationStr + selectDetailLocationStr, forKey: locationKey)
-            //playButton.setImage(UIImage(named: "play.png"), for: .normal)
         }
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
         selectCellIndex = indexPath.row

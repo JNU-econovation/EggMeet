@@ -13,6 +13,11 @@ class SignUpCheckTermsOfMaliciousContentVC: UIViewController{
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
+    }
+    
     @IBAction func windSignUpEndView (_ sender: Any){
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpEndVC") as? SignUpEndVC else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)

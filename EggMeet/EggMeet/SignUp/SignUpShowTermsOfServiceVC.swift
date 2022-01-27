@@ -13,5 +13,8 @@ class SignUpShowTermsOfServiceVC: UIViewController{
         super.viewDidLoad()
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.topItem?.title = ""
+    }
 }
