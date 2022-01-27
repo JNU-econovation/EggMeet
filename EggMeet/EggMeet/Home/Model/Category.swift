@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Category: String, Codable {
+enum Category: String, Codable, CaseIterable {
     case IT_WEB = "프로그래밍 > 웹프론트엔드 개발",
          IT_BACKEND = "프로그래밍 > 백엔드 개발",
          IT_APP = "프로그래밍 > 모바일 앱 개발",
@@ -71,4 +71,10 @@ enum Category: String, Codable {
          EXPERIENCE_FAIL = "경험/조언/노하우 > 실패 극복 경험",
          EXPERIENCE_EMPLOYMENT = "경험/조언/노하우 > 취업 성공 노하우",
          EXPERIENCE_ETC = "경험/조언/노하우 > 기타"
+}
+extension CaseIterable {
+    static func from(string: String) -> Self? {
+        return Self.allCases.first { string == "\($0)" }
+    }
+    func toString() -> String { "\(self)" }
 }

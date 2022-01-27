@@ -31,6 +31,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
     ["실용음악 이론", "작곡 및 프로듀싱", "작사", "기타"],
     ["여행기", "창업 경험담", "실패 극복 경험", "취업 성공 노하우", "기타"]]
     var mentorAreaSelectedIndex: Int = 0
+    var selectCategory = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,6 +71,7 @@ class SignUpMentoAreaSelectionVC: UIViewController{
             ud.set(item, forKey: mentoAreaKey)
             mentorAreaSelectedIndex = index
             mentorCategoryLabel.text = item
+            selectCategory = item + " > "
         }
         isCategorySelected = true
     }
@@ -84,8 +86,9 @@ class SignUpMentoAreaSelectionVC: UIViewController{
         mentorDetailAreaDD.selectionAction = { [unowned self] (index: Int, item: String) in
             print("선택한 아이템 : \(item)")
             print("인덱스 : \(index)")
-            ud.set(item, forKey: mentorDetailAreaKey)
             mentorDetailCategoryLabel.text = item
+            selectCategory += item
+            ud.set(selectCategory, forKey: mentorDetailAreaKey)
         }
         isCategorySelected = true
     }

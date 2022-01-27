@@ -16,7 +16,6 @@ class HomeTVC: UITableViewCell {
     @IBOutlet weak var growthCostLabel: UILabel!
     @IBOutlet weak var mentorGrowthPointLabel: UILabel!
     @IBOutlet weak var firstCategoryLabel: UILabel!
-    @IBOutlet weak var secondCategoryLabel: UILabel!
     @IBOutlet weak var firstHashtagLabel: UILabel!
     @IBOutlet weak var areaImageView: UIImageView!
 
@@ -33,11 +32,11 @@ class HomeTVC: UITableViewCell {
 }
 
 extension HomeTVC {
-    func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: Category , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
+    func initCell(image: String, nickname: String, rating: Float, mentorGrowthPoint: Int, firstCategory: String , location: Location, isOnline: Int, isOffline: Int, age: Int, sex: Sex, isMentor: Bool){
         nicknameLabel.text = nickname
         nicknameLabel.adjustsFontSizeToFitWidth = true
         mentorGrowthPointLabel.text = "\(mentorGrowthPoint) point"
-        firstCategoryLabel.text = "\(firstCategory)"
+        firstCategoryLabel.text = firstCategory
         
         var hashtagStr: String = ""
         switch location {

@@ -40,7 +40,7 @@ struct HomeNetwork {
                             return
                         }
                         
-                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category(rawValue: category)!, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
                     }
                     
                     completion(mentorList)
@@ -137,7 +137,7 @@ extension HomeNetwork {
                             return
                         }
                         
-                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category(rawValue: category)!, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
                     }
                     completion(menteeList)
                 } catch {print(error)}
@@ -183,7 +183,7 @@ extension HomeNetwork {
                             return
                         }
                         
-                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category(rawValue: category)!, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        menteeList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: 0, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
                     }
                     completion(menteeList)
                 } catch {print(error)}
@@ -226,7 +226,7 @@ extension HomeNetwork {
                             return
                         }
                         
-                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category(rawValue: category)!, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
+                        mentorList.append(UserMentorResponseModel.init(age: setProperAge(age: age), category: Category.from(string: category)!.rawValue, growthCost: growthCost, id: id, location: Location.init(rawValue: location) ?? .ALL, mentorRating: mentorRating, nickname: nickname, offlineAvailable: offlineAvailable, onlineAvailable: onlineAvailable, sex: Sex.init(rawValue: sex) ?? .UNDEFINED))
                     }
                     
                     completion(mentorList)

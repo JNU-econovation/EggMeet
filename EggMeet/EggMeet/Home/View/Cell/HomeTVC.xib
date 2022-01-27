@@ -65,9 +65,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대분야" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGY-Hp-AiH">
-                        <rect key="frame" x="142" y="44" width="50" height="29"/>
+                        <rect key="frame" x="142" y="44" width="170" height="29"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="50" id="EN9-TH-EKh"/>
+                            <constraint firstAttribute="width" constant="170" id="EN9-TH-EKh"/>
                             <constraint firstAttribute="height" constant="29" id="YH7-Hq-J4n"/>
                         </constraints>
                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
@@ -93,15 +93,6 @@
                         <color key="textColor" red="0.21185174579999999" green="0.72251909969999994" blue="0.1035274938" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TY5-D8-t1S">
-                        <rect key="frame" x="231" y="53" width="50" height="0.0"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="50" id="XY9-7d-3nv"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="10"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_area_mentor" translatesAutoresizingMaskIntoConstraints="NO" id="flU-cN-WZq">
                         <rect key="frame" x="176.5" y="11" width="49" height="17"/>
                         <constraints>
@@ -121,7 +112,6 @@
                     <constraint firstItem="TH7-oP-h3B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="142" id="E6o-xz-san"/>
                     <constraint firstItem="ltZ-ue-FYe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="23" id="Ewz-SW-Ulb"/>
                     <constraint firstItem="m9r-Vv-Krb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="31" id="G3P-dq-Fpc"/>
-                    <constraint firstItem="TY5-D8-t1S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="211" id="GS1-8N-HBE"/>
                     <constraint firstItem="oPB-Kt-3X9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="H7V-KO-0pY"/>
                     <constraint firstItem="qI2-Yl-jQ5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="Qfm-Wp-iW7"/>
                     <constraint firstItem="kO1-w8-5WZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="142" id="Rbx-l6-3Fa"/>
@@ -129,7 +119,6 @@
                     <constraint firstItem="SGY-Hp-AiH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="142" id="Yiu-8O-BOt"/>
                     <constraint firstItem="kO1-w8-5WZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b55-78-DWo"/>
                     <constraint firstItem="flU-cN-WZq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="cwa-in-GXf"/>
-                    <constraint firstItem="TY5-D8-t1S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="42" id="fZg-lA-XjH"/>
                     <constraint firstItem="X96-Sr-E6c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="49" id="hwi-Yd-UdY"/>
                     <constraint firstItem="oPB-Kt-3X9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mbF-tC-1ZM"/>
                     <constraint firstItem="TH7-oP-h3B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="oHz-hz-fZF"/>
@@ -147,7 +136,6 @@
                 <outlet property="mentorGrowthPointLabel" destination="qI2-Yl-jQ5" id="Z54-l1-l6H"/>
                 <outlet property="nicknameLabel" destination="kO1-w8-5WZ" id="B5r-hN-tFZ"/>
                 <outlet property="profileImageView" destination="X96-Sr-E6c" id="pXs-4b-2US"/>
-                <outlet property="secondCategoryLabel" destination="TY5-D8-t1S" id="PvA-nd-cIK"/>
                 <outlet property="starImageView" destination="m9r-Vv-Krb" id="ccz-8M-kRV"/>
             </connections>
             <point key="canvasLocation" x="196.37681159420291" y="69.977678571428569"/>
