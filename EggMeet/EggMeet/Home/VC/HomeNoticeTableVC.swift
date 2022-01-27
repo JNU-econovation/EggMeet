@@ -54,7 +54,9 @@ extension HomeNoticeTableVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        //guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeProfileVC") as? HomeProfileVC else {return}
-        //self.navigationController?.pushViewController(nextVC, animated: true)
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        guard let nextVC = storyboard.instantiateViewController(withIdentifier: "ChatroomVC") as? ChatroomVC else {return}
+        nextVC.chatroomID = 26
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

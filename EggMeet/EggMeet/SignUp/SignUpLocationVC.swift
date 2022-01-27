@@ -165,6 +165,7 @@ extension SignUpLocationVC: UICollectionViewDelegateFlowLayout {
             self.nextButton.setImage(UIImage(named: "enable_next_button"), for: .normal)
             print("select location : \(selectLocationStr+selectDetailLocationStr)")
             ud.set(selectLocationStr + selectDetailLocationStr, forKey: locationKey)
+            //playButton.setImage(UIImage(named: "play.png"), for: .normal)
         }
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
         selectCellIndex = indexPath.row
