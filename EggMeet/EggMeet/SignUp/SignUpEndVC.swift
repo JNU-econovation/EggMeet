@@ -18,7 +18,13 @@ class SignUpEndVC: UIViewController {
     
     @IBAction func goToMypageButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: "ToMyPage", sender: self)
-        
     }
     
+    @IBAction func windHomeButton(){
+        let storyboard = UIStoryboard(name: "HomeStoryboard", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "HomeVC")
+        self.navigationController?.hidesBottomBarWhenPushed = false
+        self.navigationController?.pushViewController(vc, animated: true)
+        //vc.hidesBottomBarWhenPushed = false
+    }
 }
