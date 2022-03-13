@@ -1,9 +1,20 @@
 # EggMeet
 
-알을 깨고 성장하고 싶은 사람들의 만남을 중개하는 ios 어플리케이션
+**알을 깨고 성장하고 싶은 사람들의 만남을 중개하는 iOS 어플리케이션**
+
+![스크린샷 2022-03-05 오후 11 07 12](https://user-images.githubusercontent.com/64069925/158045554-2a9043a5-f0a8-4744-ae41-d5103ce068d4.png)
 
 ### 소개
 **에그밋**은, 한가지 분야 (자기계발, 취미생활 등) 에서 상대방에게 튜터링 또는 조언, 코칭을 해줄 수 있는 **'멘토'** 와, 그에게 멘토링을 받고자 하는 **'멘티'** 의 만남을 중개하는 모바일 지식 공유 서비스 입니다.
+
+<br />
+
+### 팀원
+|iOS|서버|디자인|기획|
+|------|---|---|---|
+| [김송아](https://github.com/asong57) [이윤성](https://github.com/2yunseong), [황지우](https://github.com/earlysummer0303) | [권순찬](https://github.com/Kwon770) | [류현지](https://github.com/RyuHyeonji) | [황지우](https://github.com/earlysummer0303) |
+
+<br />
 
 ### 코딩 컨벤션
 
